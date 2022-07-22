@@ -1,0 +1,4 @@
+target
+application.yml
+/.settings
+.DS_Store
