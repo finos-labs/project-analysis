@@ -28,7 +28,7 @@ public class BasicTest {
 	@Test
 	public void testSingleRepo() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
 		Repository repo = qe.repository("{id name owner}", true, "spring-bot",
-				"finos", "skip", Boolean.FALSE);
+				"finos");
 		Assertions.assertEquals("finos", repo.getOwner().getLogin());
 		Assertions.assertEquals("spring-bot", repo.getName());
 	}
@@ -83,6 +83,20 @@ public class BasicTest {
 		Map<String, String> reviewers = qs.getAllFinosRepositories(QueryType.BRANCH_RULES);
 		outputMap(reviewers);
 		Assertions.assertTrue(reviewers.size() > 110);
+	}
+	
+	@Test
+	public void testRecentCommitterDetails() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		Map<String, String> committers = qs.getAllFinosRepositories(QueryType.MAIN_RECENT_COMMITTERS);
+		outputMap(committers);
+		Assertions.assertTrue(committers.size() > 110);
+	}
+	
+	@Test
+	public void testRecentIssueActivity() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		Map<String, String> activity = qs.getAllFinosRepositories(QueryType.ISSUE_ACTIVITY);
+		outputMap(activity);
+		Assertions.assertTrue(activity.size() > 110);
 	}
 
 	private void outputMap(Map<String, String> licenseDetails) {

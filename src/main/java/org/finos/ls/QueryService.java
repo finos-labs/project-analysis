@@ -1,16 +1,24 @@
 package org.finos.ls;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.finos.scan.github.client.Blob;
 import org.finos.scan.github.client.BranchProtectionRule;
 import org.finos.scan.github.client.BranchProtectionRuleConnection;
+import org.finos.scan.github.client.Comment;
+import org.finos.scan.github.client.Commit;
+import org.finos.scan.github.client.Issue;
+import org.finos.scan.github.client.IssueComment;
 import org.finos.scan.github.client.License;
 import org.finos.scan.github.client.Organization;
+import org.finos.scan.github.client.Ref;
 import org.finos.scan.github.client.Repository;
 import org.finos.scan.github.client.RepositoryConnection;
 import org.finos.scan.github.client.util.QueryExecutor;
@@ -27,7 +35,7 @@ public class QueryService {
 		
 		LICENSE_INFO(" licenseInfo {\n"
 				+ "            spdxId\n"
-				+ "          }", r-> {License l = r.getLicenseInfo();
+				+ "          }", 50, r-> {License l = r.getLicenseInfo();
 				return (l == null) ? "" : l.getSpdxId();}),
 		
 	
@@ -35,7 +43,7 @@ public class QueryService {
 				+ "      ... on Blob {\n"
 				+ "        text\n"
 				+ "      }\n"
-				+ "    }", r -> {
+				+ "    }", 10, r -> {
 					Blob readme = (Blob) r.getObject();
 					if (readme == null) {
 						return "NO README";
@@ -73,13 +81,13 @@ public class QueryService {
 				+ "          pattern\n"
 				+ "        }\n"
 				+ "      }\n"
-				+ "    }", r -> convertToRuleSummary(r)),
+				+ "    }", 20, r -> convertToRuleSummary(r)),
 		
 		OPENSSF_STATUS("object(expression: \"HEAD:README.md\") {\n"
 				+ "      ... on Blob {\n"
 				+ "        text\n"
 				+ "      }\n"
-				+ "    }", r -> {
+				+ "    }", 20, r -> {
 					Blob readme = (Blob) r.getObject();
 					if (readme == null) {
 						return "NO README";
@@ -91,19 +99,69 @@ public class QueryService {
 					} else {
 						return "NONE";
 					}
-				});
+				}),
 		
+		MAIN_RECENT_COMMITTERS("defaultBranchRef {\n"
+				+ "      target {\n"
+				+ "        ... on Commit {\n"
+				+ "          history(first: 100) {\n"
+				+ "            edges {\n"
+				+ "              node {\n"
+				+ "                ... on Commit {\n"
+				+ "                  committedDate\n"
+				+ "                }\n"
+				+ "                author {\n"
+				+ "                  user {\n"
+				+ "                    login\n"
+				+ "                  }\n"
+				+ "                }\n"
+				+ "              }\n"
+				+ "            }\n"
+				+ "          }\n"
+				+ "        }\n"
+				+ "      }\n"
+				+ "    }", 10, r -> condenseRecentCommitters(r)),
 		
-		
+		ISSUE_ACTIVITY("issues(\n"
+				+ "      orderBy: {field: UPDATED_AT, direction: DESC}\n"
+				+ "      first: 50\n"
+				+ "    ) {\n"
+				+ "      edges {\n"
+				+ "        node {\n"
+				+ "          id\n"
+				+ "          comments(first: 30) {\n"
+				+ "            totalCount\n"
+				+ "            edges {\n"
+				+ "              node {\n"
+				+ "                author {\n"
+				+ "                  login\n"
+				+ "                }\n"
+				+ "                updatedAt\n"
+				+ "              }\n"
+				+ "            }\n"
+				+ "          }\n"
+				+ "          lastEditedAt\n"
+				+ "          title\n"
+				+ "        }\n"
+				+ "      }\n"
+				+ "    }", 10, r -> condenseIssueCommenters(r));
 
 		private String fields;
 		
 		private Function<Repository, String> converter;
+		
+		private int pageSize;
 
-		QueryType(String string, Function<Repository, String> converter) {
+		public int getPageSize() {
+			return pageSize;
+		}
+
+		QueryType(String string, int pageSize, Function<Repository, String> converter) {
 			this.fields = string;
+			this.pageSize = pageSize;
 			this.converter = converter;
 		}
+
 
 		String getFields() {
 			return fields;
@@ -130,7 +188,7 @@ public class QueryService {
 		while (total > out.size()) {
 			String query = "{\n"
 					+ "    id\n"
-					+ "    repositories(first: 20, after: &cursor) { \n"
+					+ "    repositories(first: "+qt.pageSize+", after: &cursor) { \n"
 					+ "      totalCount\n"
 					+ "      totalDiskUsage\n"
 					+ "      pageInfo {\n"
@@ -188,5 +246,62 @@ public class QueryService {
 	private static boolean matches(BranchProtectionRule bpr, String mainBranch) {
 		String pattern = bpr.getPattern();
 		return mainBranch.matches(pattern.replaceAll("\\*",".*"));
+	}
+	
+
+	private static String condenseRecentCommitters(Repository r) {
+		Date cutoff = oneYearAgo();
+		
+		Ref defaultBranchRef = r.getDefaultBranchRef();
+		if (defaultBranchRef == null) {
+			return "";  // private repo or some security reason
+		}
+		Commit target = (Commit) defaultBranchRef.getTarget();
+		Map<String, Long> counts = target.getHistory().getEdges().stream()
+			.map(ce -> (Commit) ce.getNode())
+			.filter(c -> cutoff.before(c.getCommittedDate()))
+			.filter(c -> c.getAuthor().getUser() != null)
+			.collect(Collectors.groupingBy(c -> c.getAuthor().getUser().getLogin(), Collectors.counting()));
+		
+		
+		return summarize(counts);
+	}
+
+	private static String summarize(Map<String, Long> counts) {
+		String committers = counts.entrySet().stream()
+			.sorted((a, b) -> -a.getValue().compareTo(b.getValue()))
+			.map(e -> "@"+e.getKey())
+			.collect(Collectors.joining(","));
+		
+		long totalCommitsInLastYear = counts.values().stream()
+			.reduce(Long::sum)
+			.orElse(0l);
+		
+		return totalCommitsInLastYear+";"+committers;
+	}
+
+	private static Date oneYearAgo() {
+		Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.YEAR, -1);
+		Date cutoff = cal.getTime();
+		return cutoff;
+	}
+
+
+	private static String condenseIssueCommenters(Repository r) {
+		Date cutoff = oneYearAgo();
+
+		Map<String, Long> comments = r.getIssues().getEdges().stream()
+			.map(e -> e.getNode())
+			.flatMap(n -> getComments(n))
+			.filter(c -> cutoff.before(c.getUpdatedAt()))
+			.collect(Collectors.groupingBy(c -> c.getAuthor().getLogin(), Collectors.counting()));
+		
+		return summarize(comments);
+	}
+
+	private static Stream<IssueComment> getComments(Issue n) {
+		return n.getComments().getEdges().stream()
+			.map(e -> e.getNode());
 	}
 }
