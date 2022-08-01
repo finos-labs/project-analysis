@@ -12,7 +12,6 @@ import java.util.stream.Stream;
 import org.finos.scan.github.client.Blob;
 import org.finos.scan.github.client.BranchProtectionRule;
 import org.finos.scan.github.client.BranchProtectionRuleConnection;
-import org.finos.scan.github.client.Comment;
 import org.finos.scan.github.client.Commit;
 import org.finos.scan.github.client.Issue;
 import org.finos.scan.github.client.IssueComment;
@@ -23,12 +22,12 @@ import org.finos.scan.github.client.Repository;
 import org.finos.scan.github.client.RepositoryConnection;
 import org.finos.scan.github.client.util.QueryExecutor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.graphql_java_generator.exception.GraphQLRequestExecutionException;
 import com.graphql_java_generator.exception.GraphQLRequestPreparationException;
 
-@Component
+@Service
 public class QueryService {
 	
 	enum QueryType {

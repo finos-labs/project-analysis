@@ -24,6 +24,9 @@ public class BasicTest {
 	
 	@Autowired
 	QueryService qs;
+	
+	@Autowired
+	Summarizer sum;
 
 	@Test
 	public void testSingleRepo() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
@@ -102,6 +105,12 @@ public class BasicTest {
 	private void outputMap(Map<String, String> licenseDetails) {
 		licenseDetails.entrySet().stream()
 			.forEach(e -> System.out.println(e.getKey()+ " "+e.getValue()));
+	}
+	
+	@Test
+	public void testSummaryGeneration() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		String out = sum.getSummary("finos", "spring-bot");
+		System.out.println(out);
 	}
 	
 }
