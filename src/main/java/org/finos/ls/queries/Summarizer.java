@@ -12,15 +12,17 @@ import org.commonmark.ext.front.matter.YamlFrontMatterExtension;
 import org.commonmark.ext.gfm.tables.TablesExtension;
 import org.commonmark.node.AbstractVisitor;
 import org.commonmark.node.Block;
+import org.commonmark.node.BulletList;
 import org.commonmark.node.Node;
 import org.commonmark.node.Paragraph;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.text.TextContentRenderer;
-import org.finos.ls.LinkImageExtension;
+import org.finos.ls.markdown.MarkdownExcerptExtension;
 import org.finos.scan.github.client.Blob;
 import org.finos.scan.github.client.Repository;
 import org.finos.scan.github.client.RepositoryTopicEdge;
 import org.finos.scan.github.client.Topic;
+import org.springframework.util.StringUtils;
 
 /**
  * Generates some nice Markdown summary of a project.
@@ -79,7 +81,7 @@ public class Summarizer implements QueryType<String> {
 	@Override
 	public String convert(Repository repo) {
 		String name = repo.getName();
-		List<Paragraph> firstParagraphs = extractParagraphsIfPresent(repo);
+		List<Block> firstParagraphs = extractParagraphsIfPresent(repo);
 	
 		String slugBasedTitle = getTitleFromName(name);
 		String description = repo.getDescription();
@@ -92,6 +94,7 @@ public class Summarizer implements QueryType<String> {
 		StringBuilder out = new StringBuilder();
 		
 		addTitle(out, slugBasedTitle, repo);
+		writeSummaryCounts(out, repo);
 		addTopicTags(out, tags, repo);
 		addDescription(out, description);
 		addQuotedParagraphs(out, firstParagraphs, githubUrl);
@@ -102,11 +105,11 @@ public class Summarizer implements QueryType<String> {
 
 
 
-	private List<Paragraph> extractParagraphsIfPresent(Repository repo) {
+	private List<Block> extractParagraphsIfPresent(Repository repo) {
 		if (repo.getObject() instanceof Blob) {
 			String text = ((Blob)repo.getObject()).getText();
 			Node n = p.parse(text);
-			List<Paragraph> firstParagraphs = getParagraphs(n, 4);
+			List<Block> firstParagraphs = getParagraphs(n, 4);
 			return firstParagraphs;
 		} else {
 			return Collections.emptyList();
@@ -121,14 +124,17 @@ public class Summarizer implements QueryType<String> {
 		addLink(out, homepage, homepage);
 	}
 
-	private void addQuotedParagraphs(StringBuilder out, List<Paragraph> firstThreeParagraphs, String githubUrl) {
-		if (firstThreeParagraphs.size() > 0) {
+	private void addQuotedParagraphs(StringBuilder out, List<Block> paras, String githubUrl) {
+		if (paras.size() > 0) {
 			out.append("#### From the README\n\n");
-			firstThreeParagraphs.stream()
-				.map(b -> convertBackToMarkdown(b))
-				.map(t -> t.replace("\n", ""))
-				.forEach(md -> out.append("> "+md+"\n"));
-			out.append("\n_[read more]("+githubUrl+")_\n\n");
+			for (int i = 0; i < paras.size(); i++) {
+				out.append("> " + convertBackToMarkdown(paras.get(i)).replace("\n", ""));
+				if (i<paras.size()-1) {
+					out.append("\n>\n");
+				} else {
+					out.append("... _[read more]("+githubUrl+")_\n\n");
+				}
+			}
 		}
 	}
 
@@ -139,31 +145,32 @@ public class Summarizer implements QueryType<String> {
 	}
 
 	private void writeSummaryCounts(StringBuilder out, Repository repo) {
-		out.append(" &middot; ");
-		out.append(createBadge("⭐", "GitHub Stars", ""+repo.getStargazerCount(), "yellow"));
-		out.append(createBadge("⚡", "GitHub Forks", ""+repo.getForkCount(), "yellow"));
-		out.append(createBadge("👁️", "GitHub Watchers", ""+ repo.getWatchers().getTotalCount(), "yellow"));
-		out.append(createBadge("🔎", "GitHub Issues", ""+ repo.getIssues().getTotalCount(), "yellow"));
+		out.append(createBadge("⭐", "GitHub Stars", ""+repo.getStargazerCount(), "yellow", repo, "/stargazers"));
+		out.append(createBadge("⚡", "GitHub Forks", ""+repo.getForkCount(), "yellow", repo, ""));
+		out.append(createBadge("👁️", "GitHub Watchers", ""+ repo.getWatchers().getTotalCount(), "yellow", repo, "/watchers"));
+		out.append(createBadge("🔎", "GitHub Issues", ""+ repo.getIssues().getTotalCount(), "yellow",repo, "/issues"));
 	}
 
-	private String createBadge(String title, String altText, String value, String colour){
-		return "!["+altText+"](https://img.shields.io/badge/"+title+"-"+value+"-"+colour+"?labelColor=fafbfc) ";
+	private String createBadge(String title, String altText, String value, String colour, Repository r, String url){
+		String badgeImage = "!["+altText+"](https://img.shields.io/badge/"+title+"-"+value+"-"+colour+"?labelColor=fafbfc) ";
+		return "["+badgeImage+"]("+r.getUrl()+url+")";
 	}
 
 	private void addLink(StringBuilder out, String url, String linkText) {
-		if (url != null) {
+		if (StringUtils.hasText(url)) {
 			out.append(" - ["+linkText+"]("+url+")\n");
 		}
 	}
 
 	private void addDescription(StringBuilder out, String description) {
-		out.append("_"+description+"_\n\n");
+		if (StringUtils.hasText(description)) {
+			out.append("_"+description.trim()+"_\n\n");
+		}
 	}
 
 
 	private void addTitle(StringBuilder out, String slugBasedTitle, Repository r) {
 		out.append(getTitleLeve()+slugBasedTitle);
-		writeSummaryCounts(out, r);
 		out.append("\n\n");
 	} 
 
@@ -174,8 +181,8 @@ public class Summarizer implements QueryType<String> {
 
 
 
-	private List<Paragraph> getParagraphs(Node n, int i) {
-		List<Paragraph> found = new ArrayList<>();
+	private List<Block> getParagraphs(Node n, int i) {
+		List<Block> found = new ArrayList<>();
 		n.accept(new AbstractVisitor() {
 
 			@Override
@@ -184,6 +191,15 @@ public class Summarizer implements QueryType<String> {
 					found.add(paragraph);
 				}
 			}
+
+			@Override
+			public void visit(BulletList bulletList) {
+				if (found.size() < i) {
+					found.add(bulletList);
+				}
+			}
+			
+			
 		});
 		
 		return found;
@@ -210,14 +226,14 @@ public class Summarizer implements QueryType<String> {
 
 	private String convertBackToMarkdown(Block b) {
 		TextContentRenderer tcr = TextContentRenderer.builder()
-				.extensions(Arrays.asList(LinkImageExtension.create()))
+				.extensions(Arrays.asList(MarkdownExcerptExtension.create()))
 				
 				.build();
 		return tcr.render(b);
 	}
 
 	private String getTitleFromName(String name) {
-		return WordUtils.capitalizeFully(name.replace("-", " "));
+		return WordUtils.capitalize(name.replace("-", " "));
 	}
 
 

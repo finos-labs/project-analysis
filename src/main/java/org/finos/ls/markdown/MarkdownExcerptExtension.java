@@ -1,4 +1,4 @@
-package org.finos.ls;
+package org.finos.ls.markdown;
 
 import org.commonmark.renderer.NodeRenderer;
 import org.commonmark.renderer.text.TextContentNodeRendererContext;
@@ -6,13 +6,13 @@ import org.commonmark.renderer.text.TextContentNodeRendererFactory;
 import org.commonmark.renderer.text.TextContentRenderer;
 import org.commonmark.renderer.text.TextContentRenderer.Builder;
 
-public class LinkImageExtension implements TextContentRenderer.TextContentRendererExtension {
+public class MarkdownExcerptExtension implements TextContentRenderer.TextContentRendererExtension {
 
-	private LinkImageExtension() {
+	private MarkdownExcerptExtension() {
 	}
 	
-	public static LinkImageExtension create() {
-		return new LinkImageExtension();
+	public static MarkdownExcerptExtension create() {
+		return new MarkdownExcerptExtension();
 	}
 	
 	@Override
@@ -20,7 +20,7 @@ public class LinkImageExtension implements TextContentRenderer.TextContentRender
 		rendererBuilder.nodeRendererFactory(new TextContentNodeRendererFactory() {
             @Override
             public NodeRenderer create(TextContentNodeRendererContext context) {
-                return new LinkImageRenderer(context);
+                return new MarkdownExcerptRenderer(context);
             }
         });
 	}

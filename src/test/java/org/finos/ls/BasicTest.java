@@ -101,7 +101,7 @@ public class BasicTest {
 	
 	@Test
 	public void testSummaryGenerationSubitem() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		String out = qs.getSingleRepository(new Summarizer(SummaryLevel.SUBITEM), "finos", "morphir");
+		String out = qs.getSingleRepository(new Summarizer(SummaryLevel.SUBITEM), "finos", "electron-fdc3");
 		System.out.println(out);
 	}
 	

@@ -75,6 +75,7 @@ public class ReadmeGenerator {
 
 	private Map<String, List<String>> bucketNames(List<String> names) {
 		Map<String, List<String>> out = new HashMap<String, List<String>>();
+		names = remove(names, n -> n.contains("juju"));
 		names = bucket(out, names, "Legend", n -> n.contains("legend"));
 		names = bucket(out, names, "Morphir", n -> n.contains("morphir"));
 		names = bucket(out, names, "Symphony", n -> n.contains("symphony"));
@@ -99,9 +100,13 @@ public class ReadmeGenerator {
 
 	private List<String> remove(List<String> items, String... toRemove) {
 		List<String> toGo = Arrays.asList(toRemove);
+		return remove(items, n -> toGo.contains(n));
+	}
+	
+	private List<String> remove(List<String> items, Predicate<String> toRemove) {
 		return items.stream()
-			.filter(n -> toGo.indexOf(n) == -1)
-			.collect(Collectors.toList());
+				.filter(n -> !toRemove.test(n))
+				.collect(Collectors.toList());
 	}
 	
 	private List<String> bucketItems(Map<String, List<String>> out, List<String> in, String key, String... toInclude) {

@@ -1,4 +1,4 @@
-package org.finos.ls;
+package org.finos.ls.markdown;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -7,13 +7,14 @@ import java.util.Set;
 
 import org.commonmark.node.Image;
 import org.commonmark.node.Link;
+import org.commonmark.node.ListItem;
 import org.commonmark.node.Node;
 import org.commonmark.renderer.NodeRenderer;
 import org.commonmark.renderer.text.TextContentNodeRendererContext;
 
-public class LinkImageRenderer implements NodeRenderer {
+public class MarkdownExcerptRenderer implements NodeRenderer {
 	
-	public LinkImageRenderer(TextContentNodeRendererContext context) {
+	public MarkdownExcerptRenderer(TextContentNodeRendererContext context) {
 		this.context = context;
 	}
 
@@ -21,7 +22,7 @@ public class LinkImageRenderer implements NodeRenderer {
 
 	@Override
 	public Set<Class<? extends Node>> getNodeTypes() {
-		List<Class<? extends Node>> classes = Arrays.asList(Image.class, Link.class);
+		List<Class<? extends Node>> classes = Arrays.asList(Image.class, Link.class, ListItem.class);
 		return new HashSet<Class<? extends Node>>(classes);
 	}
 
@@ -33,7 +34,7 @@ public class LinkImageRenderer implements NodeRenderer {
 				// only output absolute images
 				context.getWriter().write("![");
 				renderChildren(node);
-				context.getWriter().write("]("+i.getDestination()+")");
+				context.getWriter().write("]("+i.getDestination()+") ");
 			}
 		} else if (node instanceof Link) {
 			Link l = (Link) node;
@@ -45,6 +46,10 @@ public class LinkImageRenderer implements NodeRenderer {
 			} else {
 				renderChildren(node);
 			}
+		} else if (node instanceof ListItem) {
+			ListItem li = (ListItem) node;
+			context.getWriter().line();
+			renderChildren(node);
 		}
 	}
 
