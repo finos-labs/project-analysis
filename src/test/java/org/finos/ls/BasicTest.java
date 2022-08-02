@@ -2,12 +2,13 @@ package org.finos.ls;
 
 import java.util.Map;
 
-import org.finos.ls.QueryService.QueryType;
-import org.finos.scan.github.client.Organization;
+import org.finos.ls.queries.Activity;
+import org.finos.ls.queries.BasicQueries;
+import org.finos.ls.queries.BasicQueries.FinosStatus;
+import org.finos.ls.queries.BasicQueries.OpenSSFStatus;
+import org.finos.ls.queries.Summarizer;
+import org.finos.ls.queries.Summarizer.SummaryLevel;
 import org.finos.scan.github.client.Repository;
-import org.finos.scan.github.client.RepositoryConnection;
-import org.finos.scan.github.client.RepositoryEdge;
-import org.finos.scan.github.client.util.QueryExecutor;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,99 +19,97 @@ import com.graphql_java_generator.exception.GraphQLRequestPreparationException;
 
 @SpringBootTest(classes = LandscapeApp.class)
 public class BasicTest {
-
-	@Autowired
-	QueryExecutor qe;
 	
 	@Autowired
 	QueryService qs;
 	
 	@Autowired
-	Summarizer sum;
+	ReadmeGenerator readme;
 
 	@Test
 	public void testSingleRepo() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Repository repo = qe.repository("{id name owner}", true, "spring-bot",
-				"finos");
+		Repository repo = qs.getSingleRepository(BasicQueries.PASSTHROUGH, "spring-bot", "finos");
 		Assertions.assertEquals("finos", repo.getOwner().getLogin());
 		Assertions.assertEquals("spring-bot", repo.getName());
 	}
 
 	@Test
 	public void testRepoDownloadViaOrganisation() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {		
-		Organization o = qe.organization("{\n"
-				+ "    id\n"
-				+ "    repositories(first:10) {\n"
-				+ "      edges {\n"
-				+ "        node {\n"
-				+ "          name\n"
-				+ "        }\n"
-				+ "      }\n"
-				+ "    }}"
-				
-				, "finos");
+		Map<String, Repository> allRepos = qs.getAllFinosRepositories(BasicQueries.PASSTHROUGH);
 		
-		RepositoryConnection conn = o.getRepositories();
-		Repository firstRepo = conn.getEdges().get(0).getNode();
+		Repository firstRepo = allRepos.get("OpenMAMA");
 		Assertions.assertEquals("OpenMAMA", firstRepo.getName());
 		
 		// ok, can we pull back the entire list of repositories?
-		for (RepositoryEdge re : conn.getEdges()) {
-			System.out.println(re.getNode().getName());
+		for (Repository re : allRepos.values()) {
+			System.out.println(re.getName());
 		}
 	}
 	
 	@Test
 	public void testListOfReposWithLicenseInfo() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Map<String, String> licenseDetails = qs.getAllFinosRepositories(QueryType.LICENSE_INFO);
+		Map<String, String> licenseDetails = qs.getAllFinosRepositories(BasicQueries.LICENSE_INFO);
 		outputMap(licenseDetails);
 		Assertions.assertTrue(licenseDetails.size() > 110);
 	}
 	
 	@Test
 	public void testListOfReposWithStatusInfo() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Map<String, String> licenseDetails = qs.getAllFinosRepositories(QueryType.FINOS_STATUS);
+		Map<String, FinosStatus> licenseDetails = qs.getAllFinosRepositories(BasicQueries.FINOS_STATUS);
 		outputMap(licenseDetails);
 		Assertions.assertTrue(licenseDetails.size() > 110);
 	}
 	
 	@Test
 	public void testListOfReposWithOpenSSFStatus() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Map<String, String> licenseDetails = qs.getAllFinosRepositories(QueryType.OPENSSF_STATUS);
+		Map<String, OpenSSFStatus> licenseDetails = qs.getAllFinosRepositories(BasicQueries.OPENSSF_STATUS);
 		outputMap(licenseDetails);
 		Assertions.assertTrue(licenseDetails.size() > 110);
 	}
 	
 	@Test
 	public void testMainBranchReviewers() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Map<String, String> reviewers = qs.getAllFinosRepositories(QueryType.BRANCH_RULES);
+		Map<String, Integer> reviewers = qs.getAllFinosRepositories(BasicQueries.BRANCH_RULES);
 		outputMap(reviewers);
 		Assertions.assertTrue(reviewers.size() > 110);
 	}
 	
 	@Test
 	public void testRecentCommitterDetails() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Map<String, String> committers = qs.getAllFinosRepositories(QueryType.MAIN_RECENT_COMMITTERS);
+		Map<String, Activity> committers = qs.getAllFinosRepositories(BasicQueries.MAIN_RECENT_COMMITTERS);
 		outputMap(committers);
 		Assertions.assertTrue(committers.size() > 110);
 	}
 	
 	@Test
 	public void testRecentIssueActivity() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Map<String, String> activity = qs.getAllFinosRepositories(QueryType.ISSUE_ACTIVITY);
+		Map<String, Activity> activity = qs.getAllFinosRepositories(BasicQueries.ISSUE_ACTIVITY);
 		outputMap(activity);
 		Assertions.assertTrue(activity.size() > 110);
 	}
 
-	private void outputMap(Map<String, String> licenseDetails) {
+	private void outputMap(Map<String, ? extends Object> licenseDetails) {
 		licenseDetails.entrySet().stream()
 			.forEach(e -> System.out.println(e.getKey()+ " "+e.getValue()));
 	}
 	
 	@Test
-	public void testSummaryGeneration() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		String out = sum.getSummary("finos", "spring-bot");
+	public void testSummaryGenerationMain() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		String out = qs.getSingleRepository(new Summarizer(SummaryLevel.MAIN), "finos", "spring-bot");
 		System.out.println(out);
 	}
+	
+	@Test
+	public void testSummaryGenerationSubitem() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		String out = qs.getSingleRepository(new Summarizer(SummaryLevel.SUBITEM), "finos", "morphir");
+		System.out.println(out);
+	}
+	
+	@Test
+	public void testWholeReadme() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		String out = readme.generate(25);
+		System.out.println(out);
+	}
+	
 	
 }

@@ -1,7 +1,8 @@
-package org.finos.ls;
+package org.finos.ls.queries;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,16 +16,11 @@ import org.commonmark.node.Node;
 import org.commonmark.node.Paragraph;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.text.TextContentRenderer;
+import org.finos.ls.LinkImageExtension;
 import org.finos.scan.github.client.Blob;
 import org.finos.scan.github.client.Repository;
 import org.finos.scan.github.client.RepositoryTopicEdge;
 import org.finos.scan.github.client.Topic;
-import org.finos.scan.github.client.util.QueryExecutor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import com.graphql_java_generator.exception.GraphQLRequestExecutionException;
-import com.graphql_java_generator.exception.GraphQLRequestPreparationException;
 
 /**
  * Generates some nice Markdown summary of a project.
@@ -32,25 +28,25 @@ import com.graphql_java_generator.exception.GraphQLRequestPreparationException;
  * @author rob@kite9.com
  *
  */
-@Service
-public class Summarizer {
+public class Summarizer implements QueryType<String> {
 	
+	public enum SummaryLevel { MAIN, SUBITEM };
+
 	final Parser p;	
+	final SummaryLevel sl;
 	
-	public Summarizer() {
+	public Summarizer(SummaryLevel sl) {
+		this.sl = sl;
 		// configures the parser for github-flavoured markdown
-		p = Parser.builder().extensions(Arrays.asList(
+		this.p = Parser.builder().extensions(Arrays.asList(
 				TablesExtension.create(),
 				YamlFrontMatterExtension.create(),
 				AutolinkExtension.create())).build();
 	}
-	
-	
-	@Autowired
-	QueryExecutor qe;
 
 	private static final String GRAPH_QL = "{"
 			+ "    id\n"
+			+ "    name\n"
 			+ "    homepageUrl\n"
 			+ "    stargazerCount\n"
 			+ "    description\n"
@@ -80,18 +76,16 @@ public class Summarizer {
 			+ "    }\n"
 			+ "  }";
 	
-	
-	public String getSummary(String owner, String name) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Repository repo = qe.repository(GRAPH_QL, true, name, owner);
-		String text = ((Blob)repo.getObject()).getText();
-		Node n = p.parse(text);
+	@Override
+	public String convert(Repository repo) {
+		String name = repo.getName();
+		List<Paragraph> firstParagraphs = extractParagraphsIfPresent(repo);
 	
 		String slugBasedTitle = getTitleFromName(name);
 		String description = repo.getDescription();
 		List<String> tags = getTopicTags(repo.getRepositoryTopics().getEdges());
 		String homepage = repo.getHomepageUrl();
 		String githubUrl = repo.getUrl();
-		List<Paragraph> firstThreeParagraphs = getParagraphs(n, 3);
 		
 		// ok, let's put it all together
 		
@@ -100,25 +94,42 @@ public class Summarizer {
 		addTitle(out, slugBasedTitle, repo);
 		addTopicTags(out, tags, repo);
 		addDescription(out, description);
-		addQuotedFirstThreeParagraphs(out, firstThreeParagraphs, githubUrl);
+		addQuotedParagraphs(out, firstParagraphs, githubUrl);
 		addLinks(homepage, githubUrl, out);
 		
 		return out.toString();
 	}
 
+
+
+	private List<Paragraph> extractParagraphsIfPresent(Repository repo) {
+		if (repo.getObject() instanceof Blob) {
+			String text = ((Blob)repo.getObject()).getText();
+			Node n = p.parse(text);
+			List<Paragraph> firstParagraphs = getParagraphs(n, 4);
+			return firstParagraphs;
+		} else {
+			return Collections.emptyList();
+		}
+	}
+
+
+
 	private void addLinks(String homepage, String githubUrl, StringBuilder out) {
-		out.append("#### Further Details:\n");
+		out.append("#### Further Details\n");
 		addLink(out, githubUrl, githubUrl);
 		addLink(out, homepage, homepage);
 	}
 
-	private void addQuotedFirstThreeParagraphs(StringBuilder out, List<Paragraph> firstThreeParagraphs, String githubUrl) {
-		out.append("#### From the README:\n\n");
-		firstThreeParagraphs.stream()
-			.map(p -> (Block)p)
-			.map(b -> convertBackToMarkdown(b))
-			.forEach(md -> out.append("> "+md+">\n"));
-		out.append("\n_[read more]("+githubUrl+")_\n\n");
+	private void addQuotedParagraphs(StringBuilder out, List<Paragraph> firstThreeParagraphs, String githubUrl) {
+		if (firstThreeParagraphs.size() > 0) {
+			out.append("#### From the README\n\n");
+			firstThreeParagraphs.stream()
+				.map(b -> convertBackToMarkdown(b))
+				.map(t -> t.replace("\n", ""))
+				.forEach(md -> out.append("> "+md+"\n"));
+			out.append("\n_[read more]("+githubUrl+")_\n\n");
+		}
 	}
 
 
@@ -136,7 +147,7 @@ public class Summarizer {
 	}
 
 	private String createBadge(String title, String altText, String value, String colour){
-		return "!["+altText+"](https://img.shields.io/badge/"+title+"-"+value+"-"+colour+") ";
+		return "!["+altText+"](https://img.shields.io/badge/"+title+"-"+value+"-"+colour+"?labelColor=fafbfc) ";
 	}
 
 	private void addLink(StringBuilder out, String url, String linkText) {
@@ -151,10 +162,16 @@ public class Summarizer {
 
 
 	private void addTitle(StringBuilder out, String slugBasedTitle, Repository r) {
-		out.append("## "+slugBasedTitle);
+		out.append(getTitleLeve()+slugBasedTitle);
 		writeSummaryCounts(out, r);
 		out.append("\n\n");
 	} 
+
+
+	private String getTitleLeve() {
+		return sl == SummaryLevel.MAIN ? "## " : "### ";
+	}
+
 
 
 	private List<Paragraph> getParagraphs(Node n, int i) {
@@ -170,7 +187,6 @@ public class Summarizer {
 		});
 		
 		return found;
-		
 	}
 
 
@@ -199,10 +215,20 @@ public class Summarizer {
 				.build();
 		return tcr.render(b);
 	}
-	
-	
 
 	private String getTitleFromName(String name) {
 		return WordUtils.capitalizeFully(name.replace("-", " "));
+	}
+
+
+
+	@Override
+	public String getFields() {
+		return GRAPH_QL;
+	}
+
+	@Override
+	public int getPageSize() {
+		return 3;
 	}
 }
