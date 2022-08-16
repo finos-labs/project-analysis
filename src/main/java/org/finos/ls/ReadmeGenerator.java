@@ -13,6 +13,7 @@ import org.finos.ls.queries.Activity;
 import org.finos.ls.queries.BasicQueries;
 import org.finos.ls.queries.Summarizer;
 import org.finos.ls.queries.Summarizer.SummaryLevel;
+import org.finos.scan.github.client.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +25,8 @@ public class ReadmeGenerator {
 
 	@Autowired
 	QueryService qs;
+	
+	Map<String, Repository> cache = new HashMap<>();
 	
 	public String generate(int cutoff) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
 		Map<String, Activity> activeProjects = qs.getAllFinosRepositories(BasicQueries.COMBINED_ACTIVITY);
@@ -38,11 +41,41 @@ public class ReadmeGenerator {
 		out.append("# FINOS Projects\n\n");
 		out.append("Here are some of FINOS' most popular projects:\n\n");
 		
-		System.out.println(names.toString().replace(",", "\n"));
-		
 		Map<String, List<String>> bucketedProjects = bucketNames(names);
 		
-		return report(bucketedProjects);
+		out.append(tableOfContents(bucketedProjects));
+		
+		out.append(report(bucketedProjects));
+		
+		out.append("\n\n_For the full list see the repositories below_\n");
+		return out.toString();
+	}
+
+	private String tableOfContents(Map<String, List<String>> bucketedProjects) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		StringBuilder out = new StringBuilder();
+		for (Map.Entry<String, List<String>> entry : bucketedProjects.entrySet()) {
+			String key = entry.getKey();
+			List<String> val = entry.getValue();
+			if (val.size() == 1) {
+				String string = getTitleForRepo(val.get(0));
+				out.append(" - ["+string+"](#"+string.replace(" ", "-")+")\n");
+			} else {
+				out.append(" - "+key+"\n");
+				for (String string : val) {
+					String title = getTitleForRepo(string);
+					out.append("   - ["+title+"](#"+title.replace(" ", "-")+")\n");
+				}
+			}
+		}
+		
+		return out.toString();
+	}
+
+	private String getTitleForRepo(String name) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		Summarizer s = new Summarizer(SummaryLevel.SUBITEM);
+		Repository repo = getRepoDetails(s, name);
+		String title = s.getTitleFromNameOrH1(name, repo);
+		return title;
 	}
 
 	private String report(Map<String, List<String>> bucketedProjects) {
@@ -67,10 +100,20 @@ public class ReadmeGenerator {
 
 	private void appendUsing(Summarizer l, String name, StringBuilder out) {
 		try {
-			out.append(qs.getSingleRepository(l, "finos", name));
+			out.append(l.convert(getRepoDetails(l, name)));
 		} catch (Exception e) {
 			throw new RuntimeException("Couldn't process: ", e);
 		}
+	}
+
+	private Repository getRepoDetails(Summarizer l, String name)
+			throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		
+		if (!cache.containsKey(name)) {
+			cache.put(name, qs.getRawRepository(l, "finos", name));
+		}
+			
+		return cache.get(name);
 	}
 
 	private Map<String, List<String>> bucketNames(List<String> names) {
@@ -88,7 +131,7 @@ public class ReadmeGenerator {
 				"clabot-config",
 				"finos-parent-pom");
 		names = bucketItems(out, names, "Symphony", "messageml-utils");
-		names = bucketItems(out, names, "SIGs", "dei_sig", "innersource", "curref-data", "open-source-readiness", "compliant-financial-infrastructure");
+		names = bucketItems(out, names, "SIGs", "dei-sig", "innersource", "curref-data", "open-source-readiness", "compliant-financial-infrastructure");
 		singleBucketTheRest(out, names);
 		return out;
 	}

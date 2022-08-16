@@ -156,7 +156,7 @@ public class BasicQueries {
 
 	private static Activity combinedActivity(Repository r) {
 		if (r.getIsArchived()) {
-			return new Activity(0, Collections.EMPTY_LIST);
+			return new Activity(0, Collections.emptyList());
 		} else {
 			Activity a = BasicQueries.MAIN_RECENT_COMMITTERS.convert(r);
 			Activity b = BasicQueries.MAIN_RECENT_COMMITTERS.convert(r);

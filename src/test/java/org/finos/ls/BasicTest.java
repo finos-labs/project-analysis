@@ -106,6 +106,12 @@ public class BasicTest {
 	}
 	
 	@Test
+	public void testBadReadme() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		String out = qs.getSingleRepository(new Summarizer(SummaryLevel.SUBITEM), "finos", "symphonyelectron");
+		System.out.println(out);
+	}
+	
+	@Test
 	public void testWholeReadme() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
 		String out = readme.generate(25);
 		System.out.println(out);

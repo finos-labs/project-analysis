@@ -2,8 +2,9 @@ package org.finos.ls.queries;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.apache.commons.text.WordUtils;
@@ -11,13 +12,13 @@ import org.commonmark.ext.autolink.AutolinkExtension;
 import org.commonmark.ext.front.matter.YamlFrontMatterExtension;
 import org.commonmark.ext.gfm.tables.TablesExtension;
 import org.commonmark.node.AbstractVisitor;
-import org.commonmark.node.Block;
-import org.commonmark.node.BulletList;
+import org.commonmark.node.Document;
+import org.commonmark.node.Heading;
 import org.commonmark.node.Node;
-import org.commonmark.node.Paragraph;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.text.TextContentRenderer;
 import org.finos.ls.markdown.MarkdownExcerptExtension;
+import org.finos.ls.markdown.MarkdownHeadingExtension;
 import org.finos.scan.github.client.Blob;
 import org.finos.scan.github.client.Repository;
 import org.finos.scan.github.client.RepositoryTopicEdge;
@@ -81,9 +82,9 @@ public class Summarizer implements QueryType<String> {
 	@Override
 	public String convert(Repository repo) {
 		String name = repo.getName();
-		List<Block> firstParagraphs = extractParagraphsIfPresent(repo);
+		Document d = extractMarkdown(repo);
 	
-		String slugBasedTitle = getTitleFromName(name);
+		String slugBasedTitle = getTitleFromNameOrH1(name, repo);
 		String description = repo.getDescription();
 		List<String> tags = getTopicTags(repo.getRepositoryTopics().getEdges());
 		String homepage = repo.getHomepageUrl();
@@ -95,9 +96,10 @@ public class Summarizer implements QueryType<String> {
 		
 		addTitle(out, slugBasedTitle, repo);
 		writeSummaryCounts(out, repo);
-		addTopicTags(out, tags, repo);
+		out.append("\n\n");
 		addDescription(out, description);
-		addQuotedParagraphs(out, firstParagraphs, githubUrl);
+		addTopicTags(out, tags, repo);
+		addQuotedMarkdown(out, d, githubUrl);
 		addLinks(homepage, githubUrl, out);
 		
 		return out.toString();
@@ -105,14 +107,13 @@ public class Summarizer implements QueryType<String> {
 
 
 
-	private List<Block> extractParagraphsIfPresent(Repository repo) {
+	private Document extractMarkdown(Repository repo) {
 		if (repo.getObject() instanceof Blob) {
 			String text = ((Blob)repo.getObject()).getText();
-			Node n = p.parse(text);
-			List<Block> firstParagraphs = getParagraphs(n, 4);
-			return firstParagraphs;
+			Document n = (Document) p.parse(text);
+			return n;
 		} else {
-			return Collections.emptyList();
+			return null;
 		}
 	}
 
@@ -124,17 +125,11 @@ public class Summarizer implements QueryType<String> {
 		addLink(out, homepage, homepage);
 	}
 
-	private void addQuotedParagraphs(StringBuilder out, List<Block> paras, String githubUrl) {
-		if (paras.size() > 0) {
-			out.append("#### From the README\n\n");
-			for (int i = 0; i < paras.size(); i++) {
-				out.append("> " + convertBackToMarkdown(paras.get(i)).replace("\n", ""));
-				if (i<paras.size()-1) {
-					out.append("\n>\n");
-				} else {
-					out.append("... _[read more]("+githubUrl+")_\n\n");
-				}
-			}
+	private void addQuotedMarkdown(StringBuilder out, Document d, String githubUrl) {
+		if (d != null) {
+			out.append("#### From the README:\n\n");
+			String md = convertToQuotedMarkdown(d);
+			out.append(md);
 		}
 	}
 
@@ -145,14 +140,13 @@ public class Summarizer implements QueryType<String> {
 	}
 
 	private void writeSummaryCounts(StringBuilder out, Repository repo) {
-		out.append(createBadge("⭐", "GitHub Stars", ""+repo.getStargazerCount(), "yellow", repo, "/stargazers"));
-		out.append(createBadge("⚡", "GitHub Forks", ""+repo.getForkCount(), "yellow", repo, ""));
-		out.append(createBadge("👁️", "GitHub Watchers", ""+ repo.getWatchers().getTotalCount(), "yellow", repo, "/watchers"));
-		out.append(createBadge("🔎", "GitHub Issues", ""+ repo.getIssues().getTotalCount(), "yellow",repo, "/issues"));
+		out.append(createBadge("⭐%20Stars", "GitHub Stars", ""+repo.getStargazerCount(), "grey", repo, "/stargazers"));
+		out.append(createBadge("⚡%20Forks", "GitHub Forks", ""+repo.getForkCount(), "grey", repo, ""));
+		out.append(createBadge("🔎%20Issues", "GitHub Issues", ""+ repo.getIssues().getTotalCount(), "grey",repo, "/issues"));
 	}
 
 	private String createBadge(String title, String altText, String value, String colour, Repository r, String url){
-		String badgeImage = "!["+altText+"](https://img.shields.io/badge/"+title+"-"+value+"-"+colour+"?labelColor=fafbfc) ";
+		String badgeImage = "!["+altText+"](https://img.shields.io/badge/"+title+"-"+value+"-"+colour+"?labelColor=eaebec&style=for-the-badge) ";
 		return "["+badgeImage+"]("+r.getUrl()+url+")";
 	}
 
@@ -171,38 +165,40 @@ public class Summarizer implements QueryType<String> {
 
 	private void addTitle(StringBuilder out, String slugBasedTitle, Repository r) {
 		out.append(getTitleLeve()+slugBasedTitle);
-		out.append("\n\n");
+		out.append("\n");
 	} 
 
 
 	private String getTitleLeve() {
 		return sl == SummaryLevel.MAIN ? "## " : "### ";
 	}
-
-
-
-	private List<Block> getParagraphs(Node n, int i) {
-		List<Block> found = new ArrayList<>();
+	
+	private Heading getMostImportantHeading(Node n) {
+		Map<Integer, List<Heading>> found = new HashMap<Integer, List<Heading>>();
 		n.accept(new AbstractVisitor() {
-
 			@Override
-			public void visit(Paragraph paragraph) {
-				if (found.size() < i) {
-					found.add(paragraph);
-				}
+			public void visit(Heading h1) {
+				List<Heading> atLevel = found.getOrDefault(h1.getLevel(), new ArrayList<Heading>());
+				found.put(h1.getLevel(), atLevel);
+				atLevel.add(h1);
 			}
-
-			@Override
-			public void visit(BulletList bulletList) {
-				if (found.size() < i) {
-					found.add(bulletList);
-				}
-			}
-			
-			
 		});
 		
-		return found;
+		int highestLevel = found.keySet().stream()
+			.sorted()
+			.findFirst()
+			.orElse(-1);
+		
+		if (highestLevel == -1) {
+			return null;
+		}
+		
+		List<Heading> topMostLevel = found.get(highestLevel);
+		if (topMostLevel.size() == 1) {
+			return topMostLevel.get(0);
+		}
+		
+		return null;
 	}
 
 
@@ -224,16 +220,35 @@ public class Summarizer implements QueryType<String> {
 		return "![Topic: "+n.getName()+"](https://img.shields.io/badge/"+spacedTopic+"-fafbfc)";
 	}
 
-	private String convertBackToMarkdown(Block b) {
+	private String convertToQuotedMarkdown(Document d) {
 		TextContentRenderer tcr = TextContentRenderer.builder()
 				.extensions(Arrays.asList(MarkdownExcerptExtension.create()))
 				
 				.build();
-		return tcr.render(b);
+		return tcr.render(d);
 	}
 
-	private String getTitleFromName(String name) {
-		return WordUtils.capitalize(name.replace("-", " "));
+	public String getTitleFromNameOrH1(String name, Repository repo) {
+		Heading h = null;
+		String out = null;
+		if (repo.getObject() instanceof Blob) {
+			String text = ((Blob)repo.getObject()).getText();
+			Node n = p.parse(text);
+			h = getMostImportantHeading(n);	
+		}
+		
+		if (h != null) {
+			out = TextContentRenderer.builder()
+					.extensions(Arrays.asList(MarkdownHeadingExtension.create()))
+					.build().render(h).replace("\n", "");
+		}
+		
+		if (StringUtils.hasText(out)) {
+			return out.trim();
+		} else {
+			// figure something out from the slug
+			return WordUtils.capitalize(name.replace("-", " "));
+		}
 	}
 
 

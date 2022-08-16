@@ -6,13 +6,13 @@ import org.commonmark.renderer.text.TextContentNodeRendererFactory;
 import org.commonmark.renderer.text.TextContentRenderer;
 import org.commonmark.renderer.text.TextContentRenderer.Builder;
 
-public class MarkdownExcerptExtension implements TextContentRenderer.TextContentRendererExtension {
+public class MarkdownHeadingExtension implements TextContentRenderer.TextContentRendererExtension {
 
-	private MarkdownExcerptExtension() {
+	private MarkdownHeadingExtension() {
 	}
 	
-	public static MarkdownExcerptExtension create() {
-		return new MarkdownExcerptExtension();
+	public static MarkdownHeadingExtension create() {
+		return new MarkdownHeadingExtension();
 	}
 	
 	@Override
@@ -20,7 +20,7 @@ public class MarkdownExcerptExtension implements TextContentRenderer.TextContent
 		rendererBuilder.nodeRendererFactory(new TextContentNodeRendererFactory() {
             @Override
             public NodeRenderer create(TextContentNodeRendererContext context) {
-                return new MarkdownExcerptRenderer(context, 3);
+                return new MarkdownHeadingRenderer(context);
             }
         });
 	}

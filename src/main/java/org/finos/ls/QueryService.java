@@ -23,9 +23,15 @@ public class QueryService {
 	QueryExecutor qe;
 	
 	public <X> X getSingleRepository(QueryType<X> qt, String owner, String name) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Repository r = qe.repository(qt.getFields(), true, name, owner);
+		Repository r = getRawRepository(qt, owner, name);
 		return qt.convert(r);
 	}
+	
+	public <X> Repository getRawRepository(QueryType<X> qt, String owner, String name) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		Repository r = qe.repository(qt.getFields(), true, name, owner);
+		return r;
+	}
+	
 	
 	public <X> Map<String, X> getAllFinosRepositories(QueryType<X> qt) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
 		List<Repository> out = new ArrayList<Repository>();
