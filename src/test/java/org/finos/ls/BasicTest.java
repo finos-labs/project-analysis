@@ -1,5 +1,7 @@
 package org.finos.ls;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Map;
 
 import org.finos.ls.queries.Activity;
@@ -25,6 +27,9 @@ public class BasicTest {
 	
 	@Autowired
 	CommitService cs;
+	
+	@Autowired
+	PullRequestService pr;
 	
 	@Autowired
 	ReadmeGenerator readme;
@@ -121,8 +126,15 @@ public class BasicTest {
 	}
 	
 	@Test
-	public void testCommit() {
-		
+	public void testCommit() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		cs.commitFile("somefile.md", "This is some contents".getBytes(), "generated-branch", "landscape-scanning", "robmoffat");
+	}
+	
+	@Test
+	public void testPR() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		pr.createOrUpdatePullRequest("landscape-scanning", "robmoffat", "main", "generated-branch",Arrays.asList("@robmoffat"), "Get this merged");
+		pr.createOrUpdatePullRequest("landscape-scanning", "robmoffat", "main", "generated-branch",Arrays.asList("@robmoffat"), "new comment");
+		pr.closePullRequest("landscape-scanning", "robmoffat", "main", "generated-branch");
 	}
 	
 }

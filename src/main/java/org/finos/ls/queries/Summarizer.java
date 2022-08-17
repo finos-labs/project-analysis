@@ -164,12 +164,12 @@ public class Summarizer implements QueryType<String> {
 
 
 	private void addTitle(StringBuilder out, String slugBasedTitle, Repository r) {
-		out.append(getTitleLeve()+slugBasedTitle);
+		out.append(getTitleLevel()+slugBasedTitle);
 		out.append("\n");
 	} 
 
 
-	private String getTitleLeve() {
+	private String getTitleLevel() {
 		return sl == SummaryLevel.MAIN ? "## " : "### ";
 	}
 	
