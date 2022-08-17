@@ -1,8 +1,11 @@
 package org.finos.ls;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -39,7 +42,8 @@ public class ReadmeGenerator {
 		
 		StringBuilder out = new StringBuilder();
 		out.append("# FINOS Projects\n\n");
-		out.append("Here are some of FINOS' most popular projects:\n\n");
+		String date = new SimpleDateFormat("dd MMM yyyy").format(new Date());
+		out.append("Here are some of FINOS' most active projects (as of "+date+"):\n\n");
 		
 		Map<String, List<String>> bucketedProjects = bucketNames(names);
 		
@@ -53,29 +57,36 @@ public class ReadmeGenerator {
 
 	private String tableOfContents(Map<String, List<String>> bucketedProjects) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
 		StringBuilder out = new StringBuilder();
-		for (Map.Entry<String, List<String>> entry : bucketedProjects.entrySet()) {
-			String key = entry.getKey();
-			List<String> val = entry.getValue();
-			if (val.size() == 1) {
-				String string = getTitleForRepo(val.get(0));
-				out.append(" - ["+string+"](#"+string.replace(" ", "-")+")\n");
-			} else {
-				out.append(" - "+key+"\n");
-				for (String string : val) {
-					String title = getTitleForRepo(string);
-					out.append("   - ["+title+"](#"+title.replace(" ", "-")+")\n");
+		bucketedProjects.entrySet().stream()
+			.sorted((a, b) -> a.getKey().compareToIgnoreCase(b.getKey()))
+			.forEach(entry -> {
+				String key = entry.getKey();
+				List<String> val = entry.getValue();
+				Collections.sort(val);
+				if (val.size() == 1) {
+					String string = getTitleForRepo(val.get(0));
+					out.append(" - ["+string+"](#"+string.replace(" ", "-")+")\n");
+				} else {
+					out.append(" - "+key+"\n");
+					for (String string : val) {
+						String title = getTitleForRepo(string);
+						out.append("   - ["+title+"](#"+title.replace(" ", "-")+")\n");
+					}
 				}
-			}
-		}
+		});
 		
 		return out.toString();
 	}
 
-	private String getTitleForRepo(String name) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Summarizer s = new Summarizer(SummaryLevel.SUBITEM);
-		Repository repo = getRepoDetails(s, name);
-		String title = s.getTitleFromNameOrH1(name, repo);
-		return title;
+	private String getTitleForRepo(String name) {
+		try {
+			Summarizer s = new Summarizer(SummaryLevel.SUBITEM);
+			Repository repo = getRepoDetails(s, name);
+			String title = s.getTitleFromNameOrH1(name, repo);
+			return title;
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
 	}
 
 	private String report(Map<String, List<String>> bucketedProjects) {
@@ -83,7 +94,7 @@ public class ReadmeGenerator {
 		Summarizer secondLevel = new Summarizer(SummaryLevel.SUBITEM);
 		StringBuilder out = new StringBuilder();
 		bucketedProjects.entrySet().stream()
-			.sorted((a, b) -> a.getKey().compareTo(b.getKey()))
+			.sorted((a, b) -> a.getKey().compareToIgnoreCase(b.getKey()))
 			.forEach(e -> {
 				List<String> items = e.getValue();
 				Collections.sort(items);

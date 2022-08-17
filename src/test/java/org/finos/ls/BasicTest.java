@@ -24,6 +24,9 @@ public class BasicTest {
 	QueryService qs;
 	
 	@Autowired
+	CommitService cs;
+	
+	@Autowired
 	ReadmeGenerator readme;
 
 	@Test
@@ -117,5 +120,9 @@ public class BasicTest {
 		System.out.println(out);
 	}
 	
+	@Test
+	public void testCommit() {
+		
+	}
 	
 }
