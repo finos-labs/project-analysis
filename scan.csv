@@ -1,0 +1,130 @@
+Organisation,Repo Name,Finos Status,License,Issue Activity,Main Issue Participants,Commit Activity,Main Committers,OpenSSF Status,Github Archived,Github Private,Branch Rules
+finos,FDC3-Archive,NONE,,0,,0,,NONE,true,false,0
+finos,electron-spellchecker,NONE,NOASSERTION,0,,0,,NONE,false,false,0
+finos,metadata,NO_README,,0,,0,,NO_README,false,true,-1
+finos,glue,INCUBATING,Apache-2.0,0,,0,,NONE,false,false,0
+finos,legend,INCUBATING,Apache-2.0,33,@akphi @beekemarie @sidsahai @claudiubelu @AditModi @agitana @pierrelamy @epsstan @nsuttontrp @rafaelbey @MauricioUyaguari @donraab @AJ73 @neema3000,23,@akphi @beekemarie @epsstan @MauricioUyaguari @aziemchawdhary-gs @davidsunglee @karljohannisson @hardikmaheshwari @elopezcastro @agitana @mcleo-d,NONE,false,false,1
+finos,legend-juju-engine-server-operator,INCUBATING,Apache-2.0,0,,12,@claudiubelu @smiclea @maoo @pedroleaoc,NONE,false,false,0
+finos,structured-products,INCUBATING,Apache-2.0,0,,2,@finos-admin,NONE,true,false,0
+finos,finos-deg,INCUBATING,,0,,0,,NONE,true,false,0
+finos,secref-data,INCUBATING,Apache-2.0,1,@agitana,0,,NONE,false,false,0
+finos,fdc3-desktop-agent,NONE,Apache-2.0,0,,6,@dependabot[bot] @rikoe @nkolba,NONE,false,false,0
+finos,open-developer-platform,INCUBATING,Apache-2.0,3,@maoo,1,@maoo,NONE,false,false,0
+finos,datahub,NONE,Apache-2.0,0,,0,,NONE,false,false,1
+finos,tracdap,INCUBATING,Apache-2.0,2,@martin-traverse,44,@martin-traverse @TheJuanAndOnly99 @dependabot[bot],NONE,false,false,0
+finos,legend-integration-morphir,INCUBATING,Apache-2.0,0,,0,,NONE,false,false,0
+finos,cfi-terraform-template-child-module,NO_README,Apache-2.0,0,,0,,NO_README,false,true,-1
+finos,kdb-studio,NO_README,Apache-2.0,10,@gyorokpeter @adavies42 @robmoffat @mcleo-d,41,@gyorokpeter @punx120 @dzmipt @robmoffat @alvin-c-shih,NO_README,false,false,0
+finos,morphir-service,NONE,Apache-2.0,0,,0,,NONE,false,false,0
+finos,open-source-readiness,NONE,Apache-2.0,98,@vmbrasseur @psmulovics @mcleo-d @troups @jgavronsky @bingenito @pholleran @robmoffat @gravax @Julia-Ritter @gahuja @agitana @gyehuda @mindthegab @alstratigos @matthyx @djohnston89 @cdeliaRH @niamhoparker @TimoHotti @mvdietz @grizzwolf @chamindra @abacaphiliac @TheJuanAndOnly99,58,@mcleo-d @vmbrasseur @psmulovics,NONE,false,false,0
+finos,spring-bot,INCUBATING,Apache-2.0,64,@robmoffat @nmwael @mend-for-github-com @abhishek-sinha-db @pankajpkhandelwal-db,100,@robmoffat @pankajpkhandelwal-db @abhishek-sinha-db @vaibhav-db @mikerossiter,DONE,false,false,1
+finos,compliant-financial-infrastructure,INCUBATING,Apache-2.0,201,@mcleo-d @AdrianHammond @eddie-knight @thinkl33t @RichardWagener365 @abdullahgarcia @maoo @jamilmina1 @gibsocol @lpaulxvi @erictice @gwpatterson @kriscanonical @tcraigjohnson @pedroleaoc @Steppenwulf @robmoffat @jgavronsky @devops-adeel @jimmyraywv @johanalimka @anthonygtech @jicowan @ml4 @peter-thomas-db @TheJuanAndOnly99 @shuchitach @davidwatkins73 @peterrhysthomas @balbirthomas @Julia-Ritter @ronna,92,@AdrianHammond @eddie-knight @JuozasA @thinkl33t @jhrozek @abdullahgarcia @shuchitach @TheJuanAndOnly99,NONE,false,false,0
+finos,fdx-pmc,NONE,,0,,0,,NONE,true,false,0
+finos,waltz-juju-bundle,INCUBATING,Apache-2.0,10,@maoo @facundobatista @pedroleaoc @claudiubelu @jnsgruk,24,@claudiubelu @pedroleaoc @smiclea @maoo @TheJuanAndOnly99 @mcleo-d,NONE,false,false,0
+finos,open-reg-tech-us-lcr,NO_README,Apache-2.0,0,,0,,NO_README,false,true,-1
+finos,symphony-bdk-java,INCUBATING,Apache-2.0,8,@mend-for-github-com @ystxn @symphony-elias @symphony-mariacristina @symphony-youri,38,@symphony-youri @symphony-elias @symphony-soufiane @yinan-symphony @symphony-mariacristina @ystxn,NONE,false,false,1
+finos,kdb,NONE,Apache-2.0,46,@mcleo-d @jshinonome @alvin-c-shih @gyorokpeter @adavies42 @drgdavies @jonnypress @pholleran @maoo @dzmipt @Julia-Ritter @iodwyer,4,@gyorokpeter @alvin-c-shih,NONE,false,false,1
+finos,financial-objects,NONE,Apache-2.0,49,@Julia-Ritter @troups @jgavronsky @nigelcobb @ffionwiggins @Vijayesh-Chandel @iansloyan @JBZ-Fragmos @kenneth-hei @aamend @dschwartznyc @dcj99 @rodney-b-kagarise @MichaelJordanP @dave-wathen @ashleymercer @robmoffat @jstclair2019 @AlexIvanHoward @AJ73 @cm-howard,1,@maoo,NONE,false,false,0
+finos,community,NONE,,127,@mindthegab @mcleo-d @maoo @TheJuanAndOnly99 @lolabeis @ColinEberhardt @robmoffat @mtronci @JamieSlome @stephengoldbaum @jonfreedman @vjuge @Julia-Ritter @pholleran @noelmcloughlin @DavidVtFreshAIR @alstratigos @nkolba @jnicholls82 @bingenito @sarahsinclair @opoupeney @SimonCockx @benjaminmourad @axtsnee @mgratacos @vquinon @troups @AttilaMihaly @AdrianMileyJPM @rikoe @kriswest @JanKoehnlein @peterrhysthomas @mrkmarron @dehrich123 @dhuebner @martin-traverse @toshaellison @kprado1969 @pedroleaoc @mistryvinay,100,@mindthegab @maoo @mcleo-d @TheJuanAndOnly99 @toshaellison @jgavronsky,NONE,false,false,0
+finos,sea-quick-start,INCUBATING,Apache-2.0,0,,0,,NONE,false,false,0
+finos,legend-juju-sdlc-server-operator,INCUBATING,Apache-2.0,0,,11,@claudiubelu @smiclea @maoo,NONE,false,false,0
+finos,software-project-blueprint,NONE,Apache-2.0,1,@maoo,7,@finos-admin @TheJuanAndOnly99 @maoo,NONE,false,false,0
+finos,messageml-utils,ACTIVE,Apache-2.0,0,,3,@symphony-mariacristina @symphony-elias,NONE,false,false,1
+finos,legend-juju-db-operator,INCUBATING,Apache-2.0,0,,12,@claudiubelu @smiclea @maoo @pedroleaoc,NONE,false,false,0
+finos,finos-landscape,NONE,Apache-2.0,8,@maoo @AndreyKozlov1984 @robmoffat @jordinl83,100,@CNCF-Bot @TheJuanAndOnly99 @finos-admin @maoo,DONE,false,false,0
+finos,reference-foss-policy,NONE,CC-BY-4.0,0,,0,,NONE,false,false,0
+finos,tooling,NO_README,,0,,0,,NO_README,false,true,-1
+finos,morphir-jvm,NONE,Apache-2.0,0,,17,@AttilaMihaly @klahnunya @osborneMs @nwokafor-choongsaeng,NONE,false,false,1
+finos,SymphonyMediaBridge,INCUBATING,Apache-2.0,3,@olofkallander,74,@olofkallander @RicardoMDomingues @reddvl1980 @pcarlsym @marcusspangenberg @danielgronberg,NONE,false,false,0
+finos,morphir-elm,NONE,Apache-2.0,28,@jonathanmaw @AttilaMihaly,88,@AttilaMihaly @osborneMs @klahnunya @stephengoldbaum @bekand @jonathanmaw @nwokafor-choongsaeng @KindsonTheGenius @fjabeen02,NONE,false,false,0
+finos,DEI-SIG,NONE,Apache-2.0,59,@mcleo-d @alstratigos @cm-howard @melindajoy @beekemarie @TheJuanAndOnly99 @catherinezhai @jevonbeck @winmorgan @mindthegab @grizzwolf @hannimator @esthersun2003 @troups @niamhoparker,24,@alstratigos @TheJuanAndOnly99 @mcleo-d @finos-admin,NONE,false,false,0
+finos,OSLC-handbook,NONE,NOASSERTION,0,,0,,NONE,false,false,0
+finos,exodus,INCUBATING,Apache-2.0,0,,0,,NONE,false,false,0
+finos,plexus-interop,INCUBATING,Apache-2.0,0,,67,@iskender-kamchibekov-db,NONE,false,false,0
+finos,OpenMAMA,ACTIVE,LGPL-2.1,15,@fquinner,57,@fquinner @bill-torpey,NONE,false,false,0
+finos,symphony-wdk,INCUBATING,Apache-2.0,6,@symphony-youri @mend-for-github-com @symphony-elias @ystxn,25,@symphony-youri @symphony-soufiane @ystxn @yinan-symphony,NONE,false,false,1
+finos,waltz,ACTIVE,Apache-2.0,60,@davidwatkins73 @maoo @mcleo-d @JWoodland-Scott @claudiubelu @robmoffat @pedroleaoc @kriscanonical @balbirthomas,82,@davidwatkins73 @JWoodland-Scott @db-waltz,NONE,false,false,0
+finos,cla-bot,ACTIVE,Apache-2.0,0,,1,@maoo,NONE,false,false,0
+finos,voice-metadata-standard,INCUBATING,Apache-2.0,0,,0,,NONE,false,false,1
+finos,technical-steering-committee,NO_README,NOASSERTION,0,,0,,NO_README,false,true,-1
+finos,perspective,NONE,Apache-2.0,59,@texodus @timkpaine @nickpholden @kryaksy @brianblakely @spff @th3darkang3l @thedanchez @fariszaher @jkusa @dhirschfeld @HariChandana2000 @rkhapre @moiney @markqiu @gersongoulart @cythrawll,99,@texodus @timkpaine @brianblakely @DevAndyLee,NONE,false,false,1
+finos,legend-testing,NO_README,Apache-2.0,0,,0,,NO_README,false,true,-1
+finos,legend-sdlc,INCUBATING,Apache-2.0,2,@edmondo1984 @akphi,99,@pierredebelen @kevin-m-knight-gs @finos-admin @akphi @hardikmaheshwari @ivan-kyosev-gs @rafaelbey @nandhini-sarathy @epsstan @MauricioUyaguari @Edward-VCP,NONE,false,false,1
+finos,CatchIT,INCUBATING,Apache-2.0,0,,0,,NONE,false,false,0
+finos,greenkey-asrtoolkit,ACTIVE,Apache-2.0,0,,0,,NONE,false,false,0
+finos,open-compliance-cdmc,NONE,Apache-2.0,14,@eddie-knight @mcleo-d @RichardWagener365 @erictice,0,,NONE,false,false,1
+finos,contrib-toolbox,NONE,Apache-2.0,0,,0,,NONE,false,false,0
+finos,symphony-bdk-python,INCUBATING,Apache-2.0,8,@ystxn @yohamta @dky @symphony-soufiane @symphony-youri,52,@symphony-soufiane @symphony-elias @symphony-youri @symphony-mariacristina @ystxn @yinan-symphony @dependabot[bot],NONE,false,false,1
+finos,legend-config,NO_README,,0,,0,,NO_README,false,true,-1
+finos,morphir-scala,INCUBATING,Apache-2.0,0,,100,@DamianReeves @scala-steward @renovate-bot @TheJuanAndOnly99 @dmitrykozinets @michelchan,NONE,false,false,0
+finos,certificate-toolbox,NONE,Apache-2.0,0,,0,,NONE,true,false,0
+finos,legend-shared,INCUBATING,Apache-2.0,0,,26,@ivan-kyosev-gs @finos-admin @akphi @pierredebelen @kevin-m-knight-gs @epsstan,NONE,false,false,1
+finos,legend-integration-helm,NONE,Apache-2.0,1,@maoo,2,@finos-admin @maoo,NONE,true,false,0
+finos,ssf-enforcer-rules,NONE,Apache-2.0,0,,0,,NONE,true,false,0
+finos,devops-mutualization,NONE,Apache-2.0,36,@mcleo-d @ashukla13 @dtrace4linux @robmoffat @RichardWagener365 @peter-thomas-db @brunon @robbkeayes @bdellegrazie @reiterative @guspaul,5,@robbkeayes @ashukla13 @mcleo-d,NONE,false,false,0
+finos,terraform-aws-eks,INCUBATING,Apache-2.0,0,,9,@eddie-knight @thinkl33t @benjamb,NONE,false,false,0
+finos,buyside-sellside-interop,NO_README,Apache-2.0,0,,0,,NO_README,false,true,-1
+finos,branding,NONE,,0,,9,@mindthegab @grizzwolf @niamhoparker @winmorgan,NONE,false,false,0
+finos,openfin-python-adapter,NONE,Apache-2.0,0,,0,,NONE,false,false,0
+finos,waltz-integration-juju,INCUBATING,Apache-2.0,0,,42,@pedroleaoc @claudiubelu @smiclea @maoo @TheJuanAndOnly99 @jnsgruk,NONE,false,false,0
+finos,osr-checklists,NONE,NOASSERTION,0,,0,,NONE,false,false,0
+finos,InnerSource,NONE,Apache-2.0,52,@amaltson @chamindra @clcoffey @claredillon @mcleo-d @godds @eminty69 @vmbrasseur @gyehuda @maoo @Julia-Ritter @troups,21,@godds @amaltson @mcleo-d @eminty69,NONE,false,false,0
+finos,legend-studio,INCUBATING,Apache-2.0,30,@akphi @MauricioUyaguari @YannanGao-gs @hardikmaheshwari @gayathrir11 @beekemarie,100,@github-actions[bot] @akphi @YannanGao-gs @MauricioUyaguari @gayathrir11 @dependabot[bot] @xannem @davidsunglee @ijeh-i @aziemchawdhary-gs @hardikmaheshwari,NONE,false,false,1
+finos,air-accelerator,NONE,Apache-2.0,0,,0,,NONE,false,false,0
+finos,morphir-rust,NO_README,Apache-2.0,0,,0,,NO_README,false,true,-1
+finos,morphir-editor,NO_README,Apache-2.0,0,,0,,NO_README,false,true,-1
+finos,standards-project-blueprint,NO_README,NOASSERTION,0,,22,@TheJuanAndOnly99 @maoo @mindthegab,NO_README,false,false,0
+finos,open-regtech-sig,NONE,Apache-2.0,48,@mcleo-d @jgavronsky @RichardWagener365 @robmoffat @stephengoldbaum @mtronci @anelledavis @sndpkumar14 @AttilaMihaly @sarahsinclair @DavidVtFreshAIR @lolabeis @troups @jnicholls82 @NicDecouttere @agitana @alexandrelealbess @B-Wardrop @SolarDesalination @gyehuda @Taniem100 @MichaelJordanP @grizzwolf @n8mauer @dehrich123 @PunitShah1988 @noelmcloughlin @claudardele,0,,NONE,false,false,0
+finos,legend-depot,INCUBATING,Apache-2.0,1,@akphi,40,@akphi @elopezcastro @finos-admin @ivan-kyosev-gs @aziemchawdhary-gs @pierredebelen @jinanisha @MauricioUyaguari,NONE,false,false,1
+finos,finos-parent-pom,INCUBATING,Apache-2.0,1,@maoo,9,@maoo @ivan-kyosev-gs @davidwatkins73,NONE,false,false,0
+finos,metadata-tool,NONE,Apache-2.0,0,,0,,NONE,false,false,0
+finos,wiki.finos.org,NONE,,0,,0,,NONE,true,false,0
+finos,greenkey-discovery-sdk,ACTIVE,Apache-2.0,0,,0,,NONE,false,false,1
+finos,ScreenSnippet2,INCUBATING,Apache-2.0,0,,0,,NONE,false,false,0
+finos,JCurl,ACTIVE,Apache-2.0,0,,6,@ldrozdz @dependabot[bot],NONE,false,false,0
+finos,legend-community-delta,INCUBATING,Apache-2.0,0,,69,@aamend @finos-admin @dependabot[bot],NONE,false,false,0
+finos,secure-electron-adapter,INCUBATING,Apache-2.0,0,,0,,NONE,false,false,0
+finos,curref-data,NO_README,,20,@ElaineFraser @Vijayesh-Chandel @jgavronsky @Jourik-de-Lange @TheJuanAndOnly99 @Julia-Ritter,8,@ElaineFraser @Vijayesh-Chandel @TheJuanAndOnly99,NO_README,false,false,0
+finos,legend-pure,INCUBATING,Apache-2.0,4,@saraswat @aziemchawdhary-gs @rajamony,99,@pierredebelen @kevin-m-knight-gs @finos-admin @rafaelbey @hardikmaheshwari @akphi @vikask-gs @gs-ssh16 @mrudula-gs @aziemchawdhary-gs @abhishoya-gs @PrateekGarg-gs @AFine-gs @emilia-sokol-gs @gayathrir11 @davidsunglee @davidharte-gs @dependabot[bot] @msbggs @gs-gunjan @saisha95 @ivan-kyosev-gs @Yasirmod17,NONE,false,false,1
+finos,FDC3,NONE,Apache-2.0,320,@kriswest @robmoffat @Julia-Ritter @mistryvinay @openfin-johans @nemery-flextrade @nkolba @pauldyson @timjenkel @hampshan @rikoe @tpina @greyseer256 @WatsonCIQ @milindchidrawar @Qiana-Citi @mindthegab @pierreneu @sarahstone-cosaic @jgavronsky @dominicgifford @ggeorgievx @Yannick-Symphony @dimiter-georgiev @thorsent @bingenito @mattjamieson @Vivek-NatWest @chedzoir @MichaelMCoates @symphony-jean-michael @lspiro-Tick42 @Aaron-Haines @jonfreedman @RandallDang-Citi @nicopreto @manishbhutani @ColinEberhardt @sebbenmbarek @mcleo-d @Soul-Master @bertrand-s @alexandrelealbess @pgn-vole @katherinelachelin,100,@kriswest @robmoffat @dependabot[bot] @TheJuanAndOnly99 @rikoe @ggeorgievx @Julia-Ritter @CrlsMrls,NONE,false,false,0
+finos,qPython,NO_README,Apache-2.0,0,,5,@alvin-c-shih,NO_README,false,false,0
+finos,legend-juju-studio-operator,INCUBATING,Apache-2.0,0,,12,@claudiubelu @smiclea @maoo,NONE,false,false,0
+finos,legend-persistence,NO_README,Apache-2.0,0,,0,,NO_README,false,true,-1
+finos,hubspot-sync,NO_README,,0,,0,,NO_README,false,true,-1
+finos,clabot-test-prod,NONE,,0,,0,,NONE,false,false,0
+finos,openfin-react-hooks,NONE,Apache-2.0,1,@Lonli-Lokli,0,,NONE,false,false,1
+finos,legend-juju-gitlab-integrator,INCUBATING,Apache-2.0,1,@claudiubelu,8,@smiclea @claudiubelu @maoo,NONE,false,false,0
+finos,TimeBase-CE,NO_README,Apache-2.0,1,@alex-karpovich,29,@alex-karpovich @Romkisel @maoo,NO_README,false,false,0
+finos,asciidoctor-stylesheet-factory,NO_README,NOASSERTION,0,,0,,NO_README,true,false,0
+finos,finos-marketing,NO_README,,0,,0,,NO_README,false,true,-1
+finos,greenkey-intercom-sdk,NONE,Apache-2.0,0,,0,,NONE,true,false,0
+finos,SwiftSearch,NONE,Apache-2.0,0,,2,@keerthi16 @KiranNiranjan,NONE,false,false,2
+finos,FDC3-conformance-framework,INCUBATING,Apache-2.0,2,@ColinEberhardt @osouthwell-scottlogic,36,@ColinEberhardt @nicopreto @AidanZealley @robmoffat @dbutt-scottlogic @jhowlett-scottlogic @cbowie1,NONE,false,false,1
+finos,generator-symphony,INCUBATING,Apache-2.0,2,@mobilesns @seimei-san,13,@ystxn @dependabot[bot] @symphony-soufiane @yinan-symphony @symphony-mariacristina,NONE,false,false,1
+finos,electron-fdc3,INCUBATING,Apache-2.0,26,@nkolba @Ngoakor12 @mend-for-github-com @ColinEberhardt,100,@nkolba @TheJuanAndOnly99 @robmoffat @ColinEberhardt @kriswest,NONE,false,false,0
+finos,bot-github-chatops,NONE,Apache-2.0,0,,1,@maoo,NONE,true,false,0
+finos,symphony-object,NONE,Apache-2.0,0,,0,,NONE,true,false,0
+finos,legend-integration-juju,NONE,Apache-2.0,11,@claudiubelu,81,@pedroleaoc @maoo @claudiubelu @smiclea @balbirthomas,NONE,false,false,0
+finos,legend-engine,INCUBATING,Apache-2.0,17,@stale @davidsunglee @aziemchawdhary-gs @hardikmaheshwari @gbrgr @rajamony @MauricioUyaguari,100,@pierredebelen @finos-admin @hardikmaheshwari @epsstan @gs-ssh16 @akphi @davidsunglee @rafaelbey @MauricioUyaguari @vikask-gs @gs-gunjan @ivan-kyosev-gs @YannanGao-gs @AFine-gs @aziemchawdhary-gs @abhishoya-gs @PrateekGarg-gs @vj2050gs @elopezcastro,NONE,false,false,1
+finos,morphir-bosque,NONE,Apache-2.0,0,,0,,NONE,false,false,0
+finos,openmama.github.io,NONE,,0,,8,@fquinner,NONE,false,false,0
+finos,git-proxy,INCUBATING,Apache-2.0,12,@grovesy @matthyx @TheJuanAndOnly99 @ddimtirov @mcleo-d,22,@grovesy @dependabot[bot],NONE,false,false,0
+finos,morphir-dotnet,NONE,Apache-2.0,0,,0,,NONE,false,false,0
+finos,OpenMAMA-testdata,NONE,,0,,0,,NONE,false,false,0
+finos,ScreenShareIndicatorFrame,INCUBATING,Apache-2.0,0,,4,@KiranNiranjan,NONE,false,false,0
+finos,datahelix,INCUBATING,Apache-2.0,2,@mend-for-github-com,0,,NONE,false,false,1
+finos,morphir,INCUBATING,Apache-2.0,3,@bingenito @mcleo-d,22,@AttilaMihaly @stephengoldbaum @dependabot[bot] @mcleo-d,NONE,false,false,1
+finos,plexus-interop-desktop-api,INCUBATING,Apache-2.0,0,,0,,NONE,false,false,0
+finos,finos.github.io,NONE,Apache-2.0,0,,1,@finos-admin,NONE,true,false,0
+finos,symphony-api-spec,ACTIVE,Apache-2.0,0,,19,@symphony-mariacristina @symphony-youri @symphony-soufiane @symphonyjenkinsauto @symphony-elias @jspasquali @othmaneSymphonyDev,NONE,false,false,1
+finos,digital-rights-management,INCUBATING,Apache-2.0,0,,0,,NONE,true,false,0
+finos,morphir-examples,NONE,Apache-2.0,0,,2,@AttilaMihaly,NONE,false,false,0
+finos,legend-juju-libs,INCUBATING,Apache-2.0,0,,3,@claudiubelu @pedroleaoc,NONE,false,false,0
+finos,ScreenSnippet,NONE,Apache-2.0,0,,0,,NONE,false,false,0
+finos,reports-job,NONE,Apache-2.0,0,,0,,NONE,true,false,0
+finos,clabot-config,NONE,,0,,25,@finos-admin @maoo @kevinhinterlong,NONE,false,false,0
+finos,SymphonyElectron,INCUBATING,Apache-2.0,0,,64,@sbenmoussati @KiranNiranjan @rwestberg @axeleriksson147,NONE,false,false,1
+finos,symphony-wdk-gallery,INCUBATING,Apache-2.0,0,,3,@ystxn,NONE,false,false,0
+finos,clabot-test,NONE,Apache-2.0,0,,0,,NONE,false,false,0
+finos,finos-member-success,NO_README,,0,,0,,NO_README,false,true,-1
+finos,legend-juju-bundle,INCUBATING,Apache-2.0,0,,50,@pedroleaoc @claudiubelu @smiclea @jnsgruk @maoo @balbirthomas,NONE,false,false,0
