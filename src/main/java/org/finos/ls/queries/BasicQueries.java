@@ -30,29 +30,32 @@ public class BasicQueries {
 			"id\n"
 			+ "owner", 50, r -> r);
 	
+	public static final String BRANCH_RULES_QUERY = 
+			  "    branchProtectionRules(first: 10) {\n"
+			+ "      edges {\n"
+			+ "        node {\n"
+			+ "          id\n"
+			+ "          requiredApprovingReviewCount\n"
+			+ "          requiredStatusCheckContexts\n"
+			+ "          requiresApprovingReviews\n"
+			+ "          requiresCodeOwnerReviews\n"
+			+ "          requiresCommitSignatures\n"
+			+ "          requiresConversationResolution\n"
+			+ "          requiresLinearHistory\n"
+			+ "          requiresStatusChecks\n"
+			+ "          requiresStrictStatusChecks\n"
+			+ "          restrictsPushes\n"
+			+ "          restrictsReviewDismissals\n"
+			+ "          pattern\n"
+			+ "        }\n"
+			+ "      }\n"
+			+ "    }\n";
+	
 	public static QueryType<Integer> BRANCH_RULES = new AbstractQueryType<>("   defaultBranchRef {\n"
-		+ "      id\n"
-		+ "      name\n"
-		+ "    }\n"
-		+ "    branchProtectionRules(first: 10) {\n"
-		+ "      edges {\n"
-		+ "        node {\n"
-		+ "          id\n"
-		+ "          requiredApprovingReviewCount\n"
-		+ "          requiredStatusCheckContexts\n"
-		+ "          requiresApprovingReviews\n"
-		+ "          requiresCodeOwnerReviews\n"
-		+ "          requiresCommitSignatures\n"
-		+ "          requiresConversationResolution\n"
-		+ "          requiresLinearHistory\n"
-		+ "          requiresStatusChecks\n"
-		+ "          requiresStrictStatusChecks\n"
-		+ "          restrictsPushes\n"
-		+ "          restrictsReviewDismissals\n"
-		+ "          pattern\n"
-		+ "        }\n"
-		+ "      }\n"
-		+ "    }", 20, r -> convertToRuleSummary(r));
+			+ "      id\n"
+			+ "      name\n"
+			+ "    }\n"
+			+ BRANCH_RULES_QUERY, 20, r -> convertToRuleSummary(r));
 	
 	
 	public static QueryType<FinosStatus> FINOS_STATUS = new AbstractQueryType<FinosStatus>(	
@@ -109,6 +112,8 @@ public class BasicQueries {
 			return (l == null) ? "" : l.getSpdxId();});
 	
 	public static QueryType<Activity> MAIN_RECENT_COMMITTERS = new AbstractQueryType<>("defaultBranchRef {\n"
+		+ "      id\n"
+		+ "      name\n"
 		+ "      target {\n"
 		+ "        ... on Commit {\n"
 		+ "          history(first: 100) {\n"
@@ -150,7 +155,7 @@ public class BasicQueries {
 	
 	public static final QueryType<Activity> COMBINED_ACTIVITY = new AbstractQueryType<>(
 		BasicQueries.MAIN_RECENT_COMMITTERS.getFields() + 
-		BasicQueries.ISSUE_ACTIVITY.getFields()+"  isArchived",
+		BasicQueries.ISSUE_ACTIVITY.getFields()+"  isArchived isPrivate",
 		5,
 		r -> combinedActivity(r));
 

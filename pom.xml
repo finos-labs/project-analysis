@@ -173,7 +173,7 @@
 			<groupId>io.netty</groupId>
 			<artifactId>netty-all</artifactId>
 		</dependency>
-		
+
 		<!-- parsing the readme's -->
 		<dependency>
 			<groupId>org.commonmark</groupId>
@@ -195,7 +195,11 @@
 			<artifactId>commonmark-ext-yaml-front-matter</artifactId>
 			<version>0.19.0</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-csv</artifactId>
+			<version>1.4</version>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>

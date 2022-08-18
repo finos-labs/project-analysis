@@ -7,7 +7,6 @@ import org.finos.scan.github.client.Commit;
 import org.finos.scan.github.client.CommitMessage;
 import org.finos.scan.github.client.CommittableBranch;
 import org.finos.scan.github.client.CreateCommitOnBranchInput;
-import org.finos.scan.github.client.CreateCommitOnBranchPayload;
 import org.finos.scan.github.client.FileAddition;
 import org.finos.scan.github.client.FileChanges;
 import org.finos.scan.github.client.Repository;
@@ -30,7 +29,7 @@ public class CommitService {
 	
 	
 	public void commitFile(String file, byte[] contents, String branch, String repoName, String owner) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Repository repo = qe.repository("{ref(qualifiedName: \"refs/heads/main\") {\n"
+		Repository repo = qe.repository("{ref(qualifiedName: \"refs/heads/"+branch+"\") {\n"
 				+ "      target {\n"
 				+ "        id\n"
 				+ "        ... on Commit {\n"
@@ -68,11 +67,6 @@ public class CommitService {
 			.build();
 		
 
-		CreateCommitOnBranchPayload result = me.createCommitOnBranch("", input);
-		
-		// ok, now create a PR
-		
-		
-			
+		me.createCommitOnBranch("", input);
 	}
 }

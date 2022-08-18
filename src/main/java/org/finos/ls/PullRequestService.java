@@ -60,7 +60,7 @@ public class PullRequestService {
 			throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
 		Repository repo = qe.repository("{\n"
 				+ "    id "
-				+ "    pullRequests(baseRefName: \""+baseRef+"\", headRefName: \""+headRef+"\", first: 10) {\n"
+				+ "    pullRequests(baseRefName: \""+baseRef+"\", headRefName: \""+headRef+"\", first: 10, states: OPEN) {\n"
 				+ "      edges {\n"
 				+ "        node {\n"
 				+ "          id\n"

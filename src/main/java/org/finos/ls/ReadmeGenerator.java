@@ -1,6 +1,5 @@
 package org.finos.ls;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,8 +13,8 @@ import java.util.stream.Collectors;
 
 import org.finos.ls.queries.Activity;
 import org.finos.ls.queries.BasicQueries;
-import org.finos.ls.queries.Summarizer;
-import org.finos.ls.queries.Summarizer.SummaryLevel;
+import org.finos.ls.queries.MarkdownSummarizer;
+import org.finos.ls.queries.MarkdownSummarizer.SummaryLevel;
 import org.finos.scan.github.client.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,8 +30,8 @@ public class ReadmeGenerator {
 	
 	Map<String, Repository> cache = new HashMap<>();
 	
-	public String generate(int cutoff) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Map<String, Activity> activeProjects = qs.getAllFinosRepositories(BasicQueries.COMBINED_ACTIVITY);
+	public String generate(int cutoff, String org) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		Map<String, Activity> activeProjects = qs.getAllRepositories(BasicQueries.COMBINED_ACTIVITY, org);
 		
 		List<String> names = activeProjects.entrySet().stream()
 			.filter(r -> r.getValue().getScore() > cutoff)
@@ -80,7 +79,7 @@ public class ReadmeGenerator {
 
 	private String getTitleForRepo(String name) {
 		try {
-			Summarizer s = new Summarizer(SummaryLevel.SUBITEM);
+			MarkdownSummarizer s = new MarkdownSummarizer(SummaryLevel.SUBITEM);
 			Repository repo = getRepoDetails(s, name);
 			String title = s.getTitleFromNameOrH1(name, repo);
 			return title;
@@ -90,8 +89,8 @@ public class ReadmeGenerator {
 	}
 
 	private String report(Map<String, List<String>> bucketedProjects) {
-		Summarizer topLevel = new Summarizer(SummaryLevel.MAIN);
-		Summarizer secondLevel = new Summarizer(SummaryLevel.SUBITEM);
+		MarkdownSummarizer topLevel = new MarkdownSummarizer(SummaryLevel.MAIN);
+		MarkdownSummarizer secondLevel = new MarkdownSummarizer(SummaryLevel.SUBITEM);
 		StringBuilder out = new StringBuilder();
 		bucketedProjects.entrySet().stream()
 			.sorted((a, b) -> a.getKey().compareToIgnoreCase(b.getKey()))
@@ -109,7 +108,7 @@ public class ReadmeGenerator {
 		return out.toString();
 	}
 
-	private void appendUsing(Summarizer l, String name, StringBuilder out) {
+	private void appendUsing(MarkdownSummarizer l, String name, StringBuilder out) {
 		try {
 			out.append(l.convert(getRepoDetails(l, name)));
 		} catch (Exception e) {
@@ -117,7 +116,7 @@ public class ReadmeGenerator {
 		}
 	}
 
-	private Repository getRepoDetails(Summarizer l, String name)
+	private Repository getRepoDetails(MarkdownSummarizer l, String name)
 			throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
 		
 		if (!cache.containsKey(name)) {

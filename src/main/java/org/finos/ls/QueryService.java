@@ -33,7 +33,7 @@ public class QueryService {
 	}
 	
 	
-	public <X> Map<String, X> getAllFinosRepositories(QueryType<X> qt) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+	public <X> Map<String, X> getAllRepositories(QueryType<X> qt, String org) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
 		List<Repository> out = new ArrayList<Repository>();
 		int total = 1000;
 		String cursor = null;
@@ -58,7 +58,7 @@ public class QueryService {
 					+ "  }\n"
 					+ "}";
 			
-			Organization o = qe.organization(query, "finos", "cursor", cursor);
+			Organization o = qe.organization(query, org, "cursor", cursor);
 			
 			RepositoryConnection conn = o.getRepositories();
 			out.addAll(

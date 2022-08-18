@@ -2,12 +2,9 @@ package org.finos.ls;
 
 import javax.ws.rs.core.HttpHeaders;
 
-import org.finos.scan.github.client.spring_autoconfiguration.SpringConfiguration;
-import org.finos.scan.github.client.util.QueryExecutor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 import org.springframework.web.reactive.function.client.ClientRequest;
 import org.springframework.web.reactive.function.client.ExchangeFilterFunction;
 import org.springframework.web.reactive.function.client.WebClient;

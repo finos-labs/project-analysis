@@ -31,14 +31,14 @@ import org.springframework.util.StringUtils;
  * @author rob@kite9.com
  *
  */
-public class Summarizer implements QueryType<String> {
+public class MarkdownSummarizer implements QueryType<String> {
 	
 	public enum SummaryLevel { MAIN, SUBITEM };
 
 	final Parser p;	
 	final SummaryLevel sl;
 	
-	public Summarizer(SummaryLevel sl) {
+	public MarkdownSummarizer(SummaryLevel sl) {
 		this.sl = sl;
 		// configures the parser for github-flavoured markdown
 		this.p = Parser.builder().extensions(Arrays.asList(
