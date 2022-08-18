@@ -1,4 +1,4 @@
-Organisation,Repo Name,Finos Status,License,Issue Activity,Commit Activity,OpenSSF Status,Github Archived,Github Private,Main Issue Participants,Main Committers
+Organisation,Repo Name,Finos Status,License,Issue Activity,Commit Activity,OpenSSF Status,Github Archived,Branch Rules/Private,Main Issue Participants,Main Committers
 finos,FDC3-Archive,NONE,,0,0,NONE,true,0,,
 finos,electron-spellchecker,NONE,NOASSERTION,0,0,NONE,false,0,,
 finos,metadata,NO_README,,0,0,NO_README,false,PRIVATE,,
