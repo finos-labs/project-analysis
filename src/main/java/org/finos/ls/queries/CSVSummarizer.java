@@ -14,13 +14,12 @@ public class CSVSummarizer implements QueryType<List<String>> {
 		"Finos Status",
 		"License",
 		"Issue Activity",
-		"Main Issue Participants",
 		"Commit Activity",
-		"Main Committers",
 		"OpenSSF Status",
 		"Github Archived",
-		"Github Private",
-		"Branch Rules"
+		"Branch Rules/Private",
+		"Main Issue Participants",
+		"Main Committers",
 	};
 
 	@Override
@@ -47,13 +46,12 @@ public class CSVSummarizer implements QueryType<List<String>> {
 		out.add(finosStatus.name());
 		out.add(license);
 		out.add(""+ issue.getScore());
-		out.add(convertToSpaceList(issue));
 		out.add("" + commit.getScore());
-		out.add(convertToSpaceList(commit));
 		out.add(BasicQueries.OPENSSF_STATUS.convert(r).name());
 		out.add(""+r.getIsArchived());
-		out.add(""+r.getIsPrivate());
-		out.add(""+BasicQueries.BRANCH_RULES.convert(r));
+		out.add(r.getIsPrivate() ? "PRIVATE" : ""+BasicQueries.BRANCH_RULES.convert(r));
+		out.add(convertToSpaceList(issue));
+		out.add(convertToSpaceList(commit));
 
 		return out;
 	}
