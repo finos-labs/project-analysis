@@ -59,7 +59,7 @@ _FINOS Community, Project and SIG wide collaboration space_
 > 
 > 
 > All the documentation in this website (anything in the /docs and /website folder) are deployed for easy consumption at community.finos.org. You should be able to find most relevant and up to date information below (and your issues/pull requests are more than welcome to help us maintain this), but you can always email help@finos.org if you still can't find what you're looking for.
-> 
+>... [_read more_](https://github.com/finos/community)
 > 
 #### Further Details
  - [https://github.com/finos/community](https://github.com/finos/community)
@@ -86,6 +86,7 @@ _Open implementation of the FDC3 standard using Electron and an integrated App D
 >    - channel linking
 >    - directory search
 > - A local file-based app directory implementation
+>... [_read more_](https://github.com/finos/electron-fdc3)
 > 
 #### Further Details
  - [https://github.com/finos/electron-fdc3](https://github.com/finos/electron-fdc3)
@@ -110,7 +111,7 @@ _An open standard for the financial desktop._
 > FDC3 aims to provide an open standard for interoperability on the financial desktop. This includes standardized verbs to invoke actions between applications (called "intents"), a standardized data format, an OpenAPI app directory standard, and standardized API operations.
 > 
 > The standard currently consists of four specifications:
-> 
+>... [_read more_](https://github.com/finos/FDC3)
 > 
 #### Further Details
  - [https://github.com/finos/FDC3](https://github.com/finos/FDC3)
@@ -130,7 +131,7 @@ _A framework for testing whether desktop containers implement the FDC3 standard_
 > A framework for testing whether desktop containers implement the [FDC3 standard](https://fdc3.finos.org/).
 > 
 > This project currently targets FDC3 v1.2.
-> 
+>... [_read more_](https://github.com/finos/FDC3-conformance-framework)
 > 
 #### Further Details
  - [https://github.com/finos/FDC3-conformance-framework](https://github.com/finos/FDC3-conformance-framework)
@@ -148,7 +149,7 @@ _An info-security/compliance-friendly way for highly regulated industries to be 
 > Many corporations, especially financial services have strict policies towards opensource contributions. On rare occasions when a developer can contribute to open source, information security and compliance officers often demand complex shadow processes are set up to ensure code reviews, scans and other processes are adhered to before a push to the public repo takes place.
 > 
 > We wish to keep the process for the developer as simple and familiar as possible, therefore we feel the solution is a proxy that sits between the developer and the public repository.
-> 
+>... [_read more_](https://github.com/finos/git-proxy)
 > 
 #### Further Details
  - [https://github.com/finos/git-proxy](https://github.com/finos/git-proxy)
@@ -181,6 +182,7 @@ _The Legend project_
 > - Self-service capabilities for retrieving and working with data, while respecting the entitlements of underlying sources
 > - Built-in mechanisms for data governance with formal constructs to define ownership, validations, and provenance
 > - Code translation to JSON Schema, Protobuf and AVRO, which enables easy interoperability across models and systems
+>... [_read more_](https://github.com/finos/legend)
 > 
 #### Further Details
  - [https://github.com/finos/legend](https://github.com/finos/legend)
@@ -210,7 +212,7 @@ _Combining best of open data standards with open source technologies_
 > interpreted as a series of Spark SQL operations, helping analysts create [Delta Lake](https://delta.io/) tables that
 > not only guarantees schema definition but also complies with expectations, derivations and constraints defined by
 > business analysts.
-> 
+>... [_read more_](https://github.com/finos/legend-community-delta)
 > 
 #### Further Details
  - [https://github.com/finos/legend-community-delta](https://github.com/finos/legend-community-delta)
@@ -235,6 +237,7 @@ _Legend Depot component_
 > 
 > - Depot Server: provides read only metadata query REST API
 > - Depot Store Server: manages internal metadata cache and sources it from maven style repository where models artifacts have been published.
+>... [_read more_](https://github.com/finos/legend-depot)
 > 
 #### Further Details
  - [https://github.com/finos/legend-depot](https://github.com/finos/legend-depot)
@@ -259,6 +262,7 @@ _Legend Engine module_
 > - A Pure parser and compiler.
 > - An execution engine, generating and/or executing execution plans when provided with a Pure function, a Mapping and a Runtime.
 > - Access point for model transformers written using the Pure language (soon to come).
+>... [_read more_](https://github.com/finos/legend-engine)
 > 
 #### Further Details
  - [https://github.com/finos/legend-engine](https://github.com/finos/legend-engine)
@@ -283,7 +287,7 @@ _Legend Pure module_
 > 
 > 
 > This application uses Maven 3.6+ and JDK 11. Simply run `"mvn install"` to compile.
-> 
+>... [_read more_](https://github.com/finos/legend-pure)
 > 
 #### Further Details
  - [https://github.com/finos/legend-pure](https://github.com/finos/legend-pure)
@@ -309,7 +313,7 @@ _Legend SDLC module_
 > and folders.
 > 
 > To this end, the Legend SDLC enables:
-> 
+>... [_read more_](https://github.com/finos/legend-sdlc)
 > 
 #### Further Details
  - [https://github.com/finos/legend-sdlc](https://github.com/finos/legend-sdlc)
@@ -333,7 +337,7 @@ _Legend Shared module_
 > Shared code used across Legend applications for universal server-side functionality - hosting static files, performing authentication etc.
 > 
 > The important tenets for this project are:
-> 
+>... [_read more_](https://github.com/finos/legend-shared)
 > 
 #### Further Details
  - [https://github.com/finos/legend-shared](https://github.com/finos/legend-shared)
@@ -362,7 +366,7 @@ _Legend Studio_
 > 
 > 
 > Studio relies [Legend SDLC](https://github.com/finos/legend-sdlc) server and [Legend Engine](https://github.com/finos/legend-engine) server. To quickly set these backend servers up, use our development Docker compose. If you need to debug and develop the backend, [setup with Maven](https://legend.finos.org/docs/getting-started/installation-guide#maven-install) instead.
-> 
+>... [_read more_](https://github.com/finos/legend-studio)
 > 
 #### Further Details
  - [https://github.com/finos/legend-studio](https://github.com/finos/legend-studio)
@@ -385,7 +389,7 @@ _A universal language for business and technology_
 > Morphir is a library of tools that works to capture business logic as data.
 > 
 > For the first time, business logic can be shared, stored, translated and visualised, all with the reliability of standardisation ensured in the Morphir framework.
-> 
+>... [_read more_](https://github.com/finos/morphir)
 > 
 #### Further Details
  - [https://github.com/finos/morphir](https://github.com/finos/morphir)
@@ -407,7 +411,7 @@ _Tools to work with the Morphir IR in Elm._
 > it to other languages like [Scala](https://www.scala-lang.org/) or visualize it to your business users using Elm.
 > 
 > We publish it both as an NPM and an Elm package:
-> 
+>... [_read more_](https://github.com/finos/morphir-elm)
 > 
 #### Further Details
  - [https://github.com/finos/morphir-elm](https://github.com/finos/morphir-elm)
@@ -429,7 +433,7 @@ _Tools to work with the Morphir IR on/using the JVM._
 > 
 > If you are using IntelliJ IDEA to edit morphir-jvm's Scala code, you can create the
 > IntelliJ project files via:
-> 
+>... [_read more_](https://github.com/finos/morphir-jvm)
 > 
 #### Further Details
  - [https://github.com/finos/morphir-jvm](https://github.com/finos/morphir-jvm)
@@ -447,7 +451,7 @@ _Tools to work with the Morphir IR on/using the JVM._
 > Morphir is a library of tools that works to capture business logic as data.
 > 
 > For the first time, business logic can be shared, stored, translated and visualised, all with the reliability of standardisation ensured in the Morphir framework.
-> 
+>... [_read more_](https://github.com/finos/morphir-scala)
 > 
 #### Further Details
  - [https://github.com/finos/morphir-scala](https://github.com/finos/morphir-scala)
@@ -466,7 +470,7 @@ _OpenMAMA is an open source project that provides a high performance middleware 
 > OpenMAMDA is a framework that adds Market Data functionality, such as order book handling on top of MAMA.
 > 
 > The [project's homepage](https://openmama.finos.org) provides a good overview of the project.
-> 
+>... [_read more_](https://github.com/finos/OpenMAMA)
 > 
 #### Further Details
  - [https://github.com/finos/OpenMAMA](https://github.com/finos/OpenMAMA)
@@ -492,7 +496,7 @@ _A data visualization and analytics component, especially well-suited for large 
 > datasets. Use it to create user-configurable reports, dashboards, notebooks and
 > applications, then deploy stand-alone in the browser, or in concert with Python
 > and/or [Jupyterlab](https://jupyterlab.readthedocs.io/en/stable/).
-> 
+>... [_read more_](https://github.com/finos/perspective)
 > 
 #### Further Details
  - [https://github.com/finos/perspective](https://github.com/finos/perspective)
@@ -518,7 +522,7 @@ _Plexus Interop open source project hosted by the Fintech Open Source Foundation
 > of the application landscape is not yet tied to containers and is architecturally agnostic of container implementation.
 > Separating interoperability from the container provides notable advantages: different containers can be leveraged in
 > the same workflow, and launched applications residing outside of containers can participate in interop activities.
-> 
+>... [_read more_](https://github.com/finos/plexus-interop)
 > 
 #### Further Details
  - [https://github.com/finos/plexus-interop](https://github.com/finos/plexus-interop)
@@ -542,7 +546,7 @@ _Compliant Financial Infrastructure accelerates the development, deployment and 
 > 
 > 
 > Our community collaboratively creates accelerators to aid in the adoption of specific infrastructure based on input and experience from professionals across a variety of roles and firms.
-> 
+>... [_read more_](https://github.com/finos/compliant-financial-infrastructure)
 > 
 #### Further Details
  - [https://github.com/finos/compliant-financial-infrastructure](https://github.com/finos/compliant-financial-infrastructure)
@@ -558,7 +562,7 @@ _Compliant Financial Infrastructure accelerates the development, deployment and 
 > Chair : Melinda Aulie (Cosaic) - @melindajoy ([melinda@cosaic.io](mailto:melinda@cosaic.io) )
 > 
 > Co-chair : Beeke Nelke - (Goldman Sachs) @beekemarie ([Beeke-Marie.Nelke@gs.com](mailto:Beeke-Marie.Nelke@gs.com))
-> 
+>... [_read more_](https://github.com/finos/DEI-SIG)
 > 
 #### Further Details
  - [https://github.com/finos/DEI-SIG](https://github.com/finos/DEI-SIG)
@@ -586,7 +590,7 @@ _The FINOS InnerSource SIG is a community of people implementing, or interested 
 > practices, patterns and anti-patterns and potentially related code (e.g. for
 > InnerSource tooling) in a secure environment, with the aim of contributing
 > proven methods to FINOS and the wider InnerSource Commons community.
-> 
+>... [_read more_](https://github.com/finos/InnerSource)
 > 
 #### Further Details
  - [https://github.com/finos/InnerSource](https://github.com/finos/InnerSource)
@@ -605,7 +609,7 @@ _Accelerate financial services firms’ journeys toward open source readiness, b
 > Welcome to the FINOS Open Source Readiness Special Interest Group (OSR). The purpose of the OSR SIG is to accelerate financial services firms’ journeys toward open source readiness. The concrete goals of the SIG are to 1) advance the readiness of participants’ firms and 2) to provide guidance for the broader industry in the form of white papers, presentations, and blog posts.
 > 
 > Read more at [https://osr.finos.org](https://osr.finos.org)
-> 
+>... [_read more_](https://github.com/finos/open-source-readiness)
 > 
 #### Further Details
  - [https://github.com/finos/open-source-readiness](https://github.com/finos/open-source-readiness)
@@ -630,7 +634,7 @@ _Spring Boot + Java Integration for Symphony/Teams Chat Platform Bots and Apps_
 > 
 > 
 > Spring Bot is a set of [Spring Boot](https://spring.io/projects/spring-boot) starters designed for building chat bots in Java & Kotlin.
-> 
+>... [_read more_](https://github.com/finos/spring-bot)
 > 
 #### Further Details
  - [https://github.com/finos/spring-bot](https://github.com/finos/spring-bot)
@@ -656,6 +660,7 @@ _Yeoman based generator for Symphony Bots and Applications_
 > - [Java bot](https://github.com/finos/symphony-bdk-java)
 > - [Python bot](https://github.com/finos/symphony-bdk-python)
 > - [WDK (Symphony Workflow Developer Kit)](https://github.com/finos/symphony-wdk)
+>... [_read more_](https://github.com/finos/generator-symphony)
 > 
 #### Further Details
  - [https://github.com/finos/generator-symphony](https://github.com/finos/generator-symphony)
@@ -677,7 +682,7 @@ _Swagger definitions for Symphony LLC public REST API_
 > 
 > The master branch of the repository can be used. Endpoints or attributes added in recent versions
 > will be documented accordingly.
-> 
+>... [_read more_](https://github.com/finos/symphony-api-spec)
 > 
 #### Further Details
  - [https://github.com/finos/symphony-api-spec](https://github.com/finos/symphony-api-spec)
@@ -703,7 +708,7 @@ _The Symphony BDK (Bot Developer Kit) for Java helps you to create production-gr
 > 
 > The [reference documentation](http://symphony-bdk-java.finos.org) includes detailed installation instructions as well as a comprehensive
 > [getting started](http://symphony-bdk-java.finos.org/getting-started.html) guide.
-> 
+>... [_read more_](https://github.com/finos/symphony-bdk-java)
 > 
 #### Further Details
  - [https://github.com/finos/symphony-bdk-java](https://github.com/finos/symphony-bdk-java)
@@ -731,7 +736,7 @@ _Symphony Python Bot Development Kit (BDK)_
 > installation instructions as well as a comprehensive
 > [getting started](https://symphony-bdk-python.finos.org/markdown/getting_started.html)
 > guide.
-> 
+>... [_read more_](https://github.com/finos/symphony-bdk-python)
 > 
 #### Further Details
  - [https://github.com/finos/symphony-bdk-python](https://github.com/finos/symphony-bdk-python)
@@ -753,7 +758,7 @@ _Symphony Workflow Developer Kit (WDK), a bot capable of running workflows_
 > 
 > The Symphony Workflow Developer Kit (WDK) is a way to build bots on the Symphony platform with minimal coding efforts. A
 > standard execution engine, provided as a bot is running workflows written in a declarative manner.
-> 
+>... [_read more_](https://github.com/finos/symphony-wdk)
 > 
 #### Further Details
  - [https://github.com/finos/symphony-wdk](https://github.com/finos/symphony-wdk)
@@ -783,6 +788,7 @@ _A desktop client for the Symphony Collaboration Platform built using Electron_
 > 4. Commit your changes (`"git commit -am 'Add some fooBar'"`)
 > 5. Push to the branch (`"git push origin feature/fooBar"`)
 > 6. Create a new Pull Request
+>... [_read more_](https://github.com/finos/SymphonyElectron)
 > 
 #### Further Details
  - [https://github.com/finos/SymphonyElectron](https://github.com/finos/SymphonyElectron)
@@ -802,7 +808,7 @@ _The Symphony Media Bridge (SMB) is a media server application that handles audi
 > The Symphony Media Bridge (SMB) is a media server application that handles audio, video and screen sharing media streams in an RTC conference system.
 > 
 > In RTC conferencing systems, when more than two participants are in a conference there is usually a media server component involved. Each participant in the conference will send their audio and video streams to the media server. The media server is then responsible for sending the correct media streams to each receiving participant.
-> 
+>... [_read more_](https://github.com/finos/SymphonyMediaBridge)
 > 
 #### Further Details
  - [https://github.com/finos/SymphonyMediaBridge](https://github.com/finos/SymphonyMediaBridge)
@@ -835,7 +841,7 @@ _A next-generation data and analytics platform for use in highly regulated envir
 > access to modern, open source tools that can execute at scale, while technology
 > integrations and operational concerns are cleanly separated and consolidated
 > across use cases.
-> 
+>... [_read more_](https://github.com/finos/tracdap)
 > 
 #### Further Details
  - [https://github.com/finos/tracdap](https://github.com/finos/tracdap)
@@ -857,6 +863,7 @@ _Enterprise Information Service_
 > - [Blog](https://waltz.finos.org/blog/)
 > - [FINOS Announcement](https://www.finos.org/blog/introduction-to-finos-waltz)
 >    - now part of the [Linux Foundation](https://www.linuxfoundation.org/blog/2020/04/finos-joins-the-linux-foundation/)
+>... [_read more_](https://github.com/finos/waltz)
 > 
 #### Further Details
  - [https://github.com/finos/waltz](https://github.com/finos/waltz)
