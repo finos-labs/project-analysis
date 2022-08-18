@@ -26,10 +26,12 @@ public class MarkdownExcerptRenderer extends CoreTextContentNodeRenderer {
 	
 	private int amountToWrite;
 	private State state = State.NEW;
+	private final String url;
 	
-	public MarkdownExcerptRenderer(TextContentNodeRendererContext context, int amountToWrite) {
+	public MarkdownExcerptRenderer(TextContentNodeRendererContext context, int amountToWrite, String url) {
 		super(context);
 		this.amountToWrite = amountToWrite;
+		this.url = url;
 	}
 
 	@Override
@@ -60,6 +62,7 @@ public class MarkdownExcerptRenderer extends CoreTextContentNodeRenderer {
 				amountToWrite--;
 				state = State.WRITTEN_LINE;
 				super.visit(bulletList);
+				checkAddReadMore();
 			}
 		} else {
 			super.visit(bulletList);
@@ -79,6 +82,7 @@ public class MarkdownExcerptRenderer extends CoreTextContentNodeRenderer {
 				amountToWrite--;
 				state = State.WRITTEN_LINE;
 				super.visit(orderedList);
+				checkAddReadMore();
 			}
 		} else {
 			super.visit(orderedList);
@@ -93,11 +97,19 @@ public class MarkdownExcerptRenderer extends CoreTextContentNodeRenderer {
 				addQuote();
 				state = State.WRITTEN_LINE;
 				super.visit(paragraph);
-				addQuote();
-				context.getWriter().write("\n");
+				checkAddReadMore();
 			}
 		} else {
 			super.visit(paragraph);
+		}
+	}
+
+	private void checkAddReadMore() {
+		if (amountToWrite > 0) {
+			addQuote();
+			context.getWriter().write("\n");
+		} else {
+			context.getWriter().write(">... [_read more_]("+url+")");
 		}
 	}
 

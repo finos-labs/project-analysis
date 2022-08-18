@@ -128,7 +128,7 @@ public class MarkdownSummarizer implements QueryType<String> {
 	private void addQuotedMarkdown(StringBuilder out, Document d, String githubUrl) {
 		if (d != null) {
 			out.append("#### From the README:\n\n");
-			String md = convertToQuotedMarkdown(d);
+			String md = convertToQuotedMarkdown(d, githubUrl);
 			out.append(md);
 		}
 	}
@@ -220,9 +220,9 @@ public class MarkdownSummarizer implements QueryType<String> {
 		return "![Topic: "+n.getName()+"](https://img.shields.io/badge/"+spacedTopic+"-fafbfc)";
 	}
 
-	private String convertToQuotedMarkdown(Document d) {
+	private String convertToQuotedMarkdown(Document d, String githubUrl) {
 		TextContentRenderer tcr = TextContentRenderer.builder()
-				.extensions(Arrays.asList(MarkdownExcerptExtension.create()))
+				.extensions(Arrays.asList(MarkdownExcerptExtension.create(githubUrl)))
 				
 				.build();
 		return tcr.render(d);
