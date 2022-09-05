@@ -1,16 +1,17 @@
 package org.finos.ls.queries;
 
-import java.util.function.Function;
+import java.util.function.BiFunction;
 
 import org.finos.scan.github.client.Repository;
+import org.finos.scan.github.client.util.QueryExecutor;
 
 public class AbstractQueryType<X> implements QueryType<X> {
 	
 	private final String fields;
 	private final int pageSize;
-	private final Function<Repository, X> converter;
+	private final BiFunction<Repository, QueryExecutor, X> converter;
 	
-	public AbstractQueryType(String fields, int pageSize, Function<Repository, X> converter) {
+	public AbstractQueryType(String fields, int pageSize, BiFunction<Repository, QueryExecutor, X> converter) {
 		super();
 		this.fields = fields;
 		this.pageSize = pageSize;
@@ -23,8 +24,8 @@ public class AbstractQueryType<X> implements QueryType<X> {
 	}
 
 	@Override
-	public X convert(Repository r) {
-		return converter.apply(r);
+	public X convert(Repository r, QueryExecutor qe) {
+		return converter.apply(r, qe);
 	}
 
 	@Override

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
@@ -17,18 +18,34 @@ import org.finos.scan.github.client.Commit;
 import org.finos.scan.github.client.Issue;
 import org.finos.scan.github.client.IssueComment;
 import org.finos.scan.github.client.License;
+import org.finos.scan.github.client.Organization;
 import org.finos.scan.github.client.Ref;
 import org.finos.scan.github.client.Repository;
+import org.finos.scan.github.client.RepositoryCollaboratorEdge;
+import org.finos.scan.github.client.RepositoryPermission;
+import org.finos.scan.github.client.Tree;
+import org.finos.scan.github.client.TreeEntry;
+import org.finos.scan.github.client.util.QueryExecutor;
 
 public class BasicQueries {
 
+	public static final String NO_FIELDS = "";
+	
+	public static final String FILE_LIST = "object(expression: \"HEAD:\") {\n"
+			+ "        ... on Tree {\n"
+			+ "          id\n"
+			+ "          entries {\n"
+			+ "            path\n"
+			+ "          }\n"
+			+ "        }\n"
+			+ "      }";
+
 	public enum FinosStatus { NO_README, INCUBATING, ACTIVE, NONE }
 
-	public enum OpenSSFStatus { NO_README, DONE, NONE }
+	public enum OpenSSFStatus { NO_README, OK, NONE }
 	
 	public static QueryType<Repository> PASSTHROUGH = new AbstractQueryType<Repository>(
-			"id\n"
-			+ "owner", 50, r -> r);
+			NO_FIELDS, 50, (r, qe) -> r);
 	
 	public static final String BRANCH_RULES_QUERY = 
 			  "    branchProtectionRules(first: 10) {\n"
@@ -55,22 +72,32 @@ public class BasicQueries {
 			+ "      id\n"
 			+ "      name\n"
 			+ "    }\n"
-			+ BRANCH_RULES_QUERY, 20, r -> convertToRuleSummary(r));
+			+ BRANCH_RULES_QUERY, 20, (r, qe) -> convertToRuleSummary(r));
+	
+	public static QueryType<String> DEFAULT_BRANCH_NAME = new AbstractQueryType<>("   defaultBranchRef {\n"
+			+ "      id\n"
+			+ "      name\n"
+			+ "    }\n"
+			, 20, (r, qe) -> r.getDefaultBranchRef().getName());
+	
+	
+	public static QueryType<String> WRONG_ADMINS = new AbstractQueryType<>("collaborators(first: 100) {\n"
+			+ "          edges {\n"
+			+ "            permission\n"
+			+ "            node {\n"
+			+ "              login\n"
+			+ "            }\n"
+			+ "          }\n"
+			+ "        }", 20, (r, qe) -> wrongAdmins(r));
 	
 	
 	public static QueryType<FinosStatus> FINOS_STATUS = new AbstractQueryType<FinosStatus>(	
-			"object(expression: \"HEAD:README.md\") {\n"
-		+ "      ... on Blob {\n"
-		+ "        text\n"
-		+ "      }\n"
-		+ "    }", 10, r -> {
-			Blob readme = (Blob) r.getObject();
-			if (readme == null) {
-				return FinosStatus.NO_README;
-			}
+			FILE_LIST, 10, (r, qe) -> {
 			
-			String text = readme.getText();
-			if (text.contains("https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating")) {
+			String text = getReadme(r, qe);
+			if (text == null) {
+				return FinosStatus.NO_README;
+			} else if (text.contains("https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating")) {
 				return FinosStatus.INCUBATING;
 			} else if (text.contains("https://finosfoundation.atlassian.net/wiki/display/FINOS/Active")) {
 				return FinosStatus.ACTIVE;
@@ -102,12 +129,15 @@ public class BasicQueries {
 		+ "          title\n"
 		+ "        }\n"
 		+ "      }\n"
-		+ "    }", 10, r -> condenseIssueCommenters(r));
-		
+		+ "    }", 10, (r, qe) -> condenseIssueCommenters(r));
+	
+	public static QueryType<Boolean> CVE_SCANNING_ACTION = new AbstractQueryType<Boolean>(NO_FIELDS, 50, (r, qe) -> fileContents(r,qe, ".github/workflows/cve-scanning.yml") != null);
+
+	public static QueryType<Boolean> SEMGREP_ACTION = new AbstractQueryType<Boolean>(NO_FIELDS, 50, (r, qe) -> fileContents(r,qe, ".github/workflows/semgrep.yml") != null);
 	
 	public static QueryType<String> LICENSE_INFO = new AbstractQueryType<String>(" licenseInfo {\n"
 		+ "            spdxId\n"
-		+ "          }", 50, r-> {
+		+ "          }", 50, (r, qe) -> {
 			License l = r.getLicenseInfo();
 			return (l == null) ? "" : l.getSpdxId();});
 	
@@ -132,22 +162,15 @@ public class BasicQueries {
 		+ "          }\n"
 		+ "        }\n"
 		+ "      }\n"
-		+ "    }", 10, r -> condenseRecentCommitters(r));
+		+ "    }", 10, (r, qe) -> condenseRecentCommitters(r));
 		
 	
-	public static QueryType<OpenSSFStatus> OPENSSF_STATUS = new AbstractQueryType<>("object(expression: \"HEAD:README.md\") {\n"
-		+ "      ... on Blob {\n"
-		+ "        text\n"
-		+ "      }\n"
-		+ "    }", 20, r -> {
-		Blob readme = (Blob) r.getObject();
-		if (readme == null) {
+	public static QueryType<OpenSSFStatus> OPENSSF_STATUS = new AbstractQueryType<>(FILE_LIST, 20, (r, qe) -> {
+		String text = getReadme(r, qe);
+		if (text == null) {
 			return OpenSSFStatus.NO_README;
-		}
-		
-		String text = readme.getText();
-		if (text.contains("https://bestpractices.coreinfrastructure.org")) {
-			return OpenSSFStatus.DONE;		
+		} else if (text.contains("https://bestpractices.coreinfrastructure.org")) {
+			return OpenSSFStatus.OK;		
 		} else {
 			return OpenSSFStatus.NONE;
 		}
@@ -157,18 +180,92 @@ public class BasicQueries {
 		BasicQueries.MAIN_RECENT_COMMITTERS.getFields() + 
 		BasicQueries.ISSUE_ACTIVITY.getFields()+"  isArchived isPrivate",
 		5,
-		r -> combinedActivity(r));
+		(r, qe) -> combinedActivity(r, qe));
 
-	private static Activity combinedActivity(Repository r) {
+	private static Activity combinedActivity(Repository r, QueryExecutor qe) {
 		if (r.getIsArchived()) {
 			return new Activity(0, Collections.emptyList());
 		} else {
-			Activity a = BasicQueries.MAIN_RECENT_COMMITTERS.convert(r);
-			Activity b = BasicQueries.MAIN_RECENT_COMMITTERS.convert(r);
+			Activity a = BasicQueries.MAIN_RECENT_COMMITTERS.convert(r, qe);
+			Activity b = BasicQueries.MAIN_RECENT_COMMITTERS.convert(r, qe);
 			LinkedHashSet<String> combinedPeople = new LinkedHashSet<String>(a.getPeople());
 			combinedPeople.addAll(b.getPeople());
 			return new Activity(a.getScore() + b.getScore(), new ArrayList<>(combinedPeople));
 		}
+	}
+	
+	private static final Map<String, String> CACHED_README = new HashMap<String, String>();
+	
+	private static String wrongAdmins(Repository r) {
+		StringBuilder out = new StringBuilder();
+		for (RepositoryCollaboratorEdge rce : r.getCollaborators().getEdges()) {
+			RepositoryPermission pe = rce.getPermission();
+			if (pe == RepositoryPermission.ADMIN) {
+				String userLogin = rce.getNode().getLogin();
+				if (!"thelinuxfoundation".equals(userLogin)) {
+					if (out.length() > 0) {
+						out.append(", ");
+					}
+					out.append("@"+userLogin);
+				}
+			}
+		}
+		
+		return out.toString();
+	}
+	
+	private static String fileContents(Repository r, QueryExecutor qe, String name) {
+		try {
+			Organization o = qe.organization("{ repository(name: \""+r.getName()+"\") {\n"
+					+ "        id\n"
+					+ "        object(expression: \"HEAD:"+name+"\") {\n"
+					+ "          ... on Blob {\n"
+					+ "            text\n"
+					+ "          }\n"
+					+ "        }\n"
+					+ "      }\n}", r.getOwner().getLogin());
+			
+			Blob blob = (Blob) o.getRepository().getObject();
+			return blob == null ? null : blob.getText();
+		} catch (Exception e1) {
+			e1.printStackTrace();
+			return null;
+		} 
+	}
+	
+	/**
+	 * There are various different forms/cases the readme file can take:
+	 * Readme.md, readme.md, README.rst, README.adoc
+	 */
+	private static String getReadme(Repository r, QueryExecutor qe) {
+		String cached = CACHED_README.get(r.getId());
+		if (cached == null) {
+			Tree tree = (Tree) r.getObject();
+			if (tree != null) {
+				for (TreeEntry e : tree.getEntries()) {
+					if (e.getPath().toLowerCase().startsWith("readme")) {
+						try {
+							Organization o = qe.organization("{ repository(name: \""+r.getName()+"\") {\n"
+									+ "        id\n"
+									+ "        object(expression: \"HEAD:"+e.getPath()+"\") {\n"
+									+ "          ... on Blob {\n"
+									+ "            text\n"
+									+ "          }\n"
+									+ "        }\n"
+									+ "      }\n}", r.getOwner().getLogin());
+							cached = ((Blob) o.getRepository().getObject()).getText();
+						} catch (Exception e1) {
+							e1.printStackTrace();
+						} 
+						
+					}
+				}
+			}
+			
+			CACHED_README.put(r.getId(), cached);	
+		}
+				
+		return cached;
 	}
 	
 	private static Activity condenseIssueCommenters(Repository r) {
@@ -251,7 +348,7 @@ public class BasicQueries {
 			.filter(bpr -> matches(bpr, mainBranch))
 			.map(bpr -> countReviewers(bpr))
 			.findFirst()
-			.orElse(0);
+			.orElse(-1);
 	}
 
 }

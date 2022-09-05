@@ -23,6 +23,7 @@ import org.finos.scan.github.client.Blob;
 import org.finos.scan.github.client.Repository;
 import org.finos.scan.github.client.RepositoryTopicEdge;
 import org.finos.scan.github.client.Topic;
+import org.finos.scan.github.client.util.QueryExecutor;
 import org.springframework.util.StringUtils;
 
 /**
@@ -80,7 +81,7 @@ public class MarkdownSummarizer implements QueryType<String> {
 			+ "  }";
 	
 	@Override
-	public String convert(Repository repo) {
+	public String convert(Repository repo, QueryExecutor qe) {
 		String name = repo.getName();
 		Document d = extractMarkdown(repo);
 	

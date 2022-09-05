@@ -16,6 +16,7 @@ import org.finos.ls.queries.BasicQueries;
 import org.finos.ls.queries.MarkdownSummarizer;
 import org.finos.ls.queries.MarkdownSummarizer.SummaryLevel;
 import org.finos.scan.github.client.Repository;
+import org.finos.scan.github.client.util.QueryExecutor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +28,9 @@ public class ReadmeGenerator {
 
 	@Autowired
 	QueryService qs;
+	
+	@Autowired 
+	QueryExecutor qe;
 	
 	Map<String, Repository> cache = new HashMap<>();
 	
@@ -110,7 +114,7 @@ public class ReadmeGenerator {
 
 	private void appendUsing(MarkdownSummarizer l, String name, StringBuilder out) {
 		try {
-			out.append(l.convert(getRepoDetails(l, name)));
+			out.append(l.convert(getRepoDetails(l, name), qe));
 		} catch (Exception e) {
 			throw new RuntimeException("Couldn't process: ", e);
 		}

@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.finos.ls.queries.BasicQueries.FinosStatus;
 import org.finos.scan.github.client.Repository;
+import org.finos.scan.github.client.util.QueryExecutor;
 
 public class CSVSummarizer implements QueryType<List<String>> {
 	
@@ -18,6 +19,9 @@ public class CSVSummarizer implements QueryType<List<String>> {
 		"OpenSSF Status",
 		"Github Archived",
 		"Branch Rules/Private",
+		"SemGrep",
+		"CVE Scanning",
+		"Default Branch Name",
 		"Main Issue Participants",
 		"Main Committers",
 	};
@@ -34,11 +38,14 @@ public class CSVSummarizer implements QueryType<List<String>> {
 	}
 
 	@Override
-	public List<String> convert(Repository r) {
-		Activity issue = BasicQueries.ISSUE_ACTIVITY.convert(r);
-		Activity commit = BasicQueries.MAIN_RECENT_COMMITTERS.convert(r);
-		FinosStatus finosStatus = BasicQueries.FINOS_STATUS.convert(r);
-		String license = BasicQueries.LICENSE_INFO.convert(r);
+	public List<String> convert(Repository r, QueryExecutor qe) {
+		Activity issue = BasicQueries.ISSUE_ACTIVITY.convert(r, qe);
+		Activity commit = BasicQueries.MAIN_RECENT_COMMITTERS.convert(r, qe);
+		FinosStatus finosStatus = BasicQueries.FINOS_STATUS.convert(r, qe);
+		String license = BasicQueries.LICENSE_INFO.convert(r, qe);
+		Boolean semGrep = BasicQueries.SEMGREP_ACTION.convert(r, qe);
+		Boolean cveScan = BasicQueries.CVE_SCANNING_ACTION.convert(r, qe);
+		String defaultBranchName = BasicQueries.DEFAULT_BRANCH_NAME.convert(r, qe);
 		
 		List<String> out = new ArrayList<>();
 		out.add(r.getOwner().getLogin());
@@ -47,9 +54,12 @@ public class CSVSummarizer implements QueryType<List<String>> {
 		out.add(license);
 		out.add(""+ issue.getScore());
 		out.add("" + commit.getScore());
-		out.add(BasicQueries.OPENSSF_STATUS.convert(r).name());
+		out.add(BasicQueries.OPENSSF_STATUS.convert(r, qe).name());
 		out.add(""+r.getIsArchived());
-		out.add(r.getIsPrivate() ? "PRIVATE" : ""+BasicQueries.BRANCH_RULES.convert(r));
+		out.add(r.getIsPrivate() ? "PRIVATE" : ""+BasicQueries.BRANCH_RULES.convert(r, qe));
+		out.add(""+semGrep);
+		out.add(""+cveScan);
+		out.add(defaultBranchName);
 		out.add(convertToSpaceList(issue));
 		out.add(convertToSpaceList(commit));
 

@@ -24,11 +24,18 @@ public class QueryService {
 	
 	public <X> X getSingleRepository(QueryType<X> qt, String owner, String name) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
 		Repository r = getRawRepository(qt, owner, name);
-		return qt.convert(r);
+		return qt.convert(r, qe);
 	}
 	
 	public <X> Repository getRawRepository(QueryType<X> qt, String owner, String name) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Repository r = qe.repository(qt.getFields(), true, name, owner);
+		String query = "{\n"
+				+ "    id\n"
+				+ "    name\n"
+				+ "    owner\n"				
+				+ "          "+qt.getFields()+"\n"
+				+ "}";
+		
+		Repository r = qe.repository(query, true, name, owner);
 		return r;
 	}
 	
@@ -51,6 +58,7 @@ public class QueryService {
 					+ "      edges {\n"
 					+ "        node {\n"
 					+ "          name \n"
+					+ "          owner \n"
 					+ "          "+qt.getFields()
 					+ "        }\n"
 					+ "      }\n"
@@ -69,7 +77,7 @@ public class QueryService {
 			cursor = conn.getPageInfo().getEndCursor();
 		}
 		
-		return out.stream().collect(Collectors.toMap(r -> r.getName(), r-> qt.convert(r)));
+		return out.stream().collect(Collectors.toMap(r -> r.getName(), r-> qt.convert(r, qe)));
 				
 	}
 }

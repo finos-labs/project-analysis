@@ -40,7 +40,7 @@ public class BasicTest {
 
 	@Test
 	public void testSingleRepo() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Repository repo = qs.getSingleRepository(BasicQueries.PASSTHROUGH, "spring-bot", ORG);
+		Repository repo = qs.getSingleRepository(BasicQueries.PASSTHROUGH, ORG, "spring-bot");
 		Assertions.assertEquals(ORG, repo.getOwner().getLogin());
 		Assertions.assertEquals("spring-bot", repo.getName());
 	}
@@ -94,6 +94,29 @@ public class BasicTest {
 	}
 	
 	@Test
+	public void testAdminDetails() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		String admins = qs.getSingleRepository(BasicQueries.WRONG_ADMINS, "robmoffat", "robmoffat");
+		System.out.println(admins);
+		Assertions.assertEquals("@robmoffat", admins);
+	}
+	
+	@Test
+	public void testCVEScanningDetails() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		Map<String, Boolean> cve = qs.getAllRepositories(BasicQueries.CVE_SCANNING_ACTION, ORG);
+		outputMap(cve);
+		Assertions.assertTrue(cve.size() > 110);
+		Assertions.assertTrue(cve.get("electron-fdc3"));
+	}
+	
+	@Test
+	public void testSemgrepDetails() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		Map<String, Boolean> semgrep = qs.getAllRepositories(BasicQueries.SEMGREP_ACTION, ORG);
+		outputMap(semgrep);
+		Assertions.assertTrue(semgrep.size() > 110);
+		Assertions.assertTrue(semgrep.get("electron-fdc3"));
+	}
+	
+	@Test
 	public void testRecentIssueActivity() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
 		Map<String, Activity> activity = qs.getAllRepositories(BasicQueries.ISSUE_ACTIVITY, ORG);
 		outputMap(activity);
@@ -126,6 +149,12 @@ public class BasicTest {
 	//@Test
 	public void testWholeReadme() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
 		String out = readme.generate(25, ORG);
+		System.out.println(out);
+	}
+	
+	@Test
+	public void testDifferentlyNamedReadme() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		String out = qs.getSingleRepository(new MarkdownSummarizer(SummaryLevel.SUBITEM), ORG, "kdb-studio");
 		System.out.println(out);
 	}
 	
