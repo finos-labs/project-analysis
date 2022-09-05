@@ -7,7 +7,6 @@ Here are some of FINOS' most active projects (as of 05 Sep 2022):
    - [Electron FDC3 Desktop Agent & App Directory](#Electron-FDC3-Desktop-Agent-&-App-Directory)
    - [Fdc3](#Fdc3)
    - [FDC3 Conformance Framework](#FDC3-Conformance-Framework)
- - [FINOS Member Success](#FINOS-Member-Success)
  - [(Corporate) Git Proxy](#(Corporate)-Git-Proxy)
  - [Kdb Studio](#Kdb-Studio)
  - Legend
@@ -19,8 +18,6 @@ Here are some of FINOS' most active projects (as of 05 Sep 2022):
    - [legend-sdlc](#legend-sdlc)
    - [legend-shared](#legend-shared)
    - [legend-studio](#legend-studio)
-   - [Legend Testing](#Legend-Testing)
- - [FINOS Metadata](#FINOS-Metadata)
  - Morphir
    - [Morphir](#Morphir)
    - [Morphir Elm](#Morphir-Elm)
@@ -42,7 +39,6 @@ Here are some of FINOS' most active projects (as of 05 Sep 2022):
    - [Symphony Workflow Developer Kit (WDK)](#Symphony-Workflow-Developer-Kit-(WDK))
    - [SymphonyElectron](#SymphonyElectron)
    - [Symphony Media Bridge](#Symphony-Media-Bridge)
- - [Technical Steering Committee](#Technical-Steering-Committee)
  - [Timebase Ce](#Timebase-Ce)
  - [Tracdap](#Tracdap)
  - [Waltz](#Waltz)
@@ -138,16 +134,6 @@ _A framework for testing whether desktop containers implement the FDC3 standard_
 > 
 #### Further Details
  - [https://github.com/finos/FDC3-conformance-framework](https://github.com/finos/FDC3-conformance-framework)
-## FINOS Member Success
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/finos-member-success/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/finos-member-success)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-16-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/finos-member-success/issues)
-
-
-
-#### From the README:
-
-> Current Inventory> 
-#### Further Details
- - [https://github.com/finos/finos-member-success](https://github.com/finos/finos-member-success)
 ## (Corporate) Git Proxy
 [![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-35-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-21-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-22-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy/issues)
 
@@ -385,48 +371,6 @@ _Legend Studio_
 #### Further Details
  - [https://github.com/finos/legend-studio](https://github.com/finos/legend-studio)
  - [https://legend.finos.org](https://legend.finos.org)
-### Legend Testing
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-testing/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-5-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-testing)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-testing/issues)
-
-
-
-#### From the README:
-
-> This project contains code, configuration and other automation that is used to deploy and manage various cloud infrastructure used for Legend integration tests. This includes databases, AWS/GCP infrastructure etc.
-> 
-> 
-> * Setup of the FINOS AWS account - docs/aws/main.md
-> * Setup of the FINOS GCP account - docs/gcp/main.md
-> * Secrets management - docs/bootstrapping-secrets.md
-> 
-> 
-> * Snowflake - docs/snowflake/main.md
-> * BigQuery - docs/bigquery/main.md
-> * Redshift - docs/redshift/main.md
-> * Databricks - docs/databricks/main.md>... [_read more_](https://github.com/finos/legend-testing)#### Further Details
- - [https://github.com/finos/legend-testing](https://github.com/finos/legend-testing)
-## FINOS Metadata
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/metadata/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/metadata)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-16-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/metadata/issues)
-
-_Foundation metadata repository_
-
-[![Topic: internal](https://img.shields.io/badge/internal-fafbfc)](https://github.com/topics/internal) 
-
-#### From the README:
-
-> [![Build Status](https://travis-ci.com/finos/metadata.svg?token=AiidLhmm5rH7zSNBtP6W&branch=master) ](https://travis-ci.com/finos/metadata)
-> 
-> 
-> This is the private repository containing the Fintech Open Source Foundation's (FINOS) metadata, which is comprised of basic information about:
-> 
-> * People who've contributed to the activities hosted by the Foundation
-> * The organisations those people are affiliated with
-> * The programs the Foundation hosts
-> * The individual activities (projects and working groups) comprising those programs
->... [_read more_](https://github.com/finos/metadata)
-> 
-#### Further Details
- - [https://github.com/finos/metadata](https://github.com/finos/metadata)
 ## Morphir
 
 ### Morphir
@@ -851,15 +795,6 @@ _The Symphony Media Bridge (SMB) is a media server application that handles audi
 > 
 #### Further Details
  - [https://github.com/finos/SymphonyMediaBridge](https://github.com/finos/SymphonyMediaBridge)
-## Technical Steering Committee
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-steering-committee/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-steering-committee)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-steering-committee/issues)
-
-_📋  FINOS Technical Steering Committee_
-
-
-
-#### Further Details
- - [https://github.com/finos/technical-steering-committee](https://github.com/finos/technical-steering-committee)
 ## TimeBase CE
 [![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-48-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-8-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE/issues)
 
