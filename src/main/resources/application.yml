@@ -1,0 +1,24 @@
+graphql:
+  endpoint.url: https://api.github.com/graphql
+  token: ${{ secrets.LANDSCAPE_SCANNING_TOKEN }}
+  
+logging:
+  level:
+    org.springframework: DEBUG
+    
+debug: true
+    
+scanning:
+  org: finos
+  csv:
+    priority: legend, morphir, fdc3, cfi
+    ignore: none  
+    
+  write-to:
+    repo: landscape-scanning
+    owner: robmoffat
+    base: main
+    head: generated-branch
+    csv: security-scorecard.csv
+    
+    

@@ -33,6 +33,9 @@ public class LandscapeApp implements CommandLineRunner {
 	@Autowired
 	PullRequestService pr;
 	
+	@Value("${spring.profiles.active:}")
+	String activeProfiles;
+	
 	@Value("${scanning.org:finos}")
 	String org;
 	
@@ -64,7 +67,7 @@ public class LandscapeApp implements CommandLineRunner {
 	 */
 	@Override
 	public void run(String... args) throws Exception {
-		if ((args.length == 1) && (args[0].equals("summarize"))) {
+		if (activeProfiles.contains("summarize")) {
 			// first, write the readme
 			String readmeContent = readme.generate(25, org);
 			commit.commitFile(readmeFile, readmeContent.getBytes(), head, repo, owner);

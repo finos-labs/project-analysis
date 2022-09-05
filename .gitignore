@@ -1,4 +1,4 @@
 target
-application.yml
+application-local.yml
 /.settings
 .DS_Store
