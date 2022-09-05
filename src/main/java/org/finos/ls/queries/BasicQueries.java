@@ -183,7 +183,7 @@ public class BasicQueries {
 		(r, qe) -> combinedActivity(r, qe));
 
 	private static Activity combinedActivity(Repository r, QueryExecutor qe) {
-		if (r.getIsArchived()) {
+		if (r.getIsArchived() || r.getIsPrivate()) {
 			return new Activity(0, Collections.emptyList());
 		} else {
 			Activity a = BasicQueries.MAIN_RECENT_COMMITTERS.convert(r, qe);
