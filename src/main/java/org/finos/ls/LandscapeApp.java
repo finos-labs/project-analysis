@@ -77,7 +77,7 @@ public class LandscapeApp implements CommandLineRunner {
 			commit.commitFile(csvFile, csvContent.getBytes(), head, repo, owner);
 			
 			// create a pr
-			pr.createOrUpdatePullRequest(repo, owner, base, head, Collections.singletonList("@robmoffat"), "Updated README.md and scan.csv");
+			pr.createOrUpdatePullRequest(repo, owner, base, head, Collections.singletonList("@robmoffat"), "Updated README.md and "+csvFile);
 			ctx.close();
 		}
 	}
