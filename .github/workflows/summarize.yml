@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: "12 12 1 * *"
     
+env:
+  LANDSCAPE_SCANNING_TOKEN: ${{ secrets.LANDSCAPE_SCANNING_TOKEN }}
+    
 jobs:
   build:
 
