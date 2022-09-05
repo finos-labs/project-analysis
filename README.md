@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 05 Sept 2022):
+Here are some of FINOS' most active projects (as of 05 Sep 2022):
 
  - [FINOS Community Collaboration Space](#FINOS-Community-Collaboration-Space)
  - FDC3
