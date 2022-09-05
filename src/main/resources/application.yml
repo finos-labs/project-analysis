@@ -1,6 +1,6 @@
 graphql:
   endpoint.url: https://api.github.com/graphql
-  token: ${{ secrets.LANDSCAPE_SCANNING_TOKEN }}
+  token: ${LANDSCAPE_SCANNING_TOKEN}
   
 logging:
   level:
