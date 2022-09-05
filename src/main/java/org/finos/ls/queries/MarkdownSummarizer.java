@@ -48,10 +48,7 @@ public class MarkdownSummarizer implements QueryType<String> {
 				AutolinkExtension.create())).build();
 	}
 
-	private static final String GRAPH_QL = "{"
-			+ "    id\n"
-			+ "    name\n"
-			+ "    homepageUrl\n"
+	private static final String GRAPH_QL =  "    homepageUrl\n"
 			+ "    stargazerCount\n"
 			+ "    description\n"
 			+ "    forkCount\n"
@@ -77,8 +74,7 @@ public class MarkdownSummarizer implements QueryType<String> {
 			+ "    }\n"
 			+ "    issues(filterBy: {states: OPEN}) {\n"
 			+ "      totalCount\n"
-			+ "    }\n"
-			+ "  }";
+			+ "    }\n";
 	
 	@Override
 	public String convert(Repository repo, QueryExecutor qe) {

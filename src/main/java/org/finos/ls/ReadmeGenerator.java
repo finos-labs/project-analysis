@@ -182,6 +182,6 @@ public class ReadmeGenerator {
 				return n;
 			})
 			.filter(test.negate())
-			.toList();
+			.collect(Collectors.toList());
 	}
 }

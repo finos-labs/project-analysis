@@ -129,7 +129,7 @@ public class BasicQueries {
 		+ "          title\n"
 		+ "        }\n"
 		+ "      }\n"
-		+ "    }", 10, (r, qe) -> condenseIssueCommenters(r));
+		+ "    }", 5, (r, qe) -> condenseIssueCommenters(r));
 	
 	public static QueryType<Boolean> CVE_SCANNING_ACTION = new AbstractQueryType<Boolean>(NO_FIELDS, 50, (r, qe) -> fileContents(r,qe, ".github/workflows/cve-scanning.yml") != null);
 
@@ -179,7 +179,7 @@ public class BasicQueries {
 	public static final QueryType<Activity> COMBINED_ACTIVITY = new AbstractQueryType<>(
 		BasicQueries.MAIN_RECENT_COMMITTERS.getFields() + 
 		BasicQueries.ISSUE_ACTIVITY.getFields()+"  isArchived isPrivate",
-		5,
+		3,
 		(r, qe) -> combinedActivity(r, qe));
 
 	private static Activity combinedActivity(Repository r, QueryExecutor qe) {
@@ -202,7 +202,7 @@ public class BasicQueries {
 			RepositoryPermission pe = rce.getPermission();
 			if (pe == RepositoryPermission.ADMIN) {
 				String userLogin = rce.getNode().getLogin();
-				if (!"thelinuxfoundation".equals(userLogin)) {
+				if (!okAdmin(userLogin)) {
 					if (out.length() > 0) {
 						out.append(", ");
 					}
@@ -212,6 +212,10 @@ public class BasicQueries {
 		}
 		
 		return out.toString();
+	}
+
+	private static boolean okAdmin(String userLogin) {
+		return "thelinuxfoundation".equals(userLogin) || ("finos-admin".equals(userLogin));
 	}
 	
 	private static String fileContents(Repository r, QueryExecutor qe, String name) {

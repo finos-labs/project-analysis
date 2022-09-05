@@ -95,7 +95,7 @@ public class BasicTest {
 	
 	@Test
 	public void testAdminDetails() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		String admins = qs.getSingleRepository(BasicQueries.WRONG_ADMINS, "robmoffat", "robmoffat");
+		String admins = qs.getSingleRepository(BasicQueries.WRONG_ADMINS, "robmoffat", "landscape-scanning");
 		System.out.println(admins);
 		Assertions.assertEquals("@robmoffat", admins);
 	}
@@ -146,7 +146,7 @@ public class BasicTest {
 		System.out.println(out);
 	}
 	
-	//@Test
+	@Test
 	public void testWholeReadme() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
 		String out = readme.generate(25, ORG);
 		System.out.println(out);
