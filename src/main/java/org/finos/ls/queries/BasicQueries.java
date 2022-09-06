@@ -97,9 +97,11 @@ public class BasicQueries {
 			String text = getReadme(r, qe);
 			if (text == null) {
 				return FinosStatus.NO_README;
-			} else if (text.contains("https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating")) {
+			} else if (text.contains("https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating") || 
+					text.contains("https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg")) {
 				return FinosStatus.INCUBATING;
-			} else if (text.contains("https://finosfoundation.atlassian.net/wiki/display/FINOS/Active")) {
+			} else if (text.contains("https://finosfoundation.atlassian.net/wiki/display/FINOS/Active") ||
+					text.contains("https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-released.svg")) {
 				return FinosStatus.ACTIVE;
 			} else {
 				return FinosStatus.NONE;
@@ -242,14 +244,16 @@ public class BasicQueries {
 	 * Readme.md, readme.md, README.rst, README.adoc
 	 */
 	private static String getReadme(Repository r, QueryExecutor qe) {
-		String cached = CACHED_README.get(r.getId());
+		String name = r.getName();
+		String cached = CACHED_README.get(name);
 		if (cached == null) {
+			System.out.println("Getting readme for "+name);
 			Tree tree = (Tree) r.getObject();
 			if (tree != null) {
 				for (TreeEntry e : tree.getEntries()) {
 					if (e.getPath().toLowerCase().startsWith("readme")) {
 						try {
-							Organization o = qe.organization("{ repository(name: \""+r.getName()+"\") {\n"
+							Organization o = qe.organization("{ repository(name: \""+name+"\") {\n"
 									+ "        id\n"
 									+ "        object(expression: \"HEAD:"+e.getPath()+"\") {\n"
 									+ "          ... on Blob {\n"
@@ -266,7 +270,9 @@ public class BasicQueries {
 				}
 			}
 			
-			CACHED_README.put(r.getId(), cached);	
+			CACHED_README.put(name, cached);	
+		} else {
+			System.out.println("Found in cache: "+name);
 		}
 				
 		return cached;

@@ -14,11 +14,13 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 import com.graphql_java_generator.exception.GraphQLRequestExecutionException;
 import com.graphql_java_generator.exception.GraphQLRequestPreparationException;
 
 @SpringBootTest(classes = LandscapeApp.class)
+@ActiveProfiles("local")
 public class BasicTest {
 	
 	private static final String ORG = "finos";
@@ -65,18 +67,46 @@ public class BasicTest {
 		Assertions.assertTrue(licenseDetails.size() > 110);
 	}
 	
-	@Test
-	public void testListOfReposWithStatusInfo() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Map<String, FinosStatus> licenseDetails = qs.getAllRepositories(BasicQueries.FINOS_STATUS, ORG);
-		outputMap(licenseDetails);
-		Assertions.assertTrue(licenseDetails.size() > 110);
+	public <X> long countStatus(Map<String, X> input, X expected) {
+		return input.entrySet().stream()
+			.filter(e -> e.getValue().equals(expected))
+			.count();
 	}
 	
 	@Test
-	public void testListOfReposWithOpenSSFStatus() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Map<String, OpenSSFStatus> licenseDetails = qs.getAllRepositories(BasicQueries.OPENSSF_STATUS, ORG);
-		outputMap(licenseDetails);
-		Assertions.assertTrue(licenseDetails.size() > 110);
+	public void testListOfReposWithStatusInfo() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		FinosStatus status = qs.getSingleRepository(BasicQueries.FINOS_STATUS, ORG, "FDC3");
+		Assertions.assertEquals(FinosStatus.ACTIVE, status);
+		
+		status = qs.getSingleRepository(BasicQueries.FINOS_STATUS, ORG, "spring-bot");
+		Assertions.assertEquals(FinosStatus.INCUBATING, status);
+		
+		status = qs.getSingleRepository(BasicQueries.FINOS_STATUS, ORG, "datahub");
+		Assertions.assertEquals(FinosStatus.NONE, status);
+		
+		Map<String, FinosStatus> statuses = qs.getAllRepositories(BasicQueries.FINOS_STATUS, ORG);
+		outputMap(statuses);
+
+		Assertions.assertTrue(countStatus(statuses, FinosStatus.ACTIVE)>5);
+		Assertions.assertTrue(countStatus(statuses, FinosStatus.INCUBATING)>5);
+		
+	
+	}
+	
+	
+	@Test
+	public void testOpenSSFStatus() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		OpenSSFStatus status = qs.getSingleRepository(BasicQueries.OPENSSF_STATUS, ORG, "OpenMAMA");
+		Assertions.assertEquals(OpenSSFStatus.NONE, status);
+		
+		status = qs.getSingleRepository(BasicQueries.OPENSSF_STATUS, ORG, "spring-bot");
+		Assertions.assertEquals(OpenSSFStatus.OK, status);
+		
+		Map<String, OpenSSFStatus> statuses = qs.getAllRepositories(BasicQueries.OPENSSF_STATUS, ORG);
+		outputMap(statuses);
+		Assertions.assertTrue(countStatus(statuses, OpenSSFStatus.OK)>0);
+		Assertions.assertTrue(countStatus(statuses, OpenSSFStatus.NONE)>5);
+
 	}
 	
 	@Test
