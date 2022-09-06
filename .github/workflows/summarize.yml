@@ -22,4 +22,4 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Run with Maven
-      run: mvn spring-boot:run -Dspring-boot.run.profiles=summarize 
+      run: mvn spring-boot:run -Dspring-boot.run.profiles=summarize -DskipTests
