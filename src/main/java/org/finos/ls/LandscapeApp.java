@@ -1,8 +1,11 @@
 package org.finos.ls;
 
 
+import java.util.Arrays;
 import java.util.Collections;
 
+import org.finos.ls.queries.SecurityCSVSummarizer;
+import org.finos.ls.search.FinanceCSVSummarizer;
 import org.finos.scan.github.client.spring_autoconfiguration.SpringConfiguration;
 import org.finos.scan.github.client.util.QueryExecutor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,6 +48,8 @@ public class LandscapeApp implements CommandLineRunner {
 	@Value("${scanning.csv:scan.csv}")
 	String csvFile;
 	
+	@Value("${scanning.finance.csv:finance-topi.csv}")
+	String fcsvFile;
 	
 	@Value("${scanning.write-to.repo}")
 	String repo;
@@ -57,6 +62,12 @@ public class LandscapeApp implements CommandLineRunner {
 
 	@Value("${scanning.write-to.head}")
 	String head;
+	
+	@Value("${scanning.csv.priority:}")
+	String[] priority;
+	
+	@Value("${scanning.csv.ignore:}")
+	String[] ignore;
 
 	@Autowired
 	ConfigurableApplicationContext ctx;
@@ -73,8 +84,13 @@ public class LandscapeApp implements CommandLineRunner {
 			commit.commitFile(readmeFile, readmeContent.getBytes(), head, repo, owner);
 			
 			// then write the csv
-			String csvContent = csv.generate(org);
+			SecurityCSVSummarizer summ = new SecurityCSVSummarizer(Arrays.asList(ignore), Arrays.asList(priority));
+			String csvContent = csv.generateOrg(org, summ);
 			commit.commitFile(csvFile, csvContent.getBytes(), head, repo, owner);
+			
+			FinanceCSVSummarizer fcsv = new FinanceCSVSummarizer();
+			String fcsvContent = csv.generateOrg(org, fcsv);
+			commit.commitFile(fcsvFile, fcsvContent.getBytes(), head, repo, owner);
 			
 			// create a pr
 			pr.createOrUpdatePullRequest(repo, owner, base, head, Collections.singletonList("@robmoffat"), "Updated README.md and "+csvFile);

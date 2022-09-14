@@ -1,6 +1,7 @@
 package org.finos.ls;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Map;
 
 import org.finos.ls.queries.Activity;
@@ -9,6 +10,7 @@ import org.finos.ls.queries.BasicQueries.FinosStatus;
 import org.finos.ls.queries.BasicQueries.OpenSSFStatus;
 import org.finos.ls.queries.MarkdownSummarizer;
 import org.finos.ls.queries.MarkdownSummarizer.SummaryLevel;
+import org.finos.ls.queries.SecurityCSVSummarizer;
 import org.finos.scan.github.client.Repository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -49,7 +51,7 @@ public class BasicTest {
 
 	@Test
 	public void testRepoDownloadViaOrganisation() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {		
-		Map<String, Repository> allRepos = qs.getAllRepositories(BasicQueries.PASSTHROUGH, ORG);
+		Map<String, Repository> allRepos = qs.getAllRepositoriesInOrg(BasicQueries.PASSTHROUGH, ORG);
 		
 		Repository firstRepo = allRepos.get("OpenMAMA");
 		Assertions.assertEquals("OpenMAMA", firstRepo.getName());
@@ -62,7 +64,7 @@ public class BasicTest {
 	
 	@Test
 	public void testListOfReposWithLicenseInfo() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Map<String, String> licenseDetails = qs.getAllRepositories(BasicQueries.LICENSE_INFO, ORG);
+		Map<String, String> licenseDetails = qs.getAllRepositoriesInOrg(BasicQueries.LICENSE_INFO, ORG);
 		outputMap(licenseDetails);
 		Assertions.assertTrue(licenseDetails.size() > 110);
 	}
@@ -84,7 +86,7 @@ public class BasicTest {
 		status = qs.getSingleRepository(BasicQueries.FINOS_STATUS, ORG, "datahub");
 		Assertions.assertEquals(FinosStatus.NONE, status);
 		
-		Map<String, FinosStatus> statuses = qs.getAllRepositories(BasicQueries.FINOS_STATUS, ORG);
+		Map<String, FinosStatus> statuses = qs.getAllRepositoriesInOrg(BasicQueries.FINOS_STATUS, ORG);
 		outputMap(statuses);
 
 		Assertions.assertTrue(countStatus(statuses, FinosStatus.ACTIVE)>5);
@@ -102,7 +104,7 @@ public class BasicTest {
 		status = qs.getSingleRepository(BasicQueries.OPENSSF_STATUS, ORG, "spring-bot");
 		Assertions.assertEquals(OpenSSFStatus.OK, status);
 		
-		Map<String, OpenSSFStatus> statuses = qs.getAllRepositories(BasicQueries.OPENSSF_STATUS, ORG);
+		Map<String, OpenSSFStatus> statuses = qs.getAllRepositoriesInOrg(BasicQueries.OPENSSF_STATUS, ORG);
 		outputMap(statuses);
 		Assertions.assertTrue(countStatus(statuses, OpenSSFStatus.OK)>0);
 		Assertions.assertTrue(countStatus(statuses, OpenSSFStatus.NONE)>5);
@@ -111,14 +113,14 @@ public class BasicTest {
 	
 	@Test
 	public void testMainBranchReviewers() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Map<String, Integer> reviewers = qs.getAllRepositories(BasicQueries.BRANCH_RULES, ORG);
+		Map<String, Integer> reviewers = qs.getAllRepositoriesInOrg(BasicQueries.BRANCH_RULES, ORG);
 		outputMap(reviewers);
 		Assertions.assertTrue(reviewers.size() > 110);
 	}
 	
 	@Test
 	public void testRecentCommitterDetails() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Map<String, Activity> committers = qs.getAllRepositories(BasicQueries.MAIN_RECENT_COMMITTERS, ORG);
+		Map<String, Activity> committers = qs.getAllRepositoriesInOrg(BasicQueries.MAIN_RECENT_COMMITTERS, ORG);
 		outputMap(committers);
 		Assertions.assertTrue(committers.size() > 110);
 	}
@@ -132,7 +134,7 @@ public class BasicTest {
 	
 	@Test
 	public void testCVEScanningDetails() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Map<String, Boolean> cve = qs.getAllRepositories(BasicQueries.CVE_SCANNING_ACTION, ORG);
+		Map<String, Boolean> cve = qs.getAllRepositoriesInOrg(BasicQueries.CVE_SCANNING_ACTION, ORG);
 		outputMap(cve);
 		Assertions.assertTrue(cve.size() > 110);
 		Assertions.assertTrue(cve.get("electron-fdc3"));
@@ -140,7 +142,7 @@ public class BasicTest {
 	
 	@Test
 	public void testSemgrepDetails() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Map<String, Boolean> semgrep = qs.getAllRepositories(BasicQueries.SEMGREP_ACTION, ORG);
+		Map<String, Boolean> semgrep = qs.getAllRepositoriesInOrg(BasicQueries.SEMGREP_ACTION, ORG);
 		outputMap(semgrep);
 		Assertions.assertTrue(semgrep.size() > 110);
 		Assertions.assertTrue(semgrep.get("electron-fdc3"));
@@ -148,7 +150,7 @@ public class BasicTest {
 	
 	@Test
 	public void testRecentIssueActivity() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Map<String, Activity> activity = qs.getAllRepositories(BasicQueries.ISSUE_ACTIVITY, ORG);
+		Map<String, Activity> activity = qs.getAllRepositoriesInOrg(BasicQueries.ISSUE_ACTIVITY, ORG);
 		outputMap(activity);
 		Assertions.assertTrue(activity.size() > 110);
 	}
@@ -190,7 +192,7 @@ public class BasicTest {
 	
 	@Test
 	public void testCSV() throws Exception {
-		String out = csv.generate(ORG);
+		String out = csv.generateOrg(ORG, new SecurityCSVSummarizer(Collections.emptyList(), Collections.emptyList()));
 		System.out.println(out);
 	}
 	
