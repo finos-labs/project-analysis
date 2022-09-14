@@ -12,16 +12,17 @@ import org.finos.scan.github.client.util.QueryExecutor;
 public class FinanceCSVSummarizer implements CSVSummarizer {
 
 	public static final String[] FIELDS = {
+			"score",
+			"url",
 			"stargazerCount",
-			"Organisation",
-			"Repo Name",
 			"Commit Activity (count of commits in last 6 months, maxed at 100)",
+			"Description",
 			"Main Committers  (list of all participants for commits loaded in Commit Activity column)",
 		};
 	
 	@Override
 	public String getFields() {
-		return BasicQueries.MAIN_RECENT_COMMITTERS.getFields() + " " + "stargazerCount url";
+		return BasicQueries.MAIN_RECENT_COMMITTERS.getFields() + " " + "stargazerCount url description";
 	}
 
 	@Override
@@ -30,9 +31,11 @@ public class FinanceCSVSummarizer implements CSVSummarizer {
 		long stargazerCount = r.getStargazerCount();
 		
 		List<Object> out = new ArrayList<>();
-		out.add(stargazerCount);
+		out.add(commit.getScore() < 10 ? commit.getScore() : stargazerCount);
 		out.add(r.getUrl());
+		out.add(stargazerCount);
 		out.add(commit.getScore());
+		out.add(r.getDescription());
 		out.add(convertToSpaceList(commit));
 
 		return out;

@@ -48,7 +48,7 @@ public class LandscapeApp implements CommandLineRunner {
 	@Value("${scanning.csv:scan.csv}")
 	String csvFile;
 	
-	@Value("${scanning.finance.csv:finance-topi.csv}")
+	@Value("${scanning.finance.csv:finance-topic.csv}")
 	String fcsvFile;
 	
 	@Value("${scanning.write-to.repo}")
@@ -89,11 +89,11 @@ public class LandscapeApp implements CommandLineRunner {
 			commit.commitFile(csvFile, csvContent.getBytes(), head, repo, owner);
 			
 			FinanceCSVSummarizer fcsv = new FinanceCSVSummarizer();
-			String fcsvContent = csv.generateOrg(org, fcsv);
+			String fcsvContent = csv.generateTopic("finance", fcsv);
 			commit.commitFile(fcsvFile, fcsvContent.getBytes(), head, repo, owner);
 			
 			// create a pr
-			pr.createOrUpdatePullRequest(repo, owner, base, head, Collections.singletonList("@robmoffat"), "Updated README.md and "+csvFile);
+			pr.createOrUpdatePullRequest(repo, owner, base, head, Collections.singletonList("@robmoffat"), "Updated Generated Files");
 			ctx.close();
 		}
 	}
