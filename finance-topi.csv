@@ -1,0 +1,133 @@
+stargazerCount,Organisation,Repo Name,"Commit Activity (count of commits in last 6 months, maxed at 100)",Main Committers  (list of all participants for commits loaded in Commit Activity column)
+4842,https://github.com/finos/perspective,100,@texodus @timkpaine @brianblakely @DevAndyLee
+659,https://github.com/finos/legend,22,@akphi @epsstan @beekemarie @MauricioUyaguari @aziemchawdhary-gs @davidsunglee @karljohannisson @hardikmaheshwari @agitana
+259,https://github.com/finos/plexus-interop,59,@iskender-kamchibekov-db
+132,https://github.com/finos/datahelix,0,
+130,https://github.com/finos/waltz,99,@JWoodland-Scott @davidwatkins73 @db-waltz
+123,https://github.com/finos/FDC3,100,@kriswest @robmoffat @dependabot[bot] @rikoe @ggeorgievx @CrlsMrls @TheJuanAndOnly99
+113,https://github.com/finos/OSLC-handbook,0,
+113,https://github.com/finos/OpenMAMA,57,@fquinner @bill-torpey
+72,https://github.com/finos/compliant-financial-infrastructure,93,@AdrianHammond @eddie-knight @JuozasA @abdullahgarcia @thinkl33t @jhrozek @shuchitach @TheJuanAndOnly99
+71,https://github.com/finos/morphir,24,@mcleo-d @AttilaMihaly @dependabot[bot] @stephengoldbaum
+70,https://github.com/finos/datahub,0,
+69,https://github.com/finos/SymphonyElectron,68,@sbenmoussati @KiranNiranjan @rwestberg @axeleriksson147
+53,https://github.com/finos/legend-studio,100,@github-actions[bot] @akphi @MauricioUyaguari @YannanGao-gs @gayathrir11 @xannem @dependabot[bot] @aziemchawdhary-gs @davidsunglee @jinanisha @sahil37
+53,https://github.com/finos/legend-pure,99,@pierredebelen @kevin-m-knight-gs @finos-admin @rafaelbey @hardikmaheshwari @akphi @gs-ssh16 @aziemchawdhary-gs @abhishoya-gs @PrateekGarg-gs @AFine-gs @vikask-gs @mrudula-gs @emilia-sokol-gs @davidsunglee @davidharte-gs @dependabot[bot] @msbggs @gs-gunjan @saisha95 @ivan-kyosev-gs @Yasirmod17
+48,https://github.com/finos/TimeBase-CE,28,@alex-karpovich @Romkisel @maoo
+44,https://github.com/finos/legend-engine,100,@finos-admin @epsstan @hardikmaheshwari @gs-ssh16 @pierredebelen @vikask-gs @aziemchawdhary-gs @davidsunglee @MauricioUyaguari @vj2050gs @gs-gunjan @saisha95 @ivan-kyosev-gs @ffutera @YannanGao-gs @rafaelbey @abhishoya-gs @akphi @christian-gallagher @sahil37
+43,https://github.com/finos/cla-bot,1,@maoo
+43,https://github.com/finos/openfin-react-hooks,0,
+41,https://github.com/finos/community,100,@mindthegab @maoo @mcleo-d @TheJuanAndOnly99 @toshaellison @jgavronsky
+39,https://github.com/finos/open-developer-platform,1,@maoo
+35,https://github.com/finos/spring-bot,100,@robmoffat @pankajpkhandelwal-db @abhishek-sinha-db @vaibhav-db @jasmintailor-db @mikerossiter
+35,https://github.com/finos/git-proxy,16,@grovesy @dependabot[bot]
+33,https://github.com/finos/kdb,1,@alvin-c-shih
+31,https://github.com/finos/financial-objects,1,@maoo
+29,https://github.com/finos/morphir-elm,100,@AttilaMihaly @osborneMs @nwokafor-choongsaeng @Elorm-Axolu @fjabeen02 @bekand @jonathanmaw @dependabot[bot]
+29,https://github.com/finos/legend-sdlc,100,@finos-admin @kevin-m-knight-gs @pierredebelen @akphi @epsstan @gs-ssh16 @hardikmaheshwari @ivan-kyosev-gs @aziemchawdhary-gs @dependabot[bot] @edmondo1984 @Edward-VCP
+29,https://github.com/finos/greenkey-asrtoolkit,0,
+25,https://github.com/finos/CatchIT,0,
+24,https://github.com/finos/voice-metadata-standard,0,
+24,https://github.com/finos/symphony-bdk-python,43,@symphony-soufiane @symphony-youri @symphony-mariacristina @ystxn @yinan-symphony @symphony-elias @dependabot[bot]
+23,https://github.com/finos/devops-mutualization,5,@robbkeayes @ashukla13 @mcleo-d
+22,https://github.com/finos/tracdap,42,@martin-traverse @dependabot[bot] @TheJuanAndOnly99
+21,https://github.com/finos/open-regtech-sig,0,
+20,https://github.com/finos/glue,0,
+20,https://github.com/finos/software-project-blueprint,7,@finos-admin @TheJuanAndOnly99 @maoo
+20,https://github.com/finos/morphir-examples,2,@AttilaMihaly
+19,https://github.com/finos/symphony-bdk-java,33,@symphony-youri @symphony-soufiane @symphony-elias @yinan-symphony @symphony-mariacristina @ystxn
+19,https://github.com/finos/finos-landscape,100,@CNCF-Bot @TheJuanAndOnly99 @finos-admin @maoo
+19,https://github.com/finos/exodus,0,
+19,https://github.com/finos/JCurl,6,@ldrozdz @dependabot[bot]
+18,https://github.com/finos/secref-data,0,
+18,https://github.com/finos/legend-shared,30,@ivan-kyosev-gs @finos-admin @akphi @pierredebelen @kevin-m-knight-gs @epsstan @Yasirmod17
+17,https://github.com/finos/morphir-jvm,18,@AttilaMihaly @klahnunya @osborneMs @nwokafor-choongsaeng
+16,https://github.com/finos/fdc3-desktop-agent,6,@dependabot[bot] @rikoe @nkolba
+15,https://github.com/finos/electron-fdc3,92,@nkolba @robmoffat @TheJuanAndOnly99 @ColinEberhardt @kriswest
+14,https://github.com/finos/SymphonyMediaBridge,92,@olofkallander @RicardoMDomingues @reddvl1980 @marcusspangenberg @pcarlsym
+13,https://github.com/finos/greenkey-discovery-sdk,0,
+12,https://github.com/finos/InnerSource,21,@godds @amaltson @mcleo-d @eminty69
+12,https://github.com/finos/secure-electron-adapter,0,
+12,https://github.com/finos/symphony-api-spec,14,@symphony-youri @symphony-mariacristina @symphony-soufiane @symphony-elias @jspasquali @othmaneSymphonyDev
+11,https://github.com/finos/kdb-studio,35,@gyorokpeter @punx120 @dzmipt @robmoffat @alvin-c-shih
+11,https://github.com/finos/reference-foss-policy,0,
+10,https://github.com/finos/open-source-readiness,63,@mcleo-d @vmbrasseur @psmulovics @TheJuanAndOnly99
+10,https://github.com/finos/metadata-tool,0,
+10,https://github.com/finos/bot-github-chatops,1,@maoo
+9,https://github.com/finos/messageml-utils,3,@symphony-mariacristina @symphony-elias
+8,https://github.com/finos/finos.github.io,1,@finos-admin
+7,https://github.com/finos/openfin-python-adapter,0,
+7,https://github.com/finos/osr-checklists,0,
+7,https://github.com/finos/qPython,11,@alvin-c-shih
+7,https://github.com/finos/generator-symphony,14,@ystxn @symphony-soufiane @dependabot[bot] @yinan-symphony @symphony-mariacristina
+6,https://github.com/finos/branding,9,@mindthegab @grizzwolf @niamhoparker @winmorgan
+6,https://github.com/finos/SwiftSearch,2,@keerthi16 @KiranNiranjan
+6,https://github.com/finos/morphir-dotnet,1,@finos-admin
+5,https://github.com/finos/morphir-service,0,
+5,https://github.com/finos/finos-parent-pom,9,@maoo @ivan-kyosev-gs @davidwatkins73
+4,https://github.com/finos/legend-depot,57,@akphi @finos-admin @epsstan @elopezcastro @ivan-kyosev-gs @aziemchawdhary-gs @pierredebelen @gs-ssh16 @jinanisha @MauricioUyaguari
+4,https://github.com/finos/legend-community-delta,67,@aamend @finos-admin @dependabot[bot]
+4,https://github.com/finos/finos-marketing,9,@niamhoparker @winmorgan @agitana
+4,https://github.com/finos/ScreenSnippet,0,
+3,https://github.com/finos/FDC3-Archive,0,
+3,https://github.com/finos/sea-quick-start,0,
+3,https://github.com/finos/certificate-toolbox,0,
+3,https://github.com/finos/greenkey-intercom-sdk,0,
+3,https://github.com/finos/OpenMAMA-testdata,0,
+2,https://github.com/finos/curref-data,4,@ElaineFraser @TheJuanAndOnly99
+2,https://github.com/finos/FDC3-conformance-framework,76,@Joe-Dunleavy @ColinEberhardt @AMehtaSL @nicopreto @AidanZealley @robmoffat @osouthwell-scottlogic @dbutt-scottlogic @jhowlett-scottlogic @cbowie1
+2,https://github.com/finos/morphir-bosque,2,@finos-admin
+1,https://github.com/finos/electron-spellchecker,0,
+1,https://github.com/finos/metadata,100,@TheJuanAndOnly99 @maoo
+1,https://github.com/finos/finos-deg,0,
+1,https://github.com/finos/open-reg-tech-us-lcr,1,@finos-admin
+1,https://github.com/finos/DEI-SIG,11,@alstratigos @TheJuanAndOnly99
+1,https://github.com/finos/symphony-wdk,29,@symphony-youri @symphony-soufiane @yinan-symphony @ystxn
+1,https://github.com/finos/technical-steering-committee,16,@ColinEberhardt @mindthegab @jonfreedman @finos-admin
+1,https://github.com/finos/legend-testing,59,@epsstan @nsprimmer @roasher
+1,https://github.com/finos/waltz-integration-juju,41,@claudiubelu @pedroleaoc @smiclea @maoo @TheJuanAndOnly99 @jnsgruk
+1,https://github.com/finos/morphir-rust,3,@finos-admin
+1,https://github.com/finos/wiki.finos.org,0,
+1,https://github.com/finos/legend-persistence,3,@nickyhof @finos-admin @rajamony
+1,https://github.com/finos/symphony-object,0,
+1,https://github.com/finos/legend-integration-juju,62,@pedroleaoc @claudiubelu @maoo @smiclea
+1,https://github.com/finos/openmama.github.io,8,@fquinner
+1,https://github.com/finos/plexus-interop-desktop-api,0,
+1,https://github.com/finos/digital-rights-management,0,
+1,https://github.com/finos/reports-job,0,
+1,https://github.com/finos/clabot-config,25,@finos-admin @maoo
+1,https://github.com/finos/legend-juju-bundle,49,@pedroleaoc @claudiubelu @smiclea @jnsgruk @maoo @balbirthomas
+0,https://github.com/finos/legend-juju-engine-server-operator,13,@claudiubelu @smiclea @maoo @pedroleaoc
+0,https://github.com/finos/structured-products,2,@finos-admin
+0,https://github.com/finos/cfi-terraform-template-child-module,13,@eddie-knight @devops-adeel @ml4 @finos-admin @maoo @TheJuanAndOnly99
+0,https://github.com/finos/legend-integration-morphir,0,
+0,https://github.com/finos/fdx-pmc,0,
+0,https://github.com/finos/waltz-juju-bundle,21,@claudiubelu @pedroleaoc @smiclea @maoo @TheJuanAndOnly99 @mcleo-d
+0,https://github.com/finos/legend-juju-sdlc-server-operator,11,@claudiubelu @smiclea @maoo
+0,https://github.com/finos/finos-legend-collaboration,1,@finos-admin
+0,https://github.com/finos/legend-juju-db-operator,14,@claudiubelu @smiclea @maoo @pedroleaoc
+0,https://github.com/finos/tooling,0,
+0,https://github.com/finos/cdm-release-demo,1,@finos-admin
+0,https://github.com/finos/open-compliance-cdmc,0,
+0,https://github.com/finos/contrib-toolbox,0,
+0,https://github.com/finos/legend-config,9,@maoo @epsstan
+0,https://github.com/finos/morphir-scala,100,@DamianReeves @scala-steward @dependabot[bot] @TheJuanAndOnly99
+0,https://github.com/finos/legend-integration-helm,2,@finos-admin @maoo
+0,https://github.com/finos/ssf-enforcer-rules,0,
+0,https://github.com/finos/terraform-aws-eks,9,@eddie-knight @thinkl33t @benjamb
+0,https://github.com/finos/buyside-sellside-interop,0,
+0,https://github.com/finos/air-accelerator,0,
+0,https://github.com/finos/morphir-editor,4,@TheJuanAndOnly99 @finos-admin @stephengoldbaum
+0,https://github.com/finos/standards-project-blueprint,5,@mindthegab @TheJuanAndOnly99
+0,https://github.com/finos/ScreenSnippet2,0,
+0,https://github.com/finos/legend-juju-studio-operator,12,@claudiubelu @smiclea @maoo
+0,https://github.com/finos/hubspot-sync,0,
+0,https://github.com/finos/clabot-test-prod,0,
+0,https://github.com/finos/legend-juju-gitlab-integrator,9,@claudiubelu @smiclea @maoo
+0,https://github.com/finos/asciidoctor-stylesheet-factory,0,
+0,https://github.com/finos/cfi-terraform-gcp-ocp,1,@finos-admin
+0,https://github.com/finos/ScreenShareIndicatorFrame,4,@KiranNiranjan
+0,https://github.com/finos/legend-juju-libs,2,@claudiubelu
+0,https://github.com/finos/symphony-wdk-gallery,4,@ystxn
+0,https://github.com/finos/clabot-test,0,
+0,https://github.com/finos/finos-member-success,19,@alstratigos @TheJuanAndOnly99
