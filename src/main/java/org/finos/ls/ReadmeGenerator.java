@@ -35,7 +35,7 @@ public class ReadmeGenerator {
 	Map<String, Repository> cache = new HashMap<>();
 	
 	public String generate(int cutoff, String org) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Map<String, Activity> activeProjects = qs.getAllRepositories(BasicQueries.COMBINED_ACTIVITY, org);
+		Map<String, Activity> activeProjects = qs.getAllRepositoriesInOrg(BasicQueries.COMBINED_ACTIVITY, org);
 		
 		List<String> names = activeProjects.entrySet().stream()
 			.filter(r -> r.getValue().getScore() > cutoff)

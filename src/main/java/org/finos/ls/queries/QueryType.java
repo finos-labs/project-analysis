@@ -10,4 +10,9 @@ public interface QueryType<X> {
 	public X convert(Repository r, QueryExecutor qe);
 	
 	public int getPageSize();
+	
+	public default String getRepositoryQueryPrefix() { return ""; }
+	
+	public default int getMaxRepositories() { return 1000; }
 }
+

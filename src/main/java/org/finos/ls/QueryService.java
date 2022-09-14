@@ -9,7 +9,10 @@ import org.finos.ls.queries.QueryType;
 import org.finos.scan.github.client.Organization;
 import org.finos.scan.github.client.Repository;
 import org.finos.scan.github.client.RepositoryConnection;
+import org.finos.scan.github.client.Topic;
 import org.finos.scan.github.client.util.QueryExecutor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +21,8 @@ import com.graphql_java_generator.exception.GraphQLRequestPreparationException;
 
 @Service
 public class QueryService {
+	
+	public static final Logger QUERY_LOGGER = LoggerFactory.getLogger(QueryService.class);
 	
 	@Autowired
 	QueryExecutor qe;
@@ -40,32 +45,46 @@ public class QueryService {
 	}
 	
 	
-	public <X> Map<String, X> getAllRepositories(QueryType<X> qt, String org) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+	public <X> Map<String, X> getAllRepositoriesInTopic(QueryType<X> qt, String topic) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
 		List<Repository> out = new ArrayList<Repository>();
 		int total = 1000;
 		String cursor = null;
+		String query = buildQuery(qt);
+		
+		QUERY_LOGGER.info(query);
+		
+		while (total > out.size() && (out.size() < qt.getMaxRepositories())) {
+			Topic o = qe.topic(query, topic, "cursor", cursor);
+			
+			RepositoryConnection conn = o.getRepositories();
+		
+			out.addAll(
+				conn.getEdges().stream()
+					.map(e -> e.getNode())
+					.collect(Collectors.toList()));
+			total = conn.getTotalCount();
+			cursor = conn.getPageInfo().getEndCursor();
+		}
+		
+		if (out.size() > qt.getMaxRepositories()) {
+			out.subList(0, qt.getMaxRepositories()).clear();
+		}
+		
+		return out.stream().collect(Collectors.toMap(
+				r -> r.getName(), 
+				r-> qt.convert(r, qe),
+				(a,b) -> a));	// deal with dups
+	}
+	
+	public <X> Map<String, X> getAllRepositoriesInOrg(QueryType<X> qt, String org) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		List<Repository> out = new ArrayList<Repository>();
+		int total = 1000;
+		String cursor = null;
+		String query = buildQuery(qt);
+		
+		QUERY_LOGGER.info(query);
 		
 		while (total > out.size()) {
-			String query = "{\n"
-					+ "    id\n"
-					+ "    repositories(first: "+qt.getPageSize()+", after: &cursor) { \n"
-					+ "      totalCount\n"
-					+ "      totalDiskUsage\n"
-					+ "      pageInfo {\n"
-					+ "        endCursor\n"
-					+ "        startCursor\n"
-					+ "      }\n"
-					+ "      edges {\n"
-					+ "        node {\n"
-					+ "          name \n"
-					+ "          owner \n"
-					+ "          "+qt.getFields()
-					+ "        }\n"
-					+ "      }\n"
-					+ "    }\n"
-					+ "  }\n"
-					+ "}";
-			
 			Organization o = qe.organization(query, org, "cursor", cursor);
 			
 			RepositoryConnection conn = o.getRepositories();
@@ -79,5 +98,27 @@ public class QueryService {
 		
 		return out.stream().collect(Collectors.toMap(r -> r.getName(), r-> qt.convert(r, qe)));
 				
+	}
+
+	private <X> String buildQuery(QueryType<X> qt) {
+		return "{\n"
+				+ "    id\n"
+				+ "    repositories("+qt.getRepositoryQueryPrefix()+"first: "+qt.getPageSize()+", after: &cursor) { \n"
+				+ "      totalCount\n"
+				+ "      totalDiskUsage\n"
+				+ "      pageInfo {\n"
+				+ "        endCursor\n"
+				+ "        startCursor\n"
+				+ "      }\n"
+				+ "      edges {\n"
+				+ "        node {\n"
+				+ "          name \n"
+				+ "          owner \n"
+				+ "          "+qt.getFields()
+				+ "        }\n"
+				+ "      }\n"
+				+ "    }\n"
+				+ "  }\n"
+				+ "}";
 	}
 }
