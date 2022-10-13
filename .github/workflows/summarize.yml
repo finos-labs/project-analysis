@@ -3,7 +3,7 @@ name: Landscape Scan Summarize
 on:
   workflow_dispatch:
   schedule:
-    - cron: "12 12 1 * *"
+    - cron: "0 22 * * * "
     
 env:
   LANDSCAPE_SCANNING_TOKEN: ${{ secrets.LANDSCAPE_SCANNING_TOKEN }}
