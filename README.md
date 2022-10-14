@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 13 Oct 2022):
+Here are some of FINOS' most active projects (as of 14 Oct 2022):
 
  - [Cfi Terraform Template Child Module](#Cfi-Terraform-Template-Child-Module)
  - [FINOS Community Collaboration Space](#FINOS-Community-Collaboration-Space)
@@ -108,7 +108,7 @@ _Open implementation of the FDC3 standard using Electron and an integrated App D
 #### Further Details
  - [https://github.com/finos/electron-fdc3](https://github.com/finos/electron-fdc3)
 ### FDC3
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-124-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-81-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-49-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-124-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-81-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-50-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/issues)
 
 _An open standard for the financial desktop._
 
@@ -135,7 +135,7 @@ _An open standard for the financial desktop._
  - [https://github.com/finos/FDC3](https://github.com/finos/FDC3)
  - [https://fdc3.finos.org](https://fdc3.finos.org)
 ### FDC3 Conformance Framework
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-conformance-framework/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-6-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-conformance-framework)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-conformance-framework/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-5-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-conformance-framework/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-8-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-conformance-framework)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-conformance-framework/issues)
 
 _A framework for testing whether desktop containers implement the FDC3 standard_
 
@@ -144,6 +144,7 @@ _A framework for testing whether desktop containers implement the FDC3 standard_
 #### From the README:
 
 > [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg) ](https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating)
+> [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/6456/badge) ](https://bestpractices.coreinfrastructure.org/projects/6456)
 > 
 > 
 > A framework for testing whether desktop containers implement the [FDC3 standard](https://fdc3.finos.org/).
@@ -154,7 +155,7 @@ _A framework for testing whether desktop containers implement the FDC3 standard_
 #### Further Details
  - [https://github.com/finos/FDC3-conformance-framework](https://github.com/finos/FDC3-conformance-framework)
 ## (Corporate) Git Proxy
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-35-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-21-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-22-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-36-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-21-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-22-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy/issues)
 
 _An info-security/compliance-friendly way for highly regulated industries to be more accepting of open source_
 
@@ -183,7 +184,7 @@ _Studio for kdb+ / Rapid execution environment for q_
 ## Legend
 
 ### Legend
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-668-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-133-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-667-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-133-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/issues)
 
 _The Legend project_
 
@@ -361,7 +362,7 @@ _Legend Shared module_
  - [https://github.com/finos/legend-shared](https://github.com/finos/legend-shared)
  - [https://legend.finos.org](https://legend.finos.org)
 ### legend-studio
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-54-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-77-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-133-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-54-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-77-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-134-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/issues)
 
 _Legend Studio_
 
@@ -415,7 +416,7 @@ _A universal language for business and technology_
  - [https://github.com/finos/morphir](https://github.com/finos/morphir)
  - [https://morphir.finos.org](https://morphir.finos.org)
 ### Morphir Elm
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-29-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-elm/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-38-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-elm)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-106-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-elm/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-29-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-elm/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-38-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-elm)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-105-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-elm/issues)
 
 _Tools to work with the Morphir IR in Elm._
 
@@ -496,7 +497,7 @@ _OpenMAMA is an open source project that provides a high performance middleware 
  - [https://github.com/finos/OpenMAMA](https://github.com/finos/OpenMAMA)
  - [https://openmama.org](https://openmama.org)
 ## Perspective
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-4888-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-528-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-84-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-4890-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-528-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-84-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
@@ -745,7 +746,7 @@ _Symphony Workflow Developer Kit (WDK), a bot capable of running workflows_
 #### Further Details
  - [https://github.com/finos/symphony-wdk](https://github.com/finos/symphony-wdk)
 ### SymphonyElectron
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-69-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-99-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-70-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-99-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron/issues)
 
 _A desktop client for the Symphony Collaboration Platform built using Electron_
 
@@ -804,7 +805,7 @@ _📋  FINOS Technical Steering Committee_
 #### Further Details
  - [https://github.com/finos/technical-steering-committee](https://github.com/finos/technical-steering-committee)
 ## TimeBase CE
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-49-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-8-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-50-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-8-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE/issues)
 
 _High performance time series database_
 
