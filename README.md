@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 17 Oct 2022):
+Here are some of FINOS' most active projects (as of 18 Oct 2022):
 
  - [Cfi Terraform Template Child Module](#Cfi-Terraform-Template-Child-Module)
  - [FINOS Community Collaboration Space](#FINOS-Community-Collaboration-Space)
@@ -236,7 +236,7 @@ _Combining best of open data standards with open source technologies_
 #### Further Details
  - [https://github.com/finos/legend-community-delta](https://github.com/finos/legend-community-delta)
 ### legend-depot
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-29-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-30-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot/issues)
 
 _Legend Depot component_
 
@@ -362,7 +362,7 @@ _Legend Shared module_
  - [https://github.com/finos/legend-shared](https://github.com/finos/legend-shared)
  - [https://legend.finos.org](https://legend.finos.org)
 ### legend-studio
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-57-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-77-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-134-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-57-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-77-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-135-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/issues)
 
 _Legend Studio_
 
@@ -497,7 +497,7 @@ _OpenMAMA is an open source project that provides a high performance middleware 
  - [https://github.com/finos/OpenMAMA](https://github.com/finos/OpenMAMA)
  - [https://openmama.org](https://openmama.org)
 ## Perspective
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-4894-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-528-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-84-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-4895-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-530-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-83-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
@@ -725,7 +725,7 @@ _Symphony Python Bot Development Kit (BDK)_
  - [https://github.com/finos/symphony-bdk-python](https://github.com/finos/symphony-bdk-python)
  - [https://symphony-bdk-python.finos.org/](https://symphony-bdk-python.finos.org/)
 ### Symphony Workflow Developer Kit (WDK)
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-8-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-8-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk/issues)
 
 _Symphony Workflow Developer Kit (WDK), a bot capable of running workflows_
 
@@ -796,7 +796,7 @@ _The Symphony Media Bridge (SMB) is a media server application that handles audi
 #### Further Details
  - [https://github.com/finos/SymphonyMediaBridge](https://github.com/finos/SymphonyMediaBridge)
 ## Technical Steering Committee
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-steering-committee/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-steering-committee)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-steering-committee/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-steering-committee/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-steering-committee)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-steering-committee/issues)
 
 _📋  FINOS Technical Steering Committee_
 
