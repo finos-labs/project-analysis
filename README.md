@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 29 Oct 2022):
+Here are some of FINOS' most active projects (as of 30 Oct 2022):
 
  - [Cfi Terraform Template Child Module](#Cfi-Terraform-Template-Child-Module)
  - [FINOS Community Collaboration Space](#FINOS-Community-Collaboration-Space)
@@ -496,7 +496,7 @@ _OpenMAMA is an open source project that provides a high performance middleware 
  - [https://github.com/finos/OpenMAMA](https://github.com/finos/OpenMAMA)
  - [https://openmama.org](https://openmama.org)
 ## Perspective
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-4957-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-536-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-83-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-4959-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-536-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-83-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
@@ -579,7 +579,7 @@ _How to protect FINOS hosted projects from security threats_
 ## SIGs
 
 ### Compliant Financial Infrastructure
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-74-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/compliant-financial-infrastructure/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-45-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/compliant-financial-infrastructure)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-28-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/compliant-financial-infrastructure/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-74-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/compliant-financial-infrastructure/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-46-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/compliant-financial-infrastructure)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-28-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/compliant-financial-infrastructure/issues)
 
 _Compliant Financial Infrastructure accelerates the development, deployment and adoption of services provided for AWS, Azure and Google in a way that meets existing regulatory and internal security controls._
 
@@ -621,7 +621,7 @@ _Accelerate financial services firms’ journeys toward open source readiness, b
  - [https://github.com/finos/open-source-readiness](https://github.com/finos/open-source-readiness)
  - [https://osr.finos.org](https://osr.finos.org)
 ## Spring Bot
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-38-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-28-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-38-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-29-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot/issues)
 
 _Spring Boot + Java Integration for Symphony/Teams Chat Platform Bots and Apps_
 
@@ -816,7 +816,7 @@ _A next-generation data and analytics platform for use in highly regulated envir
 #### Further Details
  - [https://github.com/finos/tracdap](https://github.com/finos/tracdap)
 ## Waltz
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-130-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-96-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-330-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-130-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-96-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-331-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/issues)
 
 _Enterprise Information Service_
 
