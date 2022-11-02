@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 01 Nov 2022):
+Here are some of FINOS' most active projects (as of 02 Nov 2022):
 
  - [Cfi Terraform Template Child Module](#Cfi-Terraform-Template-Child-Module)
  - [FINOS Community Collaboration Space](#FINOS-Community-Collaboration-Space)
@@ -184,7 +184,7 @@ _Studio for kdb+ / Rapid execution environment for q_
 ## Legend
 
 ### Legend
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-674-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-134-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-674-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-135-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/issues)
 
 _The Legend project_
 
@@ -236,7 +236,7 @@ _Combining best of open data standards with open source technologies_
 #### Further Details
  - [https://github.com/finos/legend-community-delta](https://github.com/finos/legend-community-delta)
 ### legend-depot
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-31-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-32-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot/issues)
 
 _Legend Depot component_
 
@@ -261,7 +261,7 @@ _Legend Depot component_
 #### Further Details
  - [https://github.com/finos/legend-depot](https://github.com/finos/legend-depot)
 ### legend-engine
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-46-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-124-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-6-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-46-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-125-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-6-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine/issues)
 
 _Legend Engine module_
 
@@ -287,7 +287,7 @@ _Legend Engine module_
  - [https://github.com/finos/legend-engine](https://github.com/finos/legend-engine)
  - [https://legend.finos.org](https://legend.finos.org)
 ### legend-pure
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-54-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-pure/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-102-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-pure)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-pure/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-54-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-pure/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-103-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-pure)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-pure/issues)
 
 _Legend Pure module_
 
@@ -312,7 +312,7 @@ _Legend Pure module_
  - [https://github.com/finos/legend-pure](https://github.com/finos/legend-pure)
  - [https://legend.finos.org](https://legend.finos.org)
 ### legend-sdlc
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-30-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-sdlc/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-81-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-sdlc)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-11-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-sdlc/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-30-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-sdlc/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-82-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-sdlc)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-11-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-sdlc/issues)
 
 _Legend SDLC module_
 
@@ -338,7 +338,7 @@ _Legend SDLC module_
  - [https://github.com/finos/legend-sdlc](https://github.com/finos/legend-sdlc)
  - [https://legend.finos.org](https://legend.finos.org)
 ### legend-shared
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-18-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-shared/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-45-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-shared)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-shared/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-18-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-shared/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-46-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-shared)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-shared/issues)
 
 _Legend Shared module_
 
@@ -362,7 +362,7 @@ _Legend Shared module_
  - [https://github.com/finos/legend-shared](https://github.com/finos/legend-shared)
  - [https://legend.finos.org](https://legend.finos.org)
 ### legend-studio
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-61-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-78-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-123-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-62-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-79-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-124-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/issues)
 
 _Legend Studio_
 
@@ -394,7 +394,7 @@ _Legend Studio_
 ## Morphir
 
 ### Morphir
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-73-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-19-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-73-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-20-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir/issues)
 
 _A universal language for business and technology_
 
@@ -497,7 +497,7 @@ _OpenMAMA is an open source project that provides a high performance middleware 
  - [https://github.com/finos/OpenMAMA](https://github.com/finos/OpenMAMA)
  - [https://openmama.org](https://openmama.org)
 ## Perspective
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-4972-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-536-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-83-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-4977-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-536-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-83-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
@@ -580,7 +580,7 @@ _How to protect FINOS hosted projects from security threats_
 ## SIGs
 
 ### Compliant Financial Infrastructure
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-74-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/compliant-financial-infrastructure/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-46-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/compliant-financial-infrastructure)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-27-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/compliant-financial-infrastructure/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-76-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/compliant-financial-infrastructure/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-46-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/compliant-financial-infrastructure)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-26-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/compliant-financial-infrastructure/issues)
 
 _Compliant Financial Infrastructure accelerates the development, deployment and adoption of services provided for AWS, Azure and Google in a way that meets existing regulatory and internal security controls._
 
@@ -602,7 +602,7 @@ _Compliant Financial Infrastructure accelerates the development, deployment and 
 #### Further Details
  - [https://github.com/finos/compliant-financial-infrastructure](https://github.com/finos/compliant-financial-infrastructure)
 ### FINOS Open Source Readiness Special Interest Group
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-18-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-22-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/issues)
 
 _Accelerate financial services firms’ journeys toward open source readiness, by advancing the readiness of participants’ firms and informing guidance for the broader industry in the form of white papers, presentations, and blog posts._
 
@@ -704,7 +704,7 @@ _Symphony Python Bot Development Kit (BDK)_
  - [https://github.com/finos/symphony-bdk-python](https://github.com/finos/symphony-bdk-python)
  - [https://symphony-bdk-python.finos.org/](https://symphony-bdk-python.finos.org/)
 ### Symphony Workflow Developer Kit (WDK)
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-8-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-13-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-8-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk/issues)
 
 _Symphony Workflow Developer Kit (WDK), a bot capable of running workflows_
 
@@ -805,7 +805,7 @@ _Terraform scripts AWS EKS for CDMC_
 #### Further Details
  - [https://github.com/finos/terraform-aws-cfi-eks](https://github.com/finos/terraform-aws-cfi-eks)
 ## TimeBase CE
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-51-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-8-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-52-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-8-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE/issues)
 
 _High performance time series database_
 
