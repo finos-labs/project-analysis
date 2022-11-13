@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 12 Nov 2022):
+Here are some of FINOS' most active projects (as of 13 Nov 2022):
 
  - [Cfi Terraform Template Child Module](#Cfi-Terraform-Template-Child-Module)
  - [FINOS Community Collaboration Space](#FINOS-Community-Collaboration-Space)
@@ -498,7 +498,7 @@ _OpenMAMA is an open source project that provides a high performance middleware 
  - [https://github.com/finos/OpenMAMA](https://github.com/finos/OpenMAMA)
  - [https://openmama.org](https://openmama.org)
 ## Perspective
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-4993-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-539-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-86-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-4994-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-540-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-86-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
@@ -862,7 +862,7 @@ _A next-generation data and analytics platform for use in highly regulated envir
 #### Further Details
  - [https://github.com/finos/tracdap](https://github.com/finos/tracdap)
 ## Vuu
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-36-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-37-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/issues)
 
 _Vuu - an open source view server and html 5 based UI system_
 
@@ -873,9 +873,9 @@ _Vuu - an open source view server and html 5 based UI system_
 > [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg) ](https://community.finos.org/docs/governance/Software-Projects/stages/incubating)
 > 
 > 
-> Welcome. We maintain an md book containing all the details of the project. Why not get started there:
+> Welcome. We maintain a docusaurus book containing all the details of the project. Why not get started there:
 > 
-> [https://venuu-io.github.io/vuu/](https://venuu-io.github.io/vuu/)
+> [https://vuu.finos.org/docs/introduction/intro](https://vuu.finos.org/docs/introduction/intro)
 >... [_read more_](https://github.com/finos/vuu)
 > 
 #### Further Details
