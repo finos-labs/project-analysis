@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 17 Nov 2022):
+Here are some of FINOS' most active projects (as of 18 Nov 2022):
 
  - [FINOS Branding and Resources](#FINOS-Branding-and-Resources)
  - [Cfi Terraform Template Child Module](#Cfi-Terraform-Template-Child-Module)
@@ -85,7 +85,7 @@ _FINOS (Fintech Open Source Foundation) official branding resources_
 #### Further Details
  - [https://github.com/finos/cfi-terraform-template-child-module](https://github.com/finos/cfi-terraform-template-child-module)
 ## FINOS Community Collaboration Space
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-47-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/community/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/community)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/community/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-47-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/community/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/community)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-13-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/community/issues)
 
 _FINOS Community, Project and SIG wide collaboration space_
 
@@ -208,7 +208,7 @@ _Studio for kdb+ / Rapid execution environment for q_
 ## Legend
 
 ### Legend
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-681-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-134-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-5-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-681-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-135-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-5-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/issues)
 
 _The Legend project_
 
@@ -285,7 +285,7 @@ _Legend Depot component_
 #### Further Details
  - [https://github.com/finos/legend-depot](https://github.com/finos/legend-depot)
 ### legend-engine
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-48-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-124-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-6-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-48-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-124-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine/issues)
 
 _Legend Engine module_
 
@@ -386,7 +386,7 @@ _Legend Shared module_
  - [https://github.com/finos/legend-shared](https://github.com/finos/legend-shared)
  - [https://legend.finos.org](https://legend.finos.org)
 ### legend-studio
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-64-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-79-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-155-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-64-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-79-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-154-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/issues)
 
 _Legend Studio_
 
@@ -480,7 +480,7 @@ _Tools to work with the Morphir IR in Elm._
  - [https://github.com/finos/morphir-scala](https://github.com/finos/morphir-scala)
  - [https://scala.morphir.finos.org](https://scala.morphir.finos.org)
 ## Open Reg Tech Us Lcr
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-reg-tech-us-lcr/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-6-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-reg-tech-us-lcr)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-reg-tech-us-lcr/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-reg-tech-us-lcr/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-6-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-reg-tech-us-lcr)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-reg-tech-us-lcr/issues)
 
 _Open Reg Tech: US LCR_
 
@@ -520,7 +520,7 @@ _OpenMAMA is an open source project that provides a high performance middleware 
  - [https://github.com/finos/OpenMAMA](https://github.com/finos/OpenMAMA)
  - [https://openmama.org](https://openmama.org)
 ## Perspective
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-5000-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-542-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-86-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-5004-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-542-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-86-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
@@ -572,7 +572,7 @@ _Plexus Interop open source project hosted by the Fintech Open Source Foundation
  - [https://github.com/finos/plexus-interop](https://github.com/finos/plexus-interop)
  - [https://plexus.finos.org](https://plexus.finos.org)
 ## Security Scanning
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/security-scanning/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/security-scanning)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-6-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/security-scanning/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/security-scanning/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/security-scanning)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-5-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/security-scanning/issues)
 
 _How to protect FINOS hosted projects from security threats_
 
@@ -591,11 +591,28 @@ _How to protect FINOS hosted projects from security threats_
 > [![Static code analysis](https://github.com/finos/security-scanning/actions/workflows/semgrep.yml/badge.svg) ](https://github.com/finos/security-scanning/actions/workflows/semgrep.yml)
 > 
 > 
-> Given the wide range of platforms, languages and build systems used by FINOS projects, finding one solution that secures a codebase is not an easy task, especially considering the incredible amount of libraries available in public library repositories, which can be easily used, embedded, integrated and re-published; this proliferation of artifacts have dramatically influenced software development:
+> - The problem
+> - The solution
+> - Project Layout
+> - Enabling CVE scanning in your project
+>    - NodeJS
+>    - Python
+>    - Maven
+>    - Gradle
+>    - Scala
+>    - Rust
+>    - .NET
+>    - Docker
+>    - Other languages and build platforms
+> - Dependency update tool
+> - Static code analysis
+> - License reporting and scanning
+> - Roadmap
+> - Contributing
+> - License
 > 
-> - On average, 95% of the code shipped in a software artifact is composed of upstream libraries (aka dependencies), built, released and managed by external teams, communities and companies that the consumer has no control/influence over.
-> - A developer has very little awareness of the codebase quality and software development process in the upstream dependencies of a project, unless going through code scrutiny, which is difficult and time consuming
-> - Every programming language and build tool has a different way of consuming dependencies, making security tool adoption harder and rarer; as a consequence, more security vulnerabilities are released into public library repositories, which leads to the exponential growth of vulnerabilities and risk for all consumers using these libraries
+> 
+> Given the wide range of platforms, languages and build systems used by FINOS projects, finding one solution that secures a codebase is not an easy task, especially considering the incredible amount of libraries available in public library repositories, which can be easily used, embedded, integrated and re-published; this proliferation of artifacts have dramatically influenced software development:
 >... [_read more_](https://github.com/finos/security-scanning)
 > 
 #### Further Details
@@ -803,7 +820,6 @@ _A desktop client for the Symphony Collaboration Platform built using Electron_
 #### From the README:
 
 > [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg) ](https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating)
-> [![Symphony Software Foundation - Incubating](https://cdn.rawgit.com/symphonyoss/contrib-toolbox/master/images/ssf-badge-incubating.svg) ](https://symphonyoss.atlassian.net/wiki/display/FM/Incubating)
 > [![Continuous Integration](https://github.com/symphonyoss/SymphonyElectron/actions/workflows/ci.yml/badge.svg) ](https://github.com/symphonyoss/SymphonyElectron/actions/workflows/ci.yml)
 > [![Known Vulnerabilities](https://snyk.io/test/github/symphonyoss/SymphonyElectron/badge.svg?targetFile=package.json) ](https://snyk.io/test/github/symphonyoss/SymphonyElectron?targetFile=package.json)
 > 
@@ -825,7 +841,7 @@ _A desktop client for the Symphony Collaboration Platform built using Electron_
  - [https://github.com/finos/SymphonyElectron](https://github.com/finos/SymphonyElectron)
  - [https://symphony.com](https://symphony.com)
 ### Symphony Media Bridge
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-19-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyMediaBridge/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-9-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyMediaBridge)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyMediaBridge/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-19-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyMediaBridge/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-11-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyMediaBridge)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyMediaBridge/issues)
 
 _The Symphony Media Bridge (SMB) is a media server application that handles audio, video and screen sharing media streams in an RTC conference system._
 
@@ -927,7 +943,7 @@ _Vuu - an open source view server and html 5 based UI system_
  - [https://github.com/finos/vuu](https://github.com/finos/vuu)
  - [https://vuu.finos.org](https://vuu.finos.org)
 ## Waltz
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-133-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-96-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-313-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-133-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-96-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-314-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/issues)
 
 _Enterprise Information Service_
 
