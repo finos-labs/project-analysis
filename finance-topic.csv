@@ -1,86 +1,84 @@
 score,url,stargazerCount,"Commit Activity (count of commits in last 6 months, maxed at 100)",Description,Main Committers  (list of all participants for commits loaded in Commit Activity column)
-19511,https://github.com/vnpy/vnpy,19511,67,基于Python的开源量化交易平台开发框架,@vnpy @noranhe @Edanflame @qiyuexuezainanfang @Benson0704
-17699,https://github.com/OpenBB-finance/OpenBBTerminal,17699,100,"Investment Research for Everyone, Anywhere.",@jmaslek @colin99d @simmonsj330 @montezdesousa @hjoaquim @deeleeramone @FedericoGarza @Chavithra @andrewkenreich @martinb-bb @jose-donato @tehcoderer @Sammac-dev @gsegatti @JerBouma @piiq
-17662,https://github.com/plotly/dash,17662,96,"Analytical Web Apps for Python, R, Julia, and Jupyter. No JavaScript Required.",@alexcjohnson @T4rk1n @AnnMarieW @GKI98 @mariusdkm @siner308 @Divyessh @nickmelnikov82 @alstn2468
-10892,https://github.com/wilsonfreitas/awesome-quant,10892,11,"A curated list of insanely awesome libraries, packages and resources for Quants (Quantitative Finance)",@wilsonfreitas @maread99 @DidierRLopes
-9939,https://github.com/microsoft/qlib,9939,99,"Qlib is an AI-oriented quantitative investment platform, which aims to realize the potential, empower the research, and create the value of AI technologies in quantitative investment. With Qlib, you can easily try your ideas to create better Quant investment strategies. An increasing number of  SOTA Quant research works/papers are released in Qlib.",@you-n-g @lihuoran @SunsetWolf @ChiahungTai @qianyun210603 @MaximSmolskiy @wan9c9 @lerit @bingyao @lwwang1995 @Arthur-Null @wony-zheng @HyeongminMoon @jingedawang @plpycoin @wangershi @lcrun @huajunzhao @peteryang1 @aprilpear @OussCHE @ChengzhenDu @animic @chenditc @tecton @EricChangMSR @NotF404 @ultmaster
-9241,https://github.com/firefly-iii/firefly-iii,9241,100,Firefly III: a personal finances manager,@JC5 @dependabot[bot] @NathanPERIER @janw
-7173,https://github.com/mrjbq7/ta-lib,7173,25,Python wrapper for TA-Lib (http://ta-lib.org/).,@mrjbq7 @robcaulk @trufanov-nok @xmatthias @ryanrussell
-6788,https://github.com/QuantConnect/Lean,6788,100,"Lean Algorithmic Trading Engine by QuantConnect (Python, C#)",@Martin-Molinero @jhonabreul @AlexCatarino @ryanrussell @DerekMelchin @LouisSzeto
-6336,https://github.com/AI4Finance-Foundation/FinRL,6336,100,FinRL:  Financial Reinforcement Learning. 🔥,@zhumingpassional @ZiyiXia @pre-commit-ci[bot] @XiaoYangLiu-FinRL @BruceYanghy @DEVNODEREACT @Yuchen-Song @DominiqueGarmier @dev590t @rayrui312 @bliu17 @shintaroudlotulhanafia @pkptzx @Athe-kunal @lokeshsoni @Ckend @craquinterogo @SSORBOB
-5715,https://github.com/akaunting/akaunting,5715,100,Free and Online Accounting Software,@brkcvn @cuneytsenturk @denisdulici @CihanSenturk
-5637,https://github.com/akfamily/akshare,5637,100,"AKShare is an elegant and simple financial data interface library for Python, built for human beings! 开源财经数据接口库",@jindaxiang @jiangliheng
-5268,https://github.com/StockSharp/StockSharp,5268,100,"Algorithmic trading and quantitative trading open source platform to develop trading robots (stock markets, forex, crypto, bitcoins, and options).",@mikasoukhov @sokolovsa
+19513,https://github.com/vnpy/vnpy,19513,67,基于Python的开源量化交易平台开发框架,@vnpy @noranhe @Edanflame @qiyuexuezainanfang @Benson0704
+17701,https://github.com/OpenBB-finance/OpenBBTerminal,17701,100,"Investment Research for Everyone, Anywhere.",@jmaslek @montezdesousa @simmonsj330 @colin99d @hjoaquim @deeleeramone @FedericoGarza @jose-donato @Chavithra @martinb-bb @andrewkenreich @tehcoderer @piiq @Sammac-dev @JerBouma
+17664,https://github.com/plotly/dash,17664,96,"Analytical Web Apps for Python, R, Julia, and Jupyter. No JavaScript Required.",@alexcjohnson @T4rk1n @AnnMarieW @GKI98 @mariusdkm @siner308 @Divyessh @nickmelnikov82 @alstn2468
+10903,https://github.com/wilsonfreitas/awesome-quant,10903,11,"A curated list of insanely awesome libraries, packages and resources for Quants (Quantitative Finance)",@wilsonfreitas @maread99 @DidierRLopes
+9942,https://github.com/microsoft/qlib,9942,99,"Qlib is an AI-oriented quantitative investment platform, which aims to realize the potential, empower the research, and create the value of AI technologies in quantitative investment. With Qlib, you can easily try your ideas to create better Quant investment strategies. An increasing number of  SOTA Quant research works/papers are released in Qlib.",@you-n-g @lihuoran @SunsetWolf @ChiahungTai @qianyun210603 @MaximSmolskiy @wan9c9 @lerit @bingyao @lwwang1995 @Arthur-Null @wony-zheng @HyeongminMoon @jingedawang @plpycoin @wangershi @lcrun @huajunzhao @peteryang1 @aprilpear @OussCHE @ChengzhenDu @animic @chenditc @tecton @EricChangMSR @NotF404 @ultmaster
+9245,https://github.com/firefly-iii/firefly-iii,9245,100,Firefly III: a personal finances manager,@JC5 @dependabot[bot] @NathanPERIER @janw
+7178,https://github.com/mrjbq7/ta-lib,7178,25,Python wrapper for TA-Lib (http://ta-lib.org/).,@mrjbq7 @robcaulk @trufanov-nok @xmatthias @ryanrussell
+6796,https://github.com/QuantConnect/Lean,6796,100,"Lean Algorithmic Trading Engine by QuantConnect (Python, C#)",@Martin-Molinero @jhonabreul @AlexCatarino @ryanrussell @DerekMelchin @LouisSzeto
+6340,https://github.com/AI4Finance-Foundation/FinRL,6340,100,FinRL:  Financial Reinforcement Learning. 🔥,@zhumingpassional @ZiyiXia @pre-commit-ci[bot] @XiaoYangLiu-FinRL @BruceYanghy @DEVNODEREACT @Yuchen-Song @dev590t @rayrui312 @bliu17 @shintaroudlotulhanafia @pkptzx @Athe-kunal @lokeshsoni @DominiqueGarmier @Ckend @craquinterogo @SSORBOB
+5717,https://github.com/akaunting/akaunting,5717,100,Free and Online Accounting Software,@brkcvn @cuneytsenturk @CihanSenturk @denisdulici
+5642,https://github.com/akfamily/akshare,5642,100,"AKShare is an elegant and simple financial data interface library for Python, built for human beings! 开源财经数据接口库",@jindaxiang @jiangliheng
+5269,https://github.com/StockSharp/StockSharp,5269,100,"Algorithmic trading and quantitative trading open source platform to develop trading robots (stock markets, forex, crypto, bitcoins, and options).",@mikasoukhov @sokolovsa
 4709,https://github.com/ricequant/rqalpha,4709,82,"A extendable, replaceable Python algorithmic backtest && trading framework supporting multiple securities",@Zhou-JiaJun @Cuizi7
-3380,https://github.com/google/tf-quant-finance,3380,32,High-performance TensorFlow library for quantitative finance.,@cyrilchim @tf-quant-finance-robot @perezju @matejr @saxena-ashish-g @hawkinsp @dependabot[bot] @sleptonium
-3121,https://github.com/robertmartin8/PyPortfolioOpt,3121,16,"Financial portfolio optimisation in python, including classical efficient frontier, Black-Litterman, Hierarchical Risk Parity",@robertmartin8
-2982,https://github.com/firmai/financial-machine-learning,2982,100,A curated list of practical financial machine learning tools and applications.,@github-actions[bot]
-2537,https://github.com/ranaroussi/quantstats,2537,10,"Portfolio analytics for quants, written in Python",@ranaroussi @TradingDominion
-2418,https://github.com/matplotlib/mplfinance,2418,35,Financial Markets Data Visualization using Matplotlib,@DanielGoldfarb @andrewrgarcia @vedant-gawande @nijek @Animeshz
+3381,https://github.com/google/tf-quant-finance,3381,32,High-performance TensorFlow library for quantitative finance.,@cyrilchim @tf-quant-finance-robot @perezju @matejr @saxena-ashish-g @hawkinsp @dependabot[bot] @sleptonium
+2985,https://github.com/firmai/financial-machine-learning,2985,100,A curated list of practical financial machine learning tools and applications.,@github-actions[bot]
+2538,https://github.com/ranaroussi/quantstats,2538,10,"Portfolio analytics for quants, written in Python",@ranaroussi @TradingDominion
+2421,https://github.com/matplotlib/mplfinance,2421,40,Financial Markets Data Visualization using Matplotlib,@DanielGoldfarb @andrewrgarcia @vedant-gawande @nijek @Animeshz
 2373,https://github.com/polakowo/vectorbt,2373,12,"Find your trading edge, using the fastest engine for backtesting, algorithmic trading, and research. ",@polakowo @izikeros
 2225,https://github.com/simonmichael/hledger,2225,99,"Robust, fast, intuitive plain text accounting tool with CLI, TUI and web interfaces.",@simonmichael
 1728,https://github.com/AdaptiveConsulting/ReactiveTraderCloud,1728,71,Real-time FX trading showcase by Adaptive.,@TobyLi96 @ivanfalanga-adaptive @audreyf1 @algreasley @umitao @RL-adaptive @keshaldesai
-1636,https://github.com/dcajasn/Riskfolio-Lib,1636,29,Portfolio Optimization and Quantitative Strategic Asset Allocation in Python,@dcajasn @ryanrussell
-1277,https://github.com/liihuu/KLineChart,1277,100,📈Lightweight k-line chart that can be highly customized. Zero dependencies. Support mobile.（可高度自定义的轻量级k线图，无第三方依赖，支持移动端）,@liihuu @XYUU @hz86
-1201,https://github.com/moneymanagerex/moneymanagerex,1201,100,"Money Manager Ex is an easy to use, money management application built with wxWidgets",@vomikan @whalley @n-stein @Jerry23011 @intcooper
-1114,https://github.com/domokane/FinancePy,1114,52,"A Python Finance Library that focuses on the pricing and risk-management of Financial Derivatives, including fixed-income, equity, FX and credit derivatives. ",@domokane @DominicHong @ryanrussell @piterbarg @FergalOK
+1638,https://github.com/dcajasn/Riskfolio-Lib,1638,27,Portfolio Optimization and Quantitative Strategic Asset Allocation in Python,@dcajasn
+1280,https://github.com/liihuu/KLineChart,1280,100,📈Lightweight k-line chart that can be highly customized. Zero dependencies. Support mobile.（可高度自定义的轻量级k线图，无第三方依赖，支持移动端）,@liihuu @XYUU @hz86
+1202,https://github.com/moneymanagerex/moneymanagerex,1202,100,"Money Manager Ex is an easy to use, money management application built with wxWidgets",@whalley @vomikan @n-stein @Jerry23011
+1116,https://github.com/domokane/FinancePy,1116,53,"A Python Finance Library that focuses on the pricing and risk-management of Financial Derivatives, including fixed-income, equity, FX and credit derivatives. ",@domokane @DominicHong @ryanrussell @piterbarg @FergalOK
 1015,https://github.com/bashtage/arch,1015,73,ARCH models in Python,@bashtage @ryanrussell @lgtm-migrator @645775992
-718,https://github.com/ghostfolio/ghostfolio,718,100,Open Source Wealth Management Software. Angular + NestJS + Prisma + Nx + TypeScript 🤍,@dtslvr @yksolanki9 @DerAndereJohannes @alfredonodo @LoganArnett @thepill @m11tch @casitu @albertsalles4
+726,https://github.com/ghostfolio/ghostfolio,726,100,Open Source Wealth Management Software. Angular + NestJS + Prisma + Nx + TypeScript 🤍,@dtslvr @yksolanki9 @DerAndereJohannes @alfredonodo @LoganArnett @thepill @m11tch @casitu @albertsalles4 @delenamalan
 714,https://github.com/OpenGamma/Strata,714,59," Open source analytics and market risk library from OpenGamma",@opengammacibot @marc-henrard @jodastephen @dependabot[bot] @benhamilton-brown @santorog @RamanSB @skitini @MichaelRol @anand-uk
-658,https://github.com/microsoft/maro,658,10,"Multi-Agent Resource Optimization (MARO) platform is an instance of Reinforcement Learning as a Service (RaaS) for real-world resource optimization problems. ",@lihuoran @Jinyu-W @dependabot[bot] @zhawan
+660,https://github.com/microsoft/maro,660,10,"Multi-Agent Resource Optimization (MARO) platform is an instance of Reinforcement Learning as a Service (RaaS) for real-world resource optimization problems. ",@lihuoran @Jinyu-W @dependabot[bot] @zhawan
 592,https://github.com/codez0mb1e/resistance,592,10,Pre-crisis Risk Management for Personal Finance,@codez0mb1e
 592,https://github.com/DaveSkender/Stock.Indicators,592,81,"Stock Indicators for .NET is a C# library package that produces financial market technical indicators. Send in historical price quotes and get back desired indicators such as moving averages, Relative Strength Index, Stochastic Oscillator, Parabolic SAR, etc. Nothing more.  It can be used in any market analysis software using standard OHLCV price quotes for equities, commodities, forex, cryptocurrencies, and others. We had private trading algorithms, technical analysis, machine learning, and charting systems in mind when originally creating this community library.",@DaveSkender @dependabot[bot] @LeeDongGeon1996
 584,https://github.com/quickfixgo/quickfix,584,10,:rocket: The Go FIX protocol library,@ackleymi
 583,https://github.com/feramhq/Transity,583,18,"Keep track of your 💵, 🕘, 🐖, 🐄, 🍻 on your command line",@ad-si @Masynchin
-560,https://github.com/arrobalytics/django-ledger,560,52,A bookkeeping & financial analysis engine for the Django Framework. UNDER ACTIVE DEVELOPMENT & NOT STABLE YET.,@elarroba @rkisdp @pranav7712
-502,https://github.com/AI4Finance-Foundation/FinRL-Meta,502,100,FinRL­-Meta: Data-Driven Metaverse for Financial Reinforcement Learning. 🔥,@zhumingpassional @ZiyiXia @pre-commit-ci[bot] @mhdmyz @XiaoYangLiu-FinRL @Athe-kunal @BruceYanghy @klisly @hoeckxer @Yuchen-Song @eyast @oliverwang15
-502,https://github.com/timkpaine/tdameritrade,502,18,Python interface to TD Ameritrade (https://developer.tdameritrade.com),@timkpaine @dependabot[bot] @CompoTypo
+560,https://github.com/arrobalytics/django-ledger,560,62,A bookkeeping & financial analysis engine for the Django Framework. UNDER ACTIVE DEVELOPMENT & NOT STABLE YET.,@elarroba @rkisdp @pranav7712
+505,https://github.com/AI4Finance-Foundation/FinRL-Meta,505,100,FinRL­-Meta: Data-Driven Metaverse for Financial Reinforcement Learning. 🔥,@zhumingpassional @ZiyiXia @pre-commit-ci[bot] @mhdmyz @XiaoYangLiu-FinRL @Athe-kunal @BruceYanghy @klisly @hoeckxer @Yuchen-Song @eyast @oliverwang15
+502,https://github.com/timkpaine/tdameritrade,502,20,Python interface to TD Ameritrade (https://developer.tdameritrade.com),@timkpaine @dependabot[bot] @CompoTypo
 465,https://github.com/greyblake/ta-rs,465,13,Technical analysis library for Rust language,@greyblake @wangxiaochuTHU @kosciej
-443,https://github.com/dpguthrie/yahooquery,443,28,Python wrapper for an unofficial Yahoo Finance API,@dpguthrie @dependabot[bot]
+444,https://github.com/dpguthrie/yahooquery,444,28,Python wrapper for an unofficial Yahoo Finance API,@dpguthrie @dependabot[bot]
 433,https://github.com/kieran-mackle/AutoTrader,433,100,"A Python-based development platform for automated trading systems - from backtesting to optimisation to livetrading. ",@kieran-mackle @github-actions[bot] @jmcph4
-421,https://github.com/kdeldycke/awesome-billing,421,21,💰 Billing & Payments Knowledge for Cloud Platforms,@kdeldycke
-410,https://github.com/wangzhe3224/awesome-systematic-trading,410,16,"A curated list of insanely awesome libraries, packages and resources for systematic trading. Crypto, Stock, Futures, Options, CFDs, FX, and more | 量化交易 | 量化投资",@wangzhe3224 @grimyfishtank @danielstonks
-407,https://github.com/timkpaine/pyEX,407,16,Python interface to IEX and IEX cloud APIs,@timkpaine @dependabot[bot]
+424,https://github.com/kdeldycke/awesome-billing,424,21,💰 Billing & Payments Knowledge for Cloud Platforms,@kdeldycke
+411,https://github.com/wangzhe3224/awesome-systematic-trading,411,16,"A curated list of insanely awesome libraries, packages and resources for systematic trading. Crypto, Stock, Futures, Options, CFDs, FX, and more | 量化交易 | 量化投资",@wangzhe3224 @grimyfishtank @danielstonks
+407,https://github.com/timkpaine/pyEX,407,18,Python interface to IEX and IEX cloud APIs,@timkpaine @dependabot[bot]
 396,https://github.com/KonishchevDmitry/investments,396,32,Helps you with managing your investments,@KonishchevDmitry
 383,https://github.com/premnirmal/StockTicker,383,56,A resizable widget that shows your financial portfolio on your android home screen,@premnirmal @licaon-kter
-361,https://github.com/DeFiCh/ain,361,100,DeFi Blockchain - enabling decentralized finance on Bitcoin,@Bushstar @prasannavl @shohamc1 @Jouzo @hidiego @Mixa84 @mambisi @uzyn
+361,https://github.com/DeFiCh/ain,361,100,DeFi Blockchain - enabling decentralized finance on Bitcoin,@Bushstar @prasannavl @shohamc1 @Jouzo @hidiego @Mixa84 @uzyn
 333,https://github.com/agstrike/silverstrike,333,12,Finance Management Made Easy,@simhnna @qedi-r
-316,https://github.com/amaggiulli/QLNet,316,21,QLNet C# Library,@amaggiulli @ninetiger
+316,https://github.com/amaggiulli/QLNet,316,22,QLNet C# Library,@amaggiulli @ninetiger
 290,https://github.com/ConsenSys/UniversalToken,290,11,Implementation of Universal Token for Assets and Payments,@izzygomez @github-actions[bot] @ecp4224
-289,https://github.com/joshuaulrich/TTR,289,15,Technical analysis and other functions to construct technical trading rules with R,@joshuaulrich @ethanbsmith
-284,https://github.com/Lumiwealth/lumibot,284,95,"Backtesting and Trading Bots Made Easy for Crypto, Stocks, Options, Futures, FOREX and more",@grzesir @jbrass
+289,https://github.com/joshuaulrich/TTR,289,14,Technical analysis and other functions to construct technical trading rules with R,@joshuaulrich @ethanbsmith
+285,https://github.com/Lumiwealth/lumibot,285,95,"Backtesting and Trading Bots Made Easy for Crypto, Stocks, Options, Futures, FOREX and more",@grzesir @jbrass
 284,https://github.com/fbertram/TuringTrader,284,20,The Open-Source Backtesting Engine/ Market Simulator by Bertram Solutions.,@fbertram
 275,https://github.com/paritytrading/philadelphia,275,100,Fast FIX protocol library for the JVM,@jvirtanen @dependabot[bot] @dmech
 254,https://github.com/josw123/dart-fss,254,10,한국 금융감독원에서 운영하는 다트(Dart) 시스템 크롤링을 위한 라이브러리,@josw123 @dependabot[bot]
 250,https://github.com/Reiryoku-Technologies/Mida,250,97,The open-source and cross-platform trading engine,@Vasile-Peste @dbvcode
 248,https://github.com/quarkfin/qf-lib,248,41,"Modular Python library that provides an advanced event driven backtester and a set of high quality tools for quantitative finance. Integrated with various data vendors and brokers, supports Crypto, Stocks and Futures.",@myrmarachne @tavisit @mborraty @JmmCz @guyfreund
 234,https://github.com/syncforynab/fintech-to-ynab,234,14,Automatically push Monzo and Starling transactions into YNAB in real time.,@dependabot[bot]
-9,https://github.com/Micro-sheep/efinance,749,9,efinance 是一个可以快速获取基金、股票、债券、期货数据的 Python 库，回测以及量化交易的好帮手！🚀🚀🚀,@Micro-sheep
-9,https://github.com/joshuaulrich/quantmod,673,9,Quantitative Financial Modelling Framework,@joshuaulrich
+9,https://github.com/Micro-sheep/efinance,750,9,efinance 是一个可以快速获取基金、股票、债券、期货数据的 Python 库，回测以及量化交易的好帮手！🚀🚀🚀,@Micro-sheep
+8,https://github.com/joshuaulrich/quantmod,673,8,Quantitative Financial Modelling Framework,@joshuaulrich
 8,https://github.com/guanquann/Stocksera,424,8,Web application that provides alternative data to retail investors,@guanquann @spartan737
-8,https://github.com/serversideup/financial-freedom,523,8,"Personal finance should be personal. Self-hosted and open source alternative to Mint and YNAB, using Laravel PHP + Vue 3 + InertiaJS + Redis + Meilisearch + TailwindCSS",@danpastori @jaydrogers
+8,https://github.com/serversideup/financial-freedom,524,8,"Personal finance should be personal. Self-hosted and open source alternative to Mint and YNAB, using Laravel PHP + Vue 3 + InertiaJS + Redis + Meilisearch + TailwindCSS",@danpastori @jaydrogers
 6,https://github.com/emilepetrone/financial_lessons,651,6,What financial info would I have wanted to know when I was 22 and jumping into tech?,@emilepetrone
-5,https://github.com/ssantoshp/Empyrial,626,5,Portfolio Management Framework for risk and performance analysis 投资组合管理,@ssantoshp @rgleavenworth
 5,https://github.com/alexgolec/tda-api,1094,5,"A TD Ameritrade API client for Python. Includes historical data for equities and ETFs, options chains, streaming order book data, complex order construction, and more. ",@alexgolec
-5,https://github.com/FinMind/FinMind,1821,5,"Open Data, more than 50 financial data. 提供超過 50 個金融資料(台股為主)，每天更新 https://finmind.github.io/",@linsamtw @machineCYC
-5,https://github.com/sangyx/deep-finance,1064,5,"Datasets, papers and books on AI & Finance.",@sangyx
+5,https://github.com/FinMind/FinMind,1822,5,"Open Data, more than 50 financial data. 提供超過 50 個金融資料(台股為主)，每天更新 https://finmind.github.io/",@linsamtw @machineCYC
+5,https://github.com/sangyx/deep-finance,1066,5,"Datasets, papers and books on AI & Finance.",@sangyx
 4,https://github.com/mop-tracker/mop,1712,4,Stock market tracker for hackers.,@brandleesee @Mohit-Agarwa1
-4,https://github.com/twopirllc/pandas-ta,3059,4,Technical Analysis Indicators - Pandas TA is an easy to use Python 3 Pandas Extension with 130+ Indicators,@twopirllc @dependabot[bot]
+4,https://github.com/twopirllc/pandas-ta,3062,4,Technical Analysis Indicators - Pandas TA is an easy to use Python 3 Pandas Extension with 130+ Indicators,@twopirllc @dependabot[bot]
 4,https://github.com/momo0853/kkndme,768,4,kkndme聊房，数据整理自天涯。提供HTML、PDF和Markdown三种形式。,@momo0853
 4,https://github.com/raphaelm/python-fints,262,4,Pure-python FinTS (formerly known as HBCI) implementation,@raphaelm @rhn @jan-janssen
-3,https://github.com/stefan-jansen/machine-learning-for-trading,6402,3,"Code for Machine Learning for Algorithmic Trading, 2nd edition.",@stefan-jansen
+3,https://github.com/stefan-jansen/machine-learning-for-trading,6406,3,"Code for Machine Learning for Algorithmic Trading, 2nd edition.",@stefan-jansen
 3,https://github.com/kevinschaich/mintable,1185,3,"🍃 Automate your personal finances – for free, with no ads, and no data collection.",@kevinschaich
-3,https://github.com/sec-edgar/sec-edgar,743,3," Download all companies  periodic reports, filings and forms from EDGAR database.",@wayneroe @jackmoody11 @prhiggins
-3,https://github.com/jpmorganchase/python-training,1303,3,Python training for business analysts and traders,@timkpaine @jpmtrm
+3,https://github.com/sec-edgar/sec-edgar,744,3," Download all companies  periodic reports, filings and forms from EDGAR database.",@wayneroe @jackmoody11 @prhiggins
+3,https://github.com/jpmorganchase/python-training,1305,3,Python training for business analysts and traders,@timkpaine @jpmtrm
 3,https://github.com/lakasir/lakasir,227,3,"Point Of Sale system, free and open source",@sheenazien8
-3,https://github.com/jankrepl/deepdow,619,3,Portfolio optimization with deep learning.,@jankrepl @Shivanirathod126
-2,https://github.com/MarcSkovMadsen/awesome-streamlit,1421,2,The purpose of this project is to share knowledge on how awesome Streamlit is and can be,@ozert @MarcSkovMadsen
-2,https://github.com/JerBouma/AlgorithmicTrading,417,2,"This repository contains three ways to obtain arbitrage which are Dual Listing, Options and Statistical Arbitrage. These are projects in collaboration with Optiver and have been peer-reviewed by staff members of Optiver.",@dependabot[bot] @JerBouma
-2,https://github.com/range-of-motion/budget,818,2,Get a grip on your finances.,@dependabot[bot] @range-of-motion
-2,https://github.com/refraction-ray/xalpha,1306,2,基金投资管理回测引擎,@refraction-ray
-2,https://github.com/moneymanagerex/android-money-manager-ex,352,2,Android version of Money Manager Ex,@HansCronau @vomikan
+3,https://github.com/jankrepl/deepdow,621,3,Portfolio optimization with deep learning.,@jankrepl @Shivanirathod126
+2,https://github.com/MarcSkovMadsen/awesome-streamlit,1422,2,The purpose of this project is to share knowledge on how awesome Streamlit is and can be,@ozert @MarcSkovMadsen
+2,https://github.com/JerBouma/AlgorithmicTrading,419,2,"This repository contains three ways to obtain arbitrage which are Dual Listing, Options and Statistical Arbitrage. These are projects in collaboration with Optiver and have been peer-reviewed by staff members of Optiver.",@dependabot[bot] @JerBouma
+2,https://github.com/ayastreb/money-tracker,748,2,:moneybag: Personal finances tracking web app,@lpelypenko
+2,https://github.com/range-of-motion/budget,821,2,Get a grip on your finances.,@dependabot[bot] @range-of-motion
+2,https://github.com/refraction-ray/xalpha,1307,2,基金投资管理回测引擎,@refraction-ray
+2,https://github.com/moneymanagerex/android-money-manager-ex,351,2,Android version of Money Manager Ex,@HansCronau @vomikan
 2,https://github.com/austinkregel/finance,363,2,A self hosted app to help you get a better understanding of your personal finances.,@dependabot[bot]
-1,https://github.com/ayastreb/money-tracker,748,1,:moneybag: Personal finances tracking web app,@lpelypenko
 1,https://github.com/JerBouma/FinanceDatabase,1315,1,"This is a database of 300.000+ symbols containing Equities, ETFs, Funds, Indices, Currencies, Cryptocurrencies and Money Markets.",@JerBouma
 1,https://github.com/areed1192/td-ameritrade-python-api,642,1,Unofficial Python API client library for TD Ameritrade. This library allows for easy access of the Standard API and allows users to build data pipelines for the Streaming API.,@areed1192
 1,https://github.com/nladuo/THSTrader,406,1,量化交易。同花顺免费模拟炒股软件客户端的python API。(Python3),@nladuo
@@ -90,35 +88,37 @@ score,url,stargazerCount,"Commit Activity (count of commits in last 6 months, ma
 0,https://github.com/hudson-and-thames/mlfinlab,3186,0,"MlFinLab helps portfolio managers and traders who want to leverage the power of machine learning by providing reproducible, interpretable, and easy to use tools. ",
 0,https://github.com/areed1192/python-trading-robot,427,0,"A trading robot, that can submit basic orders in an automated fashion using the TD API.",
 0,https://github.com/lukstei/trading-backtest,294,0,A stock backtesting engine written in Java. And a pairs trading (cointegration) strategy implementation using a bayesian kalman filter model,
-0,https://github.com/piquette/finance-go,577,0,:bar_chart: Financial markets data library implemented in go.,
+0,https://github.com/piquette/finance-go,576,0,:bar_chart: Financial markets data library implemented in go.,
 0,https://github.com/ryantcullen/stock-bot,281,0,An application that allows you to design and test your own stock trading algorithms in an attempt to beat the market.,
 0,https://github.com/emansih/FireflyMobile,252,0,Mobile Application for Firefly III written in Kotlin,
 0,https://github.com/PyPatel/Machine-Learning-and-AI-in-Trading,325,0,Applying Machine Learning and AI Algorithms applied to Trading for better performance and low Std.,
-0,https://github.com/rsvp/fecon235,815,0,Notebooks for financial economics. Keywords:  Jupyter notebook pandas Federal Reserve FRED Ferbus GDP CPI PCE inflation unemployment wage income debt Case-Shiller housing asset portfolio equities SPX bonds TIPS rates currency FX euro EUR USD JPY yen XAU gold Brent WTI oil Holt-Winters time-series forecasting statistics econometrics,
+0,https://github.com/rsvp/fecon235,816,0,Notebooks for financial economics. Keywords:  Jupyter notebook pandas Federal Reserve FRED Ferbus GDP CPI PCE inflation unemployment wage income debt Case-Shiller housing asset portfolio equities SPX bonds TIPS rates currency FX euro EUR USD JPY yen XAU gold Brent WTI oil Holt-Winters time-series forecasting statistics econometrics,
 0,https://github.com/sdementen/piecash,237,0,Pythonic interface to GnuCash SQL documents,
 0,https://github.com/firmai/pandapy,522,0,"PandaPy has the speed of NumPy and the usability of Pandas 10x to 50x faster (by @firmai) ",
 0,https://github.com/firmai/atspy,460,0,AtsPy: Automated Time Series Models in Python (by @firmai),
 0,https://github.com/dingran/quant-notes,369,0,"Quantitative Interview Preparation Guide, updated version here ==>",
 0,https://github.com/VivekPa/IntroNeuralNetworks,621,0,Introducing neural networks to predict stock prices,
-0,https://github.com/mr-karan/awesome-investing,1414,0," 💸💸 Curated list of investment & finance related resources ",
+0,https://github.com/mr-karan/awesome-investing,1415,0," 💸💸 Curated list of investment & finance related resources ",
 0,https://github.com/yahoo-finance/yahoo-finance,1168,0,Python module to get stock data from Yahoo! Finance,
-0,https://github.com/pydata/pandas-datareader,2480,0,Extract data from a wide range of Internet sources into a pandas DataFrame.,
-0,https://github.com/RomelTorres/alpha_vantage,3776,0,A python wrapper for Alpha Vantage API for financial data.,
+0,https://github.com/pydata/pandas-datareader,2482,0,Extract data from a wide range of Internet sources into a pandas DataFrame.,
+0,https://github.com/RomelTorres/alpha_vantage,3778,0,A python wrapper for Alpha Vantage API for financial data.,
 0,https://github.com/bsolomon1124/pyfinance,287,0,Python package designed for general financial and security returns analysis.,
+0,https://github.com/ssantoshp/Empyrial,626,0,Portfolio Management Framework for risk and performance analysis 投资组合管理,
 0,https://github.com/dotledger/dotledger,225,0,Dot Ledger is a Free and Open Source personal finance management tool.,
 0,https://github.com/mcdallas/wallstreet,901,0,Real time stock and option data.,
-0,https://github.com/quantsbin/Quantsbin,270,0,Quantitative Finance tools,
+0,https://github.com/quantsbin/Quantsbin,271,0,Quantitative Finance tools,
 0,https://github.com/SimFin/simfin-tutorials,229,0,Tutorials for SimFin - Simple financial data for Python,
 0,https://github.com/dongyuanxin/news-emotion,284,0,📉 金融文本情感分析模型,
 0,https://github.com/hootnot/oanda-api-v20,367,0,OANDA  REST-V20  API wrapper. Easy access to OANDA's REST v20 API with oandapyV20 package. Checkout the Jupyter notebooks!,
 0,https://github.com/sun0x00/redtorch,675,0,Kotlin(Java)开源量化交易开发框架,
 0,https://github.com/euforic/banking.js,609,0,The Missing API for Banks - Get all of your transactions and balances using node,
+0,https://github.com/robertmartin8/PyPortfolioOpt,3122,0,"Financial portfolio optimisation in python, including classical efficient frontier, Black-Litterman, Hierarchical Risk Parity",
 0,https://github.com/rburkholder/trade-frame,284,0,"C++ 17 based library (with sample applications) for testing equities, futures, etfs & options based automated trading ideas using DTN IQFeed real time data feed and Interactive Brokers (IB TWS API) for trade execution. [I have a private repository which has more recent changes, which get back-ported randomly][irc: #tradeframe on OFTC]",
 0,https://github.com/ebradyjobory/finance.js,1165,0,A JavaScript library for common financial calculations,
 0,https://github.com/alpha-miner/Finance-Python,466,0,"python tools for Finance with the functionality of indicator calculation, business day calculation and so on.",
 0,https://github.com/fmilthaler/FinQuant,864,0,"A program for financial portfolio management, analysis and optimisation.",
 0,https://github.com/alpacahq/example-hftish,549,0,Example Order Book Imbalance Algorithm,
-0,https://github.com/constverum/Quantdom,624,0,Python-based framework for backtesting trading strategies & analyzing financial markets [GUI :neckbeard:],
+0,https://github.com/constverum/Quantdom,625,0,Python-based framework for backtesting trading strategies & analyzing financial markets [GUI :neckbeard:],
 0,https://github.com/trentpiercy/flutter-candlesticks,399,0,Elegant OHLC Candlestick and Trade Volume charts for @Flutter,
 0,https://github.com/envato/double_entry,327,0,A double-entry accounting system for Ruby applications.,
 0,https://github.com/waditu/tushare,11835,0,TuShare is a utility for crawling historical data of China stocks,
@@ -126,25 +126,25 @@ score,url,stargazerCount,"Commit Activity (count of commits in last 6 months, ma
 0,https://github.com/dvassallo/bootstrapping-calculator,490,0,Do you have enough savings to fund your business?,
 0,https://github.com/lukstei/reddit-hyped-stocks,284,0,A web application to explore currently hyped stocks on Reddit,
 0,https://github.com/mlouielu/twstock,973,0,台灣股市股票價格擷取 (含即時股票資訊) - Taiwan Stock Opendata with realtime,
-0,https://github.com/piggyvault/piggyvault,335,0,Family finance management app.,
+0,https://github.com/piggyvault/piggyvault,336,0,Family finance management app.,
 0,https://github.com/icoxfog417/awesome-financial-nlp,329,0,Researches for Natural Language Processing for Financial Domain,
 0,https://github.com/tatsath/fin-ml,369,0,"This github repository of ""Machine Learning and Data Science Blueprints for Finance"". Please star.",
 0,https://github.com/addisonlynch/iexfinance,639,0,Python SDK for IEX Cloud,
 0,https://github.com/Benny-/Yahoo-ticker-symbol-downloader,229,0,A web scraper for ticker symbols from yahoo finance,
 0,https://github.com/firmai/deltapy,464,0,DeltaPy - Tabular Data Augmentation (by @firmai),
 0,https://github.com/michaelroudnitski/Tabs,281,0,The expense sharing app.,
-0,https://github.com/achillesrasquinha/bulbea,1742,0,:boar: :bear: Deep Learning based Python Library for Stock Market Prediction and Modelling,
+0,https://github.com/achillesrasquinha/bulbea,1745,0,:boar: :bear: Deep Learning based Python Library for Stock Market Prediction and Modelling,
 0,https://github.com/plotly/Dash.jl,419,0,Dash for Julia - A Julia interface to the Dash ecosystem for creating analytic web applications in Julia. No JavaScript required.,
-0,https://github.com/mortada/fredapi,603,0,Python API for FRED (Federal Reserve Economic Data) and ALFRED (Archival FRED),
+0,https://github.com/mortada/fredapi,604,0,Python API for FRED (Federal Reserve Economic Data) and ALFRED (Archival FRED),
 0,https://github.com/JerBouma/ThePassiveInvestor,381,0,Passive Investing for the Average Joe,
 0,https://github.com/trentpiercy/trace,966,0,Modern crypto portfolio & market explorer. Built with @Flutter,
 0,https://github.com/alpacahq/alpaca-backtrader-api,482,0,"Alpaca Trading API integrated with backtrader ",
 0,https://github.com/Hvass-Labs/FinanceOps,647,0,Research in investment finance with Python Notebooks,
-0,https://github.com/bfolkens/py-market-profile,241,0,A library to calculate Market Profile (aka Volume Profile) for financial data from a Pandas DataFrame.,
-0,https://github.com/shashankvemuri/Finance,537,0,Here you can find all the quantitative finance algorithms that I've worked on and refined over the past year!,
+0,https://github.com/bfolkens/py-market-profile,242,0,A library to calculate Market Profile (aka Volume Profile) for financial data from a Pandas DataFrame.,
+0,https://github.com/shashankvemuri/Finance,538,0,Here you can find all the quantitative finance algorithms that I've worked on and refined over the past year!,
 0,https://github.com/jeog/TOSDataBridge,289,0,"A collection of resources for pulling real-time streaming data off of TDAmeritrade's ThinkOrSwim(TOS) platform; providing C, C++, Java and Python interfaces.",
 0,https://github.com/toomore/grs,417,0,📈 台灣上市上櫃股票價格擷取（Fetch Taiwan Stock Exchange data）含即時盤、台灣時間轉換、開休市判斷。,
-0,https://github.com/SimFin/simfin,251,0,Simple financial data for Python,
+0,https://github.com/SimFin/simfin,252,0,Simple financial data for Python,
 0,https://github.com/markrogoyski/math-php,2148,0,"Powerful modern math library for PHP: Features descriptive statistics and regressions; Continuous and discrete probability distributions; Linear algebra with matrices and vectors, Numerical analysis; special mathematical functions; Algebra",
-0,https://github.com/quantopian/alphalens,2465,0,Performance analysis of predictive (alpha) stock factors,
+0,https://github.com/quantopian/alphalens,2466,0,Performance analysis of predictive (alpha) stock factors,
 0,https://github.com/gugoan/economizzer,408,0,Open Source Personal Finance Manager,
