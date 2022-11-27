@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 26 Nov 2022):
+Here are some of FINOS' most active projects (as of 27 Nov 2022):
 
  - [Backplane](#Backplane)
  - [FINOS Branding and Resources](#FINOS-Branding-and-Resources)
@@ -313,7 +313,7 @@ _Legend Depot component_
 #### Further Details
  - [https://github.com/finos/legend-depot](https://github.com/finos/legend-depot)
 ### legend-engine
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-48-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-124-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-6-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-48-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-124-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-5-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine/issues)
 
 _Legend Engine module_
 
@@ -574,7 +574,7 @@ _A data visualization and analytics component, especially well-suited for large 
  - [https://github.com/finos/perspective](https://github.com/finos/perspective)
  - [https://perspective.finos.org/](https://perspective.finos.org/)
 ## Plexus Interop
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-258-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/plexus-interop/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-55-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/plexus-interop)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-70-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/plexus-interop/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-258-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/plexus-interop/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-55-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/plexus-interop)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-71-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/plexus-interop/issues)
 
 _Plexus Interop open source project hosted by the Fintech Open Source Foundation_
 
