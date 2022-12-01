@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 30 Nov 2022):
+Here are some of FINOS' most active projects (as of 01 Dec 2022):
 
  - [Backplane](#Backplane)
  - [FINOS Branding and Resources](#FINOS-Branding-and-Resources)
@@ -35,7 +35,6 @@ Here are some of FINOS' most active projects (as of 30 Nov 2022):
    - [FINOS Open Source Readiness Special Interest Group](#FINOS-Open-Source-Readiness-Special-Interest-Group)
  - [Spring Bot](#Spring-Bot)
  - Symphony
-   - [Symphony Generator](#Symphony-Generator)
    - [Symphony BDK for Java](#Symphony-BDK-for-Java)
    - [Symphony BDK for Python](#Symphony-BDK-for-Python)
    - [Symphony Workflow Developer Kit (WDK)](#Symphony-Workflow-Developer-Kit-(WDK))
@@ -58,13 +57,13 @@ _FDC3 Desktop Agent Bridge_
 #### From the README:
 
 > [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg) ](https://community.finos.org/docs/governance/Software-Projects/stages/incubating)
-> [![CodeQL](https://github.com/bankofapis/backplane/actions/workflows/codeql.yml/badge.svg) ](https://github.com/bankofapis/backplane/actions/workflows/codeql.yml)
-> [![Node.js CVE Scanning](https://github.com/bankofapis/backplane/actions/workflows/node-cve-scanning.yml/badge.svg) ](https://github.com/bankofapis/backplane/actions/workflows/node-cve-scanning.yml)
-> [![CVE Scanning for .NET](https://github.com/bankofapis/backplane/actions/workflows/dotnet-cve-scanning.yml/badge.svg) ](https://github.com/bankofapis/backplane/actions/workflows/dotnet-cve-scanning.yml)
-> [![.NET](https://github.com/bankofapis/backplane/actions/workflows/dot-net-build.yml/badge.svg) ](https://github.com/bankofapis/backplane/actions/workflows/dot-net-build.yml)
-> [![npm build](https://github.com/bankofapis/backplane/actions/workflows/npm-build.yml/badge.svg) ](https://github.com/bankofapis/backplane/actions/workflows/npm-build.yml)
+> [![CodeQL](https://github.com/finos/backplane/actions/workflows/codeql.yml/badge.svg) ](https://github.com/finos/backplane/actions/workflows/codeql.yml)
+> [![Node.js CVE Scanning](https://github.com/finos/backplane/actions/workflows/node-cve-scanning.yml/badge.svg) ](https://github.com/finos/backplane/actions/workflows/node-cve-scanning.yml)
+> [![CVE Scanning for .NET](https://github.com/finos/backplane/actions/workflows/dotnet-cve-scanning.yml/badge.svg) ](https://github.com/finos/backplane/actions/workflows/dotnet-cve-scanning.yml)
+> [![.NET](https://github.com/finos/backplane/actions/workflows/dot-net-build.yml/badge.svg) ](https://github.com/finos/backplane/actions/workflows/dot-net-build.yml)
+> [![npm build](https://github.com/finos/backplane/actions/workflows/npm-build.yml/badge.svg) ](https://github.com/finos/backplane/actions/workflows/npm-build.yml)
 > [![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/6700/badge) ](https://bestpractices.coreinfrastructure.org/projects/6700)
-> [![Node.js License Scanning](https://github.com/bankofapis/backplane/actions/workflows/node-license-scanning.yml/badge.svg) ](https://github.com/bankofapis/backplane/actions/workflows/node-license-scanning.yml)
+> [![Node.js License Scanning](https://github.com/finos/backplane/actions/workflows/node-license-scanning.yml/badge.svg) ](https://github.com/finos/backplane/actions/workflows/node-license-scanning.yml)
 > [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg) ](https://opensource.org/licenses/Apache-2.0)
 > 
 > 
@@ -164,7 +163,7 @@ _An open standard for the financial desktop._
  - [https://github.com/finos/FDC3](https://github.com/finos/FDC3)
  - [https://fdc3.finos.org](https://fdc3.finos.org)
 ### FDC3 Conformance Framework
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-conformance-framework/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-11-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-conformance-framework)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-13-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-conformance-framework/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-conformance-framework/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-conformance-framework)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-13-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-conformance-framework/issues)
 
 _A framework for testing whether desktop containers implement the FDC3 standard_
 
@@ -446,7 +445,7 @@ _Legend Studio_
 ## Morphir
 
 ### Morphir
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-73-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-21-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-73-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-16-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir/issues)
 
 _A universal language for business and technology_
 
@@ -557,7 +556,7 @@ _OpenMAMA is an open source project that provides a high performance middleware 
  - [https://github.com/finos/OpenMAMA](https://github.com/finos/OpenMAMA)
  - [https://openmama.org](https://openmama.org)
 ## Perspective
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-5032-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-548-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-87-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-5036-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-549-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-87-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
@@ -725,31 +724,8 @@ _Spring Boot + Java Integration for Symphony/Teams Chat Platform Bots and Apps_
  - [https://springbot.finos.org](https://springbot.finos.org)
 ## Symphony
 
-### Symphony Generator
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/generator-symphony/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-20-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/generator-symphony)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/generator-symphony/issues)
-
-_Yeoman based generator for Symphony Bots and Applications_
-
-
-
-#### From the README:
-
-> [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg) ](https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating)
-> [![npm version](https://badge.fury.io/js/@finos%2Fgenerator-symphony.svg) ](https://badge.fury.io/js/@finos%2Fgenerator-symphony)
-> [![Build](https://github.com/finos/symphony-bdk-java/actions/workflows/build.yml/badge.svg) ](https://github.com/finos/symphony-bdk-java/actions/workflows/build.yml)
-> 
-> 
-> Yeoman based generator for Symphony Bots and Applications:
-> 
-> - [Java bot](https://github.com/finos/symphony-bdk-java)
-> - [Python bot](https://github.com/finos/symphony-bdk-python)
-> - [WDK (Symphony Workflow Developer Kit)](https://github.com/finos/symphony-wdk)
->... [_read more_](https://github.com/finos/generator-symphony)
-> 
-#### Further Details
- - [https://github.com/finos/generator-symphony](https://github.com/finos/generator-symphony)
 ### Symphony BDK for Java
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-19-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-java/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-63-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-java)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-java/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-19-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-java/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-63-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-java)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-11-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-java/issues)
 
 _The Symphony BDK (Bot Developer Kit) for Java helps you to create production-grade Chat Bots and Extension Applications on top of the Symphony REST APIs._
 
@@ -804,7 +780,7 @@ _Symphony Python Bot Development Kit (BDK)_
  - [https://github.com/finos/symphony-bdk-python](https://github.com/finos/symphony-bdk-python)
  - [https://symphony-bdk-python.finos.org/](https://symphony-bdk-python.finos.org/)
 ### Symphony Workflow Developer Kit (WDK)
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-11-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk/issues)
 
 _Symphony Workflow Developer Kit (WDK), a bot capable of running workflows_
 
@@ -848,7 +824,7 @@ _Symphony WDK Templates_
 #### Further Details
  - [https://github.com/finos/symphony-wdk-gallery](https://github.com/finos/symphony-wdk-gallery)
 ### SymphonyElectron
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-70-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-100-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-71-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-100-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron/issues)
 
 _A desktop client for the Symphony Collaboration Platform built using Electron_
 
@@ -960,7 +936,7 @@ _A next-generation data and analytics platform for use in highly regulated envir
 #### Further Details
  - [https://github.com/finos/tracdap](https://github.com/finos/tracdap)
 ## Vuu
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-5-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-5-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-52-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-6-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-5-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-53-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/issues)
 
 _Vuu - an open source view server and html 5 based UI system_
 
@@ -980,7 +956,7 @@ _Vuu - an open source view server and html 5 based UI system_
  - [https://github.com/finos/vuu](https://github.com/finos/vuu)
  - [https://vuu.finos.org](https://vuu.finos.org)
 ## Waltz
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-133-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-96-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-327-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-133-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-96-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-329-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/issues)
 
 _Enterprise Information Service_
 
