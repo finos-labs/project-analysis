@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 04 Dec 2022):
+Here are some of FINOS' most active projects (as of 05 Dec 2022):
 
  - [Backplane](#Backplane)
  - [FINOS Branding and Resources](#FINOS-Branding-and-Resources)
@@ -32,6 +32,7 @@ Here are some of FINOS' most active projects (as of 04 Dec 2022):
  - [Security Scanning](#Security-Scanning)
  - SIGs
    - [Compliant Financial Infrastructure](#Compliant-Financial-Infrastructure)
+   - [FINOS InnerSource Special Interest Group](#FINOS-InnerSource-Special-Interest-Group)
    - [FINOS Open Source Readiness Special Interest Group](#FINOS-Open-Source-Readiness-Special-Interest-Group)
  - [Spring Bot](#Spring-Bot)
  - Symphony
@@ -48,7 +49,7 @@ Here are some of FINOS' most active projects (as of 04 Dec 2022):
  - [Vuu](#Vuu)
  - [Waltz](#Waltz)
 ## Backplane
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/backplane/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/backplane)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/backplane/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/backplane/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/backplane)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/backplane/issues)
 
 _FDC3 Desktop Agent Bridge_
 
@@ -136,7 +137,7 @@ _FINOS Community, Project and SIG wide collaboration space_
 ## FDC3
 
 ### FDC3
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-126-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-82-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-53-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-126-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-82-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-52-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/issues)
 
 _An open standard for the financial desktop._
 
@@ -183,7 +184,7 @@ _A framework for testing whether desktop containers implement the FDC3 standard_
 #### Further Details
  - [https://github.com/finos/FDC3-conformance-framework](https://github.com/finos/FDC3-conformance-framework)
 ### FDC3 Sail
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-16-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-Sail/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-9-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-Sail)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-Sail/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-17-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-Sail/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-9-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-Sail)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-Sail/issues)
 
 _Open implementation of the FDC3 standard using Electron and an integrated App Directory._
 
@@ -677,6 +678,34 @@ _Compliant Financial Infrastructure accelerates the development, deployment and 
 > 
 #### Further Details
  - [https://github.com/finos/compliant-financial-infrastructure](https://github.com/finos/compliant-financial-infrastructure)
+### FINOS InnerSource Special Interest Group
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-14-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/InnerSource/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-14-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/InnerSource)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-13-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/InnerSource/issues)
+
+_The FINOS InnerSource SIG is a community of people implementing, or interested in implementing, InnerSource within their financial services organization._
+
+[![Topic: innersource](https://img.shields.io/badge/innersource-fafbfc)](https://github.com/topics/innersource) [![Topic: finos](https://img.shields.io/badge/finos-fafbfc)](https://github.com/topics/finos) [![Topic: finos-innersource](https://img.shields.io/badge/finos%20innersource-fafbfc)](https://github.com/topics/finos-innersource) [![Topic: hacktoberfest](https://img.shields.io/badge/hacktoberfest-fafbfc)](https://github.com/topics/hacktoberfest) 
+
+#### From the README:
+
+> InnerSource can help break down silos, encourage internal collaboration and
+> innovation, accelerate new engineer on-boarding, and identify opportunities to
+> contribute software back to the open source world.
+> 
+> 
+> The FINOS InnerSource
+> [Special Interest Group](https://github.com/finos/community/tree/master/governance#special-interest-groups)
+> is a community of people implementing, or interested in implementing,
+> InnerSource within their financial services organization.
+> 
+> The InnerSource SIG is of particular importance to financial services
+> organisations who wish to accelerate their InnerSource practices, share best
+> practices, patterns and anti-patterns and potentially related code (e.g. for
+> InnerSource tooling) in a secure environment, with the aim of contributing
+> proven methods to FINOS and the wider InnerSource Commons community.
+>... [_read more_](https://github.com/finos/InnerSource)
+> 
+#### Further Details
+ - [https://github.com/finos/InnerSource](https://github.com/finos/InnerSource)
 ### FINOS Open Source Readiness Special Interest Group
 [![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-24-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/issues)
 
@@ -725,7 +754,7 @@ _Spring Boot + Java Integration for Symphony/Teams Chat Platform Bots and Apps_
 ## Symphony
 
 ### Symphony BDK for Java
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-19-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-java/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-64-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-java)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-java/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-19-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-java/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-64-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-java)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-11-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-java/issues)
 
 _The Symphony BDK (Bot Developer Kit) for Java helps you to create production-grade Chat Bots and Extension Applications on top of the Symphony REST APIs._
 
@@ -752,7 +781,7 @@ _The Symphony BDK (Bot Developer Kit) for Java helps you to create production-gr
  - [https://github.com/finos/symphony-bdk-java](https://github.com/finos/symphony-bdk-java)
  - [https://symphony-bdk-java.finos.org](https://symphony-bdk-java.finos.org)
 ### Symphony BDK for Python
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-24-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-python/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-35-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-python)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-python/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-24-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-python/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-35-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-python)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-python/issues)
 
 _Symphony Python Bot Development Kit (BDK)_
 
@@ -956,7 +985,7 @@ _Vuu - an open source view server and html 5 based UI system_
  - [https://github.com/finos/vuu](https://github.com/finos/vuu)
  - [https://vuu.finos.org](https://vuu.finos.org)
 ## Waltz
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-133-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-96-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-329-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-134-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-96-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-328-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/issues)
 
 _Enterprise Information Service_
 
