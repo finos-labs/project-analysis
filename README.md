@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 22 Dec 2022):
+Here are some of FINOS' most active projects (as of 23 Dec 2022):
 
  - [Backplane](#Backplane)
  - [FINOS Branding and Resources](#FINOS-Branding-and-Resources)
@@ -50,33 +50,31 @@ Here are some of FINOS' most active projects (as of 22 Dec 2022):
  - [Vuu](#Vuu)
  - [Waltz](#Waltz)
 ## Backplane
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/backplane/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/backplane)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/backplane/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/backplane/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/backplane)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/backplane/issues)
 
 _FDC3 Desktop Agent Bridge_
 
-
+[![Topic: fdc3](https://img.shields.io/badge/fdc3-fafbfc)](https://github.com/topics/fdc3) [![Topic: desktop-agent-bridge](https://img.shields.io/badge/desktop%20agent%20bridge-fafbfc)](https://github.com/topics/desktop-agent-bridge) 
 
 #### From the README:
 
+> [![npm](https://img.shields.io/npm/v/@finos/fdc3-backplane-client) ](https://www.npmjs.com/package/@finos/fdc3-backplane-client)
 > [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg) ](https://community.finos.org/docs/governance/Software-Projects/stages/incubating)
-> [![CodeQL](https://github.com/finos/backplane/actions/workflows/codeql.yml/badge.svg) ](https://github.com/finos/backplane/actions/workflows/codeql.yml)
-> [![Node.js CVE Scanning](https://github.com/finos/backplane/actions/workflows/node-cve-scanning.yml/badge.svg) ](https://github.com/finos/backplane/actions/workflows/node-cve-scanning.yml)
-> [![CVE Scanning for .NET](https://github.com/finos/backplane/actions/workflows/dotnet-cve-scanning.yml/badge.svg) ](https://github.com/finos/backplane/actions/workflows/dotnet-cve-scanning.yml)
-> [![.NET](https://github.com/finos/backplane/actions/workflows/dot-net-build.yml/badge.svg) ](https://github.com/finos/backplane/actions/workflows/dot-net-build.yml)
-> [![npm build](https://github.com/finos/backplane/actions/workflows/npm-build.yml/badge.svg) ](https://github.com/finos/backplane/actions/workflows/npm-build.yml)
-> [![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/6700/badge) ](https://bestpractices.coreinfrastructure.org/projects/6700)
-> [![Node.js License Scanning](https://github.com/finos/backplane/actions/workflows/node-license-scanning.yml/badge.svg) ](https://github.com/finos/backplane/actions/workflows/node-license-scanning.yml)
-> [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg) ](https://opensource.org/licenses/Apache-2.0)
+> [![codeql](https://github.com/finos/backplane/actions/workflows/codeql.yml/badge.svg) ](https://github.com/finos/backplane/actions/workflows/codeql.yml)
+> [![vulnerabilities check(js)](https://github.com/finos/backplane/actions/workflows/node-cve-scanning.yml/badge.svg) ](https://github.com/finos/backplane/actions/workflows/node-cve-scanning.yml)
+> [![vulnerabilities check(.net)](https://github.com/finos/backplane/actions/workflows/dotnet-cve-scanning.yml/badge.svg) ](https://github.com/finos/backplane/actions/workflows/dotnet-cve-scanning.yml)
+> [![ossf best practices](https://bestpractices.coreinfrastructure.org/projects/6700/badge) ](https://bestpractices.coreinfrastructure.org/projects/6700)
+> [![floss license(js)](https://github.com/finos/backplane/actions/workflows/node-license-scanning.yml/badge.svg) ](https://github.com/finos/backplane/actions/workflows/node-license-scanning.yml)
+> [![license](https://img.shields.io/badge/License-Apache%202.0-blue.svg) ](https://opensource.org/licenses/Apache-2.0)
+> 
 > 
 > 
 > Desktop Agent bridge aka 'Backplane' is a component which allows different desktop agents to connect and communicate through websockets.
-> 
-> Where FDC3 Desktop Agent API addresses interoperability between apps running within the context of a single Desktop Agent (DA), facilitating cross-application workflows, FDC3 Desktop Agent Backplane addresses the interconnection of Desktop Agents (DAs) such that apps running under different Desktop Agents can also interoperate, allowing workflows to span multiple Desktop Agents
 >... [_read more_](https://github.com/finos/backplane)
 > 
 #### Further Details
  - [https://github.com/finos/backplane](https://github.com/finos/backplane)
- - [https://backplane.finos.org](https://backplane.finos.org)
+ - [https://finos.github.io/backplane/](https://finos.github.io/backplane/)
 ## FINOS Branding and Resources
 [![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/branding/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/branding)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/branding/issues)
 
@@ -272,7 +270,7 @@ _Support for jupyter notebook templates in jupyterlab_
 ## Legend
 
 ### Legend
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-689-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-138-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-688-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-138-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/issues)
 
 _The Legend project_
 
@@ -594,7 +592,7 @@ _OpenMAMA is an open source project that provides a high performance middleware 
  - [https://github.com/finos/OpenMAMA](https://github.com/finos/OpenMAMA)
  - [https://openmama.org](https://openmama.org)
 ## Perspective
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-5120-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-558-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-89-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-5121-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-558-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-89-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
