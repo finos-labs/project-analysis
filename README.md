@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 24 Dec 2022):
+Here are some of FINOS' most active projects (as of 25 Dec 2022):
 
  - [Backplane](#Backplane)
  - [FINOS Branding and Resources](#FINOS-Branding-and-Resources)
@@ -270,7 +270,7 @@ _Support for jupyter notebook templates in jupyterlab_
 ## Legend
 
 ### Legend
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-688-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-138-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-689-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-139-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/issues)
 
 _The Legend project_
 
@@ -347,7 +347,7 @@ _Legend Depot component_
 #### Further Details
  - [https://github.com/finos/legend-depot](https://github.com/finos/legend-depot)
 ### legend-engine
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-51-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-126-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-51-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-126-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine/issues)
 
 _Legend Engine module_
 
@@ -592,7 +592,7 @@ _OpenMAMA is an open source project that provides a high performance middleware 
  - [https://github.com/finos/OpenMAMA](https://github.com/finos/OpenMAMA)
  - [https://openmama.org](https://openmama.org)
 ## Perspective
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-5122-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-558-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-90-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-5124-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-558-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-90-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
