@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 31 Dec 2022):
+Here are some of FINOS' most active projects (as of 01 Jan 2023):
 
  - [Backplane](#Backplane)
  - [FINOS Branding and Resources](#FINOS-Branding-and-Resources)
@@ -38,7 +38,6 @@ Here are some of FINOS' most active projects (as of 31 Dec 2022):
  - [Spring Bot](#Spring-Bot)
  - Symphony
    - [Symphony BDK for Java](#Symphony-BDK-for-Java)
-   - [Symphony BDK for Python](#Symphony-BDK-for-Python)
    - [Symphony Workflow Developer Kit (WDK)](#Symphony-Workflow-Developer-Kit-(WDK))
    - [Symphony WDK Gallery](#Symphony-WDK-Gallery)
    - [SymphonyElectron](#SymphonyElectron)
@@ -592,7 +591,7 @@ _OpenMAMA is an open source project that provides a high performance middleware 
  - [https://github.com/finos/OpenMAMA](https://github.com/finos/OpenMAMA)
  - [https://openmama.org](https://openmama.org)
 ## Perspective
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-5131-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-561-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-89-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-5131-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-561-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-90-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
@@ -762,7 +761,7 @@ _Accelerate financial services firms’ journeys toward open source readiness, b
  - [https://github.com/finos/open-source-readiness](https://github.com/finos/open-source-readiness)
  - [https://osr.finos.org](https://osr.finos.org)
 ## Spring Bot
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-39-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-29-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-39-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-30-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot/issues)
 
 _Spring Boot + Java Integration for Symphony/Teams Chat Platform Bots and Apps_
 
@@ -815,34 +814,6 @@ _The Symphony BDK (Bot Developer Kit) for Java helps you to create production-gr
 #### Further Details
  - [https://github.com/finos/symphony-bdk-java](https://github.com/finos/symphony-bdk-java)
  - [https://symphony-bdk-java.finos.org](https://symphony-bdk-java.finos.org)
-### Symphony BDK for Python
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-24-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-python/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-35-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-python)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-python/issues)
-
-_Symphony Python Bot Development Kit (BDK)_
-
-[![Topic: symphony](https://img.shields.io/badge/symphony-fafbfc)](https://github.com/topics/symphony) [![Topic: bot](https://img.shields.io/badge/bot-fafbfc)](https://github.com/topics/bot) [![Topic: python](https://img.shields.io/badge/python-fafbfc)](https://github.com/topics/python) [![Topic: bot-framework](https://img.shields.io/badge/bot%20framework-fafbfc)](https://github.com/topics/bot-framework) [![Topic: finos](https://img.shields.io/badge/finos-fafbfc)](https://github.com/topics/finos) [![Topic: bdk](https://img.shields.io/badge/bdk-fafbfc)](https://github.com/topics/bdk) [![Topic: symphony-bdk](https://img.shields.io/badge/symphony%20bdk-fafbfc)](https://github.com/topics/symphony-bdk) 
-
-#### From the README:
-
-> [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg) ](https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating)
-> [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg) ](https://opensource.org/licenses/Apache-2.0)
-> [![Python](https://img.shields.io/badge/python-3.8%20%7C%203.9-blue) ](https://www.python.org/downloads/release/python-3)
-> [![Pypi](https://img.shields.io/pypi/v/symphony-bdk-python) ](https://pypi.org/project/symphony-bdk-python/)
-> ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/finos/symphony-bdk-python/build/main) 
-> 
-> 
-> This is the Symphony BDK for Python to help develop bots and interact with the [Symphony REST APIs](https://developers.symphony.com/restapi/reference).
-> 
-> 
-> The [reference documentation](https://symphony-bdk-python.finos.org/) includes detailed
-> installation instructions as well as a comprehensive
-> [getting started](https://symphony-bdk-python.finos.org/markdown/getting_started.html)
-> guide.
->... [_read more_](https://github.com/finos/symphony-bdk-python)
-> 
-#### Further Details
- - [https://github.com/finos/symphony-bdk-python](https://github.com/finos/symphony-bdk-python)
- - [https://symphony-bdk-python.finos.org/](https://symphony-bdk-python.finos.org/)
 ### Symphony Workflow Developer Kit (WDK)
 [![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk/issues)
 
