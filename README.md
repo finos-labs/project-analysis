@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 22 May 2023):
+Here are some of FINOS' most active projects (as of 23 May 2023):
 
  - [Backplane](#Backplane)
  - [Common Domain Model (CDM)](#Common-Domain-Model-(CDM))
@@ -72,7 +72,7 @@ _FDC3 Desktop Agent Bridge_
  - [https://github.com/finos/backplane](https://github.com/finos/backplane)
  - [https://backplane.finos.org/](https://backplane.finos.org/)
 ## Common Domain Model (CDM)
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-61-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-43-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-61-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-44-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/issues)
 
 _The CDM is a model for financial products, trades in those products, and the lifecycle events of those trades. It is a open source standard that aligns data, systems and processes and is available as code in multiple languages for easy implementation across technologies._
 
@@ -114,7 +114,7 @@ _FINOS Community, Project and SIG wide collaboration space_
 ## FDC3
 
 ### FDC3
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-147-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-88-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-57-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-147-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-88-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-54-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/issues)
 
 _An open standard for the financial desktop._
 
@@ -163,7 +163,7 @@ _A framework for testing whether desktop containers implement the FDC3 standard_
 #### Further Details
  - [https://github.com/finos/FDC3-conformance-framework](https://github.com/finos/FDC3-conformance-framework)
 ### FDC3 Sail
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-24-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-Sail/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-Sail)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-22-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-Sail/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-24-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-Sail/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-Sail)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-Sail/issues)
 
 _Open implementation of the FDC3 standard using Electron and an integrated App Directory._
 
@@ -249,7 +249,7 @@ _Support for jupyter notebook templates in jupyterlab_
 ## Legend
 
 ### Legend
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-728-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-152-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-20-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-728-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-152-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-19-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/issues)
 
 _The Legend project_
 
@@ -558,7 +558,7 @@ _OpenMAMA is an open source project that provides a high performance middleware 
  - [https://github.com/finos/OpenMAMA](https://github.com/finos/OpenMAMA)
  - [https://openmama.org](https://openmama.org)
 ## Perspective
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-6259-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-691-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-80-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-6264-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-692-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-79-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
@@ -927,7 +927,7 @@ _Vuu - an open source view server and html 5 based UI system_
  - [https://github.com/finos/vuu](https://github.com/finos/vuu)
  - [https://vuu.finos.org](https://vuu.finos.org)
 ## Waltz
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-150-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-105-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-306-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-150-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-105-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-308-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/issues)
 
 _Enterprise Information Service_
 
@@ -950,7 +950,7 @@ _Enterprise Information Service_
  - [https://github.com/finos/waltz](https://github.com/finos/waltz)
  - [https://waltz.finos.org](https://waltz.finos.org)
 ## Welcome to Zenith
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/zenith/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/zenith)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/zenith/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/zenith/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/zenith)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/zenith/issues)
 
 _Create a space where expertise can be identified and implemented to help the fintech ecosystem understand and adopt new technologies through the exploration and creation of common understanding._
 
