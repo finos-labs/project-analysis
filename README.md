@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 06 Jun 2023):
+Here are some of FINOS' most active projects (as of 07 Jun 2023):
 
  - [Backplane](#Backplane)
  - [Common Domain Model (CDM)](#Common-Domain-Model-(CDM))
@@ -72,7 +72,7 @@ _FDC3 Desktop Agent Bridge_
  - [https://github.com/finos/backplane](https://github.com/finos/backplane)
  - [https://backplane.finos.org/](https://backplane.finos.org/)
 ## Common Domain Model (CDM)
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-65-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-25-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-47-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-65-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-26-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-48-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/issues)
 
 _The CDM is a model for financial products, trades in those products, and the lifecycle events of those trades. It is a open source standard that aligns data, systems and processes and is available as code in multiple languages for easy implementation across technologies._
 
@@ -114,7 +114,7 @@ _FINOS Community, Project and SIG wide collaboration space_
 ## FDC3
 
 ### FDC3
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-148-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-90-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-49-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-148-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-90-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-50-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/issues)
 
 _An open standard for the financial desktop._
 
@@ -249,7 +249,7 @@ _Support for jupyter notebook templates in jupyterlab_
 ## Legend
 
 ### Legend
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-731-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-155-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-9-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-732-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-155-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-9-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/issues)
 
 _The Legend project_
 
@@ -400,7 +400,7 @@ _Legend Shared module_
  - [https://github.com/finos/legend-shared](https://github.com/finos/legend-shared)
  - [https://legend.finos.org](https://legend.finos.org)
 ### legend-studio
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-66-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-94-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-158-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-66-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-94-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-159-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/issues)
 
 _Legend Studio_
 
@@ -534,7 +534,7 @@ _Tools to work with the Morphir IR in Elm._
  - [https://github.com/finos/morphir-scala](https://github.com/finos/morphir-scala)
  - [https://scala.morphir.finos.org](https://scala.morphir.finos.org)
 ## Open Reg Tech Us Lcr
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-reg-tech-us-lcr/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-22-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-reg-tech-us-lcr)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-reg-tech-us-lcr/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-reg-tech-us-lcr/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-21-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-reg-tech-us-lcr)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-reg-tech-us-lcr/issues)
 
 _Open Reg Tech: US LCR_
 
@@ -583,7 +583,7 @@ _OpenMAMA is an open source project that provides a high performance middleware 
  - [https://github.com/finos/OpenMAMA](https://github.com/finos/OpenMAMA)
  - [https://openmama.org](https://openmama.org)
 ## Perspective
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-6324-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-702-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-79-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-6329-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-704-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-80-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
@@ -710,7 +710,7 @@ _Accelerate financial services firms’ journeys toward open source readiness, b
  - [https://github.com/finos/open-source-readiness](https://github.com/finos/open-source-readiness)
  - [https://osr.finos.org](https://osr.finos.org)
 ## Spring Bot
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-46-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-32-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-16-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-46-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-32-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-17-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot/issues)
 
 _Spring Boot + Java Integration for Symphony/Teams Chat Platform Bots and Apps_
 
@@ -816,7 +816,7 @@ _A desktop client for the Symphony Collaboration Platform built using Electron_
  - [https://github.com/finos/SymphonyElectron](https://github.com/finos/SymphonyElectron)
  - [https://symphony.com](https://symphony.com)
 ### Symphony Media Bridge
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-39-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyMediaBridge/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyMediaBridge)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyMediaBridge/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-40-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyMediaBridge/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyMediaBridge)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyMediaBridge/issues)
 
 _The Symphony Media Bridge (SMB) is a media server application that handles audio, video and screen sharing media streams in an RTC conference system._
 
