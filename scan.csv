@@ -59,7 +59,7 @@ Score,Pass,Organisation,Repo Name,Finos Lifecycle State (from the README badge),
 18,FAIL (Finos Lifecycle) (wrong admins) (No CVE Scan),finos,regular-table,NONE,Apache-2.0,1,17,OK,false,0,true,false,master,@texodus,@texodus,@texodus @TheJuanAndOnly99
 17,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,software-project-blueprint,INCUBATING,Apache-2.0,0,17,NONE,false,0,false,false,main,,,@TheJuanAndOnly99 @renovate[bot] @maoo
 15,FAIL (Finos Lifecycle) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,finos-landscape,NONE,Apache-2.0,7,8,OK,false,-1,false,false,master,,@maoo @AndreyKozlov1984 @TheJuanAndOnly99,@maoo @TheJuanAndOnly99
-14,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,generator-symphony,INCUBATING,Apache-2.0,1,13,NONE,false,1,false,false,master,,@ystxn,@yinan-symphony @ystxn @symphony-soufiane
+15,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,generator-symphony,INCUBATING,Apache-2.0,1,14,NONE,false,1,false,false,master,,@ystxn,@yinan-symphony @ystxn @symphony-soufiane
 14,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No License Set) (No CVE Scan) (No Sem Grep),finos,clabot-config,NONE,,0,14,NONE,false,-1,false,false,master,,,@finos-admin @TheJuanAndOnly99
 13,FAIL (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,waltz-integration-juju,INCUBATING,Apache-2.0,2,11,NONE,false,-1,false,false,main,,@maoo,@claudiubelu @maoo @smiclea @TheJuanAndOnly99
 12,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,financial-objects,NONE,Apache-2.0,12,0,NONE,false,-1,false,false,master,,@iansloyan @ffionwiggins @jstclair2019 @JBZ-Fragmos @jgavronsky @Julia-Ritter @omarelnaggarwev @brooklynrob @jbfletch @dschwartznyc,
