@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 07 Sep 2023):
+Here are some of FINOS' most active projects (as of 08 Sep 2023):
 
  - [FINOS Calendar](#FINOS-Calendar)
  - [Common Domain Model (CDM)](#Common-Domain-Model-(CDM))
@@ -67,7 +67,7 @@ _FINOS Calendar_
 #### Further Details
  - [https://github.com/finos/calendar](https://github.com/finos/calendar)
 ## Common Domain Model (CDM)
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-71-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-35-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-74-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-71-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-36-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-74-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/issues)
 
 _The CDM is a model for financial products, trades in those products, and the lifecycle events of those trades. It is an open source standard that aligns data, systems and processes and is available as code in multiple languages for easy implementation across technologies._
 
@@ -109,7 +109,7 @@ _Provide a continuous compliance and assurance approach to DevOps that mutually 
 ## FDC3
 
 ### FDC3 - Financial Desktop Connectivity and Collaboration Consortium
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-155-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-98-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-39-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-156-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-98-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-39-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/issues)
 
 _An open standard for the financial desktop._
 
@@ -179,7 +179,7 @@ _Open implementation of the FDC3 standard using Electron and an integrated App D
 #### Further Details
  - [https://github.com/finos/FDC3-Sail](https://github.com/finos/FDC3-Sail)
 ## Git Proxy
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-53-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-30-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-30-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-53-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-30-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-31-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy/issues)
 
 _Deploy custom push protections and policies on top of Git_
 
@@ -495,7 +495,7 @@ _A universal language for business and technology_
 #### Further Details
  - [https://github.com/finos/morphir-dotnet](https://github.com/finos/morphir-dotnet)
 ### Morphir Elm
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-35-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-elm/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-43-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-elm)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-124-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-elm/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-36-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-elm/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-43-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-elm)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-124-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-elm/issues)
 
 _Tools to work with the Morphir IR in Elm._
 
@@ -517,7 +517,7 @@ _Tools to work with the Morphir IR in Elm._
  - [https://github.com/finos/morphir-elm](https://github.com/finos/morphir-elm)
  - [https://package.elm-lang.org/packages/finos/morphir-elm/latest](https://package.elm-lang.org/packages/finos/morphir-elm/latest)
 ### Morphir Jvm
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-20-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-jvm/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-16-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-jvm)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-jvm/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-21-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-jvm/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-16-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-jvm)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-jvm/issues)
 
 _Tools to work with the Morphir IR on/using the JVM._
 
@@ -594,7 +594,7 @@ _Open Reg Tech: US LCR_
 #### Further Details
  - [https://github.com/finos/open-reg-tech-us-lcr](https://github.com/finos/open-reg-tech-us-lcr)
 ## Perspective
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-6626-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-830-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-92-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-6627-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-831-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-92-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
@@ -714,7 +714,7 @@ _How to protect FINOS hosted projects from security threats_
 #### Further Details
  - [https://github.com/finos/security-scanning](https://github.com/finos/security-scanning)
 ## FINOS Open Source Readiness Special Interest Group
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-22-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-18-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-34-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-22-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-18-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-32-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/issues)
 
 _Accelerate financial services firms’ journeys toward open source readiness, by advancing the readiness of participants’ firms and informing guidance for the broader industry in the form of white papers, presentations, and blog posts._
 
@@ -924,7 +924,7 @@ _A next-generation data and analytics platform for use in highly regulated envir
 #### Further Details
  - [https://github.com/finos/tracdap](https://github.com/finos/tracdap)
 ## Vuu
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-22-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-122-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-22-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-128-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/issues)
 
 _Vuu - an open source view server and html 5 based UI system_
 
