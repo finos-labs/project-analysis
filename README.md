@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 25 Sep 2023):
+Here are some of FINOS' most active projects (as of 26 Sep 2023):
 
  - [FINOS Calendar](#FINOS-Calendar)
  - [CDM Object Builder](#CDM-Object-Builder)
@@ -106,7 +106,7 @@ _The CDM is a model for financial products, trades in those products, and the li
 #### Further Details
  - [https://github.com/finos/common-domain-model](https://github.com/finos/common-domain-model)
 ## DevOps Automation Special Interest Group
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-40-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/devops-automation/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-16-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/devops-automation)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-63-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/devops-automation/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-40-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/devops-automation/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-16-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/devops-automation)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-65-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/devops-automation/issues)
 
 _Provide a continuous compliance and assurance approach to DevOps that mutually benefits banks, auditors and regulators whilst accelerating DevOps adoption in engineering and fintech IT departments._
 
@@ -129,7 +129,7 @@ _Provide a continuous compliance and assurance approach to DevOps that mutually 
 ## FDC3
 
 ### FDC3 - Financial Desktop Connectivity and Collaboration Consortium
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-157-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-99-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-40-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-158-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-99-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-40-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/issues)
 
 _An open standard for the financial desktop._
 
@@ -199,7 +199,7 @@ _Open implementation of the FDC3 standard using Electron and an integrated App D
 #### Further Details
  - [https://github.com/finos/FDC3-Sail](https://github.com/finos/FDC3-Sail)
 ## Git Proxy
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-54-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-32-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-31-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-55-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-32-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-31-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy/issues)
 
 _Deploy custom push protections and policies on top of Git_
 
@@ -225,7 +225,7 @@ _Deploy custom push protections and policies on top of Git_
 #### Further Details
  - [https://github.com/finos/git-proxy](https://github.com/finos/git-proxy)
 ## Ipyregulartable
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-94-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ipyregulartable/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-15-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ipyregulartable)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ipyregulartable/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-95-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ipyregulartable/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-15-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ipyregulartable)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ipyregulartable/issues)
 
 _High performance, editable, stylable datagrids in jupyter and jupyterlab_
 
@@ -295,7 +295,7 @@ _The Legend project_
  - [https://github.com/finos/legend](https://github.com/finos/legend)
  - [https://legend.finos.org](https://legend.finos.org)
 ### legend-depot
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-8-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-62-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-8-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-63-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot/issues)
 
 _Legend Depot component_
 
@@ -475,7 +475,7 @@ _pylegend_
 ## Morphir
 
 ### Morphir
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-108-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-39-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-34-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-108-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-40-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-34-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir/issues)
 
 _A universal language for business and technology_
 
@@ -595,7 +595,7 @@ _Open Reg Tech: US LCR_
 #### Further Details
  - [https://github.com/finos/open-reg-tech-us-lcr](https://github.com/finos/open-reg-tech-us-lcr)
 ## Perspective
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-6657-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-835-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-92-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-6664-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-837-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-93-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
@@ -762,7 +762,7 @@ _Spring Boot + Java Integration for Symphony/Teams Chat Platform Bots and Apps_
 ## Symphony
 
 ### Symphony Generator
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/generator-symphony/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-20-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/generator-symphony)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/generator-symphony/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/generator-symphony/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-20-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/generator-symphony)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/generator-symphony/issues)
 
 _Yeoman based generator for Symphony Bots and Applications_
 
@@ -883,7 +883,7 @@ _The Symphony Media Bridge (SMB) is a media server application that handles audi
 #### Further Details
  - [https://github.com/finos/SymphonyMediaBridge](https://github.com/finos/SymphonyMediaBridge)
 ## Technical Oversight Committee
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-oversight-committee/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-oversight-committee)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-oversight-committee/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-oversight-committee/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-oversight-committee)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-5-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-oversight-committee/issues)
 
 _📋  FINOS Technical Steering Committee_
 
@@ -964,7 +964,7 @@ _Vuu - an open source view server and html 5 based UI system_
  - [https://github.com/finos/vuu](https://github.com/finos/vuu)
  - [https://vuu.finos.org](https://vuu.finos.org)
 ## Waltz
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-156-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-122-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-320-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-156-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-122-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-308-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/issues)
 
 _Enterprise Information Service_
 
