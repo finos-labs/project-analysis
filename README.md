@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 07 Oct 2023):
+Here are some of FINOS' most active projects (as of 08 Oct 2023):
 
  - [Accessibility Theme Builder](#Accessibility-Theme-Builder)
  - [Accessibility Theme Builder SDK](#Accessibility-Theme-Builder-SDK)
@@ -13,6 +13,7 @@ Here are some of FINOS' most active projects (as of 07 Oct 2023):
    - [FDC3 Conformance Framework](#FDC3-Conformance-Framework)
    - [Fdc3 Sail](#Fdc3-Sail)
  - [Git Proxy](#Git-Proxy)
+ - [Ipyregulartable](#Ipyregulartable)
  - [Jupyterlab_templates](#Jupyterlab_templates)
  - Legend
    - [Legend](#Legend)
@@ -263,6 +264,25 @@ _Deploy custom push protections and policies on top of Git_
 > 
 #### Further Details
  - [https://github.com/finos/git-proxy](https://github.com/finos/git-proxy)
+## Ipyregulartable
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-95-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ipyregulartable/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-15-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ipyregulartable)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ipyregulartable/issues)
+
+_High performance, editable, stylable datagrids in jupyter and jupyterlab_
+
+[![Topic: jupyter](https://img.shields.io/badge/jupyter-fafbfc)](https://github.com/topics/jupyter) [![Topic: jupyter-notebook](https://img.shields.io/badge/jupyter%20notebook-fafbfc)](https://github.com/topics/jupyter-notebook) [![Topic: jupyterlab](https://img.shields.io/badge/jupyterlab-fafbfc)](https://github.com/topics/jupyterlab) [![Topic: jupyterlab-extension](https://img.shields.io/badge/jupyterlab%20extension-fafbfc)](https://github.com/topics/jupyterlab-extension) [![Topic: ipywidgets](https://img.shields.io/badge/ipywidgets-fafbfc)](https://github.com/topics/ipywidgets) [![Topic: datagrid](https://img.shields.io/badge/datagrid-fafbfc)](https://github.com/topics/datagrid) [![Topic: table](https://img.shields.io/badge/table-fafbfc)](https://github.com/topics/table) [![Topic: data-table](https://img.shields.io/badge/data%20table-fafbfc)](https://github.com/topics/data-table) [![Topic: data-visualization](https://img.shields.io/badge/data%20visualization-fafbfc)](https://github.com/topics/data-visualization) [![Topic: python](https://img.shields.io/badge/python-fafbfc)](https://github.com/topics/python) 
+
+#### From the README:
+
+> An [ipywidgets](https://github.com/jupyter-widgets/ipywidgets) wrapper of [regular-table](https://github.com/finos/regular-table) for Jupyter.
+> 
+> 
+> [Notebook](https://raw.githubusercontent.com/finos/ipyregulartable/main/docs/examples/two_billion.ipynb)
+> 
+> ![](https://raw.githubusercontent.com/finos/ipyregulartable/main/docs/img/twobillion.gif) 
+>... [_read more_](https://github.com/finos/ipyregulartable)
+> 
+#### Further Details
+ - [https://github.com/finos/ipyregulartable](https://github.com/finos/ipyregulartable)
 ## Jupyterlab_templates
 [![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-349-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-62-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-6-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates/issues)
 
@@ -615,7 +635,7 @@ _Open Reg Tech: US LCR_
 #### Further Details
  - [https://github.com/finos/open-reg-tech-us-lcr](https://github.com/finos/open-reg-tech-us-lcr)
 ## Perspective
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-6704-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-843-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-95-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-6707-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-843-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-96-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
