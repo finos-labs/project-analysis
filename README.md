@@ -1,16 +1,18 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 11 May 2023):
+Here are some of FINOS' most active projects (as of 15 Oct 2023):
 
- - [Backplane](#Backplane)
- - [FINOS Branding and Resources](#FINOS-Branding-and-Resources)
+ - [Accessibility Theme Builder](#Accessibility-Theme-Builder)
+ - [Accessibility Theme Builder SDK](#Accessibility-Theme-Builder-SDK)
+ - [FINOS Calendar](#FINOS-Calendar)
+ - [CDM Object Builder](#CDM-Object-Builder)
  - [Common Domain Model (CDM)](#Common-Domain-Model-(CDM))
- - [FINOS Community Collaboration Space](#FINOS-Community-Collaboration-Space)
+ - [DevOps Automation Special Interest Group](#DevOps-Automation-Special-Interest-Group)
  - FDC3
-   - [Fdc3](#Fdc3)
+   - [FDC3 - Financial Desktop Connectivity and Collaboration Consortium](#FDC3---Financial-Desktop-Connectivity-and-Collaboration-Consortium)
    - [FDC3 Conformance Framework](#FDC3-Conformance-Framework)
    - [Fdc3 Sail](#Fdc3-Sail)
- - [(Corporate) Git Proxy](#(Corporate)-Git-Proxy)
+ - [Git Proxy](#Git-Proxy)
  - [Ipyregulartable](#Ipyregulartable)
  - [Jupyterlab_templates](#Jupyterlab_templates)
  - Legend
@@ -19,83 +21,115 @@ Here are some of FINOS' most active projects (as of 11 May 2023):
    - [legend-engine](#legend-engine)
    - [legend-pure](#legend-pure)
    - [legend-sdlc](#legend-sdlc)
+   - [legend-shared](#legend-shared)
    - [legend-studio](#legend-studio)
    - [PyLegend](#PyLegend)
  - Morphir
    - [Morphir](#Morphir)
    - [Morphir](#Morphir)
    - [Morphir Elm](#Morphir-Elm)
-   - [Morphir Scala](#Morphir-Scala)
+   - [Morphir Jvm](#Morphir-Jvm)
+   - [Morphir](#Morphir)
  - [Open Reg Tech Us Lcr](#Open-Reg-Tech-Us-Lcr)
- - [The Open Middleware Agnostic Messaging API](#The-Open-Middleware-Agnostic-Messaging-API)
  - [Perspective](#Perspective)
  - [Regular Table](#Regular-Table)
  - [Security Scanning](#Security-Scanning)
- - SIGs
-   - [Compliant Financial Infrastructure](#Compliant-Financial-Infrastructure)
-   - [FINOS InnerSource Special Interest Group](#FINOS-InnerSource-Special-Interest-Group)
-   - [FINOS Open Source Readiness Special Interest Group](#FINOS-Open-Source-Readiness-Special-Interest-Group)
+ - [FINOS Open Source Readiness Special Interest Group](#FINOS-Open-Source-Readiness-Special-Interest-Group)
  - [Spring Bot](#Spring-Bot)
  - Symphony
    - [Symphony BDK for Java](#Symphony-BDK-for-Java)
    - [Symphony Workflow Developer Kit (WDK)](#Symphony-Workflow-Developer-Kit-(WDK))
-   - [Symphony WDK Gallery](#Symphony-WDK-Gallery)
    - [SymphonyElectron](#SymphonyElectron)
    - [Symphony Media Bridge](#Symphony-Media-Bridge)
- - [Technical Steering Committee](#Technical-Steering-Committee)
+ - [Technical Oversight Committee](#Technical-Oversight-Committee)
+ - [Terraform Aws Cfi Eks](#Terraform-Aws-Cfi-Eks)
+ - [Timebase Ce](#Timebase-Ce)
  - [Tracdap](#Tracdap)
  - [Vuu](#Vuu)
  - [Waltz](#Waltz)
-## Backplane
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/backplane/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-5-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/backplane)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-5-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/backplane/issues)
+ - [Welcome to Zenith](#Welcome-to-Zenith)
+## Accessibility Theme Builder
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-33-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-103-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder/issues)
 
-_FDC3 Desktop Agent Bridge_
+_DesignOps toolchain theme builder for accessibility inclusion using Atomic Design._
 
-[![Topic: fdc3](https://img.shields.io/badge/fdc3-fafbfc)](https://github.com/topics/fdc3) [![Topic: desktop-agent-bridge](https://img.shields.io/badge/desktop%20agent%20bridge-fafbfc)](https://github.com/topics/desktop-agent-bridge) 
+[![Topic: accessibility](https://img.shields.io/badge/accessibility-fafbfc)](https://github.com/topics/accessibility) [![Topic: design-systems](https://img.shields.io/badge/design%20systems-fafbfc)](https://github.com/topics/design-systems) [![Topic: nodejs](https://img.shields.io/badge/nodejs-fafbfc)](https://github.com/topics/nodejs) [![Topic: react](https://img.shields.io/badge/react-fafbfc)](https://github.com/topics/react) [![Topic: a11y-tb](https://img.shields.io/badge/a11y%20tb-fafbfc)](https://github.com/topics/a11y-tb) 
 
 #### From the README:
 
-> [![npm](https://img.shields.io/npm/v/@finos/fdc3-backplane-client) ](https://www.npmjs.com/package/@finos/fdc3-backplane-client)
+> [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg) ](https://community.finos.org/docs/governance/Software-Projects/stages/incubating) ![Maintainers-Invited](https://img.shields.io/badge/Maintainers-Wanted-blueviolet)  ![Contributors-Invited](https://img.shields.io/badge/Contributors-Wanted-blue) 
+> 
+> 
+>  A system for generating machine readable asset types allowing design systems to publish products that are accessibly inclusive.
+> 
+> 
+> Accessibility compliance is difficult. All too often accessibility is addressed late in the development and testing cycle. What if systems were designed upfront with accessible inclusion as a design principle? What if the workflow between designers and developers produced accessible components before the assembling of applications?
+>... [_read more_](https://github.com/finos/a11y-theme-builder)
+> 
+#### Further Details
+ - [https://github.com/finos/a11y-theme-builder](https://github.com/finos/a11y-theme-builder)
+## Accessibility Theme Builder SDK
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder-sdk/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder-sdk)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder-sdk/issues)
+
+_Collection of atomic design services for computing WCAG compliant code artifacts._
+
+[![Topic: a11y-tb](https://img.shields.io/badge/a11y%20tb-fafbfc)](https://github.com/topics/a11y-tb) [![Topic: accessibility](https://img.shields.io/badge/accessibility-fafbfc)](https://github.com/topics/accessibility) [![Topic: design-system](https://img.shields.io/badge/design%20system-fafbfc)](https://github.com/topics/design-system) 
+
+#### From the README:
+
+> [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg) ](https://community.finos.org/docs/governance/Software-Projects/stages/incubating) ![Maintainers-Invited](https://img.shields.io/badge/Maintainers-Wanted-blueviolet)  ![Contributors-Invited](https://img.shields.io/badge/Contributors-Wanted-blue) 
+> 
+> 
+> Accessibility compliance is both a difficult and a cost intensive task.  This is true not only when creating an initially compliant application, but also when maintaining that compliance.
+> 
+> The purpose of this SDK is to simplify this task by performing the necessary calculations and generating output (e.g. CSS, JSON tokens, or other) to be imported into your application.
+>... [_read more_](https://github.com/finos/a11y-theme-builder-sdk)
+> 
+#### Further Details
+ - [https://github.com/finos/a11y-theme-builder-sdk](https://github.com/finos/a11y-theme-builder-sdk)
+## FINOS Calendar
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/calendar/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/calendar)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/calendar/issues)
+
+_FINOS Calendar_
+
+
+
+#### From the README:
+
+> This code builds the page hosted on [https://calendar.finos.org](https://calendar.finos.org) , which is also embedded on [https://www.finos.org/calendar](https://www.finos.org/calendar) .
+> 
+> 
+> - Node.js and npm installed on your machine.
+> 
+> 
+> 1. Clone the repository:
+>... [_read more_](https://github.com/finos/calendar)
+> 
+#### Further Details
+ - [https://github.com/finos/calendar](https://github.com/finos/calendar)
+## CDM Object Builder
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/cdm-object-builder/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/cdm-object-builder)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/cdm-object-builder/issues)
+
+_Object Builder_
+
+
+
+#### From the README:
+
 > [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg) ](https://community.finos.org/docs/governance/Software-Projects/stages/incubating)
-> [![codeql](https://github.com/finos/backplane/actions/workflows/codeql.yml/badge.svg) ](https://github.com/finos/backplane/actions/workflows/codeql.yml)
-> [![vulnerabilities check(js)](https://github.com/finos/backplane/actions/workflows/node-cve-scanning.yml/badge.svg) ](https://github.com/finos/backplane/actions/workflows/node-cve-scanning.yml)
-> [![vulnerabilities check(.net)](https://github.com/finos/backplane/actions/workflows/dotnet-cve-scanning.yml/badge.svg) ](https://github.com/finos/backplane/actions/workflows/dotnet-cve-scanning.yml)
-> [![ossf best practices](https://bestpractices.coreinfrastructure.org/projects/6700/badge) ](https://bestpractices.coreinfrastructure.org/projects/6700)
-> [![floss license(js)](https://github.com/finos/backplane/actions/workflows/node-license-scanning.yml/badge.svg) ](https://github.com/finos/backplane/actions/workflows/node-license-scanning.yml)
-> [![license](https://img.shields.io/badge/License-Apache%202.0-blue.svg) ](https://opensource.org/licenses/Apache-2.0)
 > 
 > 
+> This project is a utility tool for dynamically generating Common Domain Model<sup>TM</sup> (CDM)  objects using a visual UI builder which can then be reviewed.
 > 
-> Desktop Agent bridge aka 'Backplane' is a component which allows different desktop agents to connect and communicate through websockets.
->... [_read more_](https://github.com/finos/backplane)
+> The tool provides functionality for navigating the CDM<sup>TM</sup> starting at a root type and traversing its nodes (attributes) to build up an object visually in the user interface.
+>... [_read more_](https://github.com/finos/cdm-object-builder)
 > 
 #### Further Details
- - [https://github.com/finos/backplane](https://github.com/finos/backplane)
- - [https://backplane.finos.org/](https://backplane.finos.org/)
-## FINOS Branding and Resources
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-9-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/branding/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/branding)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/branding/issues)
-
-_FINOS (Fintech Open Source Foundation) official branding resources_
-
-[![Topic: internal](https://img.shields.io/badge/internal-fafbfc)](https://github.com/topics/internal) 
-
-#### From the README:
-
-> This repository contains FINOS official branding assets. This includes FINOS logos, Program Logos and FINOS document templates. Please before making use of this assets make sure you:
-> 
-> - review the FINOS Brand Visual Guidelines
-> - comply with the [FINOS Trademark Guidelines](https://www.finos.org/hubfs/FINOS/governance/FINOS%20Trademark%20Guidelines%202018-12-12.pdf)
-> 
-> Contact `"marketing at finos dot org"` if you have questions or are unsure about proper usage of FINOS branding material.
->... [_read more_](https://github.com/finos/branding)
-> 
-#### Further Details
- - [https://github.com/finos/branding](https://github.com/finos/branding)
- - [http://finos.org](http://finos.org)
+ - [https://github.com/finos/cdm-object-builder](https://github.com/finos/cdm-object-builder)
 ## Common Domain Model (CDM)
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-61-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-21-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-53-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-74-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-37-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-84-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/issues)
 
-_The CDM is a model for financial products, trades in those products, and the lifecycle events of those trades. It is a open source standard that aligns data, systems and processes and is available as code in multiple languages for easy implementation across technologies._
+_The CDM is a model for financial products, trades in those products, and the lifecycle events of those trades. It is an open source standard that aligns data, systems and processes and is available as code in multiple languages for easy implementation across technologies._
 
 
 
@@ -111,31 +145,31 @@ _The CDM is a model for financial products, trades in those products, and the li
 > 
 #### Further Details
  - [https://github.com/finos/common-domain-model](https://github.com/finos/common-domain-model)
-## FINOS Community Collaboration Space
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-55-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/community/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-25-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/community)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-14-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/community/issues)
+## DevOps Automation Special Interest Group
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-40-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/devops-automation/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-16-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/devops-automation)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-66-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/devops-automation/issues)
 
-_FINOS Community, Project and SIG wide collaboration space_
+_Provide a continuous compliance and assurance approach to DevOps that mutually benefits banks, auditors and regulators whilst accelerating DevOps adoption in engineering and fintech IT departments._
 
-[![Topic: projects](https://img.shields.io/badge/projects-fafbfc)](https://github.com/topics/projects) [![Topic: finos](https://img.shields.io/badge/finos-fafbfc)](https://github.com/topics/finos) [![Topic: community](https://img.shields.io/badge/community-fafbfc)](https://github.com/topics/community) 
+
 
 #### From the README:
 
-> [<img src="https://img.shields.io/badge/slack-@finos/community-green.svg?logo=slack">](https://finos-lf.slack.com/messages/finos-community/)
+> FINOS DevOps Automation Special Interest Group aims to solve common engineering problems by providing a continuous compliance and assurance approach to DevOps that mutually benefits banks, auditors and regulators whilst accelerating DevOps adoption in engineering and FinTech IT departments.
 > 
 > 
-> This repository hosts the FINOS Foundation governance and collaboration across the [Fintech Open Source Foundation (FINOS)](https://www.finos.org/) Project Leads and Community at large. You can browse these contents also via [https://community.finos.org](https://community.finos.org) .
+> To unite SMEs from across FINOS members to help solve the industry's challenges as they relate to continuous automation and the related audit and regulatory compliance. Often seen as an inhibitor of productivity, we see automation of our DevOps practices provides an opportunity to drive automated compliance that help facilitate reduced delivery timelines and increased productivity. The DevOps Automation SIG has formed a number of Working Groups which focus on innovating collaborative solutions to the benefit of all our members.
 > 
 > 
-> All the documentation in this website (anything in the /docs and /website folder) are deployed for easy consumption at community.finos.org. You should be able to find most relevant and up to date information below (and your issues/pull requests are more than welcome to help us maintain this), but you can always email help@finos.org if you still can't find what you're looking for.
->... [_read more_](https://github.com/finos/community)
+> The DevOps Automation SIG has formed several Working Groups to focus on key themes for the financial industry. You can see details of the active working groups, how they operate and how you can get involved here.
+>... [_read more_](https://github.com/finos/devops-automation)
 > 
 #### Further Details
- - [https://github.com/finos/community](https://github.com/finos/community)
- - [http://community.finos.org](http://community.finos.org)
+ - [https://github.com/finos/devops-automation](https://github.com/finos/devops-automation)
+ - [http://devops.finos.org](http://devops.finos.org)
 ## FDC3
 
-### FDC3
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-144-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-87-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-54-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/issues)
+### FDC3 - Financial Desktop Connectivity and Collaboration Consortium
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-161-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-100-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-41-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/issues)
 
 _An open standard for the financial desktop._
 
@@ -143,6 +177,8 @@ _An open standard for the financial desktop._
 
 #### From the README:
 
+> <a href='http://fdc3.finos.org'><img src='./website/static/img/fdc3-logo-2019-color.png' height='150' alt='FDC3 Logo' aria-label='fdc3.finos.org' /></a>
+> 
 > [![Latest Standard](https://img.shields.io/badge/release-2.0-blue) ](https://github.com/finos/fdc3/releases/v2.0)
 > [![npm](https://img.shields.io/npm/v/@finos/fdc3) ](https://www.npmjs.com/package/@finos/fdc3)
 > [![FINOS - Released](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-released.svg) ](https://finosfoundation.atlassian.net/wiki/display/FINOS/Released)
@@ -152,16 +188,15 @@ _An open standard for the financial desktop._
 > [![Slack](https://img.shields.io/badge/slack-@finos/fdc3-green.svg?logo=slack) ](https://finos-lf.slack.com/messages/fdc3/)
 > [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/6579/badge) ](https://bestpractices.coreinfrastructure.org/projects/6579)
 > 
-> FDC3 aims to provide an open standard for interoperability on the financial desktop. This includes standardized verbs to invoke actions between applications (called "intents"), a standardized data format, an OpenAPI app directory standard, and standardized API operations.
 > 
-> The standard currently consists of four specifications:
+> [FDC3](https://fdc3.finos.org) is an open standard for applications on financial desktop to interoperate and exchange data with each other.
 >... [_read more_](https://github.com/finos/FDC3)
 > 
 #### Further Details
  - [https://github.com/finos/FDC3](https://github.com/finos/FDC3)
  - [https://fdc3.finos.org](https://fdc3.finos.org)
 ### FDC3 Conformance Framework
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-9-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-conformance-framework/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-14-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-conformance-framework)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-conformance-framework/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-11-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-conformance-framework/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-15-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-conformance-framework)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-6-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-conformance-framework/issues)
 
 _A framework for testing whether desktop containers implement the FDC3 standard_
 
@@ -175,16 +210,13 @@ _A framework for testing whether desktop containers implement the FDC3 standard_
 > 
 > A framework for testing whether desktop containers implement the [FDC3 standard](https://fdc3.finos.org/).
 > 
-> 
-> - There are many vendors implementing Desktop Agents for the FDC3 standard.
-> - Developers building apps interoperating with the FDC3 standard want to be sure that their apps will work with every Desktop Agent.
-> - This suite of conformance tests allows for programmatic verification of an FDC3 Desktop Agent implementation.
+> The tests implemented for each FDC3 version are based on the FDC3 Conformance tests specifications defined by the FDC3 maintainers and provided in the main FDC3 repository. Please see [the README file in that repository](https://github.com/finos/FDC3/blob/master/toolbox/fdc3-conformance/README.md) for further details.
 >... [_read more_](https://github.com/finos/FDC3-conformance-framework)
 > 
 #### Further Details
  - [https://github.com/finos/FDC3-conformance-framework](https://github.com/finos/FDC3-conformance-framework)
 ### FDC3 Sail
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-Sail/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-Sail)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-22-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-Sail/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-25-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-Sail/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-14-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-Sail)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-25-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3-Sail/issues)
 
 _Open implementation of the FDC3 standard using Electron and an integrated App Directory._
 
@@ -206,26 +238,34 @@ _Open implementation of the FDC3 standard using Electron and an integrated App D
 > 
 #### Further Details
  - [https://github.com/finos/FDC3-Sail](https://github.com/finos/FDC3-Sail)
-## (Corporate) Git Proxy
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-48-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-24-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy/issues)
+## Git Proxy
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-55-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-34-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-30-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/git-proxy/issues)
 
-_An info-security/compliance-friendly way for highly regulated industries to be more accepting of open source_
+_Deploy custom push protections and policies on top of Git_
 
-[![Topic: git-proxy](https://img.shields.io/badge/git%20proxy-fafbfc)](https://github.com/topics/git-proxy) [![Topic: scans](https://img.shields.io/badge/scans-fafbfc)](https://github.com/topics/scans) 
+[![Topic: scans](https://img.shields.io/badge/scans-fafbfc)](https://github.com/topics/scans) [![Topic: gitops](https://img.shields.io/badge/gitops-fafbfc)](https://github.com/topics/gitops) [![Topic: security](https://img.shields.io/badge/security-fafbfc)](https://github.com/topics/security) 
 
 #### From the README:
 
-> [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg) ](https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating)
+> [![NPM](https://img.shields.io/npm/v/@finos/git-proxy?colorA=00C586&colorB=000000) ](https://www.npmjs.com/package/@finos/git-proxy)
+> [![Build](https://img.shields.io/github/actions/workflow/status/finos/git-proxy/nodejs.yml?branch=main&label=CI&logo=github&colorA=00C586&colorB=000000) ](https://github.com/finos/git-proxy/actions/workflows/nodejs.yml)
+> [![Documentation](https://img.shields.io/badge/_-documentation-000000?colorA=00C586&logo=docusaurus&logoColor=FFFFFF&) ](https://git-proxy.finos.org)
+> <br />
+> [![License](https://img.shields.io/github/license/finos/git-proxy?colorA=00C586&colorB=000000) ](https://github.com/finos/git-proxy/blob/main/LICENSEP)
+> [![Contributors](https://img.shields.io/github/contributors/finos/git-proxy?colorA=00C586&colorB=000000) ](https://github.com/finos/git-proxy/graphs/contributors)
+> [![Stars](https://img.shields.io/github/stars/finos/git-proxy?colorA=00C586&colorB=000000) ](https://github.com/finos/git-proxy/stargazers)
+> [![Forks](https://img.shields.io/github/forks/finos/git-proxy?colorA=00C586&colorB=000000) ](https://github.com/finos/git-proxy/forks)
 > 
-> Many corporations, especially financial services have strict policies towards opensource contributions. On rare occasions when a developer can contribute to open source, information security and compliance officers often demand complex shadow processes are set up to ensure code reviews, scans and other processes are adhered to before a push to the public repo takes place.
 > 
-> We wish to keep the process for the developer as simple and familiar as possible, therefore we feel the solution is a proxy that sits between the developer and the public repository.
+> Git Proxy deploys custom push protections and policies on top of Git. It is a highly configurable framework allowing developers and organizations to enforce push protections relevant to their developer workflow, security posture and risk appetite.
+> 
+> Git Proxy is built with a developer-first mindset. By presenting simple-to-follow remediation instructions in the CLI/Terminal, it minimises the friction of use and adoption, and keeps developers focused on what matters; committing and pushing code.
 >... [_read more_](https://github.com/finos/git-proxy)
 > 
 #### Further Details
  - [https://github.com/finos/git-proxy](https://github.com/finos/git-proxy)
 ## Ipyregulartable
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-86-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ipyregulartable/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-15-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ipyregulartable)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ipyregulartable/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-95-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ipyregulartable/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-15-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ipyregulartable)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ipyregulartable/issues)
 
 _High performance, editable, stylable datagrids in jupyter and jupyterlab_
 
@@ -244,7 +284,7 @@ _High performance, editable, stylable datagrids in jupyter and jupyterlab_
 #### Further Details
  - [https://github.com/finos/ipyregulartable](https://github.com/finos/ipyregulartable)
 ## Jupyterlab_templates
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-337-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-60-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-6-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-349-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-62-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-6-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates/issues)
 
 _Support for jupyter notebook templates in jupyterlab_
 
@@ -270,7 +310,7 @@ _Support for jupyter notebook templates in jupyterlab_
 ## Legend
 
 ### Legend
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-726-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-151-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-18-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-760-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-167-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/issues)
 
 _The Legend project_
 
@@ -279,6 +319,8 @@ _The Legend project_
 #### From the README:
 
 > [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg) ](https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating)
+> [![build](https://img.shields.io/github/actions/workflow/status/finos/legend/publish-docker-snapshot.yml?branch=master) ](https://github.com/finos/legend/actions/workflows/publish-docker-snapshot.yml)
+> [![docker](https://img.shields.io/docker/v/finos/legend-omnibus/latest) ](https://hub.docker.com/r/finos/legend-omnibus)
 > 
 > 
 > Legend provides an end-to-end data platform experience covering the full data lifecycle. It encompasses a suite of data management and governance components known as the Legend Platform. Legend enables breaking down silos and building a critical bridge over the historical divide between business and engineering, allowing companies to build data-driven applications and insightful business intelligence dashboards. Legend also includes novel features that accelerate data curation, exchange, and sharing such as:
@@ -293,7 +335,7 @@ _The Legend project_
  - [https://github.com/finos/legend](https://github.com/finos/legend)
  - [https://legend.finos.org](https://legend.finos.org)
 ### legend-depot
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-53-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-8-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-64-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-depot/issues)
 
 _Legend Depot component_
 
@@ -318,7 +360,7 @@ _Legend Depot component_
 #### Further Details
  - [https://github.com/finos/legend-depot](https://github.com/finos/legend-depot)
 ### legend-engine
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-60-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-155-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-64-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-183-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-engine/issues)
 
 _Legend Engine module_
 
@@ -344,7 +386,7 @@ _Legend Engine module_
  - [https://github.com/finos/legend-engine](https://github.com/finos/legend-engine)
  - [https://legend.finos.org](https://legend.finos.org)
 ### legend-pure
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-57-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-pure/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-115-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-pure)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-pure/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-59-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-pure/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-126-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-pure)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-pure/issues)
 
 _Legend Pure module_
 
@@ -369,7 +411,7 @@ _Legend Pure module_
  - [https://github.com/finos/legend-pure](https://github.com/finos/legend-pure)
  - [https://legend.finos.org](https://legend.finos.org)
 ### legend-sdlc
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-32-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-sdlc/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-96-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-sdlc)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-11-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-sdlc/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-33-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-sdlc/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-100-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-sdlc)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-11-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-sdlc/issues)
 
 _Legend SDLC module_
 
@@ -394,8 +436,32 @@ _Legend SDLC module_
 #### Further Details
  - [https://github.com/finos/legend-sdlc](https://github.com/finos/legend-sdlc)
  - [https://legend.finos.org](https://legend.finos.org)
+### legend-shared
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-20-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-shared/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-56-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-shared)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-shared/issues)
+
+_Legend Shared module_
+
+[![Topic: legend](https://img.shields.io/badge/legend-fafbfc)](https://github.com/topics/legend) [![Topic: modeling](https://img.shields.io/badge/modeling-fafbfc)](https://github.com/topics/modeling) 
+
+#### From the README:
+
+> [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg) ](https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating)
+> [![Maven Central](https://img.shields.io/maven-central/v/org.finos.legend.shared/legend-shared-server.svg) ](https://central.sonatype.com/namespace/org.finos.legend.shared)
+> ![Build CI](https://github.com/finos/legend-shared/workflows/Build%20CI/badge.svg) 
+> [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=legend-shared&metric=security_rating&token=4c3f5479f7a32d754c947207987569fc14c7bba9) ](https://sonarcloud.io/dashboard?id=legend-shared)
+> [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=legend-shared&metric=bugs&token=4c3f5479f7a32d754c947207987569fc14c7bba9) ](https://sonarcloud.io/dashboard?id=legend-shared)
+> 
+> 
+> Shared code used across Legend applications for universal server-side functionality - hosting static files, performing authentication etc.
+> 
+> The important tenets for this project are:
+>... [_read more_](https://github.com/finos/legend-shared)
+> 
+#### Further Details
+ - [https://github.com/finos/legend-shared](https://github.com/finos/legend-shared)
+ - [https://legend.finos.org](https://legend.finos.org)
 ### legend-studio
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-66-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-91-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-159-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-70-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-109-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-162-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/issues)
 
 _Legend Studio_
 
@@ -412,7 +478,6 @@ _Legend Studio_
 > [![npm](https://img.shields.io/npm/v/@finos/legend-application-studio-bootstrap) ](https://www.npmjs.com/package/@finos/legend-application-studio-bootstrap)
 > [![docker](https://img.shields.io/docker/v/finos/legend-studio?label=finos%2Flegend-studio&logo=docker&logoColor=docker&sort=semver) ](https://hub.docker.com/r/finos/legend-studio)
 > [![docker](https://img.shields.io/docker/v/finos/legend-query?label=finos%2Flegend-query&logo=docker&logoColor=docker&sort=semver) ](https://hub.docker.com/r/finos/legend-query)
-> [![docker](https://img.shields.io/docker/v/finos/legend-taxonomy?label=finos%2Flegend-taxonomy&logo=docker&logoColor=docker&sort=semver) ](https://hub.docker.com/r/finos/legend-taxonomy)
 > 
 > 
 > The codebase and home of Legend applications: `"Legend Studio"`, `"Legend Query"`, etc.
@@ -425,11 +490,11 @@ _Legend Studio_
  - [https://github.com/finos/legend-studio](https://github.com/finos/legend-studio)
  - [https://legend.finos.org](https://legend.finos.org)
 ### PyLegend
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/pylegend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/pylegend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/pylegend/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/pylegend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/pylegend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/pylegend/issues)
 
 _pylegend_
 
-
+[![Topic: legend](https://img.shields.io/badge/legend-fafbfc)](https://github.com/topics/legend) [![Topic: modeling](https://img.shields.io/badge/modeling-fafbfc)](https://github.com/topics/modeling) 
 
 #### From the README:
 
@@ -450,7 +515,7 @@ _pylegend_
 ## Morphir
 
 ### Morphir
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-96-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-34-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-108-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-42-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-35-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir/issues)
 
 _A universal language for business and technology_
 
@@ -458,7 +523,7 @@ _A universal language for business and technology_
 
 #### From the README:
 
-> [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg) ](https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating)
+> [![FINOS - Active](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-active.svg) ](https://community.finos.org/docs/governance/Software-Projects/stages/active)
 > [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/6526/badge) ](https://bestpractices.coreinfrastructure.org/projects/6526)
 > [<img src="https://img.shields.io/badge/slack-@finos/morphir-green.svg?logo=slack">](https://finos-lf.slack.com/messages/morphir/)
 > 
@@ -472,7 +537,7 @@ _A universal language for business and technology_
  - [https://github.com/finos/morphir](https://github.com/finos/morphir)
  - [https://morphir.finos.org](https://morphir.finos.org)
 ### Morphir
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-dotnet/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-6-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-dotnet)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-48-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-dotnet/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-dotnet/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-6-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-dotnet)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-47-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-dotnet/issues)
 
 
 
@@ -490,7 +555,7 @@ _A universal language for business and technology_
 #### Further Details
  - [https://github.com/finos/morphir-dotnet](https://github.com/finos/morphir-dotnet)
 ### Morphir Elm
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-35-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-elm/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-41-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-elm)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-120-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-elm/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-37-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-elm/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-47-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-elm)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-125-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-elm/issues)
 
 _Tools to work with the Morphir IR in Elm._
 
@@ -511,26 +576,46 @@ _Tools to work with the Morphir IR in Elm._
 #### Further Details
  - [https://github.com/finos/morphir-elm](https://github.com/finos/morphir-elm)
  - [https://package.elm-lang.org/packages/finos/morphir-elm/latest](https://package.elm-lang.org/packages/finos/morphir-elm/latest)
-### Morphir Scala
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-scala/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-11-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-scala)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-9-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-scala/issues)
+### Morphir Jvm
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-21-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-jvm/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-17-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-jvm)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-jvm/issues)
+
+_Tools to work with the Morphir IR on/using the JVM._
 
 
 
 #### From the README:
 
+> This repo contains tools to work with the Morphir IR on the JVM. It will include data models for the IR, JSON serialization and developer tooling.
+> 
+> 
+> Morphir-jvm use mill as its build tool.
+> 
+> 
+> If you are using IntelliJ IDEA to edit morphir-jvm's Scala code, you can create the
+> IntelliJ project files via:
+>... [_read more_](https://github.com/finos/morphir-jvm)
+> 
+#### Further Details
+ - [https://github.com/finos/morphir-jvm](https://github.com/finos/morphir-jvm)
+### Morphir
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-8-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-scala/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-16-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-scala)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-18-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-scala/issues)
+
+
+
+#### From the README:
+
+> [![Scaladoc](https://img.shields.io/badge/Scaladoc-latest-blue) ](https://javadoc.io/doc/org.finos.morphir/morphir-runtime_3/latest/index.html) ![Scaladex](https://img.shields.io/maven-central/v/org.finos.morphir/morphir-runtime_3?style=flat-square&label=Scaladex)  [![Sonatype Releases](https://img.shields.io/nexus/r/https/oss.sonatype.org/org.finos.morphir/morphir_3.svg?label=Sonatype%20Release) ](https://oss.sonatype.org/content/repositories/releases/org/finos/morphir/morphir_3/) [![Sonatype Snapshots](https://img.shields.io/nexus/s/https/oss.sonatype.org/org.finos.morphir/morphir_3.svg?label=Sonatype%20Snapshot) ](https://oss.sonatype.org/content/repositories/snapshots/org/finos/morphir/morphir_3/)
+> 
 > Morphir is a library of tools that works to capture business logic as data.
 > 
 > For the first time, business logic can be shared, stored, translated and visualised, all with the reliability of standardisation ensured in the Morphir framework.
-> 
-> 
-> Provides Scala language bindings and JVM based tooling for Morphir.
 >... [_read more_](https://github.com/finos/morphir-scala)
 > 
 #### Further Details
  - [https://github.com/finos/morphir-scala](https://github.com/finos/morphir-scala)
  - [https://scala.morphir.finos.org](https://scala.morphir.finos.org)
 ## Open Reg Tech Us Lcr
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-reg-tech-us-lcr/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-21-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-reg-tech-us-lcr)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-reg-tech-us-lcr/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-8-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-reg-tech-us-lcr/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-21-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-reg-tech-us-lcr)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-reg-tech-us-lcr/issues)
 
 _Open Reg Tech: US LCR_
 
@@ -549,37 +634,8 @@ _Open Reg Tech: US LCR_
 > 
 #### Further Details
  - [https://github.com/finos/open-reg-tech-us-lcr](https://github.com/finos/open-reg-tech-us-lcr)
-## The Open Middleware Agnostic Messaging API
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-123-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/OpenMAMA/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-52-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/OpenMAMA)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/OpenMAMA/issues)
-
-_OpenMAMA is an open source project that provides a high performance middleware agnostic messaging API that interfaces with a variety of proprietary and open source message oriented middleware systems._
-
-[![Topic: openmama](https://img.shields.io/badge/openmama-fafbfc)](https://github.com/topics/openmama) [![Topic: middleware](https://img.shields.io/badge/middleware-fafbfc)](https://github.com/topics/middleware) [![Topic: fintech](https://img.shields.io/badge/fintech-fafbfc)](https://github.com/topics/fintech) [![Topic: fintech-api](https://img.shields.io/badge/fintech%20api-fafbfc)](https://github.com/topics/fintech-api) [![Topic: linux-foundation](https://img.shields.io/badge/linux%20foundation-fafbfc)](https://github.com/topics/linux-foundation) [![Topic: gplv2](https://img.shields.io/badge/gplv2-fafbfc)](https://github.com/topics/gplv2) 
-
-#### From the README:
-
-> [![Build CI](https://img.shields.io/github/actions/workflow/status/finos/OpenMAMA/main.yml?label=Build%20CI) ](https://github.com/finos/openmama/actions/workflows/main.yml)
-> [![FINOS - Active](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-active.svg) ](https://finosfoundation.atlassian.net/wiki/display/FINOS/Active)
-> [![License](https://img.shields.io/badge/License-LGPLv2.1-blue.svg) ](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html)
-> [![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/6741/badge) ](https://bestpractices.coreinfrastructure.org/projects/6741)
-> [![Join the chat at https://gitter.im/OpenMAMA/OpenMAMA](https://badges.gitter.im/OpenMAMA/OpenMAMA.svg) ](https://gitter.im/OpenMAMA/OpenMAMA?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-> [![.NET security](https://img.shields.io/github/actions/workflow/status/finos/OpenMAMA/cve-scanning-dotnet.yml?label=.NET%20Security) ](https://github.com/finos/openmama/actions/workflows/cve-scanning-dotnet.yml)
-> [![Java Security](https://img.shields.io/github/actions/workflow/status/finos/OpenMAMA/cve-scanning-gradle.yml?label=Java%20Security) ](https://github.com/finos/openmama/actions/workflows/cve-scanning-gradle.yml)
-> [![Docker Security](https://img.shields.io/github/actions/workflow/status/finos/OpenMAMA/cve-scanning-docker.yml?label=Docker%20Security) ](https://github.com/finos/openmama/actions/workflows/cve-scanning-docker.yml)
-> [![Static Code Analysis](https://img.shields.io/github/actions/workflow/status/finos/OpenMAMA/semgrep.yml?label=Static%20Code%20Analysis) ](https://github.com/finos/openmama/actions/workflows/semgrep.yml)
-> 
-> 
-> OpenMAMA is a high performance vendor neutral lightweight wrapper that provides a common API interface
-> to different middleware and messaging solutions across a variety of platforms and languages.
-> 
-> OpenMAMDA is a framework that adds Market Data functionality, such as order book handling on top of MAMA.
->... [_read more_](https://github.com/finos/OpenMAMA)
-> 
-#### Further Details
- - [https://github.com/finos/OpenMAMA](https://github.com/finos/OpenMAMA)
- - [https://openmama.org](https://openmama.org)
 ## Perspective
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-6245-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-680-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-81-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-6793-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-851-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-98-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
@@ -617,7 +673,7 @@ _A data visualization and analytics component, especially well-suited for large 
  - [https://github.com/finos/perspective](https://github.com/finos/perspective)
  - [https://perspective.finos.org/](https://perspective.finos.org/)
 ## Regular Table
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-298-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-34-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-13-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-318-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-35-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table/issues)
 
 _A regular <table> library, for async and virtual data models._
 
@@ -645,7 +701,6 @@ _A regular <table> library, for async and virtual data models._
 > - canvas_data_model.md
 > - file_browser.md
 > - minesweeper.md
-> - perspective.md
 > - react.md
 > - spreadsheet.md
 > - two_billion_rows.md
@@ -654,7 +709,7 @@ _A regular <table> library, for async and virtual data models._
 #### Further Details
  - [https://github.com/finos/regular-table](https://github.com/finos/regular-table)
 ## Security Scanning
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-5-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/security-scanning/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/security-scanning)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-5-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/security-scanning/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-5-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/security-scanning/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-5-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/security-scanning)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/security-scanning/issues)
 
 _How to protect FINOS hosted projects from security threats_
 
@@ -699,59 +754,8 @@ _How to protect FINOS hosted projects from security threats_
 > 
 #### Further Details
  - [https://github.com/finos/security-scanning](https://github.com/finos/security-scanning)
-## SIGs
-
-### Compliant Financial Infrastructure
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-98-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/compliant-financial-infrastructure/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-55-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/compliant-financial-infrastructure)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-26-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/compliant-financial-infrastructure/issues)
-
-_Compliant Financial Infrastructure accelerates the development, deployment and adoption of services provided for AWS, Azure and Google in a way that meets existing regulatory and internal security controls._
-
-[![Topic: cloud-service-certification](https://img.shields.io/badge/cloud%20service%20certification-fafbfc)](https://github.com/topics/cloud-service-certification) [![Topic: cloud](https://img.shields.io/badge/cloud-fafbfc)](https://github.com/topics/cloud) [![Topic: finos](https://img.shields.io/badge/finos-fafbfc)](https://github.com/topics/finos) [![Topic: aws](https://img.shields.io/badge/aws-fafbfc)](https://github.com/topics/aws) [![Topic: gcp](https://img.shields.io/badge/gcp-fafbfc)](https://github.com/topics/gcp) [![Topic: azure](https://img.shields.io/badge/azure-fafbfc)](https://github.com/topics/azure) [![Topic: infrastructure-as-code](https://img.shields.io/badge/infrastructure%20as%20code-fafbfc)](https://github.com/topics/infrastructure-as-code) 
-
-#### From the README:
-
-> [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg) ](https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating)
-> [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/6557/badge) ](https://bestpractices.coreinfrastructure.org/projects/6557)
-> [<img src="https://img.shields.io/badge/slack-@finos/compliant%20financial%20infrastructure-green.svg?logo=slack">](https://finos-lf.slack.com/messages/cfi/)
-> 
-> 
-> Compliant Financial Infrastructure (CFI) is a project that exists to accelerate the development, deployment and adoption of services provided for infrastructure in a way that meets common regulatory and internal security controls.
-> 
-> Through our three working groups, we provide:
->... [_read more_](https://github.com/finos/compliant-financial-infrastructure)
-> 
-#### Further Details
- - [https://github.com/finos/compliant-financial-infrastructure](https://github.com/finos/compliant-financial-infrastructure)
-### FINOS InnerSource Special Interest Group
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-22-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/InnerSource/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-15-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/InnerSource)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-19-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/InnerSource/issues)
-
-_The FINOS InnerSource SIG is a community of people implementing, or interested in implementing, InnerSource within their financial services organization._
-
-[![Topic: innersource](https://img.shields.io/badge/innersource-fafbfc)](https://github.com/topics/innersource) [![Topic: finos](https://img.shields.io/badge/finos-fafbfc)](https://github.com/topics/finos) [![Topic: finos-innersource](https://img.shields.io/badge/finos%20innersource-fafbfc)](https://github.com/topics/finos-innersource) [![Topic: hacktoberfest](https://img.shields.io/badge/hacktoberfest-fafbfc)](https://github.com/topics/hacktoberfest) 
-
-#### From the README:
-
-> InnerSource can help break down silos, encourage internal collaboration and
-> innovation, accelerate new engineer on-boarding, and identify opportunities to
-> contribute software back to the open source world.
-> 
-> 
-> The FINOS InnerSource
-> [Special Interest Group](https://github.com/finos/community/tree/master/governance#special-interest-groups)
-> is a community of people implementing, or interested in implementing,
-> InnerSource within their financial services organization.
-> 
-> The InnerSource SIG is of particular importance to financial services
-> organisations who wish to accelerate their InnerSource practices, share best
-> practices, patterns and anti-patterns and potentially related code (e.g. for
-> InnerSource tooling) in a secure environment, with the aim of contributing
-> proven methods to FINOS and the wider InnerSource Commons community.
->... [_read more_](https://github.com/finos/InnerSource)
-> 
-#### Further Details
- - [https://github.com/finos/InnerSource](https://github.com/finos/InnerSource)
-### FINOS Open Source Readiness Special Interest Group
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-20-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-16-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-30-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/issues)
+## FINOS Open Source Readiness Special Interest Group
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-24-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-21-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/issues)
 
 _Accelerate financial services firms’ journeys toward open source readiness, by advancing the readiness of participants’ firms and informing guidance for the broader industry in the form of white papers, presentations, and blog posts._
 
@@ -771,7 +775,7 @@ _Accelerate financial services firms’ journeys toward open source readiness, b
  - [https://github.com/finos/open-source-readiness](https://github.com/finos/open-source-readiness)
  - [https://osr.finos.org](https://osr.finos.org)
 ## Spring Bot
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-46-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-32-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-18-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-50-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-32-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-18-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot/issues)
 
 _Spring Boot + Java Integration for Symphony/Teams Chat Platform Bots and Apps_
 
@@ -779,10 +783,10 @@ _Spring Boot + Java Integration for Symphony/Teams Chat Platform Bots and Apps_
 
 #### From the README:
 
-> [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg) ](https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating)
+> [![FINOS - Active](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-active.svg) ](https://community.finos.org/docs/governance/Software-Projects/stages/active)
 > [![codecov](https://codecov.io/gh/finos/spring-bot/branch/spring-bot-develop/graph/badge.svg?token=CSa0aaqYD0) ](https://codecov.io/gh/finos/spring-bot)
 > ![License](https://img.shields.io/github/license/finos/spring-bot) 
-> ![build](https://github.com/finos/spring-bot/workflows/sjt-build/badge.svg) 
+> ![build](https://github.com/finos/spring-bot/actions/workflows/build.yml/badge.svg) 
 > [![javadoc](https://javadoc.io/badge2/org.finos.springbot/chat-workflow/javadoc.svg) ](https://javadoc.io/doc/org.finos.springbot/chat-workflow)
 > [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/5948/badge) ](https://bestpractices.coreinfrastructure.org/projects/5948)
 > 
@@ -798,7 +802,7 @@ _Spring Boot + Java Integration for Symphony/Teams Chat Platform Bots and Apps_
 ## Symphony
 
 ### Symphony BDK for Java
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-20-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-java/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-66-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-java)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-java/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-22-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-java/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-67-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-java)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-java/issues)
 
 _The Symphony BDK (Bot Developer Kit) for Java helps you to create production-grade Chat Bots and Extension Applications on top of the Symphony REST APIs._
 
@@ -825,7 +829,7 @@ _The Symphony BDK (Bot Developer Kit) for Java helps you to create production-gr
  - [https://github.com/finos/symphony-bdk-java](https://github.com/finos/symphony-bdk-java)
  - [https://symphony-bdk-java.finos.org](https://symphony-bdk-java.finos.org)
 ### Symphony Workflow Developer Kit (WDK)
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-2-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-9-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-8-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-8-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk/issues)
 
 _Symphony Workflow Developer Kit (WDK), a bot capable of running workflows_
 
@@ -845,31 +849,8 @@ _Symphony Workflow Developer Kit (WDK), a bot capable of running workflows_
 > 
 #### Further Details
  - [https://github.com/finos/symphony-wdk](https://github.com/finos/symphony-wdk)
-### Symphony WDK Gallery
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk-gallery/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk-gallery)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-wdk-gallery/issues)
-
-_Symphony WDK Templates_
-
-
-
-#### From the README:
-
-> [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg) ](https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating)
-> 
-> 
-> The Symphony WDK Gallery is a project collecting ready-to-use workflow templates that can be used using the Symphony Workflow Developer Kit.
-> Workflow templates are described using the SWADL language ([https://github.com/finos/symphony-wdk/blob/master/docs/reference.md](https://github.com/finos/symphony-wdk/blob/master/docs/reference.md))
-> 
-> 
-> 1. Select the SWADL file corresponding to a template from one category under the  categories directory.
-> 2. Copy the file to the workflow directory set in the application.yaml file in your WDK project.
-> 3. Alternatively adapt the SWADL file to fit your own need.
->... [_read more_](https://github.com/finos/symphony-wdk-gallery)
-> 
-#### Further Details
- - [https://github.com/finos/symphony-wdk-gallery](https://github.com/finos/symphony-wdk-gallery)
 ### SymphonyElectron
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-72-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-103-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-76-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-104-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron/issues)
 
 _A desktop client for the Symphony Collaboration Platform built using Electron_
 
@@ -900,11 +881,11 @@ _A desktop client for the Symphony Collaboration Platform built using Electron_
  - [https://github.com/finos/SymphonyElectron](https://github.com/finos/SymphonyElectron)
  - [https://symphony.com](https://symphony.com)
 ### Symphony Media Bridge
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-37-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyMediaBridge/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyMediaBridge)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyMediaBridge/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-44-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyMediaBridge/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-16-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyMediaBridge)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyMediaBridge/issues)
 
 _The Symphony Media Bridge (SMB) is a media server application that handles audio, video and screen sharing media streams in an RTC conference system._
 
-[![Topic: webrtc](https://img.shields.io/badge/webrtc-fafbfc)](https://github.com/topics/webrtc) [![Topic: sfu](https://img.shields.io/badge/sfu-fafbfc)](https://github.com/topics/sfu) [![Topic: mcu](https://img.shields.io/badge/mcu-fafbfc)](https://github.com/topics/mcu) [![Topic: rtp](https://img.shields.io/badge/rtp-fafbfc)](https://github.com/topics/rtp) [![Topic: dtls](https://img.shields.io/badge/dtls-fafbfc)](https://github.com/topics/dtls) [![Topic: ice](https://img.shields.io/badge/ice-fafbfc)](https://github.com/topics/ice) [![Topic: sctp](https://img.shields.io/badge/sctp-fafbfc)](https://github.com/topics/sctp) [![Topic: bandwidth-estimation](https://img.shields.io/badge/bandwidth%20estimation-fafbfc)](https://github.com/topics/bandwidth-estimation) 
+[![Topic: webrtc](https://img.shields.io/badge/webrtc-fafbfc)](https://github.com/topics/webrtc) [![Topic: sfu](https://img.shields.io/badge/sfu-fafbfc)](https://github.com/topics/sfu) [![Topic: mcu](https://img.shields.io/badge/mcu-fafbfc)](https://github.com/topics/mcu) [![Topic: rtp](https://img.shields.io/badge/rtp-fafbfc)](https://github.com/topics/rtp) [![Topic: dtls](https://img.shields.io/badge/dtls-fafbfc)](https://github.com/topics/dtls) [![Topic: ice](https://img.shields.io/badge/ice-fafbfc)](https://github.com/topics/ice) [![Topic: sctp](https://img.shields.io/badge/sctp-fafbfc)](https://github.com/topics/sctp) [![Topic: bandwidth-estimation](https://img.shields.io/badge/bandwidth%20estimation-fafbfc)](https://github.com/topics/bandwidth-estimation) [![Topic: sdes](https://img.shields.io/badge/sdes-fafbfc)](https://github.com/topics/sdes) [![Topic: srtp](https://img.shields.io/badge/srtp-fafbfc)](https://github.com/topics/srtp) 
 
 #### From the README:
 
@@ -918,17 +899,46 @@ _The Symphony Media Bridge (SMB) is a media server application that handles audi
 > 
 #### Further Details
  - [https://github.com/finos/SymphonyMediaBridge](https://github.com/finos/SymphonyMediaBridge)
-## Technical Steering Committee
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-steering-committee/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-steering-committee)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-steering-committee/issues)
+## Technical Oversight Committee
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-oversight-committee/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-oversight-committee)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-11-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/technical-oversight-committee/issues)
 
-_📋  FINOS Technical Steering Committee_
+_📋  FINOS Technical Oversight Committee_
 
 
 
 #### Further Details
- - [https://github.com/finos/technical-steering-committee](https://github.com/finos/technical-steering-committee)
+ - [https://github.com/finos/technical-oversight-committee](https://github.com/finos/technical-oversight-committee)
+## Terraform Aws Cfi Eks
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/terraform-aws-cfi-eks/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/terraform-aws-cfi-eks)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/terraform-aws-cfi-eks/issues)
+
+
+
+#### From the README:
+
+> [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg) ](https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating)
+> ![website build](https://github.com/finos/cfi-terraform-template-child-module/workflows/Docusaurus-website-build/badge.svg) 
+> 
+> 
+> This terraform module produces an AWS EKS cluster.
+> 
+> 
+> Before running the Terraform scripts, make sure to set the IAM required permissions first. You will have to remove the comments in the code if you decide to copy/paste them. Remember it is a best practice to use a role and assign this permissions as a managed policy rather than inline.
+>... [_read more_](https://github.com/finos/terraform-aws-cfi-eks)
+> 
+#### Further Details
+ - [https://github.com/finos/terraform-aws-cfi-eks](https://github.com/finos/terraform-aws-cfi-eks)
+## TimeBase CE
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-99-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-18-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE/issues)
+
+_High performance time series database_
+
+[![Topic: java](https://img.shields.io/badge/java-fafbfc)](https://github.com/topics/java) [![Topic: time-series](https://img.shields.io/badge/time%20series-fafbfc)](https://github.com/topics/time-series) [![Topic: database](https://img.shields.io/badge/database-fafbfc)](https://github.com/topics/database) [![Topic: time-series-database](https://img.shields.io/badge/time%20series%20database-fafbfc)](https://github.com/topics/time-series-database) [![Topic: sql](https://img.shields.io/badge/sql-fafbfc)](https://github.com/topics/sql) [![Topic: timebase](https://img.shields.io/badge/timebase-fafbfc)](https://github.com/topics/timebase) [![Topic: high-performance](https://img.shields.io/badge/high%20performance-fafbfc)](https://github.com/topics/high-performance) 
+
+#### Further Details
+ - [https://github.com/finos/TimeBase-CE](https://github.com/finos/TimeBase-CE)
+ - [https://timebase.info](https://timebase.info)
 ## Tracdap
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-29-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/tracdap/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-13-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/tracdap)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-33-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/tracdap/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-31-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/tracdap/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/tracdap)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-31-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/tracdap/issues)
 
 _A next-generation data and analytics platform for use in highly regulated environments_
 
@@ -951,7 +961,7 @@ _A next-generation data and analytics platform for use in highly regulated envir
 #### Further Details
  - [https://github.com/finos/tracdap](https://github.com/finos/tracdap)
 ## Vuu
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-17-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-17-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-103-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-24-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-21-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-132-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/issues)
 
 _Vuu - an open source view server and html 5 based UI system_
 
@@ -962,7 +972,7 @@ _Vuu - an open source view server and html 5 based UI system_
 > [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg) ](https://community.finos.org/docs/governance/Software-Projects/stages/incubating)
 > 
 > 
-> Welcome. We maintain a docusaurus book containing all the details of the project. Why not get started there:
+> Welcome. We maintain a docusaurus site containing all the details of the project. Why not get started there:
 > 
 > [https://vuu.finos.org/docs/introduction/intro](https://vuu.finos.org/docs/introduction/intro)
 >... [_read more_](https://github.com/finos/vuu)
@@ -971,7 +981,7 @@ _Vuu - an open source view server and html 5 based UI system_
  - [https://github.com/finos/vuu](https://github.com/finos/vuu)
  - [https://vuu.finos.org](https://vuu.finos.org)
 ## Waltz
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-149-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-105-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-300-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-156-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-123-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-319-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/issues)
 
 _Enterprise Information Service_
 
@@ -993,6 +1003,29 @@ _Enterprise Information Service_
 #### Further Details
  - [https://github.com/finos/waltz](https://github.com/finos/waltz)
  - [https://waltz.finos.org](https://waltz.finos.org)
+## Welcome to Zenith
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-19-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/zenith/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/zenith)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/zenith/issues)
+
+_Create a space where expertise can be identified and implemented to help the fintech ecosystem understand and adopt new technologies through the exploration and creation of common understanding._
+
+[![Topic: emerging](https://img.shields.io/badge/emerging-fafbfc)](https://github.com/topics/emerging) [![Topic: emerging-tech](https://img.shields.io/badge/emerging%20tech-fafbfc)](https://github.com/topics/emerging-tech) [![Topic: technologies](https://img.shields.io/badge/technologies-fafbfc)](https://github.com/topics/technologies) 
+
+#### From the README:
+
+> All SIG related communications are conducted through the [zenith@lists.finos.org](mailto:zenith@lists.finos.org)
+> mailing list. Email [zenith@lists.finos.org](mailto:zenith@lists.finos.org) with questions or suggestions for
+> collaboration use cases. Join the mailing list and stay up to date by sending a
+> note to [zenith+subscribe@lists.finos.org](mailto:zenith+subscribe@lists.finos.org) .
+> 
+> Watch [our intro video](https://youtu.be/HhXkbroh8sM) for a general overview.
+> 
+> 
+> Welcome to the GitHub repository of the Zenith SIG. The purpose of this special interest group is to explore and promote the adoption of new and innovative technologies in the financial services industry. The  goals of the SIG are to:
+>... [_read more_](https://github.com/finos/zenith)
+> 
+#### Further Details
+ - [https://github.com/finos/zenith](https://github.com/finos/zenith)
+ - [https://zenith.finos.org](https://zenith.finos.org)
 
 
 _For the full list see the repositories below_
