@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 10 Nov 2023):
+Here are some of FINOS' most active projects (as of 11 Nov 2023):
 
  - [Accessibility Theme Builder](#Accessibility-Theme-Builder)
  - [Accessibility Theme Builder SDK](#Accessibility-Theme-Builder-SDK)
@@ -52,7 +52,7 @@ Here are some of FINOS' most active projects (as of 10 Nov 2023):
  - [Waltz](#Waltz)
  - [Welcome to Zenith](#Welcome-to-Zenith)
 ## Accessibility Theme Builder
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-17-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-39-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-109-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-17-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-39-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-114-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder/issues)
 
 _DesignOps toolchain theme builder for accessibility inclusion using Atomic Design._
 
@@ -662,7 +662,7 @@ _Tools to work with the Morphir IR in Elm._
  - [https://github.com/finos/morphir-elm](https://github.com/finos/morphir-elm)
  - [https://package.elm-lang.org/packages/finos/morphir-elm/latest](https://package.elm-lang.org/packages/finos/morphir-elm/latest)
 ### Morphir Jvm
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-21-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-jvm/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-17-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-jvm)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-jvm/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-22-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-jvm/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-17-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-jvm)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-23-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-jvm/issues)
 
 _Tools to work with the Morphir IR on/using the JVM._
 
@@ -683,7 +683,7 @@ _Tools to work with the Morphir IR on/using the JVM._
 #### Further Details
  - [https://github.com/finos/morphir-jvm](https://github.com/finos/morphir-jvm)
 ### Morphir
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-9-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-scala/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-16-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-scala)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-20-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-scala/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-scala/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-16-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-scala)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-20-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir-scala/issues)
 
 
 
@@ -749,7 +749,7 @@ _OpenMAMA is an open source project that provides a high performance middleware 
  - [https://github.com/finos/OpenMAMA](https://github.com/finos/OpenMAMA)
  - [https://openmama.org](https://openmama.org)
 ## Perspective
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-6916-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-873-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-101-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-6919-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-873-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-101-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
