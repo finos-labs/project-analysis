@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 11 Nov 2023):
+Here are some of FINOS' most active projects (as of 12 Nov 2023):
 
  - [Accessibility Theme Builder](#Accessibility-Theme-Builder)
  - [Accessibility Theme Builder SDK](#Accessibility-Theme-Builder-SDK)
@@ -383,7 +383,7 @@ _High performance, editable, stylable datagrids in jupyter and jupyterlab_
 #### Further Details
  - [https://github.com/finos/ipyregulartable](https://github.com/finos/ipyregulartable)
 ## Jupyterlab_templates
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-352-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-61-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-6-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-352-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-61-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates/issues)
 
 _Support for jupyter notebook templates in jupyterlab_
 
@@ -749,7 +749,7 @@ _OpenMAMA is an open source project that provides a high performance middleware 
  - [https://github.com/finos/OpenMAMA](https://github.com/finos/OpenMAMA)
  - [https://openmama.org](https://openmama.org)
 ## Perspective
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-6919-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-873-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-101-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-6920-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-873-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-101-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
