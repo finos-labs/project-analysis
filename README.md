@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 13 Nov 2023):
+Here are some of FINOS' most active projects (as of 14 Nov 2023):
 
  - [Accessibility Theme Builder](#Accessibility-Theme-Builder)
  - [Accessibility Theme Builder SDK](#Accessibility-Theme-Builder-SDK)
@@ -204,7 +204,7 @@ _FINOS Common Cloud Controls_
  - [https://github.com/finos/common-cloud-controls](https://github.com/finos/common-cloud-controls)
  - [https://www.finos.org/common-cloud-controls-project](https://www.finos.org/common-cloud-controls-project)
 ## Common Domain Model (CDM)
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-74-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-37-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-104-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-74-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-38-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-103-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/issues)
 
 _The CDM is a model for financial products, trades in those products, and the lifecycle events of those trades. It is an open source standard that aligns data, systems and processes and is available as code in multiple languages for easy implementation across technologies._
 
@@ -267,7 +267,7 @@ _Provide a continuous compliance and assurance approach to DevOps that mutually 
 ## FDC3
 
 ### FDC3 - Financial Desktop Connectivity and Collaboration Consortium
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-162-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-101-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-43-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-162-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-101-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-45-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/issues)
 
 _An open standard for the financial desktop._
 
@@ -383,7 +383,7 @@ _High performance, editable, stylable datagrids in jupyter and jupyterlab_
 #### Further Details
  - [https://github.com/finos/ipyregulartable](https://github.com/finos/ipyregulartable)
 ## Jupyterlab_templates
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-352-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-61-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-352-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-62-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-7-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates/issues)
 
 _Support for jupyter notebook templates in jupyterlab_
 
@@ -560,7 +560,7 @@ _Legend Shared module_
  - [https://github.com/finos/legend-shared](https://github.com/finos/legend-shared)
  - [https://legend.finos.org](https://legend.finos.org)
 ### legend-studio
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-70-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-112-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-175-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-71-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-112-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-175-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend-studio/issues)
 
 _Legend Studio_
 
@@ -749,7 +749,7 @@ _OpenMAMA is an open source project that provides a high performance middleware 
  - [https://github.com/finos/OpenMAMA](https://github.com/finos/OpenMAMA)
  - [https://openmama.org](https://openmama.org)
 ## Perspective
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-6923-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-873-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-101-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-6926-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-873-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-101-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
@@ -823,7 +823,7 @@ _A regular <table> library, for async and virtual data models._
 #### Further Details
  - [https://github.com/finos/regular-table](https://github.com/finos/regular-table)
 ## FINOS Open Source Readiness Special Interest Group
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-26-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-21-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-31-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-26-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-21-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-37-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/issues)
 
 _Accelerate financial services firms’ journeys toward open source readiness, by advancing the readiness of participants’ firms and informing guidance for the broader industry in the form of white papers, presentations, and blog posts._
 
@@ -1006,7 +1006,7 @@ _A next-generation data and analytics platform for use in highly regulated envir
 #### Further Details
  - [https://github.com/finos/tracdap](https://github.com/finos/tracdap)
 ## FINOS | TraderX Example of a Simple Trading App
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-8-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/traderX/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-22-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/traderX)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-19-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/traderX/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-9-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/traderX/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-22-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/traderX)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-19-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/traderX/issues)
 
 [![Topic: finos-hackathon-bmo](https://img.shields.io/badge/finos%20hackathon%20bmo-fafbfc)](https://github.com/topics/finos-hackathon-bmo) 
 
@@ -1027,7 +1027,7 @@ _A next-generation data and analytics platform for use in highly regulated envir
 #### Further Details
  - [https://github.com/finos/traderX](https://github.com/finos/traderX)
 ## Vuu
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-24-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-21-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-129-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-24-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-21-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-132-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/issues)
 
 _Vuu - an open source view server and html 5 based UI system_
 
@@ -1047,7 +1047,7 @@ _Vuu - an open source view server and html 5 based UI system_
  - [https://github.com/finos/vuu](https://github.com/finos/vuu)
  - [https://vuu.finos.org](https://vuu.finos.org)
 ## Waltz
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-157-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-125-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-316-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-157-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-125-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-320-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/waltz/issues)
 
 _Enterprise Information Service_
 
