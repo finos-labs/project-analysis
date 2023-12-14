@@ -37,6 +37,25 @@ public class CSVGenerator {
 		return convertToCSV(summ, activeProjects);
 	}
 
+	public String generateMostPopular(CSVSummarizer summ) throws Exception {
+		List<List<Object>> mostPopular = qs.getMostPopularRepositories(summ);
+		return convertToCSV(summ, mostPopular);
+	}
+	
+	
+	private String convertToCSV(CSVSummarizer summ, List<List<Object>> activeProjects) throws IOException {
+		StringWriter sw = new StringWriter();
+		CSVPrinter printer = new CSVPrinter(sw, CSVFormat.DEFAULT.withHeader(summ.getColumnNames()));
+		
+		for (List<Object> record : activeProjects) {
+			printer.printRecord(record.stream().toArray());
+		}
+		
+		printer.close();
+		
+		return sw.toString();
+	}
+
 	
 	private String convertToCSV(CSVSummarizer summ, Map<String, List<Object>> activeProjects) throws IOException {
 		StringWriter sw = new StringWriter();

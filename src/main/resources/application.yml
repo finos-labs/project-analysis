@@ -5,6 +5,7 @@ graphql:
 logging:
   level:
     org.springframework: DEBUG
+    org.finos.scan.github: DEBUG
     
 debug: true
     

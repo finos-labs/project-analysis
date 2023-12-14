@@ -2,6 +2,7 @@ package org.finos.ls;
 
 import java.util.Collections;
 
+import org.finos.ls.queries.BigProjectsSummarizer;
 import org.finos.ls.queries.SecurityCSVSummarizer;
 import org.finos.ls.search.FinanceCSVSummarizer;
 import org.junit.jupiter.api.Test;
@@ -31,6 +32,12 @@ public class SearchTests {
 	@Test
 	public void top150ReposInFinanceTopic() throws Exception {
 		String out = csv.generateTopic("finance", new FinanceCSVSummarizer());
+		System.out.println(out);
+	}
+	
+	@Test
+	public void top150MostPopular() throws Exception {
+		String out = csv.generateMostPopular(new BigProjectsSummarizer());
 		System.out.println(out);
 	}
 }

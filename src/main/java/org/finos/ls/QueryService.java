@@ -9,6 +9,8 @@ import org.finos.ls.queries.QueryType;
 import org.finos.scan.github.client.Organization;
 import org.finos.scan.github.client.Repository;
 import org.finos.scan.github.client.RepositoryConnection;
+import org.finos.scan.github.client.SearchResultItemConnection;
+import org.finos.scan.github.client.SearchType;
 import org.finos.scan.github.client.Topic;
 import org.finos.scan.github.client.util.QueryExecutor;
 import org.slf4j.Logger;
@@ -49,7 +51,7 @@ public class QueryService {
 		List<Repository> out = new ArrayList<Repository>();
 		int total = 1000;
 		String cursor = null;
-		String query = buildQuery(qt);
+		String query = buildRepositoryQuery(qt);
 		
 		QUERY_LOGGER.info(query);
 		
@@ -76,11 +78,29 @@ public class QueryService {
 				(a,b) -> a));	// deal with dups
 	}
 	
+	public List<List<Object>> getMostPopularRepositories(QueryType<List<Object>> qt) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		List<List<Object>> out = new ArrayList<>();
+		String query = buildPopularQuery(qt);
+		
+		QUERY_LOGGER.info(query);
+		
+		SearchResultItemConnection q = qe.search(query, null, null, 100, null, qt.getRepositoryQueryPrefix(), SearchType.REPOSITORY);
+		
+		out.addAll(
+			q.getEdges().stream()
+				.map(e -> (Repository) e.getNode())
+				.map(r -> qt.convert(r, qe))
+				.collect(Collectors.toList()));
+		
+		return out;
+	}
+	
+	
 	public <X> Map<String, X> getAllRepositoriesInOrg(QueryType<X> qt, String org) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
 		List<Repository> out = new ArrayList<Repository>();
 		int total = 1000;
 		String cursor = null;
-		String query = buildQuery(qt);
+		String query = buildRepositoryQuery(qt);
 		
 		QUERY_LOGGER.info(query);
 		
@@ -100,7 +120,7 @@ public class QueryService {
 				
 	}
 
-	private <X> String buildQuery(QueryType<X> qt) {
+	private <X> String buildRepositoryQuery(QueryType<X> qt) {
 		return "{\n"
 				+ "    id\n"
 				+ "    repositories("+qt.getRepositoryQueryPrefix()+"first: "+qt.getPageSize()+", after: &cursor) { \n"
@@ -119,6 +139,18 @@ public class QueryService {
 				+ "      }\n"
 				+ "    }\n"
 				+ "  }\n"
+				+ "}";
+	}
+	
+	private <X> String buildPopularQuery(QueryType<X> qt) {
+		return "{"
+				+ "edges {\n"
+				+ "      node {\n"
+				+ "        ... on Repository {\n"
+				+ qt.getFields()
+				+ "        }\n"
+				+ "      }\n"
+				+ "    }"
 				+ "}";
 	}
 }

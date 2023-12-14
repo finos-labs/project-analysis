@@ -165,6 +165,30 @@ public class BasicQueries {
 		+ "        }\n"
 		+ "      }\n"
 		+ "    }", 10, (r, qe) -> condenseRecentCommitters(r));
+	
+	public static QueryType<Map<String, Long>> COMMITS_BY_USER = new AbstractQueryType<>("defaultBranchRef {\n"
+			+ "      id\n"
+			+ "      name\n"
+			+ "      target {\n"
+			+ "        ... on Commit {\n"
+			+ "          history(first: 100) {\n"
+			+ "            edges {\n"
+			+ "              node {\n"
+			+ "                ... on Commit {\n"
+			+ "                  committedDate\n"
+			+ "                }\n"
+			+ "                author {\n"
+			+ "                  user {\n"
+			+ "                    login\n"
+			+ "                  }\n"
+			+ "                }\n"
+			+ "              }\n"
+			+ "            }\n"
+			+ "          }\n"
+			+ "        }\n"
+			+ "      }\n"
+			+ "    }", 10, (r, qe) -> commitsByUser(r));
+			
 		
 	
 	public static QueryType<OpenSSFStatus> OPENSSF_STATUS = new AbstractQueryType<>(FILE_LIST, 20, (r, qe) -> {
@@ -291,11 +315,17 @@ public class BasicQueries {
 	}
 	
 	private static Activity condenseRecentCommitters(Repository r) {
+		Map<String, Long> counts = commitsByUser(r);
+		
+		return summarize(counts);
+	}
+	
+	private static Map<String, Long> commitsByUser(Repository r) {
 		Date cutoff = cutoff();
 		
 		Ref defaultBranchRef = r.getDefaultBranchRef();
 		if (defaultBranchRef == null) {
-			return new Activity(0, Collections.emptyList());  // private repo or some security reason
+			return Collections.emptyMap();  // private repo or some security reason
 		}
 		Commit target = (Commit) defaultBranchRef.getTarget();
 		Map<String, Long> counts = target.getHistory().getEdges().stream()
@@ -305,7 +335,7 @@ public class BasicQueries {
 			.collect(Collectors.groupingBy(c -> c.getAuthor().getUser().getLogin(), Collectors.counting()));
 		
 		
-		return summarize(counts);
+		return counts;
 	}
 	
 	private static Activity summarize(Map<String, Long> counts) {

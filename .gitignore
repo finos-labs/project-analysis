@@ -2,3 +2,4 @@ target
 application-local.yml
 /.settings
 .DS_Store
+/bin/

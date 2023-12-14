@@ -126,6 +126,24 @@ public class BasicTest {
 	}
 	
 	@Test
+	public void testRecentCommitterCounts() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+//		singleRepoCommitterDetails("legend");
+//		singleRepoCommitterDetails("legend-engine");
+//		singleRepoCommitterDetails("legend-depot");
+//		singleRepoCommitterDetails("legend-sdlc");
+		singleRepoCommitterDetails("legend-pure");
+		singleRepoCommitterDetails("legend-studio");
+		singleRepoCommitterDetails("pylegend");
+	}
+
+	private void singleRepoCommitterDetails(String name)
+			throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		Map<String, Long> committers = qs.getSingleRepository(BasicQueries.COMMITS_BY_USER, ORG, name);
+		outputCounts(name, committers);
+	}
+	
+	
+	@Test
 	public void testAdminDetails() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
 		String admins = qs.getSingleRepository(BasicQueries.WRONG_ADMINS, "robmoffat", "landscape-scanning");
 		System.out.println(admins);
@@ -158,6 +176,14 @@ public class BasicTest {
 	private void outputMap(Map<String, ? extends Object> licenseDetails) {
 		licenseDetails.entrySet().stream()
 			.forEach(e -> System.out.println(e.getKey()+ " "+e.getValue()));
+	}
+
+	private void outputCounts(String repo, Map<String, Long> val) {
+		for (Map.Entry<String, Long> entry2 : val.entrySet()) {
+			String user = entry2.getKey();
+			Long count = entry2.getValue();
+			System.out.println(repo+","+user+","+count);
+		}
 	}
 	
 	@Test
