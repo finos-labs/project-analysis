@@ -1,9 +1,9 @@
 package org.finos.ls;
 
-import java.util.Collections;
+import java.io.FileWriter;
 
 import org.finos.ls.queries.BigProjectsSummarizer;
-import org.finos.ls.queries.SecurityCSVSummarizer;
+import org.finos.ls.queries.IssueQuery;
 import org.finos.ls.search.FinanceCSVSummarizer;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,4 +47,5 @@ public class SearchTests {
 		System.out.println(out);
 
 	}
+	
 }

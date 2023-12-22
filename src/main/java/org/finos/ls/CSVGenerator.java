@@ -2,7 +2,7 @@ package org.finos.ls;
 
 import java.io.IOException;
 import java.io.StringWriter;
-import java.util.Arrays;
+import java.io.Writer;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,10 +11,10 @@ import java.util.stream.Collectors;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
 import org.finos.ls.queries.CSVSummarizer;
-import org.finos.ls.queries.SecurityCSVSummarizer;
+import org.finos.ls.queries.HasColumns;
+import org.finos.ls.queries.TableSummarizer;
 import org.finos.scan.github.client.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -39,12 +39,17 @@ public class CSVGenerator {
 
 	public String generateMostPopular(CSVSummarizer summ) throws Exception {
 		List<List<Object>> mostPopular = qs.getMostPopularRepositories(summ);
-		return convertToCSV(summ, mostPopular);
+		StringWriter out = new StringWriter();
+		convertToCSV(summ, mostPopular, out);
+		return out.toString();
 	}
 	
+	public void generateFromFile(TableSummarizer qt, String file, Writer w) throws Exception {
+		List<List<Object>> data = qs.getRepositiesFromFile(qt, file);
+		convertToCSV(qt, data, w);
+	}
 	
-	private String convertToCSV(CSVSummarizer summ, List<List<Object>> activeProjects) throws IOException {
-		StringWriter sw = new StringWriter();
+	private void convertToCSV(HasColumns summ, List<List<Object>> activeProjects, Writer sw) throws IOException {
 		CSVPrinter printer = new CSVPrinter(sw, CSVFormat.DEFAULT.withHeader(summ.getColumnNames()));
 		
 		for (List<Object> record : activeProjects) {
@@ -52,12 +57,10 @@ public class CSVGenerator {
 		}
 		
 		printer.close();
-		
-		return sw.toString();
 	}
 
 	
-	private String convertToCSV(CSVSummarizer summ, Map<String, List<Object>> activeProjects) throws IOException {
+	private String convertToCSV(HasColumns summ, Map<String, List<Object>> activeProjects) throws IOException {
 		StringWriter sw = new StringWriter();
 		CSVPrinter printer = new CSVPrinter(sw, CSVFormat.DEFAULT.withHeader(summ.getColumnNames()));
 		

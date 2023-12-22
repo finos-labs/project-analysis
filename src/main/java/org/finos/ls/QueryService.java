@@ -1,10 +1,13 @@
 package org.finos.ls;
 
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
 import org.finos.ls.queries.QueryType;
 import org.finos.scan.github.client.Organization;
 import org.finos.scan.github.client.Repository;
@@ -45,7 +48,6 @@ public class QueryService {
 		Repository r = qe.repository(query, true, name, owner);
 		return r;
 	}
-	
 	
 	public <X> Map<String, X> getAllRepositoriesInTopic(QueryType<X> qt, String topic) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
 		List<Repository> out = new ArrayList<Repository>();
@@ -94,6 +96,28 @@ public class QueryService {
 		
 		return out;
 	}
+	
+	public List<List<Object>> getRepositiesFromFile(QueryType<List<List<Object>>> qt, String filename) throws Exception {
+		List<List<Object>> out = new ArrayList<>();
+		
+		FileReader fr = new FileReader(filename);
+		CSVParser p = new CSVParser(fr, CSVFormat.DEFAULT.withFirstRecordAsHeader());
+		p.getRecords().forEach(r -> {
+			try {
+				Repository rr = getRawRepository(qt, r.get(1), r.get(2));
+				List<List<Object>> result = qt.convert(rr, qe);
+				out.addAll(result);
+				Thread.sleep(10000);	// avoid overloading query service
+			} catch (GraphQLRequestExecutionException | GraphQLRequestPreparationException e) {
+				e.printStackTrace();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		});
+		p.close();
+		
+		return out;
+	} 
 	
 	
 	public <X> Map<String, X> getAllRepositoriesInOrg(QueryType<X> qt, String org) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
