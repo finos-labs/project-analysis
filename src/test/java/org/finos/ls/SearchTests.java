@@ -36,8 +36,15 @@ public class SearchTests {
 	}
 	
 	@Test
-	public void top150MostPopular() throws Exception {
-		String out = csv.generateMostPopular(new BigProjectsSummarizer());
+	public void mostPopular() throws Exception {
+//		String out = csv.generateMostPopular(new BigProjectsSummarizer("java"));
+//		System.out.println(out);
+//
+//		out = csv.generateMostPopular(new BigProjectsSummarizer("javascript"));
+//		System.out.println(out);
+//		
+		String out = csv.generateMostPopular(new BigProjectsSummarizer("python"));
 		System.out.println(out);
+
 	}
 }

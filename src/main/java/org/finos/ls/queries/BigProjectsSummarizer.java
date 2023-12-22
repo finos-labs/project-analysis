@@ -8,9 +8,11 @@ import org.finos.scan.github.client.util.QueryExecutor;
 
 public class BigProjectsSummarizer implements CSVSummarizer{
 	
+	private String language;
 	
-	public BigProjectsSummarizer() {
+	public BigProjectsSummarizer(String language) {
 		super();
+		this.language = language;
 	}
 
 	
@@ -78,12 +80,12 @@ public class BigProjectsSummarizer implements CSVSummarizer{
 
 	@Override
 	public String getRepositoryQueryPrefix() {
-		return "created:2010-01-01..2024-12-31 sort:stars-desc";
+		return "created:2010-01-01..2024-12-31 stars:>10000 sort:stars-desc language:"+language;
 	}
 
 	@Override
 	public int getMaxRepositories() {
-		return 100;
+		return 50;
 	}
 
 }
