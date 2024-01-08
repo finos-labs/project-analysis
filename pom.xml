@@ -198,6 +198,13 @@
 			<artifactId>commons-csv</artifactId>
 			<version>1.4</version>
 		</dependency>
+		
+		<!-- Chat GPT -->
+		<dependency>
+		    <groupId>com.github.plexpt</groupId>
+		    <artifactId>chatgpt</artifactId>
+		    <version>4.3.0</version>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>

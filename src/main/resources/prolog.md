@@ -1,0 +1,3 @@
+For the following GitHub issue, please summarise with: a one-line description 
+of the problem (prefix line with Problem:), one line description of the risk to the project (prefix line with Risks:), one 
+line description of the resolution actions taken (prefix line with Resolution:) and one line description of any attempt to prevent this occurring again (prefix line with Preventative:).  Issue content follows: 
