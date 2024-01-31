@@ -26,7 +26,9 @@ import com.graphql_java_generator.exception.GraphQLRequestPreparationException;
 public class BasicTest {
 	
 	private static final String ORG = "finos";
+	private static final String ORG2 = "finos-labs";
 
+	
 	@Autowired
 	QueryService qs;
 	
@@ -180,7 +182,7 @@ public class BasicTest {
 	
 	@Test
 	public void testWholeReadme() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		String out = readme.generate(25, ORG);
+		String out = readme.generate(25, Arrays.asList(ORG, ORG2));
 		System.out.println(out);
 	}
 	

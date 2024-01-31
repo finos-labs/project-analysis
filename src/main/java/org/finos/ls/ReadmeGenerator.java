@@ -2,7 +2,6 @@ package org.finos.ls;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
@@ -18,12 +17,16 @@ import org.finos.ls.queries.MarkdownSummarizer.SummaryLevel;
 import org.finos.scan.github.client.Repository;
 import org.finos.scan.github.client.util.QueryExecutor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Service;
 
 import com.graphql_java_generator.exception.GraphQLRequestExecutionException;
 import com.graphql_java_generator.exception.GraphQLRequestPreparationException;
 
 @Service
+@EnableConfigurationProperties
+@ConfigurationProperties(prefix = "scanning.readme")
 public class ReadmeGenerator {
 
 	@Autowired
@@ -32,10 +35,38 @@ public class ReadmeGenerator {
 	@Autowired 
 	QueryExecutor qe;
 	
+	private List<String> remove;
+	
+	public List<String> getRemove() {
+		return remove;
+	}
+
+	public void setRemove(List<String> remove) {
+		this.remove = remove;
+	}
+
+	private Map<String, List<String>> buckets;
+	
+	public Map<String, List<String>> getBuckets() {
+		return buckets;
+	}
+
+	public void setBuckets(Map<String, List<String>> buckets) {
+		this.buckets = buckets;
+	}
+
 	Map<String, Repository> cache = new HashMap<>();
 	
-	public String generate(int cutoff, String org) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Map<String, Activity> activeProjects = qs.getAllRepositoriesInOrg(BasicQueries.COMBINED_ACTIVITY, org);
+	public String generate(int cutoff, List<String> orgs) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		Map<String, Activity> activeProjects = new HashMap<>(); 
+		orgs.forEach(o -> {
+			try {
+				activeProjects.putAll(qs.getAllRepositoriesInOrg(BasicQueries.COMBINED_ACTIVITY, o));
+			} catch (GraphQLRequestExecutionException | GraphQLRequestPreparationException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		});
 		
 		List<String> names = activeProjects.entrySet().stream()
 			.filter(r -> r.getValue().getScore() > cutoff)
@@ -84,7 +115,8 @@ public class ReadmeGenerator {
 	private String getTitleForRepo(String name) {
 		try {
 			MarkdownSummarizer s = new MarkdownSummarizer(SummaryLevel.SUBITEM);
-			Repository repo = getRepoDetails(s, name);
+			String[] parts = name.split(",");
+			Repository repo = getRepoDetails(s, parts[1], parts[0]);
 			String title = s.getTitleFromNameOrH1(name, repo);
 			return title;
 		} catch (Exception e) {
@@ -112,19 +144,23 @@ public class ReadmeGenerator {
 		return out.toString();
 	}
 
-	private void appendUsing(MarkdownSummarizer l, String name, StringBuilder out) {
+	private void appendUsing(MarkdownSummarizer l, String id, StringBuilder out) {
 		try {
-			out.append(l.convert(getRepoDetails(l, name), qe));
+			String[] parts = id.split(",");
+			String name = parts[1];
+			String org = parts[0];
+
+			out.append(l.convert(getRepoDetails(l, name, org), qe));
 		} catch (Exception e) {
 			throw new RuntimeException("Couldn't process: ", e);
 		}
 	}
 
-	private Repository getRepoDetails(MarkdownSummarizer l, String name)
+	private Repository getRepoDetails(MarkdownSummarizer l, String name, String org)
 			throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
 		
 		if (!cache.containsKey(name)) {
-			cache.put(name, qs.getRawRepository(l, "finos", name));
+			cache.put(name, qs.getRawRepository(l, org, name));
 		}
 			
 		return cache.get(name);
@@ -132,20 +168,13 @@ public class ReadmeGenerator {
 
 	private Map<String, List<String>> bucketNames(List<String> names) {
 		Map<String, List<String>> out = new HashMap<String, List<String>>();
-		names = remove(names, n -> n.contains("juju"));
-		names = bucket(out, names, "Legend", n -> n.contains("legend"));
-		names = bucket(out, names, "Morphir", n -> n.contains("morphir"));
-		names = bucket(out, names, "Symphony", n -> n.contains("symphony"));
-		names = bucket(out, names, "FDC3", n -> n.contains("fdc3"));
-		names = bucket(out, names, "Waltz", n -> n.contains("waltz"));
-		names = remove(names, 
-				"finos-landscape", 
-				"software-project-blueprint", 
-				"standards-project-blueprint", 
-				"clabot-config",
-				"finos-parent-pom");
-		names = bucketItems(out, names, "Symphony", "messageml-utils");
-		names = bucketItems(out, names, "SIGs", "dei-sig", "innersource", "curref-data", "open-source-readiness", "compliant-financial-infrastructure");
+		
+		names = remove(names, this.remove);
+		
+		for (Map.Entry<String, List<String>> bucket : this.buckets.entrySet()) {
+			names = bucketItems(out, names, bucket.getKey(), bucket.getValue());
+		}
+		
 		singleBucketTheRest(out, names);
 		return out;
 	}
@@ -155,8 +184,7 @@ public class ReadmeGenerator {
 			.forEach(n -> out.put(n, Collections.singletonList(n)));
 	}
 
-	private List<String> remove(List<String> items, String... toRemove) {
-		List<String> toGo = Arrays.asList(toRemove);
+	private List<String> remove(List<String> items, List<String> toGo) {
 		return remove(items, n -> toGo.contains(n));
 	}
 	
@@ -166,9 +194,12 @@ public class ReadmeGenerator {
 				.collect(Collectors.toList());
 	}
 	
-	private List<String> bucketItems(Map<String, List<String>> out, List<String> in, String key, String... toInclude) {
-		List<String> toGo = Arrays.asList(toInclude);
-		return bucket(out, in, key, n -> toGo.indexOf(n) > -1);
+	private List<String> bucketItems(Map<String, List<String>> out, List<String> in, String key, List<String> toGo) {
+		List<String> lcToGo = toGo.stream().map(e -> e.toLowerCase()).collect(Collectors.toList());
+		Predicate<String> theTest = j -> lcToGo.stream()
+				.map(e -> j.toLowerCase().indexOf(e) > -1)
+				.reduce(false, (a, b) -> a || b);
+		return bucket(out, in, key, theTest);
 	}
 
 	private List<String> bucket(Map<String, List<String>> out, List<String> in, String key, Predicate<String> test) {

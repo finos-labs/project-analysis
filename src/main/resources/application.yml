@@ -9,10 +9,49 @@ logging:
 debug: true
     
 scanning:
-  org: finos
+  orgs: 
+   - finos
+   - finos-labs
   csv:
+<<<<<<< HEAD
     priority: morphir, fdc3, cfi
     ignore: none  
+=======
+    priority: legend, morphir, fdc3, cfi
+    ignore: none    
+  readme:
+    remove: 
+     - juju
+     - finos-landscape
+     - software-project-blueprint
+     - standards-project-blueprint
+     - clabot-config
+     - finos-parent-pom
+    buckets: 
+      FDC3: 
+        - fdc3
+      Jupyter:
+        - ipy
+        - regular-table
+        - jupyter
+      Symphony: 
+        - Symphony 
+        - messageml-utils 
+      Legend: 
+        - Legend
+      Morphir: 
+        - Morphir
+      Accessibility:
+        - a11y
+      SIGs: 
+        - dei-sig
+        - innersource
+        - curref-data
+        - open-source-readiness
+        - compliant-financial-infrastructure
+        - common-cloud-controls
+        - zenith
+>>>>>>> a5fd8f3 (Updated to scan 2 orgs, config file)
     
   write-to:
     repo: landscape-scanning

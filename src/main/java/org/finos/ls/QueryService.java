@@ -96,7 +96,7 @@ public class QueryService {
 			cursor = conn.getPageInfo().getEndCursor();
 		}
 		
-		return out.stream().collect(Collectors.toMap(r -> r.getName(), r-> qt.convert(r, qe)));
+		return out.stream().collect(Collectors.toMap(r -> r.getOwner().getLogin()+","+r.getName(), r-> qt.convert(r, qe)));
 				
 	}
 

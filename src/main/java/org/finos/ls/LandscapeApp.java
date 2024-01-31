@@ -3,6 +3,7 @@ package org.finos.ls;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 import org.finos.ls.queries.SecurityCSVSummarizer;
 import org.finos.ls.search.FinanceCSVSummarizer;
@@ -13,11 +14,15 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import com.graphql_java_generator.client.GraphQLConfiguration;
 
 @SpringBootApplication(scanBasePackageClasses = { LandscapeApp.class, GraphQLConfiguration.class, QueryExecutor.class, SpringConfiguration.class })
+@EnableConfigurationProperties
+@ConfigurationProperties(prefix = "scanning")
 public class LandscapeApp implements CommandLineRunner {
 	
 	public static void main(String[] args) {
@@ -38,10 +43,7 @@ public class LandscapeApp implements CommandLineRunner {
 	
 	@Value("${spring.profiles.active:}")
 	String activeProfiles;
-	
-	@Value("${scanning.org:finos}")
-	String org;
-	
+		
 	@Value("${scanning.readme:README.md}")
 	String readmeFile;
 	
@@ -68,6 +70,16 @@ public class LandscapeApp implements CommandLineRunner {
 	
 	@Value("${scanning.csv.ignore:}")
 	String[] ignore;
+	
+	List<String> orgs;
+
+	public List<String> getOrgs() {
+		return orgs;
+	}
+
+	public void setOrgs(List<String> orgs) {
+		this.orgs = orgs;
+	}
 
 	@Autowired
 	ConfigurableApplicationContext ctx;
@@ -80,13 +92,20 @@ public class LandscapeApp implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		if (activeProfiles.contains("summarize")) {
 			// first, write the readme
-			String readmeContent = readme.generate(25, org);
+			String readmeContent = readme.generate(25, orgs);
 			commit.commitFile(readmeFile, readmeContent.getBytes(), head, repo, owner);
 			
 			// then write the csv
 			SecurityCSVSummarizer summ = new SecurityCSVSummarizer(Arrays.asList(ignore), Arrays.asList(priority));
-			String csvContent = csv.generateOrg(org, summ);
-			commit.commitFile(csvFile, csvContent.getBytes(), head, repo, owner);
+			StringBuilder sb = new StringBuilder();
+			orgs.forEach(o -> {
+				try {
+					sb.append( csv.generateOrg(o, summ));
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			});
+			commit.commitFile(csvFile, sb.toString().getBytes(), head, repo, owner);
 			
 			FinanceCSVSummarizer fcsv = new FinanceCSVSummarizer();
 			String fcsvContent = csv.generateTopic("finance", fcsv);
