@@ -13,10 +13,6 @@ scanning:
    - finos
    - finos-labs
   csv:
-<<<<<<< HEAD
-    priority: morphir, fdc3, cfi
-    ignore: none  
-=======
     priority: legend, morphir, fdc3, cfi
     ignore: none    
   readme:
@@ -50,9 +46,7 @@ scanning:
         - open-source-readiness
         - compliant-financial-infrastructure
         - common-cloud-controls
-        - zenith
->>>>>>> a5fd8f3 (Updated to scan 2 orgs, config file)
-    
+        - zenith    
   write-to:
     repo: landscape-scanning
     owner: robmoffat
