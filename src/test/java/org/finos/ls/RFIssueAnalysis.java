@@ -17,7 +17,7 @@ public class RFIssueAnalysis {
 	AnalysisTool at;
 	
 	@Test
-	public void javaIssues() throws Exception {
+	public void javaIssueAnalysis() throws Exception {
 		File in = new File("src/main/resources/issues/Java.csv");
 		File out = new File("src/main/resources/issues/Java-Analysis.csv");
 		at.analyze(in, out);
