@@ -10,6 +10,8 @@ import java.util.Map;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import org.finos.ls.landscape.LandscapeReader;
+import org.finos.ls.landscape.ProjectInfo;
 import org.finos.ls.queries.Activity;
 import org.finos.ls.queries.BasicQueries;
 import org.finos.ls.queries.MarkdownSummarizer;
@@ -17,6 +19,7 @@ import org.finos.ls.queries.MarkdownSummarizer.SummaryLevel;
 import org.finos.scan.github.client.Repository;
 import org.finos.scan.github.client.util.QueryExecutor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Service;
@@ -25,10 +28,14 @@ import com.graphql_java_generator.exception.GraphQLRequestExecutionException;
 import com.graphql_java_generator.exception.GraphQLRequestPreparationException;
 
 @Service
-@EnableConfigurationProperties
-@ConfigurationProperties(prefix = "scanning.readme")
 public class ReadmeGenerator {
-
+	
+	@Autowired
+	LandscapeReader lr;
+	
+	@Value("${landscapeUrl}")
+	String landscapeUrl;
+	
 	@Autowired
 	QueryService qs;
 	
@@ -45,19 +52,11 @@ public class ReadmeGenerator {
 		this.remove = remove;
 	}
 
-	private Map<String, List<String>> buckets;
-	
-	public Map<String, List<String>> getBuckets() {
-		return buckets;
-	}
-
-	public void setBuckets(Map<String, List<String>> buckets) {
-		this.buckets = buckets;
-	}
-
 	Map<String, Repository> cache = new HashMap<>();
 	
 	public String generate(int cutoff, List<String> orgs) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		List<ProjectInfo> info = lr.readFromLandscape(landscapeUrl);
+		
 		Map<String, Activity> activeProjects = new HashMap<>(); 
 		orgs.forEach(o -> {
 			try {
@@ -79,7 +78,7 @@ public class ReadmeGenerator {
 		String date = new SimpleDateFormat("dd MMM yyyy").format(new Date());
 		out.append("Here are some of FINOS' most active projects (as of "+date+"):\n\n");
 		
-		Map<String, List<String>> bucketedProjects = bucketNames(names);
+		Map<String, ProjectInfo> bucketedProjects = bucketNames(info);
 		
 		out.append(tableOfContents(bucketedProjects));
 		
@@ -89,64 +88,33 @@ public class ReadmeGenerator {
 		return out.toString();
 	}
 
-	private String tableOfContents(Map<String, List<String>> bucketedProjects) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+	private String tableOfContents(Map<String, ProjectInfo> bucketedProjects) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
 		StringBuilder out = new StringBuilder();
 		bucketedProjects.entrySet().stream()
 			.sorted((a, b) -> a.getKey().compareToIgnoreCase(b.getKey()))
 			.forEach(entry -> {
 				String key = entry.getKey();
-				List<String> val = entry.getValue();
-				Collections.sort(val);
-				if (val.size() == 1) {
-					String string = getTitleForRepo(val.get(0));
-					out.append(" - ["+string+"](#"+string.replace(" ", "-")+")\n");
-				} else {
-					out.append(" - "+key+"\n");
-					for (String string : val) {
-						String title = getTitleForRepo(string);
-						out.append("   - ["+title+"](#"+title.replace(" ", "-")+")\n");
-					}
-				}
+				out.append(" - ["+key+"](#"+key.replace(" ", "-")+")\n");
 		});
 		
 		return out.toString();
 	}
 
-	private String getTitleForRepo(String name) {
-		try {
-			MarkdownSummarizer s = new MarkdownSummarizer(SummaryLevel.SUBITEM);
-			String[] parts = name.split(",");
-			Repository repo = getRepoDetails(s, parts[1], parts[0]);
-			String title = s.getTitleFromNameOrH1(name, repo);
-			return title;
-		} catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-	}
-
-	private String report(Map<String, List<String>> bucketedProjects) {
-		MarkdownSummarizer topLevel = new MarkdownSummarizer(SummaryLevel.MAIN);
-		MarkdownSummarizer secondLevel = new MarkdownSummarizer(SummaryLevel.SUBITEM);
+	private String report(Map<String, ProjectInfo> bucketedProjects) {
 		StringBuilder out = new StringBuilder();
 		bucketedProjects.entrySet().stream()
 			.sorted((a, b) -> a.getKey().compareToIgnoreCase(b.getKey()))
 			.forEach(e -> {
-				List<String> items = e.getValue();
-				Collections.sort(items);
-				if (items.size() > 1) {
-					out.append("## "+e.getKey()+"\n\n");
-					items.forEach(i -> appendUsing(secondLevel, i, out));
-				} else {
-					appendUsing(topLevel, items.get(0), out);
-				}
+				MarkdownSummarizer topLevel = new MarkdownSummarizer(SummaryLevel.MAIN, e.getValue());
+				appendUsing(topLevel, e.getValue(), out);
 			});
 		
 		return out.toString();
 	}
 
-	private void appendUsing(MarkdownSummarizer l, String id, StringBuilder out) {
+	private void appendUsing(MarkdownSummarizer l, ProjectInfo pi, StringBuilder out) {
 		try {
-			String[] parts = id.split(",");
+			String[] parts = pi.mainRepo.substring("https://github.com/".length()).split("/");
 			String name = parts[1];
 			String org = parts[0];
 
@@ -166,53 +134,8 @@ public class ReadmeGenerator {
 		return cache.get(name);
 	}
 
-	private Map<String, List<String>> bucketNames(List<String> names) {
-		Map<String, List<String>> out = new HashMap<String, List<String>>();
-		
-		names = remove(names, this.remove);
-		
-		for (Map.Entry<String, List<String>> bucket : this.buckets.entrySet()) {
-			names = bucketItems(out, names, bucket.getKey(), bucket.getValue());
-		}
-		
-		singleBucketTheRest(out, names);
-		return out;
+	private Map<String, ProjectInfo> bucketNames(List<ProjectInfo> list) {
+		return list.stream().collect(Collectors.toMap(pi -> pi.name, pi -> pi));
 	}
 
-	private void singleBucketTheRest(Map<String, List<String>> out, List<String> names) {
-		names.stream()
-			.forEach(n -> out.put(n, Collections.singletonList(n)));
-	}
-
-	private List<String> remove(List<String> items, List<String> toGo) {
-		return remove(items, n -> toGo.contains(n));
-	}
-	
-	private List<String> remove(List<String> items, Predicate<String> toRemove) {
-		return items.stream()
-				.filter(n -> !toRemove.test(n))
-				.collect(Collectors.toList());
-	}
-	
-	private List<String> bucketItems(Map<String, List<String>> out, List<String> in, String key, List<String> toGo) {
-		List<String> lcToGo = toGo.stream().map(e -> e.toLowerCase()).collect(Collectors.toList());
-		Predicate<String> theTest = j -> lcToGo.stream()
-				.map(e -> j.toLowerCase().indexOf(e) > -1)
-				.reduce(false, (a, b) -> a || b);
-		return bucket(out, in, key, theTest);
-	}
-
-	private List<String> bucket(Map<String, List<String>> out, List<String> in, String key, Predicate<String> test) {
-		return in.stream()
-			.map(n -> { 
-				if (test.test(n)) {
-					List<String> names = out.getOrDefault(key, new ArrayList<>());
-					names.add(n);
-					out.put(key, names);
-				}
-				return n;
-			})
-			.filter(test.negate())
-			.collect(Collectors.toList());
-	}
 }

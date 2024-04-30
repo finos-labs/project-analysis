@@ -3,8 +3,12 @@ package org.finos.ls.queries;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 import org.apache.commons.text.WordUtils;
@@ -17,6 +21,7 @@ import org.commonmark.node.Heading;
 import org.commonmark.node.Node;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.text.TextContentRenderer;
+import org.finos.ls.landscape.ProjectInfo;
 import org.finos.ls.markdown.MarkdownExcerptExtension;
 import org.finos.ls.markdown.MarkdownHeadingExtension;
 import org.finos.scan.github.client.Blob;
@@ -38,9 +43,11 @@ public class MarkdownSummarizer implements QueryType<String> {
 
 	final Parser p;	
 	final SummaryLevel sl;
+	final ProjectInfo pi;
 	
-	public MarkdownSummarizer(SummaryLevel sl) {
+	public MarkdownSummarizer(SummaryLevel sl, ProjectInfo projectInfo) {
 		this.sl = sl;
+		this.pi = projectInfo;
 		// configures the parser for github-flavoured markdown
 		this.p = Parser.builder().extensions(Arrays.asList(
 				TablesExtension.create(),
@@ -78,13 +85,21 @@ public class MarkdownSummarizer implements QueryType<String> {
 	
 	@Override
 	public String convert(Repository repo, QueryExecutor qe) {
-		String name = repo.getName();
+		String name = this.pi.name;
+		
+		if (name==null) {
+			name = repo.getName();
+		}
+		
 		Document d = extractMarkdown(repo);
 	
 		String slugBasedTitle = getTitleFromNameOrH1(name, repo);
 		String description = repo.getDescription();
 		List<String> tags = getTopicTags(repo.getRepositoryTopics().getEdges());
 		String homepage = repo.getHomepageUrl();
+		if (homepage == null) {
+			homepage = this.pi.homepageUrl;
+		}
 		String githubUrl = repo.getUrl();
 		
 		// ok, let's put it all together
@@ -92,14 +107,21 @@ public class MarkdownSummarizer implements QueryType<String> {
 		StringBuilder out = new StringBuilder();
 		
 		addTitle(out, slugBasedTitle, repo);
+		addLogo(out, this.pi.logo);
 		writeSummaryCounts(out, repo);
 		out.append("\n\n");
 		addDescription(out, description);
 		addTopicTags(out, tags, repo);
 		addQuotedMarkdown(out, d, githubUrl);
-		addLinks(homepage, githubUrl, out);
+		addLinks(homepage, githubUrl, this.pi.additionalRepos, out);
 		
 		return out.toString();
+	}
+
+
+
+	private void addLogo(StringBuilder out, String logo) {
+		out.append("\n<img src=\""+this.pi.logo+"\" width=\"100px\" />\n\n");
 	}
 
 
@@ -116,10 +138,21 @@ public class MarkdownSummarizer implements QueryType<String> {
 
 
 
-	private void addLinks(String homepage, String githubUrl, StringBuilder out) {
+	private void addLinks(String homepage, String githubUrl, List<String> additionalRepos, StringBuilder out) {
+		Set<String> all = new TreeSet<String>();
 		out.append("#### Further Details\n");
 		addLink(out, githubUrl, githubUrl);
 		addLink(out, homepage, homepage);
+		all.add(homepage);
+		all.add(githubUrl);
+		if (additionalRepos != null) {
+			for (String string : additionalRepos) {
+				if (!all.contains(string)) {
+					all.add(string);
+					addLink(out, string, string);				
+				}
+			}
+		}
 	}
 
 	private void addQuotedMarkdown(StringBuilder out, Document d, String githubUrl) {

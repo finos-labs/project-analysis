@@ -8,6 +8,8 @@ logging:
     
 debug: true
     
+landscapeUrl: https://raw.githubusercontent.com/finos/finos-landscape/master/landscape.yml
+
 scanning:
   orgs: 
    - finos
@@ -23,30 +25,6 @@ scanning:
      - standards-project-blueprint
      - clabot-config
      - finos-parent-pom
-    buckets: 
-      FDC3: 
-        - fdc3
-      Jupyter:
-        - ipy
-        - regular-table
-        - jupyter
-      Symphony: 
-        - Symphony 
-        - messageml-utils 
-      Legend: 
-        - Legend
-      Morphir: 
-        - Morphir
-      Accessibility:
-        - a11y
-      SIGs: 
-        - dei-sig
-        - innersource
-        - curref-data
-        - open-source-readiness
-        - compliant-financial-infrastructure
-        - common-cloud-controls
-        - zenith    
   write-to:
     repo: landscape-scanning
     owner: robmoffat
