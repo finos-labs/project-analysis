@@ -1,27 +1,20 @@
 package org.finos.ls;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import org.finos.ls.landscape.LandscapeReader;
 import org.finos.ls.landscape.ProjectInfo;
-import org.finos.ls.queries.Activity;
-import org.finos.ls.queries.BasicQueries;
 import org.finos.ls.queries.MarkdownSummarizer;
 import org.finos.ls.queries.MarkdownSummarizer.SummaryLevel;
 import org.finos.scan.github.client.Repository;
 import org.finos.scan.github.client.util.QueryExecutor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Service;
 
 import com.graphql_java_generator.exception.GraphQLRequestExecutionException;
@@ -57,21 +50,10 @@ public class ReadmeGenerator {
 	public String generate(int cutoff, List<String> orgs) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
 		List<ProjectInfo> info = lr.readFromLandscape(landscapeUrl);
 		
-		Map<String, Activity> activeProjects = new HashMap<>(); 
-		orgs.forEach(o -> {
-			try {
-				activeProjects.putAll(qs.getAllRepositoriesInOrg(BasicQueries.COMBINED_ACTIVITY, o));
-			} catch (GraphQLRequestExecutionException | GraphQLRequestPreparationException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		});
-		
-		List<String> names = activeProjects.entrySet().stream()
-			.filter(r -> r.getValue().getScore() > cutoff)
-			.sorted((a, b) -> ((Long) b.getValue().getScore()).compareTo(a.getValue().getScore()))
-			.map(e -> e.getKey().toLowerCase())
-			.collect(Collectors.toList());
+		// remove gitlab projects for now
+		info = info.stream()
+				.filter(pi -> pi.mainRepo != null)
+				.filter(pi -> !pi.mainRepo.contains("gitlab.com")).collect(Collectors.toList());
 		
 		StringBuilder out = new StringBuilder();
 		out.append("# FINOS Projects\n\n");
