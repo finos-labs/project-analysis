@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Map;
 
+import org.finos.ls.landscape.ProjectInfo;
 import org.finos.ls.queries.Activity;
 import org.finos.ls.queries.BasicQueries;
 import org.finos.ls.queries.BasicQueries.FinosStatus;
@@ -164,19 +165,20 @@ public class BasicTest {
 	
 	@Test
 	public void testSummaryGenerationMain() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		String out = qs.getSingleRepository(new MarkdownSummarizer(SummaryLevel.MAIN), ORG, "spring-bot");
-		System.out.println(out);
-	}
-	
-	@Test
-	public void testSummaryGenerationSubitem() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		String out = qs.getSingleRepository(new MarkdownSummarizer(SummaryLevel.SUBITEM), ORG, "electron-fdc3");
+		ProjectInfo pi = new ProjectInfo();
+		pi.category = "Platforms and Runtimes";
+		pi.subcategory = "Interop";
+		pi.name = "Spring Bot";
+		pi.logo = "https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/springbot.svg";
+		pi.homepageUrl = "https://springbot.finos.org";
+		pi.type = org.finos.ls.landscape.ProjectInfo.ProjectType.ACTIVE;
+		String out = qs.getSingleRepository(new MarkdownSummarizer(SummaryLevel.MAIN, pi), ORG, "spring-bot");
 		System.out.println(out);
 	}
 	
 	@Test
 	public void testBadReadme() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		String out = qs.getSingleRepository(new MarkdownSummarizer(SummaryLevel.SUBITEM), ORG, "symphonyelectron");
+		String out = qs.getSingleRepository(new MarkdownSummarizer(SummaryLevel.SUBITEM, new ProjectInfo()), ORG, "symphonyelectron");
 		System.out.println(out);
 	}
 	
@@ -188,7 +190,7 @@ public class BasicTest {
 	
 	@Test
 	public void testDifferentlyNamedReadme() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		String out = qs.getSingleRepository(new MarkdownSummarizer(SummaryLevel.SUBITEM), ORG, "kdb-studio");
+		String out = qs.getSingleRepository(new MarkdownSummarizer(SummaryLevel.SUBITEM, new ProjectInfo()), ORG, "kdb-studio");
 		System.out.println(out);
 	}
 	

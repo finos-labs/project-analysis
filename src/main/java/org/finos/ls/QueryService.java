@@ -94,6 +94,11 @@ public class QueryService {
 					.collect(Collectors.toList()));
 			total = conn.getTotalCount();
 			cursor = conn.getPageInfo().getEndCursor();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e1) {
+				e1.printStackTrace();
+			}
 		}
 		
 		return out.stream().collect(Collectors.toMap(r -> r.getOwner().getLogin()+","+r.getName(), r-> qt.convert(r, qe)));
