@@ -1,201 +1,199 @@
-Score,Pass,Organisation,Repo Name,Finos Lifecycle State (from the README badge),License (from GitHub Api),"Issue Activity (for most recent 50 issues, count most recent 30 comments in last 6 months)","Commit Activity (count of commits in last 6 months, maxed at 100)",OpenSSF Status (from the README badge),Github Archived (has the Archive tag in GitHub API),"Branch Rules/Private (number of approvers or 0 if no approvers, -1 no branch rules",SemGrep (checks .github/workflows/semgrep.yml file exists),CVE Scanning (checks .github/workflows/cve-scanning.yml file exists),Default Branch Name,Excess Admins,Main Issue Participants (list of all participants for issues loaded in Issue Activity column),Main Committers  (list of all participants for commits loaded in Commit Activity column)
-1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-juju-studio-operator,INCUBATING,Apache-2.0,0,0,NONE,false,0,false,false,main,,,
-1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,morphir-dotnet,NONE,Apache-2.0,1,0,NONE,false,0,false,false,main,@DamianReeves,@Shahil093,
-1000,FAIL (OpenSSF Status) (No Sem Grep),finos,fdc3-dotnet,INCUBATING,Apache-2.0,3,51,NONE,false,1,false,true,main,,@bingenito @BalassaMarton,@dependabot[bot] @bingenito @josspo @ztanczos @kruplm @lilla28 @TheJuanAndOnly99
-1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-juju-db-operator,INCUBATING,Apache-2.0,0,0,NONE,false,0,false,false,main,,,
-1000,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan),finos,terraform-aws-cfi-redshift,NONE,Apache-2.0,0,0,NONE,false,-1,true,false,main,,,
-1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-sdlc,INCUBATING,Apache-2.0,0,96,NONE,false,1,false,false,master,,,@finos-admin @kevin-m-knight-gs @rafaelbey @MauricioUyaguari @Yasirmod17 @mrudula-gs @abhishoya-gs @YannanGao-gs @ivan-kyosev-gs @elopezcastro @davidharte-gs @pierredebelen @janeenyamak1 @jake-kim1 @gs-ssh16
-1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-engine,INCUBATING,Apache-2.0,2,100,NONE,false,1,false,false,master,,@finos-admin,@finos-admin @Yasirmod17 @pierredebelen @aziemchawdhary-gs @kumuwu @gs-ssh16 @kevin-m-knight-gs @gayathrir11 @rafaelbey @prasar-ashutosh @theodosis1989 @shtirlets @gs-kotang @sprisha @gs-jp1 @MauricioUyaguari @tanujgirdhar @ghub-real @satendra-sahu @epsstan @abhishoya-gs @YannanGao-gs @Oluwatobiadeoye @akphi @jake-kim1 @rengam32 @haroonsherjan @gs-rpant1729 @siaka-Akash @relationalai-opensource
-1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-juju-bundle,INCUBATING,Apache-2.0,0,0,NONE,false,0,false,false,main,,,
-1000,,finos,FDC3-Sail,INCUBATING,Apache-2.0,0,19,OK,false,0,true,true,main,,,@robmoffat @nkolba @andreifloricel
-1000,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,terraform-aws-cfi-eks,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,main,,,
-1000,FAIL (Finos Lifecycle) (wrong admins) (No CVE Scan) (No Sem Grep),finos,morphir,NONE,Apache-2.0,55,50,OK,false,1,false,false,main,@DamianReeves,@DamianReeves @karlmoll @edwardpeters @AttilaMihaly @mcleo-d @stephengoldbaum @michelchan @RichardWagener365 @psmulovics @nwokafor-choongsaeng @sahilravinder @sidmocodes @edmondop @tomhealey-icma @frankchoongsaeng @kmudrick @bensanchin,@stephengoldbaum @DamianReeves @dependabot[bot] @AttilaMihaly @bensanchin @maoo @TheJuanAndOnly99 @bekand @michelchan @sahilravinder @ronaldssebalamu
-1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,ansible-cfi-ocp,INCUBATING,Apache-2.0,2,0,NONE,false,1,false,false,main,,@AdrianHammond,
-1000,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan),finos,terraform-aws-cfi-dynamodb,NONE,Apache-2.0,0,0,NONE,false,-1,true,false,main,,,
-1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (No Sem Grep),finos,legend-engine-ide-client-vscode,NONE,Apache-2.0,1,65,NONE,false,1,false,true,main,@rafaelbey,@rafaelbey,@gayathrir11 @rafaelbey @finos-admin @josspo @kevin-m-knight-gs @jake-kim1 @TheJuanAndOnly99 @agitana @MauricioUyaguari
-1000,FAIL (Finos Lifecycle),finos,FDC3,NONE,NOASSERTION,185,100,OK,false,1,true,true,main,,@kriswest @robmoffat @hughtroeger @openfin-johans @bingenito @mistryvinay @Lecss @novavi @paulgoldsmith @Yannick-Malins @Vivek-NatWest @nkolba @julianna-ciq @john-ciq @mthomcfa @fapulito @gilesstevenson @mattjamieson @karlmoll @timjenkel @headsphere @psmulovics @maoo @kziemski @jasonmdorsey @tomhealey-icma @bpgandluri @rikoe @milindchidrawar @pvoznyuk @lspiro-Tick42 @tgrecojs @aateeque @chordmemory @tpina @mimiflynn @aaronhaines @danielblignaut @BalassaMarton @TheJuanAndOnly99,@kriswest @robmoffat @julianna-ciq @maoo @andreifloricel @dependabot[bot] @bingenito
-1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-studio,INCUBATING,Apache-2.0,0,100,NONE,false,1,false,false,master,,,@github-actions[bot] @MauricioUyaguari @travisstebbins @YannanGao-gs @gayathrir11 @gs-jp1 @rafaelbey @Oluwatobiadeoye
-1000,FAIL (OpenSSF Status) (Branch Reviewers) (No CVE Scan),finos,terraform-aws-cfi-sqs,INCUBATING,Apache-2.0,0,0,NONE,false,-1,true,false,main,,,
-1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-depot,INCUBATING,Apache-2.0,0,100,NONE,false,1,false,false,master,,,@finos-admin @gs-gunjan @elopezcastro @Yasirmod17 @kevin-m-knight-gs @abhishoya-gs @rafaelbey @davidharte-gs @gayathrir11 @gs-ssh16 @YannanGao-gs @MauricioUyaguari
-1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,morphir-scala,INCUBATING,Apache-2.0,1,100,NONE,false,0,false,false,main,,@DamianReeves,@scala-steward @justin-corn @DamianReeves @dependabot[bot] @edwardpeters @michelchan @sahilravinder @dmitrykozinets @Paul-Folbrecht @Bouzomgi @bensanchin
-1000,FAIL (OpenSSF Status) (No CVE Scan),finos,cfi-terraform-template-child-module,INCUBATING,Apache-2.0,0,0,NONE,false,1,true,false,main,,,
-1000,FAIL (wrong admins) (OpenSSF Status) (No Sem Grep),finos,legend-engine-ide-lsp,INCUBATING,Apache-2.0,0,100,NONE,false,1,false,true,main,@rafaelbey,,@finos-admin @rafaelbey @gayathrir11 @jake-kim1 @kevin-m-knight-gs @renuccif
-1000,FAIL (OpenSSF Status) (No Sem Grep),finos,pylegend,INCUBATING,Apache-2.0,0,10,NONE,false,0,false,true,main,,,@renovate[bot] @akphi @gs-ssh16 @epsstan
-1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-shared,INCUBATING,Apache-2.0,0,25,NONE,false,1,false,false,master,,,@finos-admin @Yasirmod17 @kevin-m-knight-gs @ivan-kyosev-gs @elopezcastro @akphi
-1000,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,morphir-elm,NONE,Apache-2.0,9,100,NONE,false,-1,false,false,main,,@DamianReeves @bekand @edwardpeters @stephengoldbaum @AttilaMihaly,@sfc-gh-lfallasavendano @DamianReeves @sfc-gh-aramirezfuentes @AttilaMihaly @bekand @dependabot[bot] @kmudrick @michelchan @stephengoldbaum @nwokafor-choongsaeng
-1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,morphir-jvm,NONE,Apache-2.0,1,5,NONE,false,0,false,false,main,@DamianReeves,@DamianReeves,@DamianReeves @Abdul-Hameed-Turntabl @AttilaMihaly
-1000,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan),finos,terraform-aws-cfi-lambda,NONE,Apache-2.0,0,0,NONE,false,-1,true,false,main,,,
-1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-juju-engine-server-operator,INCUBATING,Apache-2.0,0,0,NONE,false,0,false,false,main,,,
-1000,FAIL (Finos Lifecycle) (OpenSSF Status) (No Sem Grep),finos,morphir-service,NONE,Apache-2.0,0,0,NONE,false,0,false,true,main,,,
-1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-juju-sdlc-server-operator,INCUBATING,Apache-2.0,0,0,NONE,false,0,false,false,main,,,
-1000,,finos,FDC3-conformance-framework,INCUBATING,Apache-2.0,0,1,OK,false,1,true,true,main,,,@robmoffat
-1000,FAIL (OpenSSF Status) (Branch Reviewers) (No CVE Scan),finos,terraform-google-cfi-gke,INCUBATING,Apache-2.0,0,0,NONE,false,-1,true,false,main,,,
-1000,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan),finos,terraform-azurerm-cfi-aks,NONE,Apache-2.0,0,0,NONE,false,-1,true,false,main,,,
-1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-juju-gitlab-integrator,INCUBATING,Apache-2.0,0,0,NONE,false,0,false,false,main,,,
-1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend,INCUBATING,Apache-2.0,16,51,NONE,false,1,false,false,master,,@finos-admin @reyes-michael @smorres,@finos-admin @MauricioUyaguari @haroonsherjan @akphi @YannanGao-gs @gs-ssh16 @maoo @epsstan @agitana
-1000,FAIL (wrong admins) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,cfi-ansible-aws-rds,INCUBATING,Apache-2.0,5,9,NONE,false,1,false,false,main,@AdrianHammond,@AdrianHammond,@eddie-knight @renovate[bot] @AdrianHammond
-1000,FAIL (Finos Lifecycle) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-integration-juju,NONE,Apache-2.0,0,0,NONE,false,1,false,false,main,,,
-1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-pure,INCUBATING,Apache-2.0,0,85,NONE,false,1,false,false,master,,,@finos-admin @kevin-m-knight-gs @pierredebelen @aziemchawdhary-gs @davidharte-gs @gs-ssh16 @gs-jp1 @simmosn @rafaelbey @elopezcastro @aormerod-gs
-1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-integration-morphir,INCUBATING,Apache-2.0,0,0,NONE,false,0,false,false,main,,,
-1000,FAIL (OpenSSF Status) (Branch Reviewers) (No CVE Scan),finos,terraform-azurerm-cfi-postgresql,INCUBATING,Apache-2.0,0,0,NONE,false,-1,true,false,main,,,
-1000,FAIL (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,legend-juju-libs,INCUBATING,Apache-2.0,0,0,NONE,false,-1,false,false,master,,,
-1000,FAIL (Finos Lifecycle) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,morphir-examples,NONE,Apache-2.0,0,0,NONE,false,0,false,false,main,,,
-1000,FAIL (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,legend-community-delta,INCUBATING,Apache-2.0,0,0,NONE,false,-1,false,false,main,,,
-387,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,common-cloud-controls,INCUBATING,NOASSERTION,307,80,NONE,false,1,false,false,main,,@crawfordchanel @robmoffat @eddie-knight @iMichaela @rgriffiths-scottlogic @ojeb2 @mcleo-d @AdrianHammond @smendis-scottlogic @karlmoll @rachkim00 @eziogas-scottlogic @mlysaght2017 @sshiells-scottlogic @jared-lambert @damienjburks @zeal-somani @simonzhangbmo @njwilliams @maoo @jisted-scottlogic @hennersz @nas-hub @speedwater @aric-rosenbaum @rowan-baker @leefaus @selgags @eteridvalishvili @Perelmuter @ianmiell @pgste @d1gital-f @TheFoxAtWork @vicenteherrera @joan-s-molas @mimiflynn @jgoodwin72 @davidstonegoogle @cfisher-scottlogic @abdullahsaf @sosullivan92 @rhyddian @joeschny @jgavronsky @Alexstpierrework @newtob @markrushing @git-hub-forwork1,@eddie-knight @AdrianHammond @smendis-scottlogic @jisted-scottlogic @robmoffat @iMichaela @vicenteherrera @maoo @mlysaght2017 @cfisher-scottlogic @crawfordchanel @rajkrishnamurthy @rowan-baker @sshiells-scottlogic @zeal-somani @ianmiell @valmihai @hennersz @nas-hub @aaronsutton @damienjburks
-381,FAIL (OpenSSF Status) (No Sem Grep),finos,common-domain-model,INCUBATING,NOASSERTION,281,100,NONE,false,1,false,true,master,,@Oblongs @chrisisla @JBZ-Fragmos @tomhealey-icma @lolabeis @mgratacos @dschwartznyc @dshoneisda @llynhiavu @rogerguitart @eteridvalishvili @eacunaISDA @manucarreramoreno @manel-martos @nicholas-moger @brianlynn2 @deyan-paroushev @jiahaodengbb @mikealambert @gopazoTH @HajnalOB @ebataller @bohuang19 @tzurcher @jonathan-jpmc @yniubb @jgavronsky @iansloyan @valdensmith @ziadzee @tabi5h @karlmoll @AmyCaruso @eelramy92 @AdrianJenksD2LT @MalwinaAzemi @modobez @aidanrussell @adamulman @mahoneg1br @duncancarpenterpirum @VRao85 @acrangle-murex @OusidaR @vallslaura @ahutusoru123 @d-sen-gupta @code-ghalib @rsiddharthan @maoo @hugohills-regnosys @sashworthTKN @minesh-s-patel @mindthegab @Davezhou1 @Alexis25091972 @criss11fr @Elaijja @hasnatjx @DIVA291265 @dharmkap,@chrisisla @eteridvalishvili @dshoneisda @hugohills-regnosys @Oblongs @regnosys-prod-user @PayalKhanna @DIVA291265 @dschwartznyc @SimonCockx @maoo @mgratacos @plamen-neykov @eacunaISDA @valdensmith @JayasriR
-256,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,a11y-theme-builder,INCUBATING,Apache-2.0,203,53,NONE,false,2,false,false,main,,@aaronreed708 @PaulaPaul @evangk6 @lwnoble @Chessel @codyzu @prithviraj-chaudhuri @Kayd396 @mdacic01 @vinfinity7 @Turntabl-DorothyEwuah @turnalfred @sagnik3788 @smithbk @maoo @omesh-omg @literalEval,@aaronreed708 @evangk6 @brycecurtis @PaulaPaul @DorothyEwuah @lwnoble
-254,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,git-proxy,INCUBATING,Apache-2.0,154,100,NONE,false,0,false,false,main,,@JamieSlome @maoo @coopernetes @msagi @LewisBroadhurst @marksmith388 @abinash2512 @rgmz @lwhiteley @vaibssingh @ahpook @chrischu,@JamieSlome @msagi @renovate[bot] @rgmz @coopernetes
-244,FAIL (Finos Lifecycle) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,devops-automation,NONE,Apache-2.0,236,8,NONE,false,1,false,false,main,,@rocketstack-matt @karlmoll @ashukla13 @johnmark @mgasca @cnygardtw @rvema @psmulovics @mimiflynn @mcleo-d @dc-ms @jpgough-ms @Budlee @arhy @ojeb2 @floresjma @robmoffat @fleureedwards @matthewgardner @willosborne @lionking421 @aidanm3341 @goneall @yt-ms @christophe-f @kborchers @aldwins-ln @johnny-qiang-chen-lseg @mjorgen @ericchapman80 @sgm-ms @SlavaVedernikov @kirederik @alexashley @ColinEberhardt @eddie-knight @AttilaMihaly @nealharvey @eminty69 @bingenito @paul-russell-lseg @lbulanti-ms @sidmocodes @alvin-c-shih @akinbjoseph @pratikthanki @admleggett @eteridvalishvili @avikalpg @sinclairwilson @studees @lpaul1 @jorok @grahampacker-ms @jamesthurgood34 @peterrhysthomas @subbu-raj @vgorti @meghdeepnatwest @amasare,@rocketstack-matt @TheJuanAndOnly99
-227,FAIL (Finos Lifecycle) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,open-source-readiness,NONE,Apache-2.0,127,100,NONE,false,1,false,false,main,,@robmoffat @psmulovics @mimiflynn @BrittanyIstenes @pholleran @JamieSlome @katnovakovic @HelloKay27 @coopernetes @caradelia @AmolMeshram19 @eminty69 @kmdchew @tsteenbe @pcheong-lbg @jessicapeng @rvema @rhyddian @andybs @ana-gamito @bingenito @mindthegab @jmeridth @tenatzen @jstclair2019 @chamindra,@robmoffat @psmulovics @mimiflynn @maoo @pholleran @BrittanyIstenes @anteos
-172,FAIL (Finos Lifecycle) (OpenSSF Status) (No Sem Grep),finos,calendar,NONE,Apache-2.0,72,100,NONE,false,0,false,true,main,,@gautamjuyal @maoo @TheJuanAndOnly99 @psmulovics @mimiflynn @robmoffat @Amool-kk @winmorgan @ronaldssebalamu,@renovate[bot] @mimiflynn @TheJuanAndOnly99 @gautamjuyal @maoo @finos-admin
-156,FAIL (Finos Lifecycle) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,zenith,NONE,Apache-2.0,56,100,NONE,false,1,false,false,main,,@padraignix @tenatzen @psmulovics @alagergren @alvin-c-shih @vbandi @carlyrichmond @awaiken @xevg @sammoorhouse @mimiflynn @wendallkaters @DamianReeves @Benjamin-Senso @dubgeis @ditomike @anderew @PaulaPaul @chaitali-ladikkar @nigelsimpson @justin-atwell @RAI-INFO @karlmoll @sergmetelin @brunodom,@psmulovics @padraignix @tenatzen @dependabot[bot] @polinalevyant @carlyrichmond
-154,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,perspective,NONE,Apache-2.0,57,97,NONE,false,1,false,false,master,"@texodus, @timkpaine",@texodus @timkpaine @mhkeller @kryaksy @jordanskole @brianblakely @maoo @pitrou @TimeWanderer @ekalosak @RajaPoseidon @hengaini2055 @dhirschfeld @abalabin-bamfunds @sjpfenninger @hegdeadithyak @aszenz @msmolkin1,@texodus @ada-x64 @tomjakubowski @timkpaine @timbess
-133,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,traderX,INCUBATING,Apache-2.0,78,55,NONE,false,0,false,false,main,,@maoo @rocketstack-matt @DovOps @karlmoll @ctiltman @tomhealey-icma @psmulovics @heswell @leandroyabut @fhubi @PR-SS @mimiflynn,@renovate[bot] @DovOps @maoo @TheJuanAndOnly99 @ztanczos @rocketstack-matt
-133,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No License Set) (No CVE Scan) (No Sem Grep),finos,technical-oversight-committee,NONE,,121,12,NONE,false,-1,false,false,main,,@maoo @psmulovics @ColinEberhardt @stephengoldbaum @brunodom @DamianReeves @eminty69 @jonfreedman @caradelia @rikoe @opoupeney @mindthegab @TheJuanAndOnly99 @epsstan @eteridvalishvili @tenatzen,@maoo @ColinEberhardt @psmulovics
-119,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,waltz,ACTIVE,Apache-2.0,19,100,NONE,false,0,false,false,master,,@davidwatkins73 @TL41 @kamransaleem @mcleo-d @mrudangit @maoo,@JWoodland-Scott @db-waltz @davidwatkins73 @kamran-b-saleem-db @maoo @kamransaleem
-105,FAIL (wrong admins) (OpenSSF Status),finos,vuu,INCUBATING,Apache-2.0,5,100,NONE,false,0,true,true,main,@chrisjstevo,@naleeha @heswell @keikeicheung @chrisjstevo,@heswell @junaidzm13 @naleeha @actions-user @chuchee @rumakt @chrisjstevo @keikeicheung
-102,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,DEI-SIG,NONE,Apache-2.0,94,8,NONE,false,-1,false,false,main,,@PaulaPaul @Perelmuter @psmulovics @mcleo-d @beekemarie @KaajalAminSharma @mimiflynn @TadhgWilson @ritachaturvedi @eteridvalishvili @whykay @sergiobettencourt @celanthe @JinanMartiuk @rhyddian @ditomike @tenatzen @lwnoble,@psmulovics @beekemarie @PaulaPaul @TheJuanAndOnly99
-102,FAIL (Finos Lifecycle) (OpenSSF Status) (No License Set) (No CVE Scan) (No Sem Grep),finos,community,NONE,,85,17,NONE,false,0,false,false,main,,@maoo @mcleo-d @TheJuanAndOnly99 @ColinEberhardt @psmulovics @timkpaine @kriswest @mindthegab @leefaus @vicenteherrera @miglaros @mimiflynn @pholleran @SimonCockx @Neetuj @lolabeis @salmenus @rhyddian @eddie-knight @nickveenhof @cronky @bingenito @ajgnacht @BrittanyIstenes @cm-howard @awaiken @TheFoxAtWork @ferguskeenan @MikeWilsonZngly @caradelia @jstclair2019 @tenatzen @satyampsoni @ashukla13 @opatrascoiu @rocketstack-matt @brunodom @pcheong-lbg,@maoo @mindthegab @TheJuanAndOnly99 @psmulovics
-100,FAIL (No CVE Scan),finos,SymphonyElectron,ACTIVE,Apache-2.0,0,100,OK,false,1,true,false,main,,,@KiranNiranjan @NguyenTranHoangSym @sbenmoussati @swasunb @symphony-crowdin @axeleriksson147
-91,FAIL (wrong admins) (OpenSSF Status) (No Sem Grep),finos,rune-dsl,INCUBATING,Apache-2.0,19,72,NONE,false,1,false,true,main,@minesh-s-patel,@SimonCockx @brianlynn2 @hugohills-regnosys @maoo @Oblongs @TheJuanAndOnly99,@PayalKhanna @SimonCockx @renovate[bot] @minesh-s-patel @hugohills-regnosys @davidalk
-58,FAIL (Finos Lifecycle) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,kdb,NONE,Apache-2.0,54,4,NONE,false,1,false,false,main,,@alvin-c-shih @adavies42 @rianoc-kx @gyorokpeter @rdffy @karlmoll @jshinonome @drgdavies @mcleo-d @claire-sloan @rianoc @honus85 @ctwomeykx,@adavies42 @alvin-c-shih
-56,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,jupyterlab_templates,NONE,Apache-2.0,5,51,NONE,false,1,false,false,main,@timkpaine,@timkpaine @sodeso-nl @psychemedia @wakkadojo,@timkpaine @dependabot[bot] @TheJuanAndOnly99 @maoo @forest-d
-43,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,cdm-object-builder,INCUBATING,Apache-2.0,1,42,NONE,false,0,false,false,main,,@minesh-s-patel,@minesh-s-patel @renovate[bot] @eacunaISDA @dependabot[bot] @davidalk @hugohills-regnosys
-42,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,open-regtech-sig,NONE,Apache-2.0,39,3,NONE,false,-1,false,false,master,,@martinudy @eteridvalishvili @ffionwiggins @jgavronsky @sarahsinclair @Perelmuter @lolabeis @anelledavis @stephengoldbaum @desipops @dshoneisda @sndpkumar14 @zeal-somani @apetroni @AndrewOConnor1 @tabi5h @tomhealey-icma @RobReeveLexTego @iansloyan @sudhendu-das @PJDiGi @kannan2024 @noelmcloughlin,@TheJuanAndOnly99
-40,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,InnerSource,NONE,Apache-2.0,30,10,NONE,false,-1,false,false,master,,@chamindra @robmoffat @psmulovics @BrittanyIstenes @jaz4th @katnovakovic @kmdchew @miguel-capitao-db,@chamindra @BrittanyIstenes @robmoffat @psmulovics
-36,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No License Set) (No CVE Scan) (No Sem Grep),finos,branding,NONE,,1,35,NONE,false,-1,false,false,master,,@TheJuanAndOnly99,@TheJuanAndOnly99 @maoo @DovOps
-33,FAIL (OpenSSF Status) (No Sem Grep),finos,SymphonyMediaBridge,INCUBATING,Apache-2.0,3,30,NONE,false,0,false,true,master,,@topilski @RicardoMDomingues,@RicardoMDomingues @reddvl1980 @olofkallander @danielgronberg @marcusspangenberg
-22,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,code-scanning,INCUBATING,Apache-2.0,1,21,NONE,false,0,false,false,main,,@josspo,@josspo @maoo
-21,FAIL (OpenSSF Status) (No CVE Scan),finos,symphony-bdk-java,INCUBATING,Apache-2.0,6,15,NONE,false,1,true,false,main,,@yinan-symphony @mend-for-github-com @hkw1831,@yinan-symphony @vladokrsymphony @Yannick-Malins @antoinerollindev
-17,FAIL (No CVE Scan) (No Sem Grep),finos,compliant-financial-infrastructure,INCUBATING,Apache-2.0,11,6,OK,false,1,false,false,main,,@AdrianHammond @eddie-knight @karlmoll @alexashley @grudra7714 @olearycrew @ericchapman80 @abdullahgarcia,@eddie-knight @AdrianHammond @TheJuanAndOnly99
-16,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,tracdap,INCUBATING,Apache-2.0,1,15,NONE,false,0,false,false,main,,@martin-traverse,@martin-traverse
-14,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,a11y-theme-builder-sdk,INCUBATING,Apache-2.0,0,14,NONE,false,2,false,false,main,,,@aaronreed708 @evangk6 @smithbk
-13,FAIL (Finos Lifecycle),finos,spring-bot,NONE,Apache-2.0,9,4,OK,false,1,true,true,spring-bot-master,,@robmoffat @vaibhav-db,@robmoffat @vaibhav-db
-13,FAIL (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,TimeBase-CE,INCUBATING,Apache-2.0,0,13,NONE,false,-1,false,false,main-6.1,@alex-karpovich,,@alex-karpovich @Romkisel
-11,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,software-project-blueprint,INCUBATING,Apache-2.0,0,11,NONE,false,0,false,false,main,,,@renovate[bot] @maoo @TheJuanAndOnly99
-9,FAIL (wrong admins) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,ipyregulartable,INCUBATING,Apache-2.0,1,8,NONE,false,1,false,false,main,"@texodus, @neilslinger, @timkpaine",@dermodmaster,@timkpaine @dependabot[bot]
-8,FAIL (No CVE Scan),finos,OpenMAMA,ACTIVE,LGPL-2.1,0,8,OK,false,0,true,false,next,,,@renovate[bot]
-8,FAIL (No CVE Scan),finos,symphony-api-spec,ACTIVE,Apache-2.0,0,8,OK,false,1,true,false,master,,,@jspasquali @mohamed-rojbeni @FabienVSymphony @pierreneu @apocarteres @symphony-chayst
-7,FAIL (No CVE Scan) (No Sem Grep),finos,backplane,INCUBATING,Apache-2.0,0,7,OK,false,1,false,false,main,,,@Vivek-NatWest @manish-nwm
-7,FAIL (Finos Lifecycle) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,finos-landscape,NONE,Apache-2.0,0,7,OK,false,-1,false,false,master,,,@TheJuanAndOnly99 @maoo @finos-admin
-6,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No License Set) (No CVE Scan) (No Sem Grep),finos,clabot-config,NONE,,0,6,NONE,false,-1,false,false,master,,,@finos-admin @maoo @TheJuanAndOnly99
-5,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,ai-readiness,NONE,Apache-2.0,0,5,NONE,false,-1,false,false,main,,,@ColinEberhardt @finos-admin @maoo
-4,FAIL (Finos Lifecycle) (wrong admins) (No CVE Scan),finos,regular-table,NONE,Apache-2.0,1,3,OK,false,0,true,false,master,@texodus,@domehead100,@texodus
-4,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,ambassadors,NONE,NOASSERTION,0,4,NONE,false,-1,false,false,main,,,@TheJuanAndOnly99 @finos-admin
-4,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,waltz-integration-juju,INCUBATING,Apache-2.0,0,4,NONE,false,1,false,false,main,,,@claudiubelu @maoo
-4,,finos,messageml-utils,ACTIVE,Apache-2.0,0,4,OK,false,1,true,true,main,,,@mohamed-rojbeni @FabienVSymphony
-3,FAIL (OpenSSF Status) (No CVE Scan),finos,symphony-wdk,INCUBATING,Apache-2.0,1,2,NONE,false,1,true,false,master,,@yinan-symphony,@yinan-symphony @Yannick-Malins
-3,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,open-reg-tech-us-lcr,INCUBATING,Apache-2.0,0,3,NONE,false,0,false,false,main,,,@stephengoldbaum
-1,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,standards-project-blueprint,NONE,NOASSERTION,0,1,NONE,false,-1,false,false,main,,,@mindthegab
-1,FAIL (OpenSSF Status) (No CVE Scan),finos,symphony-bdk-python,INCUBATING,Apache-2.0,0,1,NONE,false,1,true,false,main,,,@anthony-symphony
-1,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,waltz-juju-bundle,INCUBATING,Apache-2.0,0,1,NONE,false,0,false,false,main,,,@claudiubelu
-1,FAIL (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,cla-bot,ACTIVE,Apache-2.0,1,0,NONE,false,-1,false,false,develop,,@maoo,
-0,,finos,fdc3-hack-fest-2024,INCUBATING,Apache-2.0,0,1,NONE,false,PRIVATE,false,false,main,,,@finos-admin
-0,,finos,fdx-pmc,NONE,,0,0,NONE,true,-1,false,false,master,,,
-0,,finos,morphir-rust,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,,,
-0,,finos,legend-engine-datapush,NONE,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,"@pierredebelen, @ivan-kyosev-gs",,
-0,,finos,reports-job,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,,,
-0,,finos,morphir-go,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,,,
-0,,finos,reference-foss-policy,NONE,CC-BY-4.0,0,0,NONE,true,-1,false,false,master,,,
-0,,finos,JCurl,ACTIVE,Apache-2.0,0,0,OK,false,0,true,true,master,,,
-0,,finos,fdc3-desktop-agent,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,,,
-0,,finos,metadata-tool,NONE,Apache-2.0,0,0,NONE,false,0,false,false,dev,,,
-0,,finos,datahub,NONE,Apache-2.0,0,0,NONE,true,1,false,false,master,,,
-0,,finos,ssf-enforcer-rules,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,@maoo,,
-0,,finos,exodus,INCUBATING,Apache-2.0,0,0,NONE,true,-1,false,false,master,,,
-0,,finos,openmama.github.io,NONE,,0,0,NONE,false,-1,false,false,master,,,
-0,,finos,datahelix,NONE,Apache-2.0,0,0,NONE,true,1,false,false,master,,,
-0,,finos,greenkey-asrtoolkit,NONE,Apache-2.0,0,0,NONE,true,0,false,false,master,,,
-0,,finos,OpenMAMA-testdata,NONE,,0,0,NONE,false,-1,false,false,master,,,
-0,,finos,clabot-test-prod,NONE,,0,0,NONE,false,-1,false,false,master,,,
-0,,finos,legend-engine-iceberg,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,"@pierredebelen, @ivan-kyosev-gs",,
-0,,finos,certificate-toolbox,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,@maoo,,
-0,,finos,finos-member-success,NONE,,0,2,NONE,false,PRIVATE,false,false,master,"@maoo, @robmoffat, @grizzwolf, @mindthegab, @TheJuanAndOnly99, @alstratigos",,@wendallkaters
-0,,finos,curref-data,INCUBATING,,0,0,NONE,false,-1,false,false,master,,,
-0,,finos,contrib-toolbox,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,main,,,
-0,,finos,legend-config,NONE,,0,0,NONE,false,PRIVATE,false,false,master,,,
-0,,finos,glue,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,,,
-0,,finos,finos-marketing,NONE,,0,0,NONE,false,PRIVATE,false,false,master,"@grizzwolf, @winmorgan, @DannyJPC, @niamhoparker",,
-0,,finos,legend-persistence,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,master,,,
-0,,finos,finos-parent-pom,INCUBATING,Apache-2.0,0,0,NONE,false,0,false,false,main,,,
-0,,finos,finos-deg,INCUBATING,,0,0,NONE,true,-1,false,false,master,,,
-0,,finos,electron-spellchecker,NONE,NOASSERTION,0,0,NONE,true,-1,false,false,master,,,
-0,,finos,SwiftSearch,NONE,Apache-2.0,0,0,NONE,false,2,false,false,master,,,
-0,,finos,tooling,NO_README,,0,0,NO_README,false,PRIVATE,false,false,master,,,
-0,,finos,legend-integration-helm,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,main,,,
-0,,finos,voice-metadata-standard,NONE,Apache-2.0,0,0,NONE,true,1,false,false,master,,,
-0,,finos,wiki.finos.org,NONE,,0,0,NONE,true,-1,false,false,master,,,
-0,,finos,CatchIT,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,main,,,
-0,,finos,openfin-react-hooks,NONE,Apache-2.0,0,0,NONE,true,1,false,false,master,,,
-0,,finos,bot-github-chatops,NONE,Apache-2.0,0,0,NONE,true,0,false,false,master,@maoo,,
-0,,finos,structured-products,NONE,Apache-2.0,0,3,NONE,true,-1,false,false,main,,,@finos-admin
-0,,finos,symphony-wdk-gallery,INCUBATING,Apache-2.0,0,0,NONE,false,0,false,false,main,,,
-0,,finos,metadata,NONE,,30,79,NONE,false,PRIVATE,false,false,main,,@maoo @TheJuanAndOnly99 @alstratigos @robmoffat @grizzwolf,@maoo @TheJuanAndOnly99
-0,,finos,finos.github.io,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,@maoo,,
-0,,finos,financial-objects,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,master,,,
-0,,finos,asciidoctor-stylesheet-factory,NONE,NOASSERTION,0,0,NONE,true,-1,false,false,master,@copiesofcopies,,
-0,,finos,ScreenSnippet,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,,,
-0,,finos,legend-testing,NONE,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,@epsstan,,
-0,,finos,SymphonyWindowsHwndHelper,INCUBATING,Apache-2.0,0,0,NONE,false,-1,true,false,main,,,
-0,,finos,qPython,NONE,Apache-2.0,0,0,NONE,false,1,false,true,main,,,
-0,,finos,symphony-object,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,,,
-0,,finos,plexus-interop-desktop-api,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,,,
-0,,finos,secure-electron-adapter,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,,,
-0,,finos,greenkey-intercom-sdk,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,,,
-0,,finos,generator-symphony,INCUBATING,Apache-2.0,0,0,NONE,false,1,false,false,master,,,
-0,,finos,secref-data,INCUBATING,Apache-2.0,0,0,NONE,false,-1,false,false,master,,,
-0,,finos,OSLC-handbook,NONE,NOASSERTION,0,0,NONE,false,-1,false,false,master,,,
-0,,finos,morphir-editor,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,,,
-0,,finos,clabot-test,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,master,@maoo,,
-0,,finos,finos-legend-collaboration,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,,,
-0,,finos,open-compliance-cdmc,NONE,Apache-2.0,0,0,NONE,true,1,false,false,main,,,
-0,,finos,plexus-interop,NONE,Apache-2.0,2,1,NONE,true,-1,false,false,master,,@mend-for-github-com,@finos-admin
-0,,finos,ScreenShareIndicatorFrame,INCUBATING,Apache-2.0,0,0,NONE,false,-1,false,false,master,,,
-0,,finos,hubspot-sync,NONE,,0,0,NONE,false,PRIVATE,false,false,main,@maoo,,
-0,,finos,ScreenSnippet2,INCUBATING,Apache-2.0,0,0,NONE,false,-1,false,false,master,,,
-0,,finos,air-accelerator,INCUBATING,Apache-2.0,0,1,NONE,true,-1,false,false,main,,,@finos-admin
-0,,finos,kdb-studio,NONE,Apache-2.0,0,0,NONE,false,1,false,false,main,,,
-0,,finos,sea-quick-start,INCUBATING,Apache-2.0,0,0,NONE,false,-1,false,false,master,,,
-0,,finos,osr-checklists,NONE,NOASSERTION,0,0,NONE,true,-1,false,false,master,,,
-0,,finos,legend-engine-lakehouse,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,"@pierredebelen, @ivan-kyosev-gs",,
-0,,finos,buyside-sellside-interop,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,@agitana,,
-0,,finos,FDC3-Archive,NONE,,0,0,NONE,true,-1,false,false,master,,,
-0,,finos,greenkey-discovery-sdk,NONE,Apache-2.0,0,0,NONE,true,1,false,false,master,,,
-0,,finos,cfi-ansible-template,INCUBATING,Apache-2.0,0,0,OK,false,PRIVATE,false,false,main,"@thinkl33t, @abdullahgarcia, @AdrianHammond, @eddie-knight, @peter-thomas-db",,
-0,,finos,open-developer-platform,INCUBATING,Apache-2.0,0,1,NONE,true,-1,false,false,main,,,@maoo
-0,,finos,openfin-python-adapter,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,,,
-0,,finos,digital-rights-management,INCUBATING,Apache-2.0,0,0,NONE,true,-1,false,false,master,@islavin,,
-0,,finos,morphir-bosque,NONE,Apache-2.0,0,0,NONE,true,0,false,false,main,,,
-Score,Pass,Organisation,Repo Name,Finos Lifecycle State (from the README badge),License (from GitHub Api),"Issue Activity (for most recent 50 issues, count most recent 30 comments in last 6 months)","Commit Activity (count of commits in last 6 months, maxed at 100)",OpenSSF Status (from the README badge),Github Archived (has the Archive tag in GitHub API),"Branch Rules/Private (number of approvers or 0 if no approvers, -1 no branch rules",SemGrep (checks .github/workflows/semgrep.yml file exists),CVE Scanning (checks .github/workflows/cve-scanning.yml file exists),Default Branch Name,Excess Admins,Main Issue Participants (list of all participants for issues loaded in Issue Activity column),Main Committers  (list of all participants for commits loaded in Commit Activity column)
-1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos-labs,fdc3-identity-hackathon,NONE,Apache-2.0,0,0,NONE,false,0,false,false,master,"@maoo, @ystxn, @TheJuanAndOnly99, @yinan-symphony, @antoinerollindev, @symphony-jean-michael, @tzhao-symphony, @Yannick-Malins",,
-1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,fdc3-for-the-web,NONE,Apache-2.0,0,100,NONE,false,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,@robmoffat
-1000,FAIL (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,fdc3-api-generator,INCUBATING,Apache-2.0,0,0,NONE,false,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,
-1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,morphir-fsharp,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,main,"@maoo, @DamianReeves, @TheJuanAndOnly99",,
-1000,FAIL (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,morphir-techsprint,INCUBATING,Apache-2.0,0,0,NONE,false,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,
-1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,morphir-wasm,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,master,"@maoo, @DamianReeves, @TheJuanAndOnly99",,
-1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,legend-bigquery-integration,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,master,"@maoo, @TheJuanAndOnly99",,
-1000,FAIL (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,CDM-ECS-FDC3,INCUBATING,Apache-2.0,0,0,NONE,false,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,
-1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,training-course-developing-on-fdc3,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,
-1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,FDC3-App-Directory,NONE,Apache-2.0,2,7,NONE,false,-1,false,false,main,"@maoo, @TheJuanAndOnly99",@robmoffat @andreifloricel,@robmoffat @andreifloricel
-1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,fdc3-java-api,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,
-1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (Branch Reviewers) (No License Set) (No CVE Scan) (No Sem Grep),finos-labs,finos_fdc3_chat,NONE,,0,0,NONE,false,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,
-208,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos-labs,architecture-as-code,NONE,Apache-2.0,108,100,NONE,false,1,false,false,main,"@maoo, @TheJuanAndOnly99, @rocketstack-matt",@rocketstack-matt @willosborne @jpgough-ms @Budlee @lbulanti-ms @aidanm3341 @grahampacker-ms @matthewgardner @yt-ms @SlavaVedernikov @ojeb2,@willosborne @rocketstack-matt @aidanm3341 @jpgough-ms @lbulanti-ms @grahampacker-ms @matthewgardner @TheJuanAndOnly99
-15,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos-labs,innersource-license-generator,NONE,Apache-2.0,6,9,NONE,false,1,false,false,main,"@maoo, @chamindra, @TheJuanAndOnly99",@chamindra @spier @robmoffat,@chamindra @spier
-10,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,Voxura,NONE,Apache-2.0,0,10,NONE,false,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,@vbandi @finos-admin @TheJuanAndOnly99 @ChimaIbebunjoh
-0,,finos-labs,osmm,NONE,,0,1,NONE,true,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,@finos-admin
-0,,finos-labs,devops-mutualization-automated-change-deployment,NONE,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,"@maoo, @TheJuanAndOnly99",,
-0,,finos-labs,order-to-chat-fdc3,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,master,"@maoo, @robmoffat, @TheJuanAndOnly99",,
-0,,finos-labs,morphir-cadl,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,master,"@maoo, @TheJuanAndOnly99",,
-0,,finos-labs,air-team-cesar,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,dev,"@maoo, @TheJuanAndOnly99",,
-0,,finos-labs,gaad-hackathon-template,INCUBATING,Apache-2.0,0,0,NONE,false,0,false,false,main,"@maoo, @vinomaster, @TheJuanAndOnly99",,
-0,,finos-labs,rosetta-code-generators,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,master,"@maoo, @TheJuanAndOnly99",,
-0,,finos-labs,weets-bill-pay-it-forward,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,master,"@maoo, @TheJuanAndOnly99",,
-0,,finos-labs,jupyter_finos_widgets,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,master,"@maoo, @TheJuanAndOnly99",,
-0,,finos-labs,project-blueprint,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,
-0,,finos-labs,oasis,NONE,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,"@maoo, @TheJuanAndOnly99",,
-0,,finos-labs,air-team-ivan,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,dev,"@maoo, @TheJuanAndOnly99",,
-0,,finos-labs,csam-crypto,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,"@maoo, @TheJuanAndOnly99",,
-0,,finos-labs,nydfs-digital-regulatory-reporting,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,master,"@maoo, @TheJuanAndOnly99",,
-0,,finos-labs,dlt-sandbox,NONE,Apache-2.0,0,3,NONE,false,PRIVATE,false,false,main,"@maoo, @TheJuanAndOnly99",,@finos-admin @TheJuanAndOnly99
-0,,finos-labs,fdc3-desktop-agent-bridge-tests,NONE,Apache-2.0,0,2,NONE,false,PRIVATE,false,false,main,"@maoo, @mindthegab, @kriswest, @TheJuanAndOnly99, @toshaellison, @alstratigos, @john-ciq",,@finos-admin @TheJuanAndOnly99
-0,,finos-labs,air-team-evelyn,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,dev,"@maoo, @TheJuanAndOnly99",,
+Score,Pass,Organisation,Repo Name,Finos Lifecycle State (from the README badge),License (from GitHub Api),"Issue Activity (for most recent 50 issues, count most recent 30 comments in last 6 months)","Commit Activity (count of commits in last 6 months, maxed at 100)",OpenSSF Status (from the README badge),Github Archived (has the Archive tag in GitHub API),"Branch Rules/Private (number of approvers or 0 if no approvers, -1 no branch rules",SemGrep (checks .github/workflows/semgrep.yml file exists),CVE Scanning (checks .github/workflows/cve-scanning.yml file exists),Default Branch Name,Excess Admins,Main Issue Participants (list of all participants for issues loaded in Issue Activity column),Main Committers  (list of all participants for commits loaded in Commit Activity column),Length of Readme
+1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-juju-studio-operator,INCUBATING,Apache-2.0,0,0,NONE,false,0,false,false,main,,,,2476
+1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,morphir-dotnet,NONE,Apache-2.0,1,0,NONE,false,0,false,false,main,@DamianReeves,@Shahil093,,7236
+1000,FAIL (OpenSSF Status) (No Sem Grep),finos,fdc3-dotnet,INCUBATING,Apache-2.0,3,52,NONE,false,1,false,true,main,,@bingenito @BalassaMarton,@dependabot[bot] @bingenito @josspo @ztanczos @kruplm @lilla28 @TheJuanAndOnly99,5125
+1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-juju-db-operator,INCUBATING,Apache-2.0,0,0,NONE,false,0,false,false,main,,,,1808
+1000,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan),finos,terraform-aws-cfi-redshift,NONE,Apache-2.0,0,0,NONE,false,-1,true,false,main,,,,277
+1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-sdlc,INCUBATING,Apache-2.0,0,92,NONE,false,1,false,false,master,,,@finos-admin @MauricioUyaguari @kevin-m-knight-gs @rafaelbey @Yasirmod17 @abhishoya-gs @YannanGao-gs @ivan-kyosev-gs @mrudula-gs @davidharte-gs @pierredebelen @janeenyamak1 @siaka-Akash @jake-kim1 @gs-ssh16,4521
+1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-engine,INCUBATING,Apache-2.0,2,100,NONE,false,1,false,false,master,,@finos-admin,@finos-admin @gs-ssh16 @Yasirmod17 @kumuwu @rafaelbey @MauricioUyaguari @gayathrir11 @aziemchawdhary-gs @mrudula-gs @prasar-ashutosh @kevin-m-knight-gs @tanujgirdhar @siaka-Akash @satendra-sahu @epsstan @YannanGao-gs @pierredebelen @gs-kotang @gs-rpant1729 @ghub-real @abhishoya-gs @Oluwatobiadeoye @akphi @shtirlets @janeenyamak1 @jake-kim1 @gs-gunjan @rengam32,3332
+1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-juju-bundle,INCUBATING,Apache-2.0,0,1,NONE,false,0,false,false,main,,,@claudiubelu,5515
+1000,,finos,FDC3-Sail,INCUBATING,Apache-2.0,0,0,OK,false,0,true,true,main,,,,6315
+1000,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,terraform-aws-cfi-eks,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,main,,,,13410
+1000,FAIL (Finos Lifecycle) (wrong admins) (No CVE Scan) (No Sem Grep),finos,morphir,NONE,Apache-2.0,58,51,OK,false,1,false,false,main,@DamianReeves,@DamianReeves @edwardpeters @karlmoll @AttilaMihaly @michelchan @nwokafor-choongsaeng @mcleo-d @stephengoldbaum @RichardWagener365 @psmulovics @sahilravinder @sidmocodes @edmondop @marron-at-work @tomhealey-icma @frankchoongsaeng @kmudrick @bensanchin @alexsieland,@stephengoldbaum @DamianReeves @bensanchin @dependabot[bot] @AttilaMihaly @maoo @TheJuanAndOnly99 @bekand @michelchan @sahilravinder @ronaldssebalamu,8280
+1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,ansible-cfi-ocp,INCUBATING,Apache-2.0,0,0,NONE,false,1,false,false,main,,,,2391
+1000,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan),finos,terraform-aws-cfi-dynamodb,NONE,Apache-2.0,0,0,NONE,false,-1,true,false,main,,,,267
+1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (No Sem Grep),finos,legend-engine-ide-client-vscode,NONE,Apache-2.0,1,69,NONE,false,1,false,true,main,@rafaelbey,@rafaelbey,@rafaelbey @gayathrir11 @finos-admin @josspo @kevin-m-knight-gs @siaka-Akash @jake-kim1 @TheJuanAndOnly99 @agitana @MauricioUyaguari,1045
+1000,FAIL (Finos Lifecycle),finos,FDC3,NONE,NOASSERTION,206,100,OK,false,1,true,true,main,,@kriswest @robmoffat @mistryvinay @hughtroeger @openfin-johans @Lecss @bingenito @novavi @Vivek-NatWest @paulgoldsmith @maoo @nkolba @julianna-ciq @Yannick-Malins @fapulito @john-ciq @mthomcfa @cwatson88 @rikoe @gilesstevenson @pvoznyuk @karlmoll @timjenkel @headsphere @salmenus @kziemski @jasonmdorsey @mcleo-d @tomhealey-icma @bpgandluri @milindchidrawar @yeahjim1 @lspiro-Tick42 @hellosmithy @tgrecojs @aateeque @chordmemory @tpina @mimiflynn @aaronhaines @danielblignaut @TheJuanAndOnly99,@kriswest @robmoffat @julianna-ciq @bingenito @dependabot[bot],13652
+1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-studio,INCUBATING,Apache-2.0,0,100,NONE,false,1,false,false,master,,,@github-actions[bot] @MauricioUyaguari @travisstebbins @dependabot[bot] @YannanGao-gs @gayathrir11 @pragyasri-gs @PaulWorkStuff @rafaelbey @Oluwatobiadeoye @akphi,4294
+1000,FAIL (OpenSSF Status) (Branch Reviewers) (No CVE Scan),finos,terraform-aws-cfi-sqs,INCUBATING,Apache-2.0,0,0,NONE,false,-1,true,false,main,,,,2738
+1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-depot,INCUBATING,Apache-2.0,0,76,NONE,false,1,false,false,master,,,@finos-admin @gs-gunjan @elopezcastro @Yasirmod17 @kevin-m-knight-gs @rafaelbey @abhishoya-gs @davidharte-gs @siaka-Akash @gs-ssh16 @YannanGao-gs @MauricioUyaguari,4236
+1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,morphir-scala,INCUBATING,Apache-2.0,2,96,NONE,false,0,false,false,main,,@DamianReeves @joanna-lee-0,@scala-steward @justin-corn @dependabot[bot] @DamianReeves @edwardpeters @michelchan @sahilravinder @Paul-Folbrecht @bensanchin @Bouzomgi @dmitrykozinets,7982
+1000,FAIL (OpenSSF Status) (No CVE Scan),finos,cfi-terraform-template-child-module,INCUBATING,Apache-2.0,0,0,NONE,false,1,true,false,main,,,,3498
+1000,FAIL (wrong admins) (OpenSSF Status) (No Sem Grep),finos,legend-engine-ide-lsp,INCUBATING,Apache-2.0,0,100,NONE,false,1,false,true,main,@rafaelbey,,@rafaelbey @finos-admin @jake-kim1 @gayathrir11 @siaka-Akash @renuccif @kevin-m-knight-gs,1103
+1000,FAIL (OpenSSF Status) (No Sem Grep),finos,pylegend,INCUBATING,Apache-2.0,0,6,NONE,false,0,false,true,main,,,@renovate[bot] @gs-ssh16,3227
+1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-shared,INCUBATING,Apache-2.0,0,21,NONE,false,1,false,false,master,,,@finos-admin @Yasirmod17 @kevin-m-knight-gs @ivan-kyosev-gs,1806
+1000,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,morphir-elm,NONE,Apache-2.0,10,100,NONE,false,-1,false,false,main,,@DamianReeves @AttilaMihaly @bekand @carljmosca @edwardpeters @stephengoldbaum,@sfc-gh-lfallasavendano @DamianReeves @sfc-gh-aramirezfuentes @AttilaMihaly @bekand @dependabot[bot] @kmudrick @michelchan @stephengoldbaum @nwokafor-choongsaeng,10104
+1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,morphir-jvm,NONE,Apache-2.0,1,5,NONE,false,0,false,false,main,@DamianReeves,@DamianReeves,@DamianReeves @Abdul-Hameed-Turntabl @AttilaMihaly,1941
+1000,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan),finos,terraform-aws-cfi-lambda,NONE,Apache-2.0,0,0,NONE,false,-1,true,false,main,,,,267
+1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-juju-engine-server-operator,INCUBATING,Apache-2.0,0,0,NONE,false,0,false,false,main,,,,2072
+1000,FAIL (Finos Lifecycle) (OpenSSF Status) (No Sem Grep),finos,morphir-service,NONE,Apache-2.0,0,0,NONE,false,0,false,true,main,,,,1943
+1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-juju-sdlc-server-operator,INCUBATING,Apache-2.0,0,0,NONE,false,0,false,false,main,,,,2052
+1000,,finos,FDC3-conformance-framework,INCUBATING,Apache-2.0,0,0,OK,false,1,true,true,main,,,,5869
+1000,FAIL (OpenSSF Status) (Branch Reviewers) (No CVE Scan),finos,terraform-google-cfi-gke,INCUBATING,Apache-2.0,0,0,NONE,false,-1,true,false,main,,,,8709
+1000,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan),finos,terraform-azurerm-cfi-aks,NONE,Apache-2.0,0,0,NONE,false,-1,true,false,main,,,,279
+1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-juju-gitlab-integrator,INCUBATING,Apache-2.0,0,0,NONE,false,0,false,false,main,,,,5058
+1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend,INCUBATING,Apache-2.0,15,33,NONE,false,1,false,false,master,,@finos-admin @reyes-michael @smorres,@finos-admin @haroonsherjan @MauricioUyaguari @YannanGao-gs @gs-ssh16 @maoo,8794
+1000,FAIL (wrong admins) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,cfi-ansible-aws-rds,INCUBATING,Apache-2.0,0,0,NONE,false,1,false,false,main,@AdrianHammond,,,5066
+1000,FAIL (Finos Lifecycle) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-integration-juju,NONE,Apache-2.0,0,0,NONE,false,1,false,false,main,,,,7314
+1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-pure,INCUBATING,Apache-2.0,0,92,NONE,false,1,false,false,master,,,@kevin-m-knight-gs @finos-admin @pierredebelen @aziemchawdhary-gs @gs-ssh16 @rafaelbey @aormerod-gs @mrudula-gs,1462
+1000,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,legend-integration-morphir,INCUBATING,Apache-2.0,0,0,NONE,false,0,false,false,main,,,,4001
+1000,FAIL (OpenSSF Status) (Branch Reviewers) (No CVE Scan),finos,terraform-azurerm-cfi-postgresql,INCUBATING,Apache-2.0,0,0,NONE,false,-1,true,false,main,,,,7661
+1000,FAIL (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,legend-juju-libs,INCUBATING,Apache-2.0,0,0,NONE,false,-1,false,false,master,,,,690
+1000,FAIL (Finos Lifecycle) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,morphir-examples,NONE,Apache-2.0,0,0,NONE,false,0,false,false,main,,,,830
+1000,FAIL (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,legend-community-delta,INCUBATING,Apache-2.0,0,0,NONE,false,-1,false,false,main,,,,2531
+371,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,common-cloud-controls,INCUBATING,NOASSERTION,291,80,NONE,false,1,false,false,main,,@crawfordchanel @robmoffat @eddie-knight @iMichaela @AdrianHammond @rgriffiths-scottlogic @smendis-scottlogic @rachkim00 @ojeb2 @karlmoll @mlysaght2017 @sshiells-scottlogic @jared-lambert @damienjburks @eziogas-scottlogic @zeal-somani @maoo @jisted-scottlogic @speedwater @mcleo-d @hennersz @Alexstpierrework @njwilliams @aric-rosenbaum @rowan-baker @simonzhangbmo @eteridvalishvili @nas-hub @leefaus @abdullahsaf @Perelmuter @psmulovics @selgags @jgavronsky @markrushing @vicenteherrera @git-hub-forwork1 @caradelia @joan-s-molas @mimiflynn @jgoodwin72 @davidstonegoogle @cfisher-scottlogic,@eddie-knight @smendis-scottlogic @AdrianHammond @jisted-scottlogic @robmoffat @sshiells-scottlogic @iMichaela @mlysaght2017 @maoo @rgriffiths-scottlogic @damienjburks @cfisher-scottlogic @vicenteherrera @zeal-somani @hennersz,6509
+351,FAIL (OpenSSF Status) (No Sem Grep),finos,common-domain-model,INCUBATING,NOASSERTION,251,100,NONE,false,1,false,true,master,,@dschwartznyc @JBZ-Fragmos @eteridvalishvili @chrisisla @llynhiavu @lolabeis @dshoneisda @Oblongs @tomhealey-icma @manucarreramoreno @nicholas-moger @mgratacos @rogerguitart @jiahaodengbb @eacunaISDA @mikealambert @manel-martos @brianlynn2 @HajnalOB @jonathan-jpmc @deyan-paroushev @ebataller @bohuang19 @eelramy92 @gopazoTH @modobez @sf-lseg @GerryDenham @duncancarpenterpirum @valdensmith @ahutusoru123 @tzurcher @tabi5h @eelramy @karlmoll @yniubb @AmyCaruso @code-ghalib @hugohills-regnosys @CrisSearle @AdrianJenksD2LT @MalwinaAzemi @sashworthTKN @ftadvisory @jgavronsky @minesh-s-patel @dharm-kapadia @ryanasalt @aidanrussell @KHVermeg8686 @adamulman @mahoneg1br @DIVA291265,@eteridvalishvili @chrisisla @PayalKhanna @hugohills-regnosys @minesh-s-patel @mgratacos @brianlynn2 @dshoneisda @regnosys-prod-user @JayasriR @rogerguitart,18243
+267,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,git-proxy,INCUBATING,Apache-2.0,167,100,NONE,false,0,false,false,main,,@JamieSlome @maoo @coopernetes @msagi @LewisBroadhurst @marksmith388 @divinetettey @tt-gideonaryeetey @eddie-knight @abinash2512 @rgmz @vaibssingh @ahpook @chrischu @bill-n,@JamieSlome @renovate[bot] @eddie-knight @tt-gideonaryeetey @msagi,6236
+260,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,a11y-theme-builder,INCUBATING,Apache-2.0,235,25,NONE,false,2,false,false,main,,@aaronreed708 @PaulaPaul @Sweetdevil144 @ravjot07 @omesh-omg @codyzu @kris-reed @mdacic01 @evangk6 @Photon3009 @aarishshahmohsin @budhathokipramin @Chessel @lwnoble @kburk1997 @Lovelyfin00 @AThornton24 @aadhil2k4 @sagnik3788 @AlexThornton24 @Turntabl-DorothyEwuah @Prasanth-S7 @Apurv428 @rahat2134,@aaronreed708 @PaulaPaul @DorothyEwuah @evangk6,3603
+239,FAIL (Finos Lifecycle) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,devops-automation,NONE,Apache-2.0,235,4,NONE,false,1,false,false,main,,@rocketstack-matt @karlmoll @ashukla13 @johnmark @mgasca @rvema @cnygardtw @jpgough-ms @mimiflynn @psmulovics @mcleo-d @dc-ms @Budlee @arhy @ojeb2 @floresjma @fleureedwards @matthewgardner @willosborne @lionking421 @aidanm3341 @yt-ms @christophe-f @kborchers @robmoffat @aldwins-ln @johnny-qiang-chen-lseg @mjorgen @ericchapman80 @sgm-ms @sinclairwilson @SlavaVedernikov @meghdeepnatwest @kirederik @alexashley @ColinEberhardt @eddie-knight @AttilaMihaly @TracyRagan @nealharvey @eminty69 @bingenito @paul-russell-lseg @lbulanti-ms @sidmocodes @alvin-c-shih @akinbjoseph @pratikthanki @sbtaylor15 @admleggett @avikalpg @studees @lpaul1 @jorok @grahampacker-ms @jamesthurgood34 @peterrhysthomas @subbu-raj @vgorti @amasare,@rocketstack-matt,3043
+225,FAIL (Finos Lifecycle) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,open-source-readiness,NONE,Apache-2.0,125,100,NONE,false,1,false,false,main,,@robmoffat @psmulovics @BrittanyIstenes @mimiflynn @pholleran @katnovakovic @HelloKay27 @coopernetes @JamieSlome @caradelia @jessicapeng @AmolMeshram19 @Neetuj @eminty69 @kmdchew @pcheong-lbg @rvema @winmorgan @andybs @ana-gamito @bingenito @mindthegab @jmeridth @tenatzen @jstclair2019 @chamindra @shanecoughlan,@robmoffat @psmulovics @mimiflynn @pholleran @BrittanyIstenes @anteos,1729
+184,FAIL (wrong admins) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,architecture-as-code,INCUBATING,Apache-2.0,84,100,NONE,false,1,false,false,main,"@aidanm3341, @rocketstack-matt, @dc-ms, @jpgough-ms",@rocketstack-matt @jpgough-ms @willosborne @Budlee @lbulanti-ms @aidanm3341 @grahampacker-ms @matthewgardner @yt-ms @SlavaVedernikov,@willosborne @lbulanti-ms @renovate[bot] @jpgough-ms @aidanm3341 @rocketstack-matt @TheJuanAndOnly99 @grahampacker-ms @matthewgardner,8609
+176,FAIL (Finos Lifecycle) (OpenSSF Status),finos,calendar,NONE,Apache-2.0,76,100,NONE,false,0,true,true,main,,@gautamjuyal @maoo @TheJuanAndOnly99 @psmulovics @mimiflynn @winmorgan @robmoffat @Amool-kk @ronaldssebalamu,@renovate[bot] @mimiflynn @TheJuanAndOnly99 @gautamjuyal @maoo @finos-admin @semgrep-bot,2126
+151,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,perspective,NONE,Apache-2.0,55,96,NONE,false,1,false,false,master,"@texodus, @timkpaine",@texodus @timkpaine @mhkeller @jordanskole @brianblakely @maoo @dhirschfeld @abalabin-bamfunds @pitrou @ekalosak @RajaPoseidon @hengaini2055 @limx0 @sjpfenninger @hegdeadithyak @mike-luabase @aszenz @msmolkin1 @jonathanng,@texodus @tomjakubowski @ada-x64 @timkpaine @timbess @sinistersnare,6874
+134,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,traderX,INCUBATING,Apache-2.0,95,39,NONE,false,0,false,false,main,,@maoo @DovOps @rocketstack-matt @karlmoll @ctiltman @psmulovics @leandroyabut @tomhealey-icma @heswell @TheJuanAndOnly99 @PR-SS @fhubi @mimiflynn @janfernandosmoothstack,@DovOps @renovate[bot] @maoo @TheJuanAndOnly99 @ztanczos @rocketstack-matt,8967
+128,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,waltz,ACTIVE,Apache-2.0,28,100,NONE,false,0,false,false,master,,@davidwatkins73 @judepayne @mcleo-d @kamransaleem @mrudangit @maoo,@db-waltz @JWoodland-Scott @davidwatkins73 @kamran-b-saleem-db @TheJuanAndOnly99,5415
+125,FAIL (Finos Lifecycle) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,zenith,NONE,Apache-2.0,64,61,NONE,false,1,false,false,main,,@padraignix @tenatzen @psmulovics @alagergren @alvin-c-shih @awaiken @vbandi @carlyrichmond @xevg @sammoorhouse @mimiflynn @wendallkaters @DamianReeves @Benjamin-Senso @dubgeis @ditomike @anderew @PaulaPaul @chaitali-ladikkar @nigelsimpson @justin-atwell @RAI-INFO @karlmoll @sergmetelin @brunodom,@padraignix @psmulovics @tenatzen @dependabot[bot] @polinalevyant @carlyrichmond,8051
+120,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No License Set) (No CVE Scan) (No Sem Grep),finos,technical-oversight-committee,NONE,,109,11,NONE,false,-1,false,false,main,,@maoo @psmulovics @ColinEberhardt @stephengoldbaum @brunodom @DamianReeves @caradelia @rikoe @eminty69 @jonfreedman @opoupeney @epsstan @eddie-knight @tenatzen @PaulaPaul @TheJuanAndOnly99,@maoo @ColinEberhardt @psmulovics,2973
+116,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,DEI-SIG,NONE,Apache-2.0,109,7,NONE,false,-1,false,false,main,,@PaulaPaul @Perelmuter @psmulovics @KaajalAminSharma @mcleo-d @beekemarie @mimiflynn @sergiobettencourt @eteridvalishvili @TadhgWilson @ritachaturvedi @whykay @celanthe @JinanMartiuk @rhyddian @ditomike @tenatzen @lwnoble,@psmulovics @beekemarie @PaulaPaul,1101
+110,FAIL (OpenSSF Status),finos,vuu,INCUBATING,Apache-2.0,10,100,NONE,false,0,true,true,main,,@naleeha @junaidzm13 @keikeicheung @chrisjstevo,@heswell @junaidzm13 @actions-user @chuchee @keikeicheung @naleeha @chrisjstevo @rumakt,5388
+103,FAIL (wrong admins) (OpenSSF Status) (No Sem Grep),finos,rune-dsl,INCUBATING,Apache-2.0,50,53,NONE,false,1,false,true,main,@minesh-s-patel,@SimonCockx @lolabeis @brianlynn2 @Oblongs @hugohills-regnosys @TheJuanAndOnly99 @dschwartznyc @maoo @cdietrich,@PayalKhanna @SimonCockx @minesh-s-patel @renovate[bot] @hugohills-regnosys,11466
+100,FAIL (No CVE Scan),finos,SymphonyElectron,ACTIVE,Apache-2.0,0,100,OK,false,1,true,false,main,,,@KiranNiranjan @NguyenTranHoangSym @sbenmoussati @swasunb @symphony-crowdin @baphony @axeleriksson147,2937
+93,FAIL (Finos Lifecycle) (OpenSSF Status) (No License Set) (No CVE Scan) (No Sem Grep),finos,community,NONE,,80,13,NONE,false,0,false,false,main,,@maoo @mcleo-d @TheJuanAndOnly99 @ColinEberhardt @timkpaine @mindthegab @leefaus @kriswest @vicenteherrera @miglaros @mimiflynn @pholleran @brunodom @SimonCockx @Neetuj @psmulovics @lolabeis @salmenus @rhyddian @eddie-knight @nickveenhof @cronky @ajgnacht @BrittanyIstenes @cm-howard @awaiken @TheFoxAtWork @ferguskeenan @MikeWilsonZngly @caradelia @jstclair2019 @tenatzen @satyampsoni @ashukla13 @opatrascoiu @rocketstack-matt @pcheong-lbg,@maoo @mindthegab @TheJuanAndOnly99,3680
+58,FAIL (Finos Lifecycle) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,kdb,NONE,Apache-2.0,55,3,NONE,false,1,false,false,main,,@alvin-c-shih @rianoc-kx @karlmoll @adavies42 @rdffy @gyorokpeter @jshinonome @claire-sloan @drgdavies @honus85 @ctwomeykx @priyanka7255 @mcleo-d,@adavies42,1422
+51,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,open-regtech-sig,NONE,Apache-2.0,49,2,NONE,false,-1,false,false,master,,@eteridvalishvili @martinudy @jgavronsky @lolabeis @desipops @sarahsinclair @ffionwiggins @Perelmuter @anelledavis @stephengoldbaum @dshoneisda @sndpkumar14 @AndrewOConnor1 @tomhealey-icma @RobReeveLexTego @sudhendu-das @PJDiGi @mr-z-ro @zeal-somani @apetroni @blanchab @tabi5h @iansloyan @karlmoll @d-sen-gupta @kannan2024 @noelmcloughlin @BillMeenaghan,@TheJuanAndOnly99,4671
+43,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,jupyterlab_templates,NONE,Apache-2.0,3,40,NONE,false,1,false,false,main,@timkpaine,@timkpaine @psychemedia,@timkpaine @dependabot[bot] @maoo @TheJuanAndOnly99 @forest-d,3824
+38,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,InnerSource,NONE,Apache-2.0,37,1,NONE,false,-1,false,false,master,,@chamindra @robmoffat @BrittanyIstenes @psmulovics @katnovakovic @jaz4th @kmdchew @miguel-capitao-db,@robmoffat,5865
+36,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No License Set) (No CVE Scan) (No Sem Grep),finos,branding,NONE,,1,35,NONE,false,-1,false,false,master,,@TheJuanAndOnly99,@TheJuanAndOnly99 @maoo,2359
+30,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,cdm-object-builder,INCUBATING,Apache-2.0,1,29,NONE,false,0,false,false,main,,@minesh-s-patel,@minesh-s-patel @renovate[bot] @eacunaISDA @dependabot[bot] @davidalk,4085
+26,FAIL (Finos Lifecycle) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,finos-landscape,NONE,Apache-2.0,9,17,OK,false,-1,false,false,master,,@maoo @GitMensch @AndreyKozlov1984,@TheJuanAndOnly99 @maoo @finos-admin @AndreyKozlov1984,11621
+25,FAIL (OpenSSF Status) (No Sem Grep),finos,SymphonyMediaBridge,INCUBATING,Apache-2.0,3,22,NONE,false,0,false,true,master,,@topilski @RicardoMDomingues,@RicardoMDomingues @reddvl1980 @danielgronberg,5491
+23,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,software-project-blueprint,INCUBATING,Apache-2.0,0,23,NONE,false,0,false,false,main,,,@renovate[bot] @TheJuanAndOnly99 @maoo,2597
+22,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,code-scanning,INCUBATING,Apache-2.0,0,22,NONE,false,0,false,false,main,,,@josspo @maoo @TheJuanAndOnly99,27583
+20,FAIL (OpenSSF Status) (No CVE Scan),finos,symphony-bdk-java,INCUBATING,Apache-2.0,6,14,NONE,false,1,true,false,main,,@yinan-symphony @mend-for-github-com @hkw1831,@yinan-symphony @vladokrsymphony @Yannick-Malins @antoinerollindev,5330
+15,FAIL (No CVE Scan) (No Sem Grep),finos,compliant-financial-infrastructure,INCUBATING,Apache-2.0,10,5,OK,false,1,false,false,main,,@eddie-knight @AdrianHammond @karlmoll @alexashley @grudra7714 @olearycrew @ericchapman80 @abdullahgarcia,@eddie-knight @AdrianHammond @TheJuanAndOnly99,8048
+13,FAIL (Finos Lifecycle),finos,spring-bot,NONE,Apache-2.0,9,4,OK,false,1,true,true,spring-bot-master,,@robmoffat @vaibhav-db,@robmoffat @vaibhav-db,8380
+12,FAIL (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,TimeBase-CE,INCUBATING,Apache-2.0,0,12,NONE,false,-1,false,false,main-6.1,@alex-karpovich,,@alex-karpovich @Romkisel,9520
+9,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,tracdap,INCUBATING,Apache-2.0,1,8,NONE,false,0,false,false,main,,@martin-traverse,@martin-traverse,7631
+8,FAIL (wrong admins) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,ipyregulartable,INCUBATING,Apache-2.0,1,7,NONE,false,1,false,false,main,"@texodus, @neilslinger, @timkpaine",@dermodmaster,@timkpaine @dependabot[bot],4978
+7,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,ai-readiness,NONE,Apache-2.0,0,7,NONE,false,-1,false,false,main,,,@ColinEberhardt @finos-admin @maoo @TheJuanAndOnly99,3822
+5,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,ambassadors,NONE,NOASSERTION,0,5,NONE,false,-1,false,false,main,,,@TheJuanAndOnly99 @finos-admin,1158
+5,FAIL (No CVE Scan),finos,symphony-api-spec,ACTIVE,Apache-2.0,0,5,OK,false,1,true,false,master,,,@jspasquali @mohamed-rojbeni @pierreneu @symphony-chayst,3290
+4,FAIL (Finos Lifecycle) (wrong admins) (No CVE Scan),finos,regular-table,NONE,Apache-2.0,1,3,OK,false,0,true,false,master,@texodus,@domehead100,@texodus,19471
+4,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,waltz-integration-juju,INCUBATING,Apache-2.0,0,4,NONE,false,1,false,false,main,,,@claudiubelu @maoo,4348
+4,,finos,messageml-utils,ACTIVE,Apache-2.0,0,4,OK,false,1,true,true,main,,,@mohamed-rojbeni @FabienVSymphony,6353
+3,FAIL (OpenSSF Status) (No CVE Scan),finos,symphony-wdk,INCUBATING,Apache-2.0,1,2,NONE,false,1,true,false,master,,@yinan-symphony,@yinan-symphony @Yannick-Malins,3999
+3,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,open-reg-tech-us-lcr,INCUBATING,Apache-2.0,0,3,NONE,false,0,false,false,main,,,@stephengoldbaum,3387
+1,FAIL (Finos Lifecycle) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos,standards-project-blueprint,NONE,NOASSERTION,0,1,NONE,false,-1,false,false,main,,,@mindthegab,1391
+1,FAIL (OpenSSF Status) (No CVE Scan),finos,symphony-bdk-python,INCUBATING,Apache-2.0,0,1,NONE,false,1,true,false,main,,,@anthony-symphony,4670
+1,FAIL (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos,waltz-juju-bundle,INCUBATING,Apache-2.0,0,1,NONE,false,0,false,false,main,,,@claudiubelu,6263
+0,,finos,fdc3-hack-fest-2024,INCUBATING,Apache-2.0,0,1,NONE,false,PRIVATE,false,false,main,,,@finos-admin,2597
+0,,finos,fdx-pmc,NONE,,0,0,NONE,true,-1,false,false,master,,,,41
+0,,finos,morphir-rust,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,,,,2353
+0,,finos,legend-engine-datapush,NONE,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,"@pierredebelen, @ivan-kyosev-gs",,,30
+0,,finos,backplane,INCUBATING,Apache-2.0,0,0,OK,false,1,false,false,main,,,,7061
+0,,finos,clabot-config,NONE,,0,6,NONE,true,PRIVATE,false,false,master,,,@finos-admin @maoo @TheJuanAndOnly99,94
+0,,finos,reports-job,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,,,,1935
+0,,finos,morphir-go,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,,,,2498
+0,,finos,reference-foss-policy,NONE,CC-BY-4.0,0,0,NONE,true,-1,false,false,master,,,,3015
+0,,finos,JCurl,ACTIVE,Apache-2.0,0,0,OK,false,0,true,true,master,,,,11751
+0,,finos,fdc3-desktop-agent,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,,,,7711
+0,,finos,metadata-tool,NONE,Apache-2.0,0,1,NONE,true,0,false,false,dev,,,@finos-admin,7118
+0,,finos,datahub,NONE,Apache-2.0,0,0,NONE,true,1,false,false,master,,,,3519
+0,,finos,ssf-enforcer-rules,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,@maoo,,,3513
+0,,finos,exodus,INCUBATING,Apache-2.0,0,0,NONE,true,-1,false,false,master,,,,6350
+0,,finos,openmama.github.io,NONE,,0,0,NONE,false,-1,false,false,master,,,,661
+0,,finos,datahelix,NONE,Apache-2.0,0,0,NONE,true,1,false,false,master,,,,5825
+0,,finos,greenkey-asrtoolkit,NONE,Apache-2.0,0,0,NONE,true,0,false,false,master,,,,8319
+0,,finos,OpenMAMA-testdata,NONE,,0,0,NONE,false,-1,false,false,master,,,,241
+0,,finos,legend-engine-iceberg,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,"@pierredebelen, @ivan-kyosev-gs",,,689
+0,,finos,certificate-toolbox,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,@maoo,,,6583
+0,,finos,finos-member-success,NONE,,0,1,NONE,false,PRIVATE,false,false,master,"@maoo, @robmoffat, @grizzwolf, @mindthegab, @TheJuanAndOnly99, @alstratigos",,@wendallkaters,43
+0,,finos,curref-data,INCUBATING,,0,0,NONE,false,-1,false,false,master,,,,8653
+0,,finos,contrib-toolbox,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,main,,,,2771
+0,,finos,legend-config,NONE,,0,0,NONE,false,PRIVATE,false,false,master,,,,65
+0,,finos,glue,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,,,,3595
+0,,finos,finos-marketing,NONE,,0,0,NONE,true,PRIVATE,false,false,master,"@grizzwolf, @winmorgan, @DannyJPC, @niamhoparker",,,454
+0,,finos,legend-persistence,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,master,,,,2499
+0,,finos,finos-parent-pom,INCUBATING,Apache-2.0,0,0,NONE,false,0,false,false,main,,,,14783
+0,,finos,finos-deg,INCUBATING,,0,0,NONE,true,-1,false,false,master,,,,2311
+0,,finos,electron-spellchecker,NONE,NOASSERTION,0,0,NONE,true,-1,false,false,master,,,,4414
+0,,finos,SwiftSearch,NONE,Apache-2.0,0,0,NONE,false,2,false,false,master,,,,1693
+0,,finos,tooling,NO_README,,0,0,NO_README,false,PRIVATE,false,false,master,,,,0
+0,,finos,legend-integration-helm,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,main,,,,3296
+0,,finos,voice-metadata-standard,NONE,Apache-2.0,0,0,NONE,true,1,false,false,master,,,,2738
+0,,finos,wiki.finos.org,NONE,,0,0,NONE,true,-1,false,false,master,,,,69
+0,,finos,CatchIT,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,main,,,,3402
+0,,finos,OpenMAMA,ACTIVE,LGPL-2.1,0,0,OK,false,0,true,false,next,,,,4679
+0,,finos,cla-bot,NONE,Apache-2.0,3,3,NONE,true,-1,false,false,develop,,@maoo @TheJuanAndOnly99,@finos-admin,2185
+0,,finos,openfin-react-hooks,NONE,Apache-2.0,0,0,NONE,true,1,false,false,master,,,,8275
+0,,finos,bot-github-chatops,NONE,Apache-2.0,0,0,NONE,true,0,false,false,master,@maoo,,,4210
+0,,finos,structured-products,NONE,Apache-2.0,0,3,NONE,true,-1,false,false,main,,,@finos-admin,6296
+0,,finos,symphony-wdk-gallery,INCUBATING,Apache-2.0,0,0,NONE,false,0,false,false,main,,,,2133
+0,,finos,metadata,NONE,,13,45,NONE,false,PRIVATE,false,false,main,,@maoo @TheJuanAndOnly99 @alstratigos @grizzwolf,@TheJuanAndOnly99 @maoo @finos-admin,3220
+0,,finos,finos.github.io,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,@maoo,,,2969
+0,,finos,financial-objects,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,master,,,,13743
+0,,finos,asciidoctor-stylesheet-factory,NONE,NOASSERTION,0,0,NONE,true,-1,false,false,master,@copiesofcopies,,,4162
+0,,finos,ScreenSnippet,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,,,,2295
+0,,finos,legend-testing,NONE,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,@epsstan,,,782
+0,,finos,SymphonyWindowsHwndHelper,INCUBATING,Apache-2.0,0,0,NONE,false,-1,true,false,main,,,,2235
+0,,finos,qPython,NONE,Apache-2.0,0,0,NONE,false,1,false,true,main,,,,2461
+0,,finos,symphony-object,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,,,,93
+0,,finos,plexus-interop-desktop-api,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,,,,2634
+0,,finos,secure-electron-adapter,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,,,,2878
+0,,finos,greenkey-intercom-sdk,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,,,,4278
+0,,finos,generator-symphony,INCUBATING,Apache-2.0,0,0,NONE,false,1,false,false,master,,,,3611
+0,,finos,secref-data,INCUBATING,Apache-2.0,0,0,NONE,false,-1,false,false,master,,,,5425
+0,,finos,OSLC-handbook,NONE,NOASSERTION,0,0,NONE,false,-1,false,false,master,,,,2428
+0,,finos,morphir-editor,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,,,,2486
+0,,finos,finos-legend-collaboration,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,,,,2391
+0,,finos,open-compliance-cdmc,NONE,Apache-2.0,0,0,NONE,true,1,false,false,main,,,,2339
+0,,finos,plexus-interop,NONE,Apache-2.0,2,1,NONE,true,-1,false,false,master,,@mend-for-github-com,@finos-admin,11170
+0,,finos,ScreenShareIndicatorFrame,INCUBATING,Apache-2.0,0,0,NONE,false,-1,false,false,master,,,,2152
+0,,finos,a11y-theme-builder-sdk,INCUBATING,Apache-2.0,0,0,NONE,false,2,false,false,main,,,,2185
+0,,finos,hubspot-sync,NONE,,0,0,NONE,false,PRIVATE,false,false,main,@maoo,,,2561
+0,,finos,ScreenSnippet2,INCUBATING,Apache-2.0,0,0,NONE,false,-1,false,false,master,,,,2398
+0,,finos,air-accelerator,INCUBATING,Apache-2.0,0,1,NONE,true,-1,false,false,main,,,@finos-admin,2396
+0,,finos,kdb-studio,NONE,Apache-2.0,0,0,NONE,false,1,false,false,main,,,,2700
+0,,finos,sea-quick-start,INCUBATING,Apache-2.0,0,0,NONE,false,-1,false,false,master,,,,4277
+0,,finos,osr-checklists,NONE,NOASSERTION,0,0,NONE,true,-1,false,false,master,,,,2654
+0,,finos,legend-engine-lakehouse,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,"@pierredebelen, @ivan-kyosev-gs",,,691
+0,,finos,buyside-sellside-interop,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,@agitana,,,2499
+0,,finos,FDC3-Archive,NONE,,0,0,NONE,true,-1,false,false,master,,,,386
+0,,finos,greenkey-discovery-sdk,NONE,Apache-2.0,0,0,NONE,true,1,false,false,master,,,,6188
+0,,finos,cfi-ansible-template,INCUBATING,Apache-2.0,0,0,OK,false,PRIVATE,false,false,main,"@thinkl33t, @abdullahgarcia, @AdrianHammond, @eddie-knight, @peter-thomas-db",,,2026
+0,,finos,open-developer-platform,INCUBATING,Apache-2.0,0,1,NONE,true,-1,false,false,main,,,@maoo,2838
+0,,finos,openfin-python-adapter,NONE,Apache-2.0,0,0,NONE,true,-1,false,false,master,,,,866
+0,,finos,digital-rights-management,INCUBATING,Apache-2.0,0,0,NONE,true,-1,false,false,master,@islavin,,,871
+0,,finos,morphir-bosque,NONE,Apache-2.0,0,0,NONE,true,0,false,false,main,,,,1400
+Score,Pass,Organisation,Repo Name,Finos Lifecycle State (from the README badge),License (from GitHub Api),"Issue Activity (for most recent 50 issues, count most recent 30 comments in last 6 months)","Commit Activity (count of commits in last 6 months, maxed at 100)",OpenSSF Status (from the README badge),Github Archived (has the Archive tag in GitHub API),"Branch Rules/Private (number of approvers or 0 if no approvers, -1 no branch rules",SemGrep (checks .github/workflows/semgrep.yml file exists),CVE Scanning (checks .github/workflows/cve-scanning.yml file exists),Default Branch Name,Excess Admins,Main Issue Participants (list of all participants for issues loaded in Issue Activity column),Main Committers  (list of all participants for commits loaded in Commit Activity column),Length of Readme
+1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos-labs,fdc3-identity-hackathon,NONE,Apache-2.0,0,0,NONE,false,0,false,false,master,"@maoo, @ystxn, @TheJuanAndOnly99, @yinan-symphony, @antoinerollindev, @symphony-jean-michael, @tzhao-symphony, @Yannick-Malins",,,2898
+1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,fdc3-for-the-web,NONE,Apache-2.0,0,100,NONE,false,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,@robmoffat,5514
+1000,FAIL (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,fdc3-api-generator,INCUBATING,Apache-2.0,0,0,NONE,false,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,,2597
+1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,morphir-fsharp,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,main,"@maoo, @DamianReeves, @TheJuanAndOnly99",,,8546
+1000,FAIL (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,morphir-techsprint,INCUBATING,Apache-2.0,0,0,NONE,false,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,,2396
+1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,morphir-wasm,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,master,"@maoo, @DamianReeves, @TheJuanAndOnly99",,,2229
+1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,legend-bigquery-integration,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,master,"@maoo, @TheJuanAndOnly99",,,2229
+1000,FAIL (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,CDM-ECS-FDC3,INCUBATING,Apache-2.0,0,0,NONE,false,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,,2597
+1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,training-course-developing-on-fdc3,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,,1329
+1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,FDC3-App-Directory,NONE,Apache-2.0,0,4,NONE,false,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,@robmoffat,2647
+1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,fdc3-java-api,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,,4821
+1000,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (Branch Reviewers) (No License Set) (No CVE Scan) (No Sem Grep),finos-labs,finos_fdc3_chat,NONE,,0,0,NONE,false,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,,925
+10,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (Branch Reviewers) (No CVE Scan) (No Sem Grep),finos-labs,Voxura,NONE,Apache-2.0,0,10,NONE,false,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,@vbandi @finos-admin @TheJuanAndOnly99 @ChimaIbebunjoh,2824
+1,FAIL (Finos Lifecycle) (wrong admins) (OpenSSF Status) (No CVE Scan) (No Sem Grep),finos-labs,innersource-license-generator,NONE,Apache-2.0,1,0,NONE,false,1,false,false,main,"@maoo, @chamindra, @TheJuanAndOnly99",@robmoffat,,376
+0,,finos-labs,osmm,NONE,,0,1,NONE,true,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,@finos-admin,4107
+0,,finos-labs,devops-mutualization-automated-change-deployment,NONE,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,"@maoo, @TheJuanAndOnly99",,,116
+0,,finos-labs,order-to-chat-fdc3,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,master,"@maoo, @robmoffat, @TheJuanAndOnly99",,,2396
+0,,finos-labs,morphir-cadl,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,master,"@maoo, @TheJuanAndOnly99",,,2396
+0,,finos-labs,air-team-cesar,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,dev,"@maoo, @TheJuanAndOnly99",,,2179
+0,,finos-labs,gaad-hackathon-template,INCUBATING,Apache-2.0,0,0,NONE,false,0,false,false,main,"@maoo, @vinomaster, @TheJuanAndOnly99",,,2087
+0,,finos-labs,rosetta-code-generators,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,master,"@maoo, @TheJuanAndOnly99",,,7689
+0,,finos-labs,weets-bill-pay-it-forward,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,master,"@maoo, @TheJuanAndOnly99",,,2396
+0,,finos-labs,jupyter_finos_widgets,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,master,"@maoo, @TheJuanAndOnly99",,,1171
+0,,finos-labs,project-blueprint,NONE,Apache-2.0,0,0,NONE,false,-1,false,false,main,"@maoo, @TheJuanAndOnly99",,,1604
+0,,finos-labs,oasis,NONE,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,"@maoo, @TheJuanAndOnly99",,,30
+0,,finos-labs,air-team-ivan,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,dev,"@maoo, @TheJuanAndOnly99",,,2396
+0,,finos-labs,csam-crypto,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,main,"@maoo, @TheJuanAndOnly99",,,2396
+0,,finos-labs,nydfs-digital-regulatory-reporting,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,master,"@maoo, @TheJuanAndOnly99",,,2396
+0,,finos-labs,dlt-sandbox,NONE,Apache-2.0,0,3,NONE,false,PRIVATE,false,false,main,"@maoo, @TheJuanAndOnly99",,@finos-admin @TheJuanAndOnly99,2301
+0,,finos-labs,fdc3-desktop-agent-bridge-tests,NONE,Apache-2.0,0,2,NONE,false,PRIVATE,false,false,main,"@maoo, @mindthegab, @kriswest, @TheJuanAndOnly99, @toshaellison, @alstratigos, @john-ciq",,@finos-admin @TheJuanAndOnly99,1616
+0,,finos-labs,air-team-evelyn,INCUBATING,Apache-2.0,0,0,NONE,false,PRIVATE,false,false,dev,"@maoo, @TheJuanAndOnly99",,,2725
