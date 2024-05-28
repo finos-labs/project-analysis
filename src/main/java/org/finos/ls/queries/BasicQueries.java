@@ -107,6 +107,14 @@ public class BasicQueries {
 				return FinosStatus.NONE;
 			}
 		});
+
+	
+	public static QueryType<Integer> README_LENGTH = new AbstractQueryType<Integer>(	
+			FILE_LIST, 10, (r, qe) -> {
+			
+			String text = getReadme(r, qe);
+			return text == null  ? 0 : text.length();
+		});
 	
 	
 	public static QueryType<Activity> ISSUE_ACTIVITY = new AbstractQueryType<>("issues(\n"

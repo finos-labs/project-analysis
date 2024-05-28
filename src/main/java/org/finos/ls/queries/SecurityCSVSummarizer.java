@@ -39,6 +39,7 @@ public class SecurityCSVSummarizer implements CSVSummarizer{
 		"Excess Admins",
 		"Main Issue Participants (list of all participants for issues loaded in Issue Activity column)",
 		"Main Committers  (list of all participants for commits loaded in Commit Activity column)",
+		"Length of Readme"
 	};
 
 	@Override
@@ -67,7 +68,7 @@ public class SecurityCSVSummarizer implements CSVSummarizer{
 		int branchReviewers = BasicQueries.BRANCH_RULES.convert(r, qe);
 		long score = calculateScore(issue, commit, r.getName(), r.getIsPrivate() | r.getIsArchived());
 		String pass = passes(finosStatus, openSSF, wrongAdmins, branchReviewers, license, semGrep, cveScan, score == 0);
-		
+		long readmeLength = BasicQueries.README_LENGTH.convert(r, qe);
 		
 		List<Object> out = new ArrayList<>();
 		out.add(score);
@@ -87,6 +88,7 @@ public class SecurityCSVSummarizer implements CSVSummarizer{
 		out.add(wrongAdmins);
 		out.add(convertToSpaceList(issue));
 		out.add(convertToSpaceList(commit));
+		out.add(readmeLength);
 
 		return out;
 	}
