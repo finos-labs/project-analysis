@@ -22,7 +22,7 @@ import org.yaml.snakeyaml.Yaml;
 public class LandscapeReader {
 	
 
-	@Value("${landscapeLogoPrefix}")
+	@Value("${landscapeLogoPrefix:https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/}")
 	String logoPrefix;
 
 	public List<ProjectInfo> readFromLandscape(String url) {
