@@ -14,9 +14,9 @@ score,url,stargazerCount,"Commit Activity (count of commits in last 6 months, ma
 8878,https://github.com/QuantConnect/Lean,8878,100,"Lean Algorithmic Trading Engine by QuantConnect (Python, C#)",@Martin-Molinero @jhonabreul @LouisSzeto @Marinovsky @Romazes @ashutoshrana171 @AlexCatarino @DerekMelchin @oussamanahdi @KMichaylov
 8699,https://github.com/tradingview/lightweight-charts,8699,79,Performant financial charts built with HTML5 canvas,@SlicedSilver @illetid @eugene-korobko @romfrancois @kirchet @edew
 8634,https://github.com/akfamily/akshare,8634,100,"AKShare is an elegant and simple financial data interface library for Python, built for human beings! 开源财经数据接口库",@albertandking
-7645,https://github.com/akaunting/akaunting,7645,100,Online Accounting Software,@cuneytsenturk @CihanSenturk @mervekaraman @crowdin-bot @kreshnikg
+7646,https://github.com/akaunting/akaunting,7646,100,Online Accounting Software,@cuneytsenturk @CihanSenturk @mervekaraman @crowdin-bot @kreshnikg
 6792,https://github.com/StockSharp/StockSharp,6792,100,"Algorithmic trading and quantitative trading open source platform to develop trading robots (stock markets, forex, crypto, bitcoins, and options).",@mikasoukhov
-6335,https://github.com/firmai/financial-machine-learning,6335,100,A curated list of practical financial machine learning tools and applications.,@github-actions[bot]
+6336,https://github.com/firmai/financial-machine-learning,6336,100,A curated list of practical financial machine learning tools and applications.,@github-actions[bot]
 5250,https://github.com/ricequant/rqalpha,5250,58,"A extendable, replaceable Python algorithmic backtest && trading framework supporting multiple securities",@Lin-Dongzhao @Cuizi7
 3921,https://github.com/polakowo/vectorbt,3921,11,"Find your trading edge, using the fastest engine for backtesting, algorithmic trading, and research. ",@polakowo
 3767,https://github.com/ghostfolio/ghostfolio,3767,100,Open Source Wealth Management Software. Angular + NestJS + Prisma + Nx + TypeScript 🤍,@dtslvr @SirZemar @GerardPolloRebozado @juanabascal @coharms @Fedron @lildude
@@ -56,7 +56,7 @@ score,url,stargazerCount,"Commit Activity (count of commits in last 6 months, ma
 613,https://github.com/ad-si/Transity,613,42,"Keep track of your 💵, 🕘, 🐖, 🐄, 🍻 on your command line with the plain text accounting tool of the future! 🚀",@ad-si
 548,https://github.com/NickvisionApps/Denaro,548,52,Manage your personal finances,@nlogozzo @JoseBritto @weblate @soumyaDghosh
 530,https://github.com/andrewdwallo/erpsaas,530,37,"A Laravel and Filament-powered accounting platform, crafting a modern and automated solution for financial management.",@andrewdwallo
-512,https://github.com/Pool-Of-Tears/GreenStash,512,69,Simple FOSS android app to help you plan and manage your savings goals easily and establish the habit of saving money.,@starry-shivam @Nekothegamer @marchingon12 @mrghosti3 @theolm @PeterDaveHello @yurtpage
+513,https://github.com/Pool-Of-Tears/GreenStash,513,69,Simple FOSS android app to help you plan and manage your savings goals easily and establish the habit of saving money.,@starry-shivam @Nekothegamer @marchingon12 @mrghosti3 @theolm @PeterDaveHello @yurtpage
 508,https://github.com/JerBouma/ThePassiveInvestor,508,17,Passive Investing for the Average Joe,@JerBouma @dependabot[bot]
 501,https://github.com/quarkfin/qf-lib,501,15,"Modular Python library that provides an advanced event driven backtester and a set of high quality tools for quantitative finance. Integrated with various data vendors and brokers, supports Crypto, Stocks and Futures.",@myrmarachne @eirik-thorp @gultugaydemir
 480,https://github.com/victorbalssa/abacus,480,21,🟠 Abacus: Firefly III mobile application.,@victorbalssa @hamza-fadil @daanvanberkel @Maxco10 @maramazza @PterX @Elmagenta @NiteNeal @andyslucky
