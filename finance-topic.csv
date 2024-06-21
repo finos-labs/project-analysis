@@ -1,10 +1,10 @@
 score,url,stargazerCount,"Commit Activity (count of commits in last 6 months, maxed at 100)",Description,Main Committers  (list of all participants for commits loaded in Commit Activity column)
-28183,https://github.com/maybe-finance/maybe,28183,100,The OS for your personal finances,@zachgoll @dependabot[bot] @jakubkottnauer @ziraqyoung @scubamaggo @mattia-malnis @friaca @karankiri @gathuku @tonyvince @pea-sys @Shpigford @claudey @karbassi @duyle-py
+28185,https://github.com/maybe-finance/maybe,28185,100,The OS for your personal finances,@zachgoll @dependabot[bot] @jakubkottnauer @ziraqyoung @scubamaggo @mattia-malnis @friaca @karankiri @gathuku @tonyvince @pea-sys @Shpigford @claudey @karbassi @duyle-py
 26405,https://github.com/OpenBB-finance/OpenBBTerminal,26405,100,"Investment Research for Everyone, Everywhere.",@deeleeramone @hjoaquim @montezdesousa @IgorWounds @piiq @jmaslek @jzhao62
 23853,https://github.com/vnpy/vnpy,23853,43,基于Python的开源量化交易平台开发框架,@vnpy @noranhe @bug-or-feature
 20779,https://github.com/plotly/dash,20779,100,Data Apps & Dashboards for Python. No JavaScript Required.,@T4rk1n @insistence @AnnMarieW @Borda @leeagustin @aGitForEveryone @gvwilson @peicuiping
 16654,https://github.com/wilsonfreitas/awesome-quant,16654,72,"A curated list of insanely awesome libraries, packages and resources for Quants (Quantitative Finance)",@wilsonfreitas @HugoDelatte @tianzedavid @femtotrader @oliviermilla @jamesmunro
-14691,https://github.com/firefly-iii/firefly-iii,14691,100,Firefly III: a personal finances manager,@JC5 @github-actions[bot] @stevewasiura @JeroenED @dependabot[bot]
+14692,https://github.com/firefly-iii/firefly-iii,14692,100,Firefly III: a personal finances manager,@JC5 @github-actions[bot] @stevewasiura @JeroenED @dependabot[bot]
 14488,https://github.com/microsoft/qlib,14488,27,"Qlib is an AI-oriented quantitative investment platform that aims to realize the potential, empower research, and create value using AI technologies in quantitative investment, from exploring ideas to implementing productions. Qlib supports diverse machine learning modeling paradigms. including supervised learning, market dynamics modeling, and RL.",@SunsetWolf @you-n-g @akazeakari @Xisen-Wang @raikiriww @block-gpt @feilongfl @zhstark @eltociear @YeewahChan @Fivele-Li @igeni @m3ngyang @OzzyXu @playfund
 12459,https://github.com/AI4Finance-Foundation/FinGPT,12459,39,FinGPT: Open-Source Financial Large Language Models!  Revolutionize 🔥    We release the trained model on HuggingFace.,@BruceYanghy @llk010502 @boyuZh @WilliamGazeley @EleniVerteouri @bhadreshpsavani @KPCOFGS @GasonBai @amayuelas @Noir97
 12325,https://github.com/actualbudget/actual,12325,100,A local-first personal finance app,@joel-jeremy @carkom @MatissJanis @psybers @lelemm @twk3 @Crazypkr1099 @jfdoming @Wizmaster @Tigatok @aaimio @Marethyu1 @jpelgrom @bfritscher @uniqueeest @dymanoid @mirdaki @dangrous @duplaja @MikesGlitch @joewashear007 @sreetamdas @turt2live @youngcw @chinalichen @strazto @shall0pass @matt-fidd
@@ -16,7 +16,7 @@ score,url,stargazerCount,"Commit Activity (count of commits in last 6 months, ma
 8634,https://github.com/akfamily/akshare,8634,100,"AKShare is an elegant and simple financial data interface library for Python, built for human beings! 开源财经数据接口库",@albertandking
 7646,https://github.com/akaunting/akaunting,7646,100,Online Accounting Software,@cuneytsenturk @CihanSenturk @mervekaraman @crowdin-bot @kreshnikg
 6792,https://github.com/StockSharp/StockSharp,6792,100,"Algorithmic trading and quantitative trading open source platform to develop trading robots (stock markets, forex, crypto, bitcoins, and options).",@mikasoukhov
-6336,https://github.com/firmai/financial-machine-learning,6336,100,A curated list of practical financial machine learning tools and applications.,@github-actions[bot]
+6337,https://github.com/firmai/financial-machine-learning,6337,100,A curated list of practical financial machine learning tools and applications.,@github-actions[bot]
 5250,https://github.com/ricequant/rqalpha,5250,58,"A extendable, replaceable Python algorithmic backtest && trading framework supporting multiple securities",@Lin-Dongzhao @Cuizi7
 3921,https://github.com/polakowo/vectorbt,3921,11,"Find your trading edge, using the fastest engine for backtesting, algorithmic trading, and research. ",@polakowo
 3767,https://github.com/ghostfolio/ghostfolio,3767,100,Open Source Wealth Management Software. Angular + NestJS + Prisma + Nx + TypeScript 🤍,@dtslvr @SirZemar @GerardPolloRebozado @juanabascal @coharms @Fedron @lildude
@@ -25,8 +25,8 @@ score,url,stargazerCount,"Commit Activity (count of commits in last 6 months, ma
 3016,https://github.com/JerBouma/FinanceDatabase,3016,100,"This is a database of 300.000+ symbols containing Equities, ETFs, Funds, Indices, Currencies, Cryptocurrencies and Money Markets.",@actions-user @dependabot[bot] @JerBouma @colin99d @NeilOrley
 2831,https://github.com/simonmichael/hledger,2831,100,"Robust, fast, intuitive plain text accounting tool with CLI, TUI and web interfaces.",@simonmichael @victormihalache
 2813,https://github.com/dcajasn/Riskfolio-Lib,2813,40,Portfolio Optimization and Quantitative Strategic Asset Allocation in Python,@dcajasn
-2727,https://github.com/midday-ai/midday,2727,100,Run your business smarter 🪄,@pontusab @sagar-jani @dhairyathedev
-2509,https://github.com/JerBouma/FinanceToolkit,2509,100,Transparent and Efficient Financial Analysis,@JerBouma @dependabot[bot] @northern-64bit
+2728,https://github.com/midday-ai/midday,2728,100,Run your business smarter 🪄,@pontusab @sagar-jani @dhairyathedev
+2510,https://github.com/JerBouma/FinanceToolkit,2510,100,Transparent and Efficient Financial Analysis,@JerBouma @dependabot[bot] @northern-64bit
 2204,https://github.com/klinecharts/KLineChart,2204,100,📈Lightweight k-line chart that can be highly customized. Zero dependencies. Support mobile.（可高度自定义的轻量级k线图，无第三方依赖，支持移动端）,@liihuu @sinianzhiren @cryptotooltop @asz8621
 2067,https://github.com/FinMind/FinMind,2067,10,"Open Data, more than 50 financial data. 提供超過 50 個金融資料(台股為主)，每天更新 https://finmind.github.io/",@linsamtw @machineCYC @sakkyoi
 1987,https://github.com/refraction-ray/xalpha,1987,16,基金投资管理回测引擎,@refraction-ray @qwerty258
