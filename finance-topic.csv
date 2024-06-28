@@ -1,27 +1,27 @@
 score,url,stargazerCount,"Commit Activity (count of commits in last 6 months, maxed at 100)",Description,Main Committers  (list of all participants for commits loaded in Commit Activity column)
-28268,https://github.com/maybe-finance/maybe,28268,100,The OS for your personal finances,@zachgoll @dependabot[bot] @jakubkottnauer @tonyvince @ziraqyoung @scubamaggo @mattia-malnis @friaca @karankiri @gathuku @pea-sys @igorcarvalhh @evangelos-com @Shpigford @duyle-py
+28269,https://github.com/maybe-finance/maybe,28269,100,The OS for your personal finances,@zachgoll @dependabot[bot] @jakubkottnauer @tonyvince @ziraqyoung @scubamaggo @mattia-malnis @friaca @karankiri @gathuku @pea-sys @igorcarvalhh @evangelos-com @Shpigford
 26487,https://github.com/OpenBB-finance/OpenBBTerminal,26487,100,"Investment Research for Everyone, Everywhere.",@deeleeramone @hjoaquim @montezdesousa @piiq @IgorWounds @jmaslek @jzhao62
-23905,https://github.com/vnpy/vnpy,23905,43,基于Python的开源量化交易平台开发框架,@vnpy @noranhe @bug-or-feature
+23906,https://github.com/vnpy/vnpy,23906,43,基于Python的开源量化交易平台开发框架,@vnpy @noranhe @bug-or-feature
 20819,https://github.com/plotly/dash,20819,100,Data Apps & Dashboards for Python. No JavaScript Required.,@T4rk1n @insistence @aGitForEveryone @AnnMarieW @Borda @leeagustin @gvwilson @peicuiping
 16726,https://github.com/wilsonfreitas/awesome-quant,16726,72,"A curated list of insanely awesome libraries, packages and resources for Quants (Quantitative Finance)",@wilsonfreitas @HugoDelatte @tianzedavid @femtotrader @oliviermilla @jamesmunro
-14745,https://github.com/firefly-iii/firefly-iii,14745,100,Firefly III: a personal finances manager,@JC5 @github-actions[bot] @stevewasiura @JeroenED @dependabot[bot]
+14746,https://github.com/firefly-iii/firefly-iii,14746,100,Firefly III: a personal finances manager,@JC5 @github-actions[bot] @stevewasiura @JeroenED @dependabot[bot]
 14524,https://github.com/microsoft/qlib,14524,30,"Qlib is an AI-oriented quantitative investment platform that aims to realize the potential, empower research, and create value using AI technologies in quantitative investment, from exploring ideas to implementing productions. Qlib supports diverse machine learning modeling paradigms. including supervised learning, market dynamics modeling, and RL.",@SunsetWolf @you-n-g @akazeakari @taozhiwang @Xisen-Wang @raikiriww @block-gpt @feilongfl @zhstark @eltociear @YeewahChan @Fivele-Li @igeni @m3ngyang @OzzyXu @playfund
-12519,https://github.com/AI4Finance-Foundation/FinGPT,12519,37,FinGPT: Open-Source Financial Large Language Models!  Revolutionize 🔥    We release the trained model on HuggingFace.,@BruceYanghy @llk010502 @WilliamGazeley @boyuZh @EleniVerteouri @KPCOFGS @GasonBai @amayuelas @Noir97
+12521,https://github.com/AI4Finance-Foundation/FinGPT,12521,37,FinGPT: Open-Source Financial Large Language Models!  Revolutionize 🔥    We release the trained model on HuggingFace.,@BruceYanghy @llk010502 @WilliamGazeley @boyuZh @EleniVerteouri @KPCOFGS @GasonBai @amayuelas @Noir97
 12379,https://github.com/actualbudget/actual,12379,100,A local-first personal finance app,@joel-jeremy @carkom @MatissJanis @psybers @lelemm @Crazypkr1099 @jfdoming @MikesGlitch @Wizmaster @Tigatok @twk3 @aaimio @youngcw @Marethyu1 @jpelgrom @bfritscher @uniqueeest @dymanoid @mirdaki @dangrous @duplaja @sreetamdas @turt2live @chinalichen @strazto @shall0pass @matt-fidd
-11005,https://github.com/juspay/hyperswitch,11005,100,"An open source payments switch written in Rust to make payments fast, reliable and affordable",@github-actions[bot] @pixincreate @Chethan-rao @ShankarSinghC @hrithikesh026 @sahkal @apoorvdixit88 @prajjwalkumar17 @deepanshu-iiitu @ThisIsMani @Aprabhat19 @sai-harsha-vardhan @AkshayaFoiger @swangi-kumari @tsdk02 @lsampras @likhinbopanna @vsrivatsa-juspay @SanchithHegde @srujanchikke @Sarthak1799 @Sakilmostak @Narayanbhat166 @jagan-jaya @racnan @JeevaRamu0104 @gorakhnathy7 @Abhitator216 @NishantJoshi00 @KiranKBR @vspecky @kashif-m @awasthi21 @ind1goDusk
+11007,https://github.com/juspay/hyperswitch,11007,100,"An open source payments switch written in Rust to make payments fast, reliable and affordable",@github-actions[bot] @pixincreate @Chethan-rao @ShankarSinghC @hrithikesh026 @sahkal @apoorvdixit88 @prajjwalkumar17 @deepanshu-iiitu @ThisIsMani @Aprabhat19 @sai-harsha-vardhan @AkshayaFoiger @swangi-kumari @tsdk02 @lsampras @likhinbopanna @vsrivatsa-juspay @SanchithHegde @srujanchikke @Sarthak1799 @Sakilmostak @Narayanbhat166 @jagan-jaya @racnan @JeevaRamu0104 @gorakhnathy7 @Abhitator216 @NishantJoshi00 @KiranKBR @vspecky @kashif-m @awasthi21 @ind1goDusk
 9356,https://github.com/AI4Finance-Foundation/FinRL,9356,73,FinRL:  Financial Reinforcement Learning. 🔥,@dependabot[bot] @C4i0kun @pre-commit-ci[bot] @zhumingpassional @BruceYanghy @krishdotn1 @tricao7 @sahiljain01 @kurone02 @keonho-kim @RGIIST @dytsou
 9204,https://github.com/TA-Lib/ta-lib-python,9204,21,Python wrapper for TA-Lib (http://ta-lib.org/).,@mrjbq7 @clamytoe @xmatthias
-8915,https://github.com/QuantConnect/Lean,8915,100,"Lean Algorithmic Trading Engine by QuantConnect (Python, C#)",@Martin-Molinero @Marinovsky @jhonabreul @Romazes @LouisSzeto @AlexCatarino @DerekMelchin
+8916,https://github.com/QuantConnect/Lean,8916,100,"Lean Algorithmic Trading Engine by QuantConnect (Python, C#)",@Martin-Molinero @Marinovsky @jhonabreul @Romazes @LouisSzeto @AlexCatarino @DerekMelchin
 8740,https://github.com/tradingview/lightweight-charts,8740,77,Performant financial charts built with HTML5 canvas,@SlicedSilver @illetid @eugene-korobko @romfrancois @edew
 8664,https://github.com/akfamily/akshare,8664,100,"AKShare is an elegant and simple financial data interface library for Python, built for human beings! 开源财经数据接口库",@albertandking
 7665,https://github.com/akaunting/akaunting,7665,100,Online Accounting Software,@cuneytsenturk @CihanSenturk @mervekaraman @crowdin-bot @kreshnikg
 6812,https://github.com/StockSharp/StockSharp,6812,100,"Algorithmic trading and quantitative trading open source platform to develop trading robots (stock markets, forex, crypto, bitcoins, and options).",@mikasoukhov
-6361,https://github.com/firmai/financial-machine-learning,6361,100,A curated list of practical financial machine learning tools and applications.,@github-actions[bot]
+6362,https://github.com/firmai/financial-machine-learning,6362,100,A curated list of practical financial machine learning tools and applications.,@github-actions[bot]
 5255,https://github.com/ricequant/rqalpha,5255,72,"A extendable, replaceable Python algorithmic backtest && trading framework supporting multiple securities",@Lin-Dongzhao @Cuizi7
 3946,https://github.com/polakowo/vectorbt,3946,11,"Find your trading edge, using the fastest engine for backtesting, algorithmic trading, and research. ",@polakowo
-3796,https://github.com/ghostfolio/ghostfolio,3796,100,Open Source Wealth Management Software. Angular + NestJS + Prisma + Nx + TypeScript 🤍,@dtslvr @SirZemar @GerardPolloRebozado @juanabascal @coharms @Fedron @lildude
-3636,https://github.com/evidence-dev/evidence,3636,100,"Business intelligence as code: build fast, interactive data visualizations in pure SQL and markdown",@ItsMeBrianD @mcrascal @zachstence @kwongz @hughess @archiewood
-3043,https://github.com/JerBouma/FinanceDatabase,3043,100,"This is a database of 300.000+ symbols containing Equities, ETFs, Funds, Indices, Currencies, Cryptocurrencies and Money Markets.",@actions-user @dependabot[bot] @JerBouma @colin99d @NeilOrley
+3797,https://github.com/ghostfolio/ghostfolio,3797,100,Open Source Wealth Management Software. Angular + NestJS + Prisma + Nx + TypeScript 🤍,@dtslvr @SirZemar @GerardPolloRebozado @juanabascal @coharms @Fedron @lildude
+3637,https://github.com/evidence-dev/evidence,3637,100,"Business intelligence as code: build fast, interactive data visualizations in pure SQL and markdown",@ItsMeBrianD @mcrascal @zachstence @kwongz @hughess @archiewood
+3044,https://github.com/JerBouma/FinanceDatabase,3044,100,"This is a database of 300.000+ symbols containing Equities, ETFs, Funds, Indices, Currencies, Cryptocurrencies and Money Markets.",@actions-user @dependabot[bot] @JerBouma @colin99d @NeilOrley
 2856,https://github.com/midday-ai/midday,2856,100,Run your business smarter 🪄,@pontusab
 2839,https://github.com/simonmichael/hledger,2839,100,"Robust, fast, intuitive plain text accounting tool with CLI, TUI and web interfaces.",@simonmichael @victormihalache
 2820,https://github.com/dcajasn/Riskfolio-Lib,2820,40,Portfolio Optimization and Quantitative Strategic Asset Allocation in Python,@dcajasn
@@ -39,7 +39,7 @@ score,url,stargazerCount,"Commit Activity (count of commits in last 6 months, ma
 1277,https://github.com/bashtage/arch,1277,21,ARCH models in Python,@bashtage
 1169,https://github.com/AI4Finance-Foundation/FinRL-Meta,1169,14,FinRL­-Meta: Dynamic datasets and market environments for FinRL.,@pre-commit-ci[bot] @BruceYanghy @zhumingpassional @krishdotn1
 1161,https://github.com/jameskokoska/Cashew,1161,100,💸 An app created to help users manage a budget and purchases,@jameskokoska
-1108,https://github.com/AI4Finance-Foundation/FinRobot,1108,100,"FinRobot: An Open-Source AI Agent Platform for Financial Applications using LLMs 🚀 🚀 🚀 ",@BruceYanghy @Noir97 @Athe-kunal
+1109,https://github.com/AI4Finance-Foundation/FinRobot,1109,100,"FinRobot: An Open-Source AI Agent Platform for Financial Applications using LLMs 🚀 🚀 🚀 ",@BruceYanghy @Noir97 @Athe-kunal
 1101,https://github.com/mlouielu/twstock,1101,18,台灣股市股票價格擷取 (含即時股票資訊) - Taiwan Stock Opendata with realtime,@mlouielu @JeffBla
 975,https://github.com/range-of-motion/budget,975,10,Get a grip on your finances.,@range-of-motion
 932,https://github.com/avhz/RustQuant,932,72,Rust library for quantitative finance.,@yfnaji @avhz @joaquinbejar @github-actions[bot] @MeetThePatel @dependabot[bot] @qiweiii @y5
@@ -53,7 +53,7 @@ score,url,stargazerCount,"Commit Activity (count of commits in last 6 months, ma
 767,https://github.com/Lumiwealth/lumibot,767,100,"Backtesting and Trading Bots Made Easy for Crypto, Stocks, Options, Futures, FOREX and more",@grzesir @Canx @Al4ise @davidlatte
 719,https://github.com/quickfixgo/quickfix,719,47,The Go FIX Protocol Library :rocket:,@ackleymi @SNORRIS721 @haoyang1994 @AlexandrosKyriakakis @momin-javed @mgatny
 613,https://github.com/ad-si/Transity,613,42,"Keep track of your 💵, 🕘, 🐖, 🐄, 🍻 on your command line with the plain text accounting tool of the future! 🚀",@ad-si
-551,https://github.com/NickvisionApps/Denaro,551,35,Manage your personal finances,@nlogozzo @weblate @JoseBritto @soumyaDghosh
+552,https://github.com/NickvisionApps/Denaro,552,35,Manage your personal finances,@nlogozzo @weblate @JoseBritto @soumyaDghosh
 545,https://github.com/andrewdwallo/erpsaas,545,43,"A Laravel and Filament-powered accounting platform, crafting a modern and automated solution for financial management.",@andrewdwallo
 524,https://github.com/Pool-Of-Tears/GreenStash,524,67,Simple FOSS android app to help you plan and manage your savings goals easily and establish the habit of saving money.,@starry-shivam @Nekothegamer @marchingon12 @mrghosti3 @theolm @PeterDaveHello @yurtpage
 509,https://github.com/JerBouma/ThePassiveInvestor,509,17,Passive Investing for the Average Joe,@JerBouma @dependabot[bot]
@@ -111,7 +111,7 @@ score,url,stargazerCount,"Commit Activity (count of commits in last 6 months, ma
 0,https://github.com/kevinschaich/mintable,1490,0,"🍃 Automate your personal finances – for free, with no ads, and no data collection.",
 0,https://github.com/dbrojas/optlib,631,0,A library for financial options pricing written in Python.,
 0,https://github.com/dpguthrie/yahooquery,745,0,Python wrapper for an unofficial Yahoo Finance API,
-0,https://github.com/google/tf-quant-finance,4356,0,High-performance TensorFlow library for quantitative finance.,
+0,https://github.com/google/tf-quant-finance,4358,0,High-performance TensorFlow library for quantitative finance.,
 0,https://github.com/quantsbin/Quantsbin,471,0,Quantitative Finance tools,
 0,https://github.com/JerBouma/AlgorithmicTrading,822,0,"This repository contains three ways to obtain arbitrage which are Dual Listing, Options and Statistical Arbitrage. These are projects in collaboration with Optiver and have been peer-reviewed by staff members of Optiver.",
 0,https://github.com/ranaroussi/quantstats,4486,0,"Portfolio analytics for quants, written in Python",
@@ -122,7 +122,7 @@ score,url,stargazerCount,"Commit Activity (count of commits in last 6 months, ma
 0,https://github.com/isaiahbjork/Auto-GPT-MetaTrader-Plugin,449,0,The AutoGPT MetaTrader Plugin is a software tool that enables traders to connect their MetaTrader 4 or 5 trading account to Auto-GPT.,
 0,https://github.com/ayastreb/money-tracker,888,0,:moneybag: Personal finances tracking web app,
 0,https://github.com/fmilthaler/FinQuant,1324,0,"A program for financial portfolio management, analysis and optimisation.",
-0,https://github.com/constverum/Quantdom,702,0,Python-based framework for backtesting trading strategies & analyzing financial markets [GUI :neckbeard:],
+0,https://github.com/constverum/Quantdom,704,0,Python-based framework for backtesting trading strategies & analyzing financial markets [GUI :neckbeard:],
 0,https://github.com/alpacahq/example-hftish,733,0,Example Order Book Imbalance Algorithm,
 0,https://github.com/trentpiercy/flutter-candlesticks,424,0,Elegant OHLC Candlestick and Trade Volume charts for @Flutter,
 0,https://github.com/waditu/tushare,12701,0,TuShare is a utility for crawling historical data of China stocks,
@@ -139,7 +139,7 @@ score,url,stargazerCount,"Commit Activity (count of commits in last 6 months, ma
 0,https://github.com/kernc/backtesting.py,5034,0,:mag_right: :chart_with_upwards_trend: :snake: :moneybag:  Backtest trading strategies in Python.,
 0,https://github.com/trentpiercy/trace,1098,0,Modern crypto portfolio & market explorer. Built with @Flutter,
 0,https://github.com/alpacahq/alpaca-backtrader-api,597,0,"Alpaca Trading API integrated with backtrader ",
-0,https://github.com/guanquann/Stocksera,617,0,Finance application that provides more than 60 different alternative data to retail investors,
+0,https://github.com/guanquann/Stocksera,618,0,Finance application that provides more than 60 different alternative data to retail investors,
 0,https://github.com/microsoft/maro,825,0,"Multi-Agent Resource Optimization (MARO) platform is an instance of Reinforcement Learning as a Service (RaaS) for real-world resource optimization problems. ",
 0,https://github.com/Hvass-Labs/FinanceOps,802,0,Research in investment finance with Python Notebooks,
 0,https://github.com/toomore/grs,430,0,📈 台灣上市上櫃股票價格擷取（Fetch Taiwan Stock Exchange data）含即時盤、台灣時間轉換、開休市判斷。,
