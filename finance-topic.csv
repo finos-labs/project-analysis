@@ -1,5 +1,5 @@
 score,url,stargazerCount,"Commit Activity (count of commits in last 6 months, maxed at 100)",Description,Main Committers  (list of all participants for commits loaded in Commit Activity column)
-28267,https://github.com/maybe-finance/maybe,28267,100,The OS for your personal finances,@zachgoll @dependabot[bot] @jakubkottnauer @tonyvince @ziraqyoung @scubamaggo @mattia-malnis @friaca @karankiri @gathuku @pea-sys @igorcarvalhh @evangelos-com @Shpigford @duyle-py
+28268,https://github.com/maybe-finance/maybe,28268,100,The OS for your personal finances,@zachgoll @dependabot[bot] @jakubkottnauer @tonyvince @ziraqyoung @scubamaggo @mattia-malnis @friaca @karankiri @gathuku @pea-sys @igorcarvalhh @evangelos-com @Shpigford @duyle-py
 26487,https://github.com/OpenBB-finance/OpenBBTerminal,26487,100,"Investment Research for Everyone, Everywhere.",@deeleeramone @hjoaquim @montezdesousa @piiq @IgorWounds @jmaslek @jzhao62
 23905,https://github.com/vnpy/vnpy,23905,43,基于Python的开源量化交易平台开发框架,@vnpy @noranhe @bug-or-feature
 20819,https://github.com/plotly/dash,20819,100,Data Apps & Dashboards for Python. No JavaScript Required.,@T4rk1n @insistence @aGitForEveryone @AnnMarieW @Borda @leeagustin @gvwilson @peicuiping
@@ -19,7 +19,7 @@ score,url,stargazerCount,"Commit Activity (count of commits in last 6 months, ma
 6361,https://github.com/firmai/financial-machine-learning,6361,100,A curated list of practical financial machine learning tools and applications.,@github-actions[bot]
 5255,https://github.com/ricequant/rqalpha,5255,72,"A extendable, replaceable Python algorithmic backtest && trading framework supporting multiple securities",@Lin-Dongzhao @Cuizi7
 3946,https://github.com/polakowo/vectorbt,3946,11,"Find your trading edge, using the fastest engine for backtesting, algorithmic trading, and research. ",@polakowo
-3795,https://github.com/ghostfolio/ghostfolio,3795,100,Open Source Wealth Management Software. Angular + NestJS + Prisma + Nx + TypeScript 🤍,@dtslvr @SirZemar @GerardPolloRebozado @juanabascal @coharms @Fedron @lildude
+3796,https://github.com/ghostfolio/ghostfolio,3796,100,Open Source Wealth Management Software. Angular + NestJS + Prisma + Nx + TypeScript 🤍,@dtslvr @SirZemar @GerardPolloRebozado @juanabascal @coharms @Fedron @lildude
 3636,https://github.com/evidence-dev/evidence,3636,100,"Business intelligence as code: build fast, interactive data visualizations in pure SQL and markdown",@ItsMeBrianD @mcrascal @zachstence @kwongz @hughess @archiewood
 3043,https://github.com/JerBouma/FinanceDatabase,3043,100,"This is a database of 300.000+ symbols containing Equities, ETFs, Funds, Indices, Currencies, Cryptocurrencies and Money Markets.",@actions-user @dependabot[bot] @JerBouma @colin99d @NeilOrley
 2856,https://github.com/midday-ai/midday,2856,100,Run your business smarter 🪄,@pontusab
