@@ -196,7 +196,7 @@ public class BasicTest {
 	
 	@Test
 	public void testCSV() throws Exception {
-		String out = csv.generateOrg(ORG, new SecurityCSVSummarizer(Collections.emptyList(), Collections.emptyList()));
+		String out = csv.generateOrg(ORG, new SecurityCSVSummarizer(Collections.emptyList(), Collections.emptyList(), Collections.emptyList()));
 		System.out.println(out);
 	}
 	

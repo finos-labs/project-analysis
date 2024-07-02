@@ -62,8 +62,7 @@ public class LandscapeReader {
 					pi.mainRepo = (String) item.get("repo_url");
 					pi.type = ProjectInfo.projectType((String) item.get("project"));
 					pi.homepageUrl = (String) item.get("homepage_url");
-					List<Map<String, Object>> additionalRepos = (List<Map<String, Object>>) subcat
-							.get("additional_repos");
+					List<Map<String, Object>> additionalRepos = (List<Map<String, Object>>) item.get("additional_repos");
 					if (additionalRepos != null) {
 						List<String> ar = additionalRepos.stream().map(i -> (String) i.get("repo_url"))
 								.collect(Collectors.toList());

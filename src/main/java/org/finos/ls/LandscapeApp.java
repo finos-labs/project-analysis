@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import org.finos.ls.landscape.LandscapeReader;
+import org.finos.ls.landscape.ProjectInfo;
 import org.finos.ls.queries.SecurityCSVSummarizer;
 import org.finos.ls.search.FinanceCSVSummarizer;
 import org.finos.scan.github.client.spring_autoconfiguration.SpringConfiguration;
@@ -28,6 +30,9 @@ public class LandscapeApp implements CommandLineRunner {
 	public static void main(String[] args) {
 		SpringApplication.run(LandscapeApp.class, args);
 	}
+	
+	@Value("${landscapeUrl}")
+	String landscapeUrl;
 
 	@Autowired
 	ReadmeGenerator readme;
@@ -40,6 +45,9 @@ public class LandscapeApp implements CommandLineRunner {
 	
 	@Autowired
 	PullRequestService pr;
+	
+	@Autowired
+	LandscapeReader lr;
 	
 	@Value("${spring.profiles.active:}")
 	String activeProfiles;
@@ -91,12 +99,13 @@ public class LandscapeApp implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		if (activeProfiles.contains("summarize")) {
-			// first, write the readme
-			String readmeContent = readme.generate(25, orgs);
-			commit.commitFile(readmeFile, readmeContent.getBytes(), head, repo, owner);
+//			// first, write the readme
+//			String readmeContent = readme.generate(25, orgs);
+//			commit.commitFile(readmeFile, readmeContent.getBytes(), head, repo, owner);
 			
 			// then write the csv
-			SecurityCSVSummarizer summ = new SecurityCSVSummarizer(Arrays.asList(ignore), Arrays.asList(priority));
+			List<ProjectInfo> projects = lr.readFromLandscape(landscapeUrl);
+			SecurityCSVSummarizer summ = new SecurityCSVSummarizer(Arrays.asList(ignore), Arrays.asList(priority), projects);
 			StringBuilder sb = new StringBuilder();
 			orgs.forEach(o -> {
 				try {
@@ -107,10 +116,10 @@ public class LandscapeApp implements CommandLineRunner {
 			});
 			commit.commitFile(csvFile, sb.toString().getBytes(), head, repo, owner);
 			
-			FinanceCSVSummarizer fcsv = new FinanceCSVSummarizer();
-			String fcsvContent = csv.generateTopic("finance", fcsv);
-			commit.commitFile(fcsvFile, fcsvContent.getBytes(), head, repo, owner);
-			
+//			FinanceCSVSummarizer fcsv = new FinanceCSVSummarizer();
+//			String fcsvContent = csv.generateTopic("finance", fcsv);
+//			commit.commitFile(fcsvFile, fcsvContent.getBytes(), head, repo, owner);
+//			
 			// create a pr
 			pr.createOrUpdatePullRequest(repo, owner, base, head, Collections.singletonList("@robmoffat"), "Updated Generated Files");
 			ctx.close();

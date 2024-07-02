@@ -3,6 +3,8 @@ package org.finos.ls.queries;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.finos.ls.landscape.ProjectInfo;
+import org.finos.ls.landscape.ProjectInfo.ProjectType;
 import org.finos.ls.queries.BasicQueries.FinosStatus;
 import org.finos.ls.queries.BasicQueries.OpenSSFStatus;
 import org.finos.scan.github.client.Repository;
@@ -12,11 +14,14 @@ import org.springframework.util.StringUtils;
 public class SecurityCSVSummarizer implements CSVSummarizer{
 	
 	private List<String> ignoreList;
+	private List<ProjectInfo> projects;
+
 	
-	public SecurityCSVSummarizer(List<String> ignoreList, List<String> priorityList) {
+	public SecurityCSVSummarizer(List<String> ignoreList, List<String> priorityList, List<ProjectInfo> projects) {
 		super();
 		this.ignoreList = ignoreList;
 		this.priorityList = priorityList;
+		this.projects = projects;
 	}
 
 	private List<String> priorityList;
@@ -39,7 +44,10 @@ public class SecurityCSVSummarizer implements CSVSummarizer{
 		"Excess Admins",
 		"Main Issue Participants (list of all participants for issues loaded in Issue Activity column)",
 		"Main Committers  (list of all participants for commits loaded in Commit Activity column)",
-		"Length of Readme"
+		"Length of Readme",
+		"Project Name",
+		"Type",
+		"Stage"
 	};
 
 	@Override
@@ -89,8 +97,47 @@ public class SecurityCSVSummarizer implements CSVSummarizer{
 		out.add(convertToSpaceList(issue));
 		out.add(convertToSpaceList(commit));
 		out.add(readmeLength);
-
+		out.add(projectName(r));
+		out.add(projectType(r));
+		out.add(projectStage(r));
 		return out;
+	}
+
+	private String projectName(Repository r) {
+		ProjectInfo pi = getMatchingProject(r.getName(), r.getOwner().getLogin());
+		return pi != null ? pi.name : "";
+	}
+	
+	private String projectType(Repository r) {
+		ProjectInfo pi = getMatchingProject(r.getName(), r.getOwner().getLogin());
+		return (pi != null) && pi.type == ProjectType.SIG ? "SIG" : "Project";
+	}
+	
+	private String projectStage(Repository r) {
+		ProjectInfo pi = getMatchingProject(r.getName(), r.getOwner().getLogin());
+		return (pi != null) && pi.type == ProjectType.INCUBATING ? "Incubating" : "Active";
+	}
+	
+	private boolean matchName(String name, String owner, String url) {
+		return (url != null) && url.toLowerCase().contains("/"+name.toLowerCase()) && url.contains("/"+owner.toLowerCase()+"/");
+	}
+
+	private ProjectInfo getMatchingProject(String name, String owner) {
+		for (ProjectInfo projectInfo : projects) {
+			if (matchName(name, owner, projectInfo.mainRepo)) {
+				return projectInfo;
+			}
+			
+			if (projectInfo.additionalRepos != null) {
+				for (String string : projectInfo.additionalRepos) {
+					if (matchName(name, owner, string)) {
+						return projectInfo;
+					}
+				}
+			}
+		}
+		
+		return null;
 	}
 
 	private String passes(FinosStatus finosStatus, OpenSSFStatus openSSFStatus, String wrongAdmins, int branchReviewers, String license, boolean semGrep, Boolean cveScan, boolean ignore) {
