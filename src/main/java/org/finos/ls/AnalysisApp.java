@@ -2,6 +2,7 @@ package org.finos.ls;
 
 
 import java.util.Arrays;
+import java.util.stream.Collectors;
 
 import org.finos.ls.report.Report;
 import org.finos.scan.github.client.spring_autoconfiguration.SpringConfiguration;
@@ -39,8 +40,12 @@ public class AnalysisApp implements CommandLineRunner {
 	 */
 	@Override
 	public void run(String... args) throws Exception {
-		if (args.length > 0) {
-			reports = args;
+		String[] reportArgs = Arrays.stream(args)
+				.filter(i -> !i.startsWith("-"))
+				.collect(Collectors.toList())
+				.toArray(new String[] {});
+		if (reportArgs.length > 0) {
+			reports = reportArgs;
 		}
 		Arrays.asList(reports).forEach(r -> {
 			try {
