@@ -68,8 +68,8 @@ public class ProjectScanCSVSummarizer implements CSVSummarizer{
 		String defaultBranchName = BasicQueries.DEFAULT_BRANCH_NAME.convert(r, qe);
 		String wrongAdmins = BasicQueries.WRONG_ADMINS.convert(r, qe);
 		int branchReviewers = BasicQueries.BRANCH_RULES.convert(r, qe);
-		String score = calculateScore(issue, commit, r.getName(), r.getIsPrivate() | r.getIsArchived());
-		String pass = passes(finosStatus, openSSF, wrongAdmins, branchReviewers, license, semGrep, cveScan, score.equals("n/a"));
+		long score = calculateScore(issue, commit, r.getName(), r.getIsPrivate() | r.getIsArchived());
+		String pass = passes(finosStatus, openSSF, wrongAdmins, branchReviewers, license, semGrep, cveScan, score == -1);
 		long readmeLength = BasicQueries.README_LENGTH.convert(r, qe);
 		
 		List<Object> out = new ArrayList<>();
@@ -182,8 +182,8 @@ public class ProjectScanCSVSummarizer implements CSVSummarizer{
 		return !"CC-BY-4.0".equals(license);
 	}
 
-	private String calculateScore(Activity issue, Activity commit, String name, boolean ignore) {
-		return ignore ? "n/a" : ""+(issue.getScore() + commit.getScore());
+	private long calculateScore(Activity issue, Activity commit, String name, boolean ignore) {
+		return ignore ? -1 : (issue.getScore() + commit.getScore());
 	}
 
 	private String convertToSpaceList(Activity issue) {

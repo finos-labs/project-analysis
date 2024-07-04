@@ -31,62 +31,6 @@ public class AnalysisApp implements CommandLineRunner {
 
 	@Value("${reports}")
 	String[] reports; 
-//	
-//
-//	@Autowired
-//	ReadmeGenerator readme;
-//	
-//	@Autowired
-//	CSVGenerator csv;
-//	
-//	@Autowired
-//	CommitService commit;
-//	
-//	@Autowired
-//	PullRequestService pr;
-//	
-//	@Autowired
-//	LandscapeReader lr;
-//	
-//	@Value("${spring.profiles.active:}")
-//	String activeProfiles;
-//		
-//	@Value("${scanning.readme:README.md}")
-//	String readmeFile;
-//	
-//	@Value("${scanning.csv:scan.csv}")
-//	String csvFile;
-//	
-//	@Value("${scanning.finance.csv:finance-topic.csv}")
-//	String fcsvFile;
-//	
-//	@Value("${scanning.write-to.repo}")
-//	String repo;
-//	
-//	@Value("${scanning.write-to.owner}")
-//	String owner;
-//
-//	@Value("${scanning.write-to.base}")
-//	String base;
-//
-//	@Value("${scanning.write-to.head}")
-//	String head;
-//	
-//	@Value("${scanning.csv.priority:}")
-//	String[] priority;
-//	
-//	@Value("${scanning.csv.ignore:}")
-//	String[] ignore;
-////	
-//	List<String> orgs;
-//
-//	public List<String> getOrgs() {
-//		return orgs;
-//	}
-//
-//	public void setOrgs(List<String> orgs) {
-//		this.orgs = orgs;
-//	}
 
 	@Autowired
 	ConfigurableApplicationContext ctx;
@@ -97,6 +41,9 @@ public class AnalysisApp implements CommandLineRunner {
 	 */
 	@Override
 	public void run(String... args) throws Exception {
+		if (args.length > 0) {
+			reports = args;
+		}
 		Arrays.asList(reports).forEach(r -> {
 			try {
 				Report report = (Report) ctx.getBean(r);
@@ -107,32 +54,6 @@ public class AnalysisApp implements CommandLineRunner {
 			}
 		});
 		
-		
-//		if (activeProfiles.contains("summarize")) {
-////			// first, write the readme
-////			String readmeContent = readme.generate(25, orgs);
-////			commit.commitFile(readmeFile, readmeContent.getBytes(), head, repo, owner);
-//			
-//			// then write the csv
-//			List<ProjectInfo> projects = lr.readFromLandscape(landscapeUrl);
-//			ProjectScanCSVSummarizer summ = new ProjectScanCSVSummarizer(Arrays.asList(ignore), Arrays.asList(priority), projects);
-//			StringBuilder sb = new StringBuilder();
-//			orgs.forEach(o -> {
-//				try {
-//					sb.append( csv.generateOrg(o, summ));
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			});
-//			commit.commitFile(csvFile, sb.toString().getBytes(), head, repo, owner);
-//			
-////			FinanceCSVSummarizer fcsv = new FinanceCSVSummarizer();
-////			String fcsvContent = csv.generateTopic("finance", fcsv);
-////			commit.commitFile(fcsvFile, fcsvContent.getBytes(), head, repo, owner);
-////			
-//			// create a pr
-//			pr.createOrUpdatePullRequest(repo, owner, base, head, Collections.singletonList("@robmoffat"), "Updated Generated Files");
-//			ctx.close();
-//		}
+		ctx.close();
 	}
 }
