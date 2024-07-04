@@ -1,6 +1,7 @@
 package org.finos.ls.readme;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
@@ -24,6 +25,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
 import com.graphql_java_generator.exception.GraphQLRequestExecutionException;
@@ -34,6 +36,9 @@ import com.graphql_java_generator.exception.GraphQLRequestPreparationException;
 @ConfigurationProperties(prefix = "readme")
 @EnableConfigurationProperties
 public class ReadmeGenerator extends AbstractReport {
+	
+	@Autowired
+	Environment env;
 	
 	@Autowired
 	LandscapeReader lr;
@@ -71,6 +76,12 @@ public class ReadmeGenerator extends AbstractReport {
 	@Value("${readme.head}")
 	String head;
 	
+	@Value("${scan.output:}")
+	String filename;
+
+	public String getFilename() {
+		return filename;
+	}
 	
 	Map<String, Repository> cache = new HashMap<>();
 	
@@ -154,8 +165,11 @@ public class ReadmeGenerator extends AbstractReport {
 
 	@Override
 	public void outputResults(String report) throws Exception {
-		commit.commitFile(readmeFile, report.getBytes(), head, repo, owner);
-		pr.createOrUpdatePullRequest(repo, owner, base, head, Collections.singletonList("@robmoffat"), "Updated Generated Files");
+		super.outputResults(report);
+		if (Arrays.asList(env.getActiveProfiles()).contains("pr")) {
+			commit.commitFile(readmeFile, report.getBytes(), head, repo, owner);
+			pr.createOrUpdatePullRequest(repo, owner, base, head, Collections.singletonList("@robmoffat"), "Updated Generated Files");
+		}
 	}
 
 	

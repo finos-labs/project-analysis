@@ -30,8 +30,12 @@ public class ProjectScanReport extends AbstractReport {
 	@Value("${githubOrgs}")
 	List<String> orgs;
 	
-	@Value("${scan.name}")
+	@Value("${scan.output:}")
 	String filename;
+
+	public String getFilename() {
+		return filename;
+	}
 
 	public List<String> getOrgs() {
 		return orgs;
@@ -56,15 +60,5 @@ public class ProjectScanReport extends AbstractReport {
 
 		return sb.toString();
 	}
-
-	@Override
-	public void outputResults(String report) throws Exception {
-		File out = new File(this.filename);
-		out.getParentFile().mkdirs();
-		FileWriter fw = new FileWriter(out);
-		fw.write(report);
-		fw.close();
-	}
-
 	
 }

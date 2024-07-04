@@ -2,7 +2,6 @@ package org.finos.ls;
 
 
 import java.util.Arrays;
-import java.util.List;
 
 import org.finos.ls.report.Report;
 import org.finos.scan.github.client.spring_autoconfiguration.SpringConfiguration;
@@ -19,7 +18,6 @@ import com.graphql_java_generator.client.GraphQLConfiguration;
 
 @SpringBootApplication(scanBasePackageClasses = { AnalysisApp.class, GraphQLConfiguration.class, QueryExecutor.class, SpringConfiguration.class })
 @EnableConfigurationProperties
-//@ConfigurationProperties(prefix = "scanning")
 public class AnalysisApp implements CommandLineRunner {
 	
 	public static void main(String[] args) {
