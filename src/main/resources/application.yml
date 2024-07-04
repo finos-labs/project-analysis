@@ -9,22 +9,19 @@ logging:
 debug: true
 
 landscapeUrl: https://raw.githubusercontent.com/finos/finos-landscape/master/landscape.yml
+landscapeLogoPrefix: https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/
+  
+githubOrgs: finos, finos-labs
 
-    
-githubOrgs: 
-  - finos
-  - finos-labs
-
-reports: readme, scan
+reports: scan, readme
  
 readme:
-  type: pr
   repo: project-analysis
   owner: finos-labs
   base: main
   head: generated-branch
+  file: README.generated.md
+  output: target/README.generated.md
 
 scan:
-  type: file  
-  name: target/toc-scorecard.csv  
-
+  output: target/toc-scorecard.csv  

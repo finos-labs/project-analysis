@@ -76,7 +76,7 @@ public class ReadmeGenerator extends AbstractReport {
 	@Value("${readme.head}")
 	String head;
 	
-	@Value("${scan.output:}")
+	@Value("${readme.output:}")
 	String filename;
 
 	public String getFilename() {
