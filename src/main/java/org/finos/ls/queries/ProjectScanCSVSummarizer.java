@@ -11,20 +11,14 @@ import org.finos.scan.github.client.Repository;
 import org.finos.scan.github.client.util.QueryExecutor;
 import org.springframework.util.StringUtils;
 
-public class SecurityCSVSummarizer implements CSVSummarizer{
+public class ProjectScanCSVSummarizer implements CSVSummarizer{
 	
-	private List<String> ignoreList;
 	private List<ProjectInfo> projects;
 
-	
-	public SecurityCSVSummarizer(List<String> ignoreList, List<String> priorityList, List<ProjectInfo> projects) {
+	public ProjectScanCSVSummarizer(List<ProjectInfo> projects) {
 		super();
-		this.ignoreList = ignoreList;
-		this.priorityList = priorityList;
 		this.projects = projects;
 	}
-
-	private List<String> priorityList;
 	
 	public static final String[] FIELDS = {
 		"Score",
@@ -74,8 +68,8 @@ public class SecurityCSVSummarizer implements CSVSummarizer{
 		String defaultBranchName = BasicQueries.DEFAULT_BRANCH_NAME.convert(r, qe);
 		String wrongAdmins = BasicQueries.WRONG_ADMINS.convert(r, qe);
 		int branchReviewers = BasicQueries.BRANCH_RULES.convert(r, qe);
-		long score = calculateScore(issue, commit, r.getName(), r.getIsPrivate() | r.getIsArchived());
-		String pass = passes(finosStatus, openSSF, wrongAdmins, branchReviewers, license, semGrep, cveScan, score == 0);
+		String score = calculateScore(issue, commit, r.getName(), r.getIsPrivate() | r.getIsArchived());
+		String pass = passes(finosStatus, openSSF, wrongAdmins, branchReviewers, license, semGrep, cveScan, score.equals("n/a"));
 		long readmeLength = BasicQueries.README_LENGTH.convert(r, qe);
 		
 		List<Object> out = new ArrayList<>();
@@ -188,25 +182,8 @@ public class SecurityCSVSummarizer implements CSVSummarizer{
 		return !"CC-BY-4.0".equals(license);
 	}
 
-	private long calculateScore(Activity issue, Activity commit, String name, boolean ignore) {
-		if (ignore) {
-			return 0;
-		} else if (matches(name, ignoreList)) {
-			return 0;
-		} else if (matches(name, priorityList)) {
-			return 1000;
-		} else {
-			return issue.getScore() + commit.getScore();
-		}
-	}
-
-	private boolean matches(String name, List<String> patterns) {
-		for (String p : patterns) {
-			if (name.toLowerCase().contains(p.toLowerCase())) {
-				return true;
-			}
-		}
-		return false;
+	private String calculateScore(Activity issue, Activity commit, String name, boolean ignore) {
+		return ignore ? "n/a" : ""+(issue.getScore() + commit.getScore());
 	}
 
 	private String convertToSpaceList(Activity issue) {

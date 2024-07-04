@@ -1,27 +1,39 @@
-package org.finos.ls;
+package org.finos.ls.readme;
 
 import java.text.SimpleDateFormat;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import javax.inject.Named;
+
+import org.finos.ls.QueryService;
 import org.finos.ls.landscape.LandscapeReader;
 import org.finos.ls.landscape.ProjectInfo;
+import org.finos.ls.outputs.CommitService;
+import org.finos.ls.outputs.PullRequestService;
 import org.finos.ls.queries.MarkdownSummarizer;
 import org.finos.ls.queries.MarkdownSummarizer.SummaryLevel;
+import org.finos.ls.report.AbstractReport;
 import org.finos.scan.github.client.Repository;
 import org.finos.scan.github.client.util.QueryExecutor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Service;
 
 import com.graphql_java_generator.exception.GraphQLRequestExecutionException;
 import com.graphql_java_generator.exception.GraphQLRequestPreparationException;
 
 @Service
-public class ReadmeGenerator {
+@Named("readme")
+@ConfigurationProperties(prefix = "readme")
+@EnableConfigurationProperties
+public class ReadmeGenerator extends AbstractReport {
 	
 	@Autowired
 	LandscapeReader lr;
@@ -34,20 +46,40 @@ public class ReadmeGenerator {
 	
 	@Autowired 
 	QueryExecutor qe;
-	
-	private List<String> remove;
-	
-	public List<String> getRemove() {
-		return remove;
-	}
 
-	public void setRemove(List<String> remove) {
-		this.remove = remove;
-	}
+	@Value("${githubOrgs}")
+	List<String> orgs;
+	
+	@Autowired
+	CommitService commit;
+	
+	@Autowired
+	PullRequestService pr;
+	
+	@Value("${readme.file:README.md}")
+	String readmeFile;
+	
+	@Value("${readme.repo}")
+	String repo;
+	
+	@Value("${readme.owner}")
+	String owner;
 
+	@Value("${readme.base}")
+	String base;
+
+	@Value("${readme.head}")
+	String head;
+	
+	
 	Map<String, Repository> cache = new HashMap<>();
 	
-	public String generate(int cutoff, List<String> orgs) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+	@Override
+	public String generateInner() throws Exception {
+		return generate(orgs);
+	}
+
+	public String generate(List<String> orgs) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
 		List<ProjectInfo> info = lr.readFromLandscape(landscapeUrl);
 		
 		// remove gitlab projects for now
@@ -120,4 +152,12 @@ public class ReadmeGenerator {
 		return list.stream().collect(Collectors.toMap(pi -> pi.name, pi -> pi));
 	}
 
+	@Override
+	public void outputResults(String report) throws Exception {
+		commit.commitFile(readmeFile, report.getBytes(), head, repo, owner);
+		pr.createOrUpdatePullRequest(repo, owner, base, head, Collections.singletonList("@robmoffat"), "Updated Generated Files");
+	}
+
+	
+	
 }

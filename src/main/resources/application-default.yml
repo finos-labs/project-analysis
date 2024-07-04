@@ -1,0 +1,30 @@
+graphql:
+  endpoint.url: https://api.github.com/graphql
+  token: ${LANDSCAPE_SCANNING_TOKEN}
+  
+logging:
+  level:
+    org.springframework: DEBUG
+    
+debug: true
+
+landscapeUrl: https://raw.githubusercontent.com/finos/finos-landscape/master/landscape.yml
+
+    
+githubOrgs: 
+  - finos
+  - finos-labs
+
+reports: readme, scan
+ 
+readme:
+  type: pr
+  repo: project-analysis
+  owner: finos-labs
+  base: main
+  head: generated-branch
+
+scan:
+  type: file  
+  name: target/toc-scorecard.csv  
+

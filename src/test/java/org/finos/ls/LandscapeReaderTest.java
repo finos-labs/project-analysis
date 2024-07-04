@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-@SpringBootTest(classes = LandscapeApp.class)
+@SpringBootTest(classes = AnalysisApp.class)
 @ActiveProfiles("local")
 public class LandscapeReaderTest {
 

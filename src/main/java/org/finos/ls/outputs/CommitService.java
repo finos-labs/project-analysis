@@ -1,4 +1,4 @@
-package org.finos.ls;
+package org.finos.ls.outputs;
 
 import java.util.Arrays;
 import java.util.Base64;
