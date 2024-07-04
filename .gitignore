@@ -3,3 +3,5 @@ application-local.yml
 /.settings
 .DS_Store
 /bin
+env
+lib

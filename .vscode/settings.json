@@ -1,4 +1,5 @@
 {
   "python.pythonPath": "env/bin/python",
-  "jupyter.notebookFileRoot": "${workspaceFolder}"
+  "jupyter.notebookFileRoot": "${workspaceFolder}",
+  "java.compile.nullAnalysis.mode": "automatic"
 }
