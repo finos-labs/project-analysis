@@ -22,4 +22,8 @@ jobs:
         distribution: 'temurin'
         cache: 'maven'
     - name: Run with Maven
-      run: mvn spring-boot:run -Dspring-boot.run.profiles=summarize -DskipTests
+      run: mvn spring-boot:run -Dspring-boot.run.profiles=pr -DskipTests
+    - uses: actions/upload-artifact@v4
+      with:
+        name: Project-Report.csv
+        path: target/toc-scorecard.csv

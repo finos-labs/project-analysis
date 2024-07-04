@@ -7,29 +7,21 @@ logging:
     org.springframework: DEBUG
     
 debug: true
-    
-landscapeUrl: https://raw.githubusercontent.com/finos/finos-landscape/master/landscape.yml
 
-scanning:
-  orgs: 
-   - finos
-   - finos-labs
-  csv:
-    priority: legend, morphir, fdc3, cfi
-    ignore: none    
-  readme:
-    remove: 
-     - juju
-     - finos-landscape
-     - software-project-blueprint
-     - standards-project-blueprint
-     - clabot-config
-     - finos-parent-pom
-  write-to:
-    repo: landscape-scanning
-    owner: robmoffat
-    base: main
-    head: generated-branch
-    csv: security-scorecard.csv
-    
-    
+landscapeUrl: https://raw.githubusercontent.com/finos/finos-landscape/master/landscape.yml
+landscapeLogoPrefix: https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/
+  
+githubOrgs: finos, finos-labs
+
+reports: scan, readme
+ 
+readme:
+  repo: project-analysis
+  owner: finos-labs
+  base: main
+  head: generated-branch
+  file: README.generated.md
+  output: target/README.generated.md
+
+scan:
+  output: target/toc-scorecard.csv  

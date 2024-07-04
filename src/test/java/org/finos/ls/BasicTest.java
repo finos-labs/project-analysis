@@ -5,13 +5,16 @@ import java.util.Collections;
 import java.util.Map;
 
 import org.finos.ls.landscape.ProjectInfo;
+import org.finos.ls.outputs.CommitService;
+import org.finos.ls.outputs.PullRequestService;
 import org.finos.ls.queries.Activity;
 import org.finos.ls.queries.BasicQueries;
 import org.finos.ls.queries.BasicQueries.FinosStatus;
 import org.finos.ls.queries.BasicQueries.OpenSSFStatus;
 import org.finos.ls.queries.MarkdownSummarizer;
 import org.finos.ls.queries.MarkdownSummarizer.SummaryLevel;
-import org.finos.ls.queries.SecurityCSVSummarizer;
+import org.finos.ls.readme.ReadmeGenerator;
+import org.finos.ls.queries.ProjectScanCSVSummarizer;
 import org.finos.scan.github.client.Repository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -22,7 +25,7 @@ import org.springframework.test.context.ActiveProfiles;
 import com.graphql_java_generator.exception.GraphQLRequestExecutionException;
 import com.graphql_java_generator.exception.GraphQLRequestPreparationException;
 
-@SpringBootTest(classes = LandscapeApp.class)
+@SpringBootTest(classes = AnalysisApp.class)
 @ActiveProfiles("local")
 public class BasicTest {
 	
@@ -183,8 +186,8 @@ public class BasicTest {
 	}
 	
 	@Test
-	public void testWholeReadme() throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		String out = readme.generate(25, Arrays.asList(ORG, ORG2));
+	public void testWholeReadme() throws Exception {
+		String out = readme.generateInner();
 		System.out.println(out);
 	}
 	
@@ -196,7 +199,7 @@ public class BasicTest {
 	
 	@Test
 	public void testCSV() throws Exception {
-		String out = csv.generateOrg(ORG, new SecurityCSVSummarizer(Collections.emptyList(), Collections.emptyList(), Collections.emptyList()));
+		String out = csv.generateOrg(ORG, new ProjectScanCSVSummarizer(Collections.emptyList()));
 		System.out.println(out);
 	}
 	
