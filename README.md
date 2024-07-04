@@ -2,7 +2,9 @@
 
 # Project Analysis
 
-This repository contains tools to scan the FINOS (Fintech Open Source Foundation) project landscape, produce analytics around project activity, and summarize the projects' README files.
+Project Analysis is a tool that scan the FINOS (Fintech Open Source Foundation) GitHub repositories and:
+- Generates a readme of readme's, which can be used as a landing page for GitHub Organizations.
+- Builds a project health report (in CSV format) that can be used to analyze the health of the projects.
 
 ## Features
 
