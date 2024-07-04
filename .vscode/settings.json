@@ -1,0 +1,4 @@
+{
+  "python.pythonPath": "env/bin/python",
+  "jupyter.notebookFileRoot": "${workspaceFolder}"
+}
