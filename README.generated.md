@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 10 Jul 2024):
+Here are some of FINOS' most active projects (as of 11 Jul 2024):
 
  - [Accessibility Theme Builder](#Accessibility-Theme-Builder)
  - [AI Readiness](#AI-Readiness)
@@ -127,7 +127,7 @@ _FDC3 Desktop Agent Bridge_
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/ccc.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-26-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-25-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-50-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-26-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-25-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-54-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls/issues)
 
 _FINOS Common Cloud Controls_
 
@@ -140,7 +140,7 @@ _FINOS Common Cloud Controls_
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/cdm.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-114-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-50-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-81-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-114-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-50-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-76-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/issues)
 
 _The CDM is a model for financial products, trades in those products, and the lifecycle events of those trades. It is an open source standard that aligns data, systems and processes and is available as code in multiple languages for easy implementation across technologies._
 
@@ -211,7 +211,7 @@ _Compliant Financial Infrastructure accelerates the development, deployment and 
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/devops-automation.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-56-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/devops-automation/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-17-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/devops-automation)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-90-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/devops-automation/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-57-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/devops-automation/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-17-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/devops-automation)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-90-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/devops-automation/issues)
 
 _Provide a continuous compliance and assurance approach to DevOps that mutually benefits banks, auditors and regulators whilst accelerating DevOps adoption in engineering and fintech IT departments._
 
@@ -256,7 +256,7 @@ _Provide a continuous compliance and assurance approach to DevOps that mutually 
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/fdc3.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-187-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-109-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-48-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-187-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-109-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-49-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/FDC3/issues)
 
 _An open standard for the financial desktop._
 
@@ -634,7 +634,7 @@ _MessageML is a markup language used by the Symphony Agent API for representing 
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/morphir.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-136-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-52-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-53-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-136-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-52-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-54-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/morphir/issues)
 
 _A universal language for business and technology_
 
@@ -748,7 +748,7 @@ _OpenMAMA is an open source project that provides a high performance middleware 
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/perspective.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-7742-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-1051-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-90-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-7747-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-1052-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-90-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
@@ -850,7 +850,7 @@ _The FINOS Regulation Innovation Special Interest Group (SIG) is a community of 
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/symphony-rest-api-spec.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-17-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-api-spec/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-45-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-api-spec)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-api-spec/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-18-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-api-spec/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-45-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-api-spec)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-api-spec/issues)
 
 _Swagger definitions for Symphony LLC public REST API_
 
@@ -1114,7 +1114,7 @@ _High performance time series database_
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/tracdap.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-37-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/tracdap/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/tracdap)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-31-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/tracdap/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-38-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/tracdap/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/tracdap)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-31-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/tracdap/issues)
 
 _A next-generation data and analytics platform for use in highly regulated environments_
 
