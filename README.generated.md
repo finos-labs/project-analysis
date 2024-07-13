@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 12 Jul 2024):
+Here are some of FINOS' most active projects (as of 13 Jul 2024):
 
  - [Accessibility Theme Builder](#Accessibility-Theme-Builder)
  - [AI Readiness](#AI-Readiness)
@@ -49,7 +49,7 @@ Here are some of FINOS' most active projects (as of 12 Jul 2024):
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/themebuilder.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-38-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-70-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-183-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-39-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-70-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-184-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder/issues)
 
 _DesignOps toolchain theme builder for accessibility inclusion using Atomic Design._
 
@@ -127,7 +127,7 @@ _FDC3 Desktop Agent Bridge_
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/ccc.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-26-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-25-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-52-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-26-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-25-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-51-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls/issues)
 
 _FINOS Common Cloud Controls_
 
@@ -555,7 +555,7 @@ _kdb+ Working Group from FINOS Data Technologies program_
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/legend.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-839-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-180-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-840-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-179-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-0-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/issues)
 
 _The Legend project_
 
@@ -748,7 +748,7 @@ _OpenMAMA is an open source project that provides a high performance middleware 
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/perspective.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-7800-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-1053-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-91-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-7897-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-1056-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-91-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
@@ -789,7 +789,7 @@ _A data visualization and analytics component, especially well-suited for large 
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/regular-table.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-329-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-37-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-13-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-330-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-38-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-13-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table/issues)
 
 _A regular <table> library, for async and virtual data models._
 
@@ -1114,7 +1114,7 @@ _High performance time series database_
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/tracdap.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-38-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/tracdap/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/tracdap)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-31-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/tracdap/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-39-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/tracdap/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-12-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/tracdap)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-31-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/tracdap/issues)
 
 _A next-generation data and analytics platform for use in highly regulated environments_
 
