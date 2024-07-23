@@ -45,6 +45,15 @@ To create a [pull request to Project Analysis](https://github.com/finos-labs/pro
 SPRING_PROFILES_ACTIVE=pr
 ```
 
+#### Running A Single Report
+
+By default, both the `scan` and `readme` reports are run.  If you only want to run one, invoke in this manner:
+
+```sh
+mvn spring-boot:run -Drun.arguments=scan   # or readme
+```
+
+
 #### Generating a Personal Access Token
 
 To generate a personal access token, follow the instructions [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token).
