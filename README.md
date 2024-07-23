@@ -16,23 +16,34 @@ Project Analysis is a tool that scan the FINOS (Fintech Open Source Foundation) 
 
 **Clone the repository**:
 
-  ```sh
-  git clone https://github.com/finos-labs/project-analysis.git
-  cd project-analysis
-  ```
+```sh
+git clone https://github.com/finos-labs/project-analysis.git
+cd project-analysis
+```
 
 To scan the FINOS project landscape and gather data, run:
-  ```sh
-  LANDSCAPE_SCANNING_TOKEN={your-github-personal-access-token} mvn spring-boot:run -Dspring-boot.run.profiles=local,summarize -DskipTests
-  ```
+
+```sh
+LANDSCAPE_SCANNING_TOKEN={your-github-personal-access-token} 
+mvn spring-boot:run
+```
 
 To build the Jupyter notebook:
+
 ```sh
 python3 -m venv env
 ./env/bin/python -m pip install -r requirements.txt
 ```
 
 Open `project-report.ipynb` in VS Code and run the notebook; make sure that the `Jupyter` VS Code Extension is installed.
+
+#### Generating a Pull Request
+
+To create a [pull request to Project Analysis](https://github.com/finos-labs/project-analysis/pulls) at the end of the run, set this before running:
+
+```sh
+SPRING_PROFILES_ACTIVE=pr
+```
 
 #### Generating a Personal Access Token
 
