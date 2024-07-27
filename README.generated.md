@@ -1,6 +1,6 @@
 # FINOS Projects
 
-Here are some of FINOS' most active projects (as of 26 Jul 2024):
+Here are some of FINOS' most active projects (as of 27 Jul 2024):
 
  - [Accessibility Theme Builder](#Accessibility-Theme-Builder)
  - [AI Readiness](#AI-Readiness)
@@ -49,7 +49,7 @@ Here are some of FINOS' most active projects (as of 26 Jul 2024):
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/themebuilder.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-39-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-70-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-191-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-40-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-70-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-191-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder/issues)
 
 _DesignOps toolchain theme builder for accessibility inclusion using Atomic Design._
 
@@ -127,7 +127,7 @@ _FDC3 Desktop Agent Bridge_
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/ccc.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-26-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-28-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-46-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-26-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-28-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-43-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls/issues)
 
 _FINOS Common Cloud Controls_
 
@@ -748,7 +748,7 @@ _OpenMAMA is an open source project that provides a high performance middleware 
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/perspective.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-8045-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-1074-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-90-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-8058-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-1075-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-90-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
@@ -758,7 +758,8 @@ _A data visualization and analytics component, especially well-suited for large 
 
 > [![npm](https://img.shields.io/npm/v/@finos/perspective.svg?style=flat) ](https://www.npmjs.com/package/@finos/perspective)
 > [![PyPI](https://img.shields.io/pypi/v/perspective-python.svg?style=flat) ](https://pypi.python.org/pypi/perspective-python)
-> [![Build Status](https://github.com/finos/perspective/actions/workflows/build.yml/badge.svg?branch=master&event=push) ](https://github.com/finos/perspective/actions/workflows/build.yml)
+> [![crates.io](https://img.shields.io/crates/v/perspective.svg?style=flat) ](https://crates.io/crates/perspective)
+> [![Build Status](https://github.com/finos/perspective/actions/workflows/build.yaml/badge.svg?branch=master&event=push) ](https://github.com/finos/perspective/actions/workflows/build.yml)
 > 
 > 
 > Perspective is an <i>interactive</i> analytics and data visualization component,
@@ -789,7 +790,7 @@ _A data visualization and analytics component, especially well-suited for large 
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/regular-table.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-336-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-38-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-13-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-338-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-38-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-13-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table/issues)
 
 _A regular <table> library, for async and virtual data models._
 
@@ -1101,7 +1102,7 @@ _Symphony Workflow Developer Kit (WDK), a bot capable of running workflows_
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/timebase-ce.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-109-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-20-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-13-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-110-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-20-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-13-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/TimeBase-CE/issues)
 
 _High performance time series database_
 
@@ -1167,7 +1168,7 @@ _A next-generation data and analytics platform for use in highly regulated envir
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/vuu.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-38-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-27-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-195-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-39-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-27-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-195-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/issues)
 
 _Vuu - an open source view server and html 5 based UI system_
 
