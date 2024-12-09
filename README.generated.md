@@ -259,7 +259,8 @@ _An open standard for the financial desktop._
 
 #### From the README:
 
-> <a href='http://fdc3.finos.org'><img src='./website/static/img/fdc3-logo-2019-color.png' height='150' alt='FDC3 Logo' aria-label='fdc3.finos.org' /></a>
+> 
+> 
 > 
 > [![Latest Standard](https://img.shields.io/badge/release-2.0-blue) ](https://github.com/finos/fdc3/releases/v2.0)
 > [![npm](https://img.shields.io/npm/v/@finos/fdc3) ](https://www.npmjs.com/package/@finos/fdc3)
@@ -317,7 +318,8 @@ _Support for jupyter notebook templates in jupyterlab_
 
 #### From the README:
 
-> <img src="https://github.com/finos/jupyterlab_templates/raw/main/docs/logo.png" width=400></img>
+> 
+> 
 > 
 > Support for jupyter notebook templates in jupyterlab
 > 
@@ -379,8 +381,9 @@ _A universal language for business and technology_
 > [![FINOS Hosted Platform - LCR Interactive](https://img.shields.io/badge/FINOS%20Hosted%20Platform-LCR%20Interactive-blue) ](https://lcr-interactive.finos.org/)
 > [![FINOS - Active](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-active.svg) ](https://community.finos.org/docs/governance/Software-Projects/stages/active)
 > [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/6526/badge) ](https://bestpractices.coreinfrastructure.org/projects/6526)
-> [<img src="https://img.shields.io/badge/slack-@finos/morphir-green.svg?logo=slack">](https://finos-lf.slack.com/messages/morphir/)
+> [
 > 
+](https://finos-lf.slack.com/messages/morphir/)
 > 
 > Morphir is a library of tools that works to capture business logic as data.
 > 
@@ -449,12 +452,13 @@ _A data visualization and analytics component, especially well-suited for large 
 > [![crates.io](https://img.shields.io/crates/v/perspective?style=for-the-badge) ](https://crates.io/crates/perspective)
 > 
 > 
-> Perspective is an <i>interactive</i> analytics and data visualization component,
-> which is especially well-suited for <i>large</i> and/or <i>streaming</i>
+> Perspective is an 
+> 
+interactive analytics and data visualization component,
+> which is especially well-suited for large and/or streaming
 > datasets. Use it to create user-configurable reports, dashboards, notebooks and
 > applications, then deploy stand-alone in the browser, or in concert with Python
 > and/or [Jupyterlab](https://jupyterlab.readthedocs.io/en/stable/).
-> 
 > 
 > - A fast, memory efficient streaming query engine, written in C++ and compiled
 > for [WebAssembly](https://webassembly.org/),
@@ -729,7 +733,9 @@ _The CDM is a model for financial products, trades in those products, and the li
 > [![Codefresh build status](https://g.codefresh.io/api/badges/pipeline/regnosysops/FINOS%2Fcommon-domain-model?type=cf-1) ](https://g.codefresh.io/public/accounts/regnosysops/pipelines/new/63ecb79bde06416b39d81e70)
 > 
 > 
-> <img src=".github/bulb.svg" width="30"> [<kbd> <br> View CDM Homepage <br> </kbd>](https://cdm.finos.org/)
+> 
+> 
+ [  View CDM Homepage  ](https://cdm.finos.org/)
 > 
 > The Common Domain Model is an open standard project hosted under FINOS, the [Fintech Open Source Foundation](https://community.finos.org/docs/governance/Standards-Projects), starting in February 2023.   The standard is developed through the [Community Specification](https://community.finos.org/docs/governance/#open-standard-projects) open governance process, and underlying code assets are released under the [Community Specification License 1.0](https://github.com/finos/standards-project-blueprint/blob/master/governance-documents/4._License.md). For versions before 4.0.0 and other license details, check [Notice.md](https://github.com/finos/common-domain-model/blob/master/NOTICE.md).
 >... [_read more_](https://github.com/finos/common-domain-model)
@@ -751,8 +757,9 @@ _Compliant Financial Infrastructure accelerates the development, deployment and 
 
 > [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg) ](https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating)
 > [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/6557/badge) ](https://bestpractices.coreinfrastructure.org/projects/6557)
-> [<img src="https://img.shields.io/badge/slack-@finos/compliant%20financial%20infrastructure-green.svg?logo=slack">](https://finos-lf.slack.com/messages/cfi/)
+> [
 > 
+](https://finos-lf.slack.com/messages/cfi/)
 > 
 > Compliant Financial Infrastructure (CFI) seeks to accelerate the development,
 > deployment and adoption of services provided for infrastructure in a way that
@@ -902,13 +909,13 @@ _Deploy custom push protections and policies on top of Git_
 > [![codecov](https://codecov.io/gh/finos/git-proxy/branch/main/graph/badge.svg) ](https://codecov.io/gh/finos/git-proxy)
 > [![git-proxy](https://api.securityscorecards.dev/projects/github.com/finos/git-proxy/badge) ](https://api.securityscorecards.dev/projects/github.com/finos/git-proxy)
 > [![Documentation](https://img.shields.io/badge/_-documentation-000000?colorA=00C586&logo=docusaurus&logoColor=FFFFFF&) ](https://git-proxy.finos.org)
-> <br />
+> 
+> 
 > [![License](https://img.shields.io/github/license/finos/git-proxy?colorA=00C586&colorB=000000) ](https://github.com/finos/git-proxy/blob/main/LICENSE)
 > [![Contributors](https://img.shields.io/github/contributors/finos/git-proxy?colorA=00C586&colorB=000000) ](https://github.com/finos/git-proxy/graphs/contributors)
 > [![Slack](https://img.shields.io/badge/_-Chat_on_Slack-000000.svg?logo=slack&colorA=00C586) ](https://app.slack.com/client/T01E7QRQH97/C06LXNW0W76)
 > [![Stars](https://img.shields.io/github/stars/finos/git-proxy?colorA=00C586&colorB=000000) ](https://github.com/finos/git-proxy/stargazers)
 > [![Forks](https://img.shields.io/github/forks/finos/git-proxy?colorA=00C586&colorB=000000) ](https://github.com/finos/git-proxy/forks)
-> 
 > 
 > GitProxy is an application that stands between developers and a Git remote endpoint (e.g., `"github.com"`). It applies rules and workflows (configurable as `"plugins"`) to all outgoing `"git push"` operations to ensure they are compliant.
 > 
