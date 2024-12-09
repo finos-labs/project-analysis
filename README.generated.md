@@ -2,41 +2,46 @@
 
 Here are some of FINOS' most active projects (as of 09 Dec 2024):
 
- - [Accessibility Theme Builder](#Accessibility-Theme-Builder)
+**Special Interest Groups: **
  - [AI Readiness](#AI-Readiness)
+ - [DevOps Automation](#DevOps-Automation)
+ - [Diversity Equity & Inclusion Special Interest Group](#Diversity-Equity-&-Inclusion-Special-Interest-Group)
+ - [Financial Objects](#Financial-Objects)
+ - [InnerSource Special Interest Group](#InnerSource-Special-Interest-Group)
+ - [Open source readiness](#Open-source-readiness)
+ - [Regulation Innovation Special Interest Group](#Regulation-Innovation-Special-Interest-Group)
+ - [Zenith](#Zenith)
+**Active Projects: **
+ - [FDC3](#FDC3)
+ - [JCurl](#JCurl)
+ - [JupyterLab Templates](#JupyterLab-Templates)
+ - [MessageML Utilities](#MessageML-Utilities)
+ - [Morphir](#Morphir)
+ - [OpenMAMA](#OpenMAMA)
+ - [Perspective](#Perspective)
+ - [Regular Table](#Regular-Table)
+ - [REST API Specification](#REST-API-Specification)
+ - [Spring Bot](#Spring-Bot)
+ - [Symphony Electron](#Symphony-Electron)
+ - [Waltz](#Waltz)
+**Incubating Projects: **
+ - [Accessibility Theme Builder](#Accessibility-Theme-Builder)
  - [Backplane - FDC3 Desktop Agent Bridging](#Backplane---FDC3-Desktop-Agent-Bridging)
  - [Common Cloud Controls](#Common-Cloud-Controls)
  - [Common Domain Model](#Common-Domain-Model)
  - [Compliant Financial Infrastructure](#Compliant-Financial-Infrastructure)
  - [Currency Reference Data](#Currency-Reference-Data)
- - [DevOps Automation](#DevOps-Automation)
- - [Diversity Equity & Inclusion Special Interest Group](#Diversity-Equity-&-Inclusion-Special-Interest-Group)
- - [FDC3](#FDC3)
  - [FDC3 Conformance Framework](#FDC3-Conformance-Framework)
  - [FDC3 Sail](#FDC3-Sail)
- - [Financial Objects](#Financial-Objects)
  - [FINOS Code Scanning](#FINOS-Code-Scanning)
  - [Git Proxy](#Git-Proxy)
  - [High Throughput Compute Grid](#High-Throughput-Compute-Grid)
- - [InnerSource Special Interest Group](#InnerSource-Special-Interest-Group)
- - [JCurl](#JCurl)
- - [JupyterLab Templates](#JupyterLab-Templates)
  - [kdb+](#kdb+)
  - [Legend](#Legend)
- - [MessageML Utilities](#MessageML-Utilities)
- - [Morphir](#Morphir)
  - [Open Reg Tech US LCR](#Open-Reg-Tech-US-LCR)
- - [Open source readiness](#Open-source-readiness)
- - [OpenMAMA](#OpenMAMA)
- - [Perspective](#Perspective)
- - [Regular Table](#Regular-Table)
- - [Regulation Innovation Special Interest Group](#Regulation-Innovation-Special-Interest-Group)
- - [REST API Specification](#REST-API-Specification)
  - [Security Reference Data](#Security-Reference-Data)
- - [Spring Bot](#Spring-Bot)
  - [Symphony BDK Java](#Symphony-BDK-Java)
  - [Symphony BDK Python](#Symphony-BDK-Python)
- - [Symphony Electron](#Symphony-Electron)
  - [Symphony Generator](#Symphony-Generator)
  - [Symphony Media Bridge](#Symphony-Media-Bridge)
  - [Symphony WDK](#Symphony-WDK)
@@ -44,9 +49,7 @@ Here are some of FINOS' most active projects (as of 09 Dec 2024):
  - [TRAC d.a.p.](#TRAC-d.a.p.)
  - [TraderX](#TraderX)
  - [VUU](#VUU)
- - [Waltz](#Waltz)
- - [Zenith](#Zenith)
-## Special Interest Groups
+# Special Interest Groups
 ## AI Readiness
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/ai-readiness.svg" width="100px" />
@@ -240,7 +243,7 @@ _Create a space where expertise can be identified and implemented to help the fi
 #### Further Details
  - [https://github.com/finos/zenith](https://github.com/finos/zenith)
  - [https://zenith.finos.org](https://zenith.finos.org)
-## Active Projects
+# Active Projects
 ## FDC3 - Financial Desktop Connectivity and Collaboration Consortium
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/fdc3.svg" width="100px" />
@@ -626,7 +629,7 @@ _Enterprise Information Service_
 #### Further Details
  - [https://github.com/finos/waltz](https://github.com/finos/waltz)
  - [https://waltz.finos.org](https://waltz.finos.org)
-## Incubating Projects
+# Incubating Projects
 ## Accessibility Theme Builder
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/themebuilder.svg" width="100px" />
