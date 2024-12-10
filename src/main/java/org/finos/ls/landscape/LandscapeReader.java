@@ -44,6 +44,7 @@ public class LandscapeReader {
 		return null;
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<ProjectInfo> readCategories(List<Map<String, Object>> data) {
 		List<ProjectInfo> out = new ArrayList<>();
 
@@ -68,6 +69,14 @@ public class LandscapeReader {
 								.collect(Collectors.toList());
 						pi.additionalRepos = ar;
 					}
+					
+					Map<String, Object> extra = (Map<String, Object>) item.get("extra");
+					if (extra != null) {
+						pi.mailingList = (String) extra.get("mailing_list");
+						pi.zoomEmails = (List<String>) extra.get("zoom_emails");
+						pi.slackChannels = (List<String>) extra.get("slack_channels");	
+					}
+					
 					out.add(pi);
 				}
 			}

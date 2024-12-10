@@ -1,5 +1,8 @@
 package org.finos.ls.queries;
 
+import java.net.URLEncoder;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -11,6 +14,7 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 
+import org.apache.commons.io.Charsets;
 import org.apache.commons.text.WordUtils;
 import org.commonmark.ext.autolink.AutolinkExtension;
 import org.commonmark.ext.front.matter.YamlFrontMatterExtension;
@@ -108,7 +112,7 @@ public class MarkdownSummarizer implements QueryType<String> {
 		
 		addTitle(out, slugBasedTitle, repo);
 		addLogo(out, this.pi.logo);
-		writeSummaryCounts(out, repo);
+		writeSummaryCounts(out, repo, this.pi);
 		out.append("\n\n");
 		addDescription(out, description);
 		addTopicTags(out, tags, repo);
@@ -117,7 +121,6 @@ public class MarkdownSummarizer implements QueryType<String> {
 		
 		return out.toString();
 	}
-
 
 
 	private void addLogo(StringBuilder out, String logo) {
@@ -168,16 +171,39 @@ public class MarkdownSummarizer implements QueryType<String> {
 		tags.forEach(t -> out.append(t+" "));
 		out.append("\n\n");
 	}
+	
+	private static final List<String> ZOOM_EMAIL_TEST = Arrays.asList("finos.ccc@gmail.com", "finos.ccc.2@gmail.com");
 
-	private void writeSummaryCounts(StringBuilder out, Repository repo) {
+	private void writeSummaryCounts(StringBuilder out, Repository repo, ProjectInfo pi) {
 		out.append(createBadge("⭐%20Stars", "GitHub Stars", ""+repo.getStargazerCount(), "grey", repo, "/stargazers"));
 		out.append(createBadge("⚡%20Forks", "GitHub Forks", ""+repo.getForkCount(), "grey", repo, ""));
 		out.append(createBadge("🔎%20Issues", "GitHub Issues", ""+ repo.getIssues().getTotalCount(), "grey",repo, "/issues"));
+		
+		if (pi.mailingList != null) {
+			String email = pi.mailingList;
+			String subscribe = "mailto:"+email.replace("@", "+subscribe@");
+			out.append(createBadge("📫%20Mailing%20List", "Join The Mailing List", "Join", "orange", null, subscribe));
+		}
+		
+		if (pi.slackChannels != null) {
+			pi.slackChannels.forEach(sc -> {
+				out.append(createBadge("Slack", "Chat On Slack", "Join", "orange", null, "https://app.slack.com/client/T01E7QRQH97/"+sc));
+			});
+		}
+		
+		//if (pi.zoomEmails != null) {
+		if (ZOOM_EMAIL_TEST != null) {
+			String emails = ZOOM_EMAIL_TEST.stream().reduce("", String::concat);
+			String param = URLEncoder.encode(emails, StandardCharsets.UTF_8);
+			out.append(createBadge("📅%20Calendar", "Add To Calendar", "Add", "orange", null, "https://some.url/client/emails="+param));
+		}
+			
+		
 	}
 
 	private String createBadge(String title, String altText, String value, String colour, Repository r, String url){
 		String badgeImage = "!["+altText+"](https://img.shields.io/badge/"+title+"-"+value+"-"+colour+"?labelColor=eaebec&style=for-the-badge) ";
-		return "["+badgeImage+"]("+r.getUrl()+url+")";
+		return "["+badgeImage+"]("+(r != null ? r.getUrl(): "")+url+")";
 	}
 
 	private void addLink(StringBuilder out, String url, String linkText) {

@@ -16,7 +16,10 @@ public class ProjectInfo {
 	public String logo;
 	public String homepageUrl;
 	public ProjectType type;
-
+	public String mailingList;
+	public List<String> slackChannels;
+	public List<String> zoomEmails;
+	
 	public static ProjectType projectType(String in) {
 		if (in != null) {
 			switch (in) {
@@ -38,7 +41,10 @@ public class ProjectInfo {
 	public String toString() {
 		return "ProjectInfo [name=" + name + ", category=" + category + ", subcategory=" + subcategory + ", mainRepo="
 				+ mainRepo + ", additionalRepos=" + additionalRepos + ", logo=" + logo + ", homepageUrl=" + homepageUrl
-				+ ", type=" + type + "]";
+				+ ", type=" + type + ", mailingList=" + mailingList + ", slackChannels=" + slackChannels
+				+ ", zoomEmails=" + zoomEmails + "]";
 	}
+
+	
 
 }

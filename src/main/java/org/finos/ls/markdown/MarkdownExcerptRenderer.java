@@ -8,6 +8,7 @@ import org.commonmark.node.FencedCodeBlock;
 import org.commonmark.node.HardLineBreak;
 import org.commonmark.node.Heading;
 import org.commonmark.node.HtmlBlock;
+import org.commonmark.node.HtmlInline;
 import org.commonmark.node.Image;
 import org.commonmark.node.IndentedCodeBlock;
 import org.commonmark.node.Link;
@@ -175,10 +176,10 @@ public class MarkdownExcerptRenderer extends CoreTextContentNodeRenderer {
 //		super.visit(strongEmphasis);
 //	}
 //
-//	@Override
-//	public void visit(HtmlInline htmlInline) {
-//		handleLineSpace();
-//	}
+	@Override
+	public void visit(HtmlInline htmlInline) {
+		handleLineSpace();
+	}
 
 	@Override
 	public void visit(HtmlBlock htmlBlock) {
