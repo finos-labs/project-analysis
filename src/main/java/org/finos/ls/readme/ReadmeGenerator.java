@@ -120,9 +120,11 @@ public class ReadmeGenerator extends AbstractMultiReport {
 		allReports.put("README-generated.md", out.toString());
 
 		for (String tag : tags) {
-			out.append("\n\n# " + tag + "\n");
-			out.append(tableOfContents(bucketedProjects, null, tag));
-			out.append(report(bucketedProjects, projectSummaries, null, tag));
+			StringBuilder tagOut = new StringBuilder();
+			tagOut.append("\n\n# " + tag + "\n");
+			tagOut.append(tableOfContents(bucketedProjects, null, tag));
+			tagOut.append(report(bucketedProjects, projectSummaries, null, tag));
+			allReports.put(tag+".md", tagOut.toString());
 		}
 
 		return allReports;
