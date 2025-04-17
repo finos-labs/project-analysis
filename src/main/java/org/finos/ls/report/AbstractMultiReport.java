@@ -12,25 +12,21 @@ import java.util.Map;
  */
 public abstract class AbstractMultiReport implements Report {
 
-	
 	public abstract Map<String, String> generateInner() throws Exception;
-		
+
 	public void generate() throws Exception {
 		Map<String, String> done = generateInner();
-		System.out.println("DONE: "+done.size());
+		System.out.println("DONE: " + done.size());
+		outputResults(done);
+	}
 
+	public void outputResults(Map<String, String> done) throws Exception {
 		for (Map.Entry<String, String> entry : done.entrySet()) {
-			outputResults(entry.getKey(), entry.getValue());			
+			File out = new File(entry.getKey());
+			FileWriter fw = new FileWriter(out);
+			fw.write(entry.getValue());
+			fw.close();
 		}
-		
-	}
-	
-	public void outputResults(String filename, String report) throws Exception {
-		File out = new File(filename);
-		FileWriter fw = new FileWriter(out);
-		fw.write(report);
-		fw.close();
 	}
 
-	
 }

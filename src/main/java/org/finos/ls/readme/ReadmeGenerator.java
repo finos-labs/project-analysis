@@ -207,10 +207,12 @@ public class ReadmeGenerator extends AbstractMultiReport {
 	}
 
 	@Override
-	public void outputResults(String filename, String report) throws Exception {
-		super.outputResults(filename, report);
+	public void outputResults(Map<String, String> entries) throws Exception {
+		super.outputResults(entries);
 		if (Arrays.asList(env.getActiveProfiles()).contains("pr")) {
-			commit.commitFile(filename, report.getBytes(), head, repo, owner);
+			Map<String, byte[]> files = entries.entrySet().stream()
+					.collect(Collectors.toMap(e -> e.getKey(), e -> e.getValue().getBytes()));
+			commit.commitFiles(files, head, repo, owner);
 			pr.createOrUpdatePullRequest(repo, owner, base, head, Collections.singletonList("@robmoffat"),
 					"Updated Generated Files");
 		}
