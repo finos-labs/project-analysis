@@ -13,7 +13,7 @@ landscapeLogoPrefix: https://raw.githubusercontent.com/finos/finos-landscape/mas
   
 githubOrgs: finos, finos-labs
 
-reports: scan, readme
+reports: readme
  
 readme:
   repo: project-analysis

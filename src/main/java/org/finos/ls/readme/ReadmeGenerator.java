@@ -185,6 +185,8 @@ public class ReadmeGenerator extends AbstractMultiReport {
 
 			out.append(l.convert(getRepoDetails(l, name, org), qe));
 		} catch (Exception e) {
+			out.append("## " + pi.mainRepo + "\n");
+			out.append("Couldn't process this repo: \n");
 			System.err.println("Couldn't process: " + pi.mainRepo);
 			e.printStackTrace();
 		}
