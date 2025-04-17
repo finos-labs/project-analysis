@@ -107,7 +107,7 @@ public class ReadmeGenerator extends AbstractMultiReport {
 		System.out.println("Tags: " + String.join(", ", tags));
 
 		for (String tag : tags) {
-			out.append(" - [" + tag + "](#" + tag + ".md)\n");
+			out.append(" - [" + tag + "](" + tag + ".md)\n");
 		}
 
 		out.append("# Special Interest Groups\n");

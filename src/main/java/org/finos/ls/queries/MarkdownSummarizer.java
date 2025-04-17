@@ -188,10 +188,8 @@ public class MarkdownSummarizer implements QueryType<String> {
 			});
 		}
 
-		if (pi.calendarSearchString != null) {
-			String param = URLEncoder.encode(pi.calendarSearchString, StandardCharsets.UTF_8);
-			out.append(createBadge("📅%20Calendar", "Add To Calendar", "Add", "orange", null,
-					"https://calendar.finos.org/multi-signup?search=" + param));
+		if (pi.calendarUrl != null) {
+			out.append(createBadge("📅%20Calendar", "Add To Calendar", "Add", "orange", null, pi.calendarUrl));
 		}
 
 	}
