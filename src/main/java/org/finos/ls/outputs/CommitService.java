@@ -2,6 +2,7 @@ package org.finos.ls.outputs;
 
 import java.util.Arrays;
 import java.util.Base64;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -32,43 +33,7 @@ public class CommitService {
 
 	public void commitFile(String file, byte[] contents, String branch, String repoName, String owner)
 			throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Repository repo = qe.repository("{ref(qualifiedName: \"refs/heads/" + branch + "\") {\n"
-				+ "      target {\n"
-				+ "        id\n"
-				+ "        ... on Commit {\n"
-				+ "          history(first: 1) {\n"
-				+ "            nodes {\n"
-				+ "              oid\n"
-				+ "            }\n"
-				+ "          }\n"
-				+ "        }\n"
-				+ "      }\n"
-				+ "    }\n"
-				+ "  }", true, repoName, owner);
-
-		String oid = ((Commit) repo.getRef().getTarget()).getHistory().getNodes().get(0).getOid();
-
-		String base64Contents = Base64.getEncoder().encodeToString(contents);
-
-		FileAddition fileAddition = FileAddition.builder()
-				.withPath(file)
-				.withContents(base64Contents)
-				.build();
-
-		FileChanges fileChanges = FileChanges.builder()
-				.withAdditions(Arrays.asList(fileAddition))
-				.build();
-
-		CreateCommitOnBranchInput input = CreateCommitOnBranchInput.builder()
-				.withBranch(CommittableBranch.builder()
-						.withRepositoryNameWithOwner(owner + "/" + repoName)
-						.withBranchName("refs/heads/" + branch).build())
-				.withFileChanges(fileChanges)
-				.withMessage(CommitMessage.builder().withHeadline("Landscape Scanning Generated File").build())
-				.withExpectedHeadOid(oid)
-				.build();
-
-		me.createCommitOnBranch("", input);
+		commitFiles(Collections.singletonMap(file, contents), branch, repoName, owner);
 	}
 
 	public void commitFiles(Map<String, byte[]> files, String branch, String repoName, String owner)
