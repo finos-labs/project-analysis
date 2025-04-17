@@ -20,7 +20,6 @@ import org.yaml.snakeyaml.Yaml;
 
 @Component
 public class LandscapeReader {
-	
 
 	@Value("${landscapeLogoPrefix:https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/}")
 	String logoPrefix;
@@ -58,25 +57,31 @@ public class LandscapeReader {
 					ProjectInfo pi = new ProjectInfo();
 					pi.category = categoryName;
 					pi.subcategory = subCategoryName;
-					pi.logo = this.logoPrefix +  (String) item.get("logo");
+					pi.logo = this.logoPrefix + (String) item.get("logo");
 					pi.name = (String) item.get("name");
 					pi.mainRepo = (String) item.get("repo_url");
 					pi.type = ProjectInfo.projectType((String) item.get("project"));
 					pi.homepageUrl = (String) item.get("homepage_url");
-					List<Map<String, Object>> additionalRepos = (List<Map<String, Object>>) item.get("additional_repos");
+					List<Map<String, Object>> additionalRepos = (List<Map<String, Object>>) item
+							.get("additional_repos");
 					if (additionalRepos != null) {
 						List<String> ar = additionalRepos.stream().map(i -> (String) i.get("repo_url"))
 								.collect(Collectors.toList());
 						pi.additionalRepos = ar;
 					}
-					
+
 					Map<String, Object> extra = (Map<String, Object>) item.get("extra");
 					if (extra != null) {
 						pi.mailingList = (String) extra.get("mailing_list");
 						pi.zoomEmails = (List<String>) extra.get("zoom_emails");
-						pi.slackChannels = (List<String>) extra.get("slack_channels");	
+						pi.slackChannels = (List<String>) extra.get("slack_channels");
+						pi.tags = (List<String>) item.get("tags");
+						if (pi.tags == null) {
+							pi.tags = new ArrayList<>();
+						}
+						pi.calendarSearchString = (String) item.get("meeting_search_term");
 					}
-					
+
 					out.add(pi);
 				}
 			}

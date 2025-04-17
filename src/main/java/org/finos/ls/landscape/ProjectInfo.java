@@ -1,5 +1,6 @@
 package org.finos.ls.landscape;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProjectInfo {
@@ -19,18 +20,20 @@ public class ProjectInfo {
 	public String mailingList;
 	public List<String> slackChannels;
 	public List<String> zoomEmails;
-	
+	public List<String> tags = new ArrayList<>();
+	public String calendarSearchString;
+
 	public static ProjectType projectType(String in) {
 		if (in != null) {
 			switch (in) {
-			case "incubating":
-				return ProjectType.INCUBATING;
-			case "active":
-				return ProjectType.ACTIVE;
-			case "sig":
-				return ProjectType.SIG;
-			default:
-				return null;
+				case "incubating":
+					return ProjectType.INCUBATING;
+				case "active":
+					return ProjectType.ACTIVE;
+				case "sig":
+					return ProjectType.SIG;
+				default:
+					return null;
 			}
 		}
 		return null;
@@ -44,7 +47,5 @@ public class ProjectInfo {
 				+ ", type=" + type + ", mailingList=" + mailingList + ", slackChannels=" + slackChannels
 				+ ", zoomEmails=" + zoomEmails + "]";
 	}
-
-	
 
 }
