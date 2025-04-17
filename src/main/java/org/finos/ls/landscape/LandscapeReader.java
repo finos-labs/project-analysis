@@ -75,11 +75,11 @@ public class LandscapeReader {
 						pi.mailingList = (String) extra.get("mailing_list");
 						pi.zoomEmails = (List<String>) extra.get("zoom_emails");
 						pi.slackChannels = (List<String>) extra.get("slack_channels");
-						pi.tags = (List<String>) item.get("tags");
+						pi.tags = (List<String>) extra.get("tags");
 						if (pi.tags == null) {
 							pi.tags = new ArrayList<>();
 						}
-						pi.calendarSearchString = (String) item.get("meeting_search_term");
+						pi.calendarSearchString = (String) extra.get("meeting_search_term");
 					}
 
 					out.add(pi);
