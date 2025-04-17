@@ -27,7 +27,6 @@ public abstract class AbstractMultiReport implements Report {
 	
 	public void outputResults(String filename, String report) throws Exception {
 		File out = new File(filename);
-		out.getParentFile().mkdirs();
 		FileWriter fw = new FileWriter(out);
 		fw.write(report);
 		fw.close();
