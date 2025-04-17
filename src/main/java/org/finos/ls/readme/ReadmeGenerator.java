@@ -103,6 +103,9 @@ public class ReadmeGenerator extends AbstractMultiReport {
 
 		out.append("# Projects by Tag\n");
 		List<String> tags = collectTags(info);
+
+		System.out.println("Tags: " + String.join(", ", tags));
+
 		for (String tag : tags) {
 			out.append(" - [" + tag + "](#" + tag + ".md)\n");
 		}
@@ -124,7 +127,7 @@ public class ReadmeGenerator extends AbstractMultiReport {
 			tagOut.append("\n\n# " + tag + "\n");
 			tagOut.append(tableOfContents(bucketedProjects, null, tag));
 			tagOut.append(report(bucketedProjects, projectSummaries, null, tag));
-			allReports.put(tag+".md", tagOut.toString());
+			allReports.put(tag + ".md", tagOut.toString());
 		}
 
 		return allReports;
@@ -182,7 +185,8 @@ public class ReadmeGenerator extends AbstractMultiReport {
 
 			out.append(l.convert(getRepoDetails(l, name, org), qe));
 		} catch (Exception e) {
-			throw new RuntimeException("Couldn't process: ", e);
+			System.err.println("Couldn't process: " + pi.mainRepo);
+			e.printStackTrace();
 		}
 	}
 
