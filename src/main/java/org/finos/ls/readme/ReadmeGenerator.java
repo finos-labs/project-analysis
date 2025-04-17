@@ -14,11 +14,12 @@ import javax.inject.Named;
 import org.finos.ls.QueryService;
 import org.finos.ls.landscape.LandscapeReader;
 import org.finos.ls.landscape.ProjectInfo;
+import org.finos.ls.landscape.ProjectInfo.ProjectType;
 import org.finos.ls.outputs.CommitService;
 import org.finos.ls.outputs.PullRequestService;
 import org.finos.ls.queries.MarkdownSummarizer;
 import org.finos.ls.queries.MarkdownSummarizer.SummaryLevel;
-import org.finos.ls.report.AbstractReport;
+import org.finos.ls.report.AbstractMultiReport;
 import org.finos.scan.github.client.Repository;
 import org.finos.scan.github.client.util.QueryExecutor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,38 +36,35 @@ import com.graphql_java_generator.exception.GraphQLRequestPreparationException;
 @Named("readme")
 @ConfigurationProperties(prefix = "readme")
 @EnableConfigurationProperties
-public class ReadmeGenerator extends AbstractReport {
-	
+public class ReadmeGenerator extends AbstractMultiReport {
+
 	@Autowired
 	Environment env;
-	
+
 	@Autowired
 	LandscapeReader lr;
-	
+
 	@Value("${landscapeUrl}")
 	String landscapeUrl;
-	
+
 	@Autowired
 	QueryService qs;
-	
-	@Autowired 
+
+	@Autowired
 	QueryExecutor qe;
 
 	@Value("${githubOrgs}")
 	List<String> orgs;
-	
+
 	@Autowired
 	CommitService commit;
-	
+
 	@Autowired
 	PullRequestService pr;
-	
-	@Value("${readme.file:README.md}")
-	String readmeFile;
-	
+
 	@Value("${readme.repo}")
 	String repo;
-	
+
 	@Value("${readme.owner}")
 	String owner;
 
@@ -75,66 +73,103 @@ public class ReadmeGenerator extends AbstractReport {
 
 	@Value("${readme.head}")
 	String head;
-	
-	@Value("${readme.output:}")
-	String filename;
 
-	public String getFilename() {
-		return filename;
-	}
-	
 	Map<String, Repository> cache = new HashMap<>();
-	
-	@Override
-	public String generateInner() throws Exception {
-		return generate(orgs);
-	}
 
-	public String generate(List<String> orgs) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+	@Override
+	public Map<String, String> generateInner()
+			throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		Map<String, String> allReports = new HashMap<>();
 		List<ProjectInfo> info = lr.readFromLandscape(landscapeUrl);
-		
+
 		// remove gitlab projects for now
-		info = info.stream()
-				.filter(pi -> pi.mainRepo != null)
-				.filter(pi -> !pi.mainRepo.contains("gitlab.com")).collect(Collectors.toList());
-		
+		info = info.stream().filter(pi -> pi.mainRepo != null).filter(pi -> !pi.mainRepo.contains("gitlab.com"))
+				.collect(Collectors.toList());
+
 		StringBuilder out = new StringBuilder();
 		out.append("# FINOS Projects\n\n");
 		String date = new SimpleDateFormat("dd MMM yyyy").format(new Date());
-		out.append("Here are some of FINOS' most active projects (as of "+date+"):\n\n");
-		
+		out.append("Here are some of FINOS' most active projects (as of " + date + "):\n\n");
+
 		Map<String, ProjectInfo> bucketedProjects = bucketNames(info);
-		
-		out.append(tableOfContents(bucketedProjects));
-		
-		out.append(report(bucketedProjects));
-		
+		Map<String, String> projectSummaries = summariseProjects(bucketedProjects);
+
+		out.append("\n**Special Interest Groups:**\n");
+		out.append(tableOfContents(bucketedProjects, ProjectInfo.ProjectType.SIG, null));
+		out.append("\n**Active Projects:**\n");
+		out.append(tableOfContents(bucketedProjects, ProjectInfo.ProjectType.ACTIVE, null));
+		out.append("\n**Incubating Projects:**\n");
+		out.append(tableOfContents(bucketedProjects, ProjectInfo.ProjectType.INCUBATING, null));
+
+		out.append("# Projects by Tag\n");
+		List<String> tags = collectTags(info);
+		for (String tag : tags) {
+			out.append(" - [" + tag + "](#" + tag + ".md)\n");
+		}
+
+		out.append("# Special Interest Groups\n");
+		out.append(report(bucketedProjects, projectSummaries, ProjectInfo.ProjectType.SIG, null));
+
+		out.append("# Active Projects\n");
+		out.append(report(bucketedProjects, projectSummaries, ProjectInfo.ProjectType.ACTIVE, null));
+
+		out.append("# Incubating Projects\n");
+		out.append(report(bucketedProjects, projectSummaries, ProjectInfo.ProjectType.INCUBATING, null));
+
 		out.append("\n\n_For the full list see the repositories below_\n");
+		allReports.put("README-generated.md", out.toString());
+
+		for (String tag : tags) {
+			out.append("\n\n# " + tag + "\n");
+			out.append(tableOfContents(bucketedProjects, null, tag));
+			out.append(report(bucketedProjects, projectSummaries, null, tag));
+		}
+
+		return allReports;
+	}
+
+	private List<String> collectTags(List<ProjectInfo> info) {
+		return info.stream().flatMap(pi -> pi.tags.stream()).distinct().collect(Collectors.toList());
+	}
+
+	private String tableOfContents(Map<String, ProjectInfo> bucketedProjects, ProjectType t, String tag)
+			throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		StringBuilder out = new StringBuilder();
+		bucketedProjects.entrySet().stream()
+				.filter(a -> (a.getValue().type == t) || t == null)
+				.filter(a -> (a.getValue().tags.contains(tag)) || tag == null)
+				.sorted((a, b) -> a.getKey().compareToIgnoreCase(b.getKey())).forEach(entry -> {
+					String key = entry.getKey();
+					out.append(" - [" + key + "](#" + key.replace(" ", "-") + ")\n");
+				});
+
 		return out.toString();
 	}
 
-	private String tableOfContents(Map<String, ProjectInfo> bucketedProjects) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+	private String report(
+			Map<String, ProjectInfo> bucketedProjects,
+			Map<String, String> projectSummaries,
+			ProjectType t, String tag) {
 		StringBuilder out = new StringBuilder();
 		bucketedProjects.entrySet().stream()
-			.sorted((a, b) -> a.getKey().compareToIgnoreCase(b.getKey()))
-			.forEach(entry -> {
-				String key = entry.getKey();
-				out.append(" - ["+key+"](#"+key.replace(" ", "-")+")\n");
-		});
-		
+				.filter(a -> (a.getValue().type == t) || t == null)
+				.filter(a -> (a.getValue().tags.contains(tag)) || tag == null)
+				.sorted((a, b) -> a.getKey().compareToIgnoreCase(b.getKey())).forEach(e -> {
+					String summary = projectSummaries.get(e.getKey());
+					out.append(summary);
+				});
+
 		return out.toString();
 	}
 
-	private String report(Map<String, ProjectInfo> bucketedProjects) {
-		StringBuilder out = new StringBuilder();
-		bucketedProjects.entrySet().stream()
-			.sorted((a, b) -> a.getKey().compareToIgnoreCase(b.getKey()))
-			.forEach(e -> {
-				MarkdownSummarizer topLevel = new MarkdownSummarizer(SummaryLevel.MAIN, e.getValue());
-				appendUsing(topLevel, e.getValue(), out);
-			});
-		
-		return out.toString();
+	private Map<String, String> summariseProjects(Map<String, ProjectInfo> bucketedProjects) {
+		return bucketedProjects.entrySet().stream()
+				.collect(Collectors.toMap(e -> e.getKey(), e -> {
+					MarkdownSummarizer topLevel = new MarkdownSummarizer(SummaryLevel.MAIN, e.getValue());
+					StringBuilder out = new StringBuilder();
+					appendUsing(topLevel, e.getValue(), out);
+					return out.toString();
+				}));
 	}
 
 	private void appendUsing(MarkdownSummarizer l, ProjectInfo pi, StringBuilder out) {
@@ -151,11 +186,11 @@ public class ReadmeGenerator extends AbstractReport {
 
 	private Repository getRepoDetails(MarkdownSummarizer l, String name, String org)
 			throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		
+
 		if (!cache.containsKey(name)) {
 			cache.put(name, qs.getRawRepository(l, org, name));
 		}
-			
+
 		return cache.get(name);
 	}
 
@@ -164,14 +199,13 @@ public class ReadmeGenerator extends AbstractReport {
 	}
 
 	@Override
-	public void outputResults(String report) throws Exception {
-		super.outputResults(report);
+	public void outputResults(String filename, String report) throws Exception {
+		super.outputResults(filename, report);
 		if (Arrays.asList(env.getActiveProfiles()).contains("pr")) {
-			commit.commitFile(readmeFile, report.getBytes(), head, repo, owner);
-			pr.createOrUpdatePullRequest(repo, owner, base, head, Collections.singletonList("@robmoffat"), "Updated Generated Files");
+			commit.commitFile(filename, report.getBytes(), head, repo, owner);
+			pr.createOrUpdatePullRequest(repo, owner, base, head, Collections.singletonList("@robmoffat"),
+					"Updated Generated Files");
 		}
 	}
 
-	
-	
 }

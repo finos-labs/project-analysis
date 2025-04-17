@@ -8,7 +8,7 @@ logging:
     
 debug: true
 
-landscapeUrl: https://raw.githubusercontent.com/finos/finos-landscape/master/landscape.yml
+landscapeUrl: https://raw.githubusercontent.com/finos/finos-landscape/improved-readme/landscape.yml
 landscapeLogoPrefix: https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/
   
 githubOrgs: finos, finos-labs
@@ -20,8 +20,6 @@ readme:
   owner: finos-labs
   base: main
   head: generated-branch
-  file: README.generated.md
-  output: target/README.generated.md
 
 scan:
   output: target/toc-scorecard.csv  
