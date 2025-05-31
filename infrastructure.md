@@ -12,7 +12,7 @@
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/calm.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-104-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/architecture-as-code/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-50-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/architecture-as-code)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-92-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/architecture-as-code/issues)[![Join The Mailing List](https://img.shields.io/badge/📫%20Mailing%20List-Join-orange?labelColor=eaebec&style=for-the-badge) ](mailto:calm+subscribe@lists.finos.org)[![Chat On Slack](https://img.shields.io/badge/Slack-Join-orange?labelColor=eaebec&style=for-the-badge) ](https://app.slack.com/client/T01E7QRQH97/C085UHKL6SJ)[![Add To Calendar](https://img.shields.io/badge/📅%20Calendar-Add-orange?labelColor=eaebec&style=for-the-badge) ](https://calendar.finos.org/multi-signup?search=Architecture+as+Code)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-104-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/architecture-as-code/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-51-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/architecture-as-code)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-95-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/architecture-as-code/issues)[![Join The Mailing List](https://img.shields.io/badge/📫%20Mailing%20List-Join-orange?labelColor=eaebec&style=for-the-badge) ](mailto:calm+subscribe@lists.finos.org)[![Chat On Slack](https://img.shields.io/badge/Slack-Join-orange?labelColor=eaebec&style=for-the-badge) ](https://app.slack.com/client/T01E7QRQH97/C085UHKL6SJ)[![Add To Calendar](https://img.shields.io/badge/📅%20Calendar-Add-orange?labelColor=eaebec&style=for-the-badge) ](https://calendar.finos.org/multi-signup?search=Architecture+as+Code)
 
 _"Architecture as Code" (AasC) aims to devise and manage software architecture via a machine readable and version-controlled codebase, fostering a robust understanding, efficient development, and seamless maintenance of complex software architectures_
 
@@ -46,7 +46,7 @@ _"Architecture as Code" (AasC) aims to devise and manage software architecture v
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/ccc.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-46-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-54-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-19-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls/issues)[![Add To Calendar](https://img.shields.io/badge/📅%20Calendar-Add-orange?labelColor=eaebec&style=for-the-badge) ](https://calendar.finos.org/multi-signup?search=CCC)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-47-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-54-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-17-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-cloud-controls/issues)[![Add To Calendar](https://img.shields.io/badge/📅%20Calendar-Add-orange?labelColor=eaebec&style=for-the-badge) ](https://calendar.finos.org/multi-signup?search=CCC)
 
 _FINOS Common Cloud Controls_
 
@@ -134,7 +134,7 @@ _Provide a continuous compliance and assurance approach to DevOps that mutually 
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/finos-code-scanning.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-9-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/code-scanning/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-5-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/code-scanning)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/code-scanning/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-9-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/code-scanning/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-6-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/code-scanning)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/code-scanning/issues)
 
 _How to protect FINOS hosted projects from security threats and license compliance issues_
 
