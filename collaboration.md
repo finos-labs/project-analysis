@@ -130,7 +130,7 @@ _The Symphony BDK (Bot Developer Kit) for Java helps you to create production-gr
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/symphony-bdk-python.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-32-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-python/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-39-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-python)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-python/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-33-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-python/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-39-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-python)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/symphony-bdk-python/issues)
 
 _Symphony Python Bot Development Kit (BDK)_
 
