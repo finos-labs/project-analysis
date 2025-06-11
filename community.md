@@ -9,7 +9,7 @@
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/ai-readiness.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-48-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ai-readiness/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-20-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ai-readiness)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-13-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ai-readiness/issues)[![Join The Mailing List](https://img.shields.io/badge/📫%20Mailing%20List-Join-orange?labelColor=eaebec&style=for-the-badge) ](mailto:ai-readiness-private+subscribe@lists.finos.org)[![Add To Calendar](https://img.shields.io/badge/📅%20Calendar-Add-orange?labelColor=eaebec&style=for-the-badge) ](https://calendar.finos.org/multi-signup?search=AI)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-48-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ai-readiness/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-20-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ai-readiness)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-15-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/ai-readiness/issues)[![Join The Mailing List](https://img.shields.io/badge/📫%20Mailing%20List-Join-orange?labelColor=eaebec&style=for-the-badge) ](mailto:ai-readiness-private+subscribe@lists.finos.org)[![Add To Calendar](https://img.shields.io/badge/📅%20Calendar-Add-orange?labelColor=eaebec&style=for-the-badge) ](https://calendar.finos.org/multi-signup?search=AI)
 
 _The AI Readiness SIG provides a space to address AI-related challenges that are common to all members._
 
@@ -28,31 +28,31 @@ _The AI Readiness SIG provides a space to address AI-related challenges that are
 #### Further Details
  - [https://github.com/finos/ai-readiness](https://github.com/finos/ai-readiness)
  - [https://www.finos.org/ai-readiness](https://www.finos.org/ai-readiness)
-## Diversity Equity & Inclusion Special Interest Group
+## Open Source Talent Acceleration Special Interest Group
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/dei-sig.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-14-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/DEI-SIG/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/DEI-SIG)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-29-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/DEI-SIG/issues)[![Add To Calendar](https://img.shields.io/badge/📅%20Calendar-Add-orange?labelColor=eaebec&style=for-the-badge) ](https://calendar.finos.org/multi-signup?search=Diversity)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-14-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-talent-acceleration/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-4-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-talent-acceleration)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-29-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-talent-acceleration/issues)[![Add To Calendar](https://img.shields.io/badge/📅%20Calendar-Add-orange?labelColor=eaebec&style=for-the-badge) ](https://calendar.finos.org/multi-signup?search=Diversity)
 
 
 
 #### From the README:
 
-> Since first launching in 2022, FINOS’ DEI SIG has achieved strong momentum encouraging the participation of underrepresented groups and delivering keynote panels at [OSFF](https://events.linuxfoundation.org/open-source-finance-forum/); running federated events within the FINOS community and sharing best practice on open source in financial services with diverse communities such as [Anita B’s Grace Hopper Celebration](https://ghc.anitab.org/).
+> Since first launching in 2022, FINOS’ Open Source Talent Acceleration SIG has achieved strong momentum encouraging the participation of underrepresented groups and delivering keynote panels at [OSFF](https://events.linuxfoundation.org/open-source-finance-forum/); running federated events within the FINOS community and sharing best practice on open source in financial services with diverse communities such as [Anita B’s Grace Hopper Celebration](https://ghc.anitab.org/).
 > 
-> More recently, the DEI SIG has worked to deepen its breadth and impact to make it part of our DNA and legacy. In 2024, we set further goals to create expanded SIG leadership and contributor opportunities; agree on priorities to develop, advance, and retain diverse talent; ensure FINOS projects are inclusive and events are diverse.
+> More recently, the Open Source Talent Acceleration SIG has worked to deepen its breadth and impact to make it part of our DNA and legacy. In 2024, we set further goals to create expanded SIG leadership and contributor opportunities; agree on priorities to develop, advance, and retain diverse talent; ensure FINOS projects are inclusive and events are diverse.
 > 
 > Key focus areas for the year included Accessibility;[advancing Responsible AI; Diversity & Open Source Talent Development as Key Pillars for Inclusive Technology](https://www.finos.org/blog/finos-dei-sig-advances-responsible-ai).
->... [_read more_](https://github.com/finos/DEI-SIG)
+>... [_read more_](https://github.com/finos/open-source-talent-acceleration)
 > 
 #### Further Details
- - [https://github.com/finos/DEI-SIG](https://github.com/finos/DEI-SIG)
+ - [https://github.com/finos/open-source-talent-acceleration](https://github.com/finos/open-source-talent-acceleration)
  - [https://dei.finos.org/](https://dei.finos.org/)
 ## FINOS InnerSource Special Interest Group
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/innersource.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-29-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/InnerSource/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-22-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/InnerSource)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-58-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/InnerSource/issues)[![Join The Mailing List](https://img.shields.io/badge/📫%20Mailing%20List-Join-orange?labelColor=eaebec&style=for-the-badge) ](mailto:innersource+subscribe@finos.org)[![Chat On Slack](https://img.shields.io/badge/Slack-Join-orange?labelColor=eaebec&style=for-the-badge) ](https://app.slack.com/client/T01E7QRQH97/C01SYB503QT)[![Chat On Slack](https://img.shields.io/badge/Slack-Join-orange?labelColor=eaebec&style=for-the-badge) ](https://app.slack.com/client/T01E7QRQH97/C01TAPTAHUZ)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-29-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/InnerSource/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-22-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/InnerSource)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-59-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/InnerSource/issues)[![Join The Mailing List](https://img.shields.io/badge/📫%20Mailing%20List-Join-orange?labelColor=eaebec&style=for-the-badge) ](mailto:innersource+subscribe@finos.org)[![Chat On Slack](https://img.shields.io/badge/Slack-Join-orange?labelColor=eaebec&style=for-the-badge) ](https://app.slack.com/client/T01E7QRQH97/C01SYB503QT)[![Chat On Slack](https://img.shields.io/badge/Slack-Join-orange?labelColor=eaebec&style=for-the-badge) ](https://app.slack.com/client/T01E7QRQH97/C01TAPTAHUZ)
 
 _The FINOS InnerSource SIG is a community of people implementing, or interested in implementing, InnerSource within their financial services organization._
 
@@ -83,7 +83,7 @@ _The FINOS InnerSource SIG is a community of people implementing, or interested 
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/open-source-readiness.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-37-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-34-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-35-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/issues)[![Join The Mailing List](https://img.shields.io/badge/📫%20Mailing%20List-Join-orange?labelColor=eaebec&style=for-the-badge) ](mailto:osr+subscribe@finos.org)[![Chat On Slack](https://img.shields.io/badge/Slack-Join-orange?labelColor=eaebec&style=for-the-badge) ](https://app.slack.com/client/T01E7QRQH97/C01RVPM6YDU)[![Add To Calendar](https://img.shields.io/badge/📅%20Calendar-Add-orange?labelColor=eaebec&style=for-the-badge) ](https://calendar.finos.org/multi-signup?search=Open+Source+Readiness)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-37-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-34-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-37-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/open-source-readiness/issues)[![Join The Mailing List](https://img.shields.io/badge/📫%20Mailing%20List-Join-orange?labelColor=eaebec&style=for-the-badge) ](mailto:osr+subscribe@finos.org)[![Chat On Slack](https://img.shields.io/badge/Slack-Join-orange?labelColor=eaebec&style=for-the-badge) ](https://app.slack.com/client/T01E7QRQH97/C01RVPM6YDU)[![Add To Calendar](https://img.shields.io/badge/📅%20Calendar-Add-orange?labelColor=eaebec&style=for-the-badge) ](https://calendar.finos.org/multi-signup?search=Open+Source+Readiness)
 
 _Accelerate financial services firms’ journeys toward open source readiness, by advancing the readiness of participants’ firms and informing guidance for the broader industry in the form of white papers, presentations, and blog posts._
 
