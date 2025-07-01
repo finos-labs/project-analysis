@@ -14,7 +14,7 @@
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/cdm.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-179-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-83-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-95-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/issues)[![Add To Calendar](https://img.shields.io/badge/📅%20Calendar-Add-orange?labelColor=eaebec&style=for-the-badge) ](https://calendar.finos.org/multi-signup?search=CDM)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-179-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-83-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-97-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/common-domain-model/issues)[![Add To Calendar](https://img.shields.io/badge/📅%20Calendar-Add-orange?labelColor=eaebec&style=for-the-badge) ](https://calendar.finos.org/multi-signup?search=CDM)
 
 _The CDM is a model for financial products, trades in those products, and the lifecycle events of those trades. It is an open source standard that aligns data, systems and processes and is available as code in multiple languages for easy implementation across technologies._
 
@@ -90,7 +90,7 @@ _kdb+ Working Group from FINOS Data Technologies program_
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/legend.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-1380-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-221-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/issues)[![Join The Mailing List](https://img.shields.io/badge/📫%20Mailing%20List-Join-orange?labelColor=eaebec&style=for-the-badge) ](mailto:legend+subscribe@finos.org)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-1383-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-221-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-3-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/legend/issues)[![Join The Mailing List](https://img.shields.io/badge/📫%20Mailing%20List-Join-orange?labelColor=eaebec&style=for-the-badge) ](mailto:legend+subscribe@finos.org)
 
 _The Legend project_
 
@@ -242,7 +242,7 @@ _A next-generation data and analytics platform for use in highly regulated envir
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/traderx.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-76-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/traderX/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-79-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/traderX)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-36-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/traderX/issues)[![Add To Calendar](https://img.shields.io/badge/📅%20Calendar-Add-orange?labelColor=eaebec&style=for-the-badge) ](https://calendar.finos.org/multi-signup?search=TraderX)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-77-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/traderX/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-79-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/traderX)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-36-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/traderX/issues)[![Add To Calendar](https://img.shields.io/badge/📅%20Calendar-Add-orange?labelColor=eaebec&style=for-the-badge) ](https://calendar.finos.org/multi-signup?search=TraderX)
 
 [![Topic: finos-hackathon-bmo](https://img.shields.io/badge/finos%20hackathon%20bmo-fafbfc)](https://github.com/topics/finos-hackathon-bmo) 
 
