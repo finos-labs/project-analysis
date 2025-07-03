@@ -72,7 +72,7 @@ _Swagger definitions for Symphony LLC public REST API_
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/springbot.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-65-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-38-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-8-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot/issues)[![Add To Calendar](https://img.shields.io/badge/📅%20Calendar-Add-orange?labelColor=eaebec&style=for-the-badge) ](https://calendar.finos.org/multi-signup?search=Spring+Bot)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-66-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-38-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-8-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/spring-bot/issues)[![Add To Calendar](https://img.shields.io/badge/📅%20Calendar-Add-orange?labelColor=eaebec&style=for-the-badge) ](https://calendar.finos.org/multi-signup?search=Spring+Bot)
 
 _Spring Boot + Java Integration for Symphony/Teams Chat Platform Bots and Apps_
 
