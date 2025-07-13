@@ -391,7 +391,7 @@ _A next-generation data and analytics platform for use in highly regulated envir
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/traderx.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-78-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/traderX/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-80-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/traderX)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-37-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/traderX/issues)[![Add To Calendar](https://img.shields.io/badge/📅%20Calendar-Add-orange?labelColor=eaebec&style=for-the-badge) ](https://calendar.finos.org/multi-signup?search=TraderX)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-78-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/traderX/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-80-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/traderX)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-38-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/traderX/issues)[![Add To Calendar](https://img.shields.io/badge/📅%20Calendar-Add-orange?labelColor=eaebec&style=for-the-badge) ](https://calendar.finos.org/multi-signup?search=TraderX)
 
 [![Topic: finos-hackathon-bmo](https://img.shields.io/badge/finos%20hackathon%20bmo-fafbfc)](https://github.com/topics/finos-hackathon-bmo) 
 
