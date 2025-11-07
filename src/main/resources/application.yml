@@ -16,8 +16,8 @@ githubOrgs: finos, finos-labs
 reports: readme
  
 readme:
-  repo: project-analysis
-  owner: finos-labs
+  repo: finos
+  owner: finos
   base: main
   head: generated-branch
 
