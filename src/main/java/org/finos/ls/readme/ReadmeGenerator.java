@@ -180,7 +180,7 @@ public class ReadmeGenerator extends AbstractMultiReport {
 		System.out.println("Tags: " + String.join(", ", tags));
 
 		for (String tag : tags) {
-			out.append(" - [" + tag + "](" + tag + ".md)\n");
+			out.append(" - [" + tag + "](profile/" + tag + ".md)\n");
 		}
 
 		out.append("# Special Interest Groups\n");
@@ -193,14 +193,14 @@ public class ReadmeGenerator extends AbstractMultiReport {
 		out.append(report(bucketedProjects, projectSummaries, ProjectInfo.ProjectType.INCUBATING, null));
 
 		out.append("\n\n_For the full list see the repositories below_\n");
-		allReports.put("README.md", out.toString());
+		allReports.put("profile/README.md", out.toString());
 
 		for (String tag : tags) {
 			StringBuilder tagOut = new StringBuilder();
 			tagOut.append("\n\n# " + tag + "\n");
 			tagOut.append(tableOfContents(bucketedProjects, null, tag));
 			tagOut.append(report(bucketedProjects, projectSummaries, null, tag));
-			allReports.put(tag + ".md", tagOut.toString());
+			allReports.put("profile/" + tag + ".md", tagOut.toString());
 		}
 
 		return allReports;

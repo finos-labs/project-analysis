@@ -23,6 +23,10 @@ public abstract class AbstractMultiReport implements Report {
 	public void outputResults(Map<String, String> done) throws Exception {
 		for (Map.Entry<String, String> entry : done.entrySet()) {
 			File out = new File(entry.getKey());
+			// Create parent directories if they don't exist
+			if (out.getParentFile() != null) {
+				out.getParentFile().mkdirs();
+			}
 			FileWriter fw = new FileWriter(out);
 			fw.write(entry.getValue());
 			fw.close();

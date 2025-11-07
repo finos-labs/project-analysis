@@ -16,7 +16,7 @@ githubOrgs: finos, finos-labs
 reports: readme
  
 readme:
-  repo: finos
+  repo: .github
   owner: finos
   base: main
   head: generated-branch
