@@ -204,10 +204,12 @@ public class CalendarReader implements InitializingBean {
      * Maps Google Calendar Event objects to CalendarEntry objects.
      * Filters out cancelled events, events not accepted by the calendar, and
      * non-recurring events.
+     * Returns only the NEXT instance of each recurring meeting.
      */
     private Set<CalendarEntry> mapEvents(List<Event> events, Map<String, Event> recurringEventsMap) {
-        Set<CalendarEntry> entries = new HashSet<>();
-        Set<String> processedKeys = new HashSet<>();
+        // Group events by their root ID to find the next instance of each recurring
+        // meeting
+        Map<String, Event> nextInstanceByRootId = new HashMap<>();
         int notProcessed = 0;
         int nonRecurring = 0;
 
@@ -218,25 +220,13 @@ public class CalendarReader implements InitializingBean {
 
                 // Only process recurring events
                 if (recurrence != null) {
-                    // Create unique key to avoid duplicates
+                    // Get root ID (the recurring event ID without instance suffix)
                     String rootId = eventData.getId().split("_")[0];
-                    String eventKey = getEventDateTime(eventData.getStart()) + "_" + rootId;
 
-                    if (!processedKeys.contains(eventKey)) {
-                        processedKeys.add(eventKey);
-
-                        CalendarEntry entry = new CalendarEntry();
-                        entry.setUid(eventData.getId());
-                        entry.setTitle(eventData.getSummary());
-                        entry.setDescription(eventData.getDescription());
-                        entry.setStart(parseDateTime(eventData.getStart()));
-                        entry.setEnd(parseDateTime(eventData.getEnd()));
-                        entry.setLocation(eventData.getLocation());
-                        entry.setStatus(eventData.getStatus());
-                        entry.setRecurringEventId(eventData.getRecurringEventId());
-                        entry.setRepeating(recurrence);
-
-                        entries.add(entry);
+                    // Store only the first instance encountered for each recurring event
+                    // Since we're fetching events sorted by time, this will be the next occurrence
+                    if (!nextInstanceByRootId.containsKey(rootId)) {
+                        nextInstanceByRootId.put(rootId, eventData);
                     }
                 } else {
                     nonRecurring++;
@@ -246,8 +236,26 @@ public class CalendarReader implements InitializingBean {
             }
         }
 
+        // Convert the next instances to CalendarEntry objects
+        Set<CalendarEntry> entries = new HashSet<>();
+        for (Event eventData : nextInstanceByRootId.values()) {
+            String recurrence = getRecurrence(eventData, recurringEventsMap);
+
+            CalendarEntry entry = new CalendarEntry();
+            entry.setUid(eventData.getId());
+            entry.setTitle(eventData.getSummary());
+            entry.setDescription(eventData.getDescription());
+            entry.setLocation(eventData.getLocation());
+            entry.setStatus(eventData.getStatus());
+            entry.setRecurringEventId(eventData.getRecurringEventId());
+            entry.setRepeating(recurrence);
+
+            entries.add(entry);
+        }
+
         System.out.println("Events not processed (cancelled/not accepted): " + notProcessed);
         System.out.println("Events filtered out (non-recurring): " + nonRecurring);
+        System.out.println("Unique recurring events (next instances only): " + entries.size());
         return entries;
     }
 
@@ -294,38 +302,5 @@ public class CalendarReader implements InitializingBean {
         List<String> recurrence = eventData.getRecurrence();
         return recurrence != null && !recurrence.isEmpty()
                 && !recurrence.get(0).startsWith("EXDATE");
-    }
-
-    /**
-     * Extracts date-time string from EventDateTime object.
-     */
-    private String getEventDateTime(com.google.api.services.calendar.model.EventDateTime dateTime) {
-        if (dateTime.getDateTime() != null) {
-            return dateTime.getDateTime().toString();
-        } else if (dateTime.getDate() != null) {
-            return dateTime.getDate().toString();
-        }
-        return "";
-    }
-
-    /**
-     * Parses EventDateTime to ZonedDateTime.
-     */
-    private ZonedDateTime parseDateTime(com.google.api.services.calendar.model.EventDateTime dateTime) {
-        if (dateTime == null) {
-            return null;
-        }
-
-        if (dateTime.getDateTime() != null) {
-            // Parse RFC3339 format
-            String dateTimeStr = dateTime.getDateTime().toString();
-            return ZonedDateTime.parse(dateTimeStr, DateTimeFormatter.ISO_DATE_TIME);
-        } else if (dateTime.getDate() != null) {
-            // All-day event
-            String dateStr = dateTime.getDate().toString();
-            return ZonedDateTime.parse(dateStr + "T00:00:00Z", DateTimeFormatter.ISO_DATE_TIME);
-        }
-
-        return null;
     }
 }
