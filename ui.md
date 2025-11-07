@@ -11,7 +11,7 @@
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/themebuilder.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-63-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-75-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-231-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder/issues)[![Add To Calendar](https://img.shields.io/badge/📅%20Calendar-Add-orange?labelColor=eaebec&style=for-the-badge) ](https://calendar.finos.org/multi-signup?search=A11y)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-68-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-75-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-233-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/a11y-theme-builder/issues)
 
 _DesignOps toolchain theme builder for accessibility inclusion using Atomic Design._
 
@@ -36,7 +36,7 @@ _DesignOps toolchain theme builder for accessibility inclusion using Atomic Desi
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/jupyterlab-templates.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-407-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-69-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-11-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-410-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-70-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-10-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/jupyterlab_templates/issues)
 
 _Support for jupyter notebook templates in jupyterlab_
 
@@ -49,11 +49,10 @@ _Support for jupyter notebook templates in jupyterlab_
 > 
 > Support for jupyter notebook templates in jupyterlab
 > 
-> [![Build Status](https://github.com/finos/jupyterlab_templates/workflows/Build%20Status/badge.svg?branch=main) ](https://github.com/finos/jupyterlab_templates/actions?query=workflow%3A%22Build+Status%22)
+> [![Build Status](https://github.com/finos/jupyterlab_templates/actions/workflows/build.yaml/badge.svg?branch=main&event=push) ](https://github.com/finos/jupyterlab_templates/actions/workflows/build.yaml)
 > [![codecov](https://codecov.io/gh/finos/jupyterlab_templates/branch/main/graph/badge.svg) ](https://codecov.io/gh/finos/jupyterlab_templates)
-> [![PyPI](https://img.shields.io/pypi/l/jupyterlab_templates.svg) ](https://pypi.python.org/pypi/jupyterlab_templates)
-> [![PyPI](https://img.shields.io/pypi/v/jupyterlab_templates.svg) ](https://pypi.python.org/pypi/jupyterlab_templates)
-> [![npm](https://img.shields.io/npm/v/jupyterlab_templates.svg) ](https://www.npmjs.com/package/jupyterlab_templates)
+> [![License](https://img.shields.io/github/license/finos/jupyterlab_templates) ](https://github.com/finos/jupyterlab_templates)
+> [![PyPI](https://img.shields.io/pypi/v/jupyterlab-templates.svg) ](https://pypi.python.org/pypi/jupyterlab-templates)
 > [![FINOS Active](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-active.svg) ](https://community.finos.org/docs/governance/software-projects/stages/active/)
 > [![Binder](https://mybinder.org/badge_logo.svg) ](https://mybinder.org/v2/gh/finos/jupyterlab_templates/main?urlpath=lab)
 >... [_read more_](https://github.com/finos/jupyterlab_templates)
@@ -64,7 +63,7 @@ _Support for jupyter notebook templates in jupyterlab_
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/perspective.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-9286-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-1222-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-103-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/perspective/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-9539-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/perspective-dev/perspective/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-1241-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/perspective-dev/perspective)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-107-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/perspective-dev/perspective/issues)
 
 _A data visualization and analytics component, especially well-suited for large and/or streaming datasets._
 
@@ -72,8 +71,8 @@ _A data visualization and analytics component, especially well-suited for large 
 
 #### From the README:
 
-> [![Build Status](https://img.shields.io/github/actions/workflow/status/finos/perspective/build.yaml?event=push&style=for-the-badge) ](https://github.com/finos/perspective/actions/workflows/build.yaml)
-> [![npm](https://img.shields.io/npm/v/@finos/perspective.svg?style=for-the-badge) ](https://www.npmjs.com/package/@finos/perspective)
+> [![Build Status](https://img.shields.io/github/actions/workflow/status/perspective-dev/perspective/build.yaml?event=push&style=for-the-badge) ](https://github.com/perspective-dev/perspective/actions/workflows/build.yaml)
+> [![npm](https://img.shields.io/npm/v/@perspective-dev/client.svg?style=for-the-badge) ](https://www.npmjs.com/package/@perspective-dev/client)
 > [![PyPI](https://img.shields.io/pypi/v/perspective-python.svg?style=for-the-badge) ](https://pypi.python.org/pypi/perspective-python)
 > [![crates.io](https://img.shields.io/crates/v/perspective?style=for-the-badge) ](https://crates.io/crates/perspective)
 > 
@@ -86,11 +85,10 @@ interactive analytics and data visualization component,
 > applications.
 > 
 > - A fast, memory efficient streaming query engine, written in C++ and compiled
-> for [WebAssembly](https://webassembly.org/),
-> [Python](https://www.python.org/) and [Rust](https://www.rust-lang.org/),
-> with read/write/streaming for [Apache Arrow](https://arrow.apache.org/), and
-> a high-performance columnar expression language based on
-> [ExprTK](https://github.com/ArashPartow/exprtk).
+> for [WebAssembly](https://webassembly.org/), [Python](https://www.python.org/)
+> and [Rust](https://www.rust-lang.org/), with read/write/streaming for
+> [Apache Arrow](https://arrow.apache.org/), and a high-performance columnar
+> expression language based on [ExprTK](https://github.com/ArashPartow/exprtk).
 > - A framework-agnostic User Interface packaged as a
 > [Custom Element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements),
 > powered either in-browser via WebAssembly or virtually via WebSocket server
@@ -98,16 +96,16 @@ interactive analytics and data visualization component,
 > - A [JupyterLab](https://jupyter.org/) widget and Python client library, for
 > interactive data analysis in a notebook, as well as scalable production
 > applications.
->... [_read more_](https://github.com/finos/perspective)
+>... [_read more_](https://github.com/perspective-dev/perspective)
 > 
 #### Further Details
- - [https://github.com/finos/perspective](https://github.com/finos/perspective)
- - [https://perspective.finos.org/](https://perspective.finos.org/)
+ - [https://github.com/perspective-dev/perspective](https://github.com/perspective-dev/perspective)
+ - [http://perspective-dev.github.io/](http://perspective-dev.github.io/)
 ## Regular Table
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/regular-table.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-372-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-39-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-15-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-382-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-41-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-15-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/regular-table/issues)
 
 _A regular <table> library, for async and virtual data models._
 
@@ -146,7 +144,7 @@ _A regular <table> library, for async and virtual data models._
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/symphony-electron.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-83-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-109-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-84-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-109-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-1-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/SymphonyElectron/issues)
 
 _A desktop client for the Symphony Collaboration Platform built using Electron_
 
@@ -184,7 +182,7 @@ _A desktop client for the Symphony Collaboration Platform built using Electron_
 
 <img src="https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/vuu.svg" width="100px" />
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-46-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-30-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-208-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/issues)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Stars-53-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/stargazers)[![GitHub Forks](https://img.shields.io/badge/⚡%20Forks-40-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu)[![GitHub Issues](https://img.shields.io/badge/🔎%20Issues-215-grey?labelColor=eaebec&style=for-the-badge) ](https://github.com/finos/vuu/issues)
 
 _Vuu - an open source view server and html 5 based UI system_
 
