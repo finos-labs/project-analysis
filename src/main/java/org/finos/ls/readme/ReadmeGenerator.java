@@ -1,17 +1,22 @@
 package org.finos.ls.readme;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
+import javax.annotation.PostConstruct;
 import javax.inject.Named;
 
 import org.finos.ls.QueryService;
+import org.finos.ls.calendar.CalendarEntry;
+import org.finos.ls.calendar.CalendarReader;
 import org.finos.ls.landscape.LandscapeReader;
 import org.finos.ls.landscape.ProjectInfo;
 import org.finos.ls.landscape.ProjectInfo.ProjectType;
@@ -74,7 +79,67 @@ public class ReadmeGenerator extends AbstractMultiReport {
 	@Value("${readme.head}")
 	String head;
 
+	@Autowired
+	CalendarReader calendarReader;
+
+	@Autowired
+	ProjectMappingsConfig projectMappingsConfig;
+
 	Map<String, Repository> cache = new HashMap<>();
+
+	// Calendar entries loaded on startup
+	private Set<CalendarEntry> calendarEntries;
+
+	@PostConstruct
+	public void init() {
+		try {
+			// Load calendar entries
+			System.out.println("Loading calendar entries...");
+			calendarEntries = calendarReader.fetchEvents();
+			System.out.println("Loaded " + calendarEntries.size() + " calendar entries");
+			System.out.println("Loaded mappings for " + projectMappingsConfig.getProjects().size() + " projects");
+		} catch (Exception e) {
+			System.err.println("Warning: Failed to initialize calendar data: " + e.getMessage());
+			e.printStackTrace();
+			// Initialize with empty collection to prevent NPE
+			calendarEntries = Collections.emptySet();
+		}
+	}
+
+	/**
+	 * Gets the calendar entries that are relevant to a given project.
+	 * Matches based on:
+	 * 1. The project name itself (if it appears in the event title)
+	 * 2. Any keywords defined in the project-mappings.yml file
+	 */
+	public List<CalendarEntry> getRelevantEntries(String projectName) {
+		List<String> tmpPatterns = projectMappingsConfig.getProjects().get(projectName);
+		List<String> patterns = new ArrayList<>();
+		if (tmpPatterns != null) {
+			patterns.addAll(tmpPatterns);
+		}
+		patterns.add(projectName);
+
+		// Filter calendar entries that match any of the patterns (case-insensitive)
+		return calendarEntries.stream()
+				.filter(entry -> matchesAnyPattern(entry.getTitle(), patterns))
+				.sorted((a, b) -> a.getStart().compareTo(b.getStart()))
+				.collect(Collectors.toList());
+	}
+
+	/**
+	 * Checks if a title matches any of the given patterns (case-insensitive).
+	 */
+	private boolean matchesAnyPattern(String title, List<String> patterns) {
+		if (title == null) {
+			return false;
+		}
+
+		String lowerTitle = title.toLowerCase();
+		return patterns.stream()
+				.filter(p -> p != null)
+				.anyMatch(pattern -> lowerTitle.contains(pattern.toLowerCase()));
+	}
 
 	@Override
 	public Map<String, String> generateInner()

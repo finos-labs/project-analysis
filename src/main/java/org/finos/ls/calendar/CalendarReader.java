@@ -34,11 +34,6 @@ public class CalendarReader implements InitializingBean {
 
     private static final JsonFactory JSON_FACTORY = GsonFactory.getDefaultInstance();
 
-    // Used to divide API requests in 2: past and future, to avoid the 2500 events
-    // limit
-    private static final String CUTOFF_DATE = "2024-01-01T00:00:00Z";
-    private static final String LIMIT_FUTURE_DATE = "2026-01-01T00:00:00Z";
-
     @Value("${calendar.service.account.file:./calendar-service-account.json}")
     private String serviceAccountFilePath;
 
@@ -88,9 +83,13 @@ public class CalendarReader implements InitializingBean {
     }
 
     /**
-     * Fetches all calendar events and returns them as a Set of CalendarEntry
+     * Fetches recurring future calendar events and returns them as a Set of
+     * CalendarEntry
      * objects.
      * Handles pagination and splits requests to avoid 2500 event limits.
+     * Only returns events that:
+     * 1. Have a recurrence rule (recurring events)
+     * 2. Are in the future or currently ongoing
      * 
      * @return Set of CalendarEntry objects
      * @throws IOException              if the API request fails
@@ -102,29 +101,32 @@ public class CalendarReader implements InitializingBean {
                     + serviceAccountFilePath);
         }
 
-        System.out.println("Fetching calendar events...");
+        System.out.println("Fetching recurring future calendar events...");
 
-        // Fetch events in batches to avoid 2500 limit
-        List<Event> eventsPast = fetchGoogleEvents("Past Cutoff", true, null, CUTOFF_DATE);
-        List<Event> eventsFuture = fetchGoogleEvents("Future Cutoff", true, CUTOFF_DATE, LIMIT_FUTURE_DATE);
+        // Calculate current date as the cutoff (RFC3339 format required by Google API)
+        ZonedDateTime now = ZonedDateTime.now();
+        String currentDate = now.format(DateTimeFormatter.ISO_INSTANT);
+
+        // Calculate future date limit (1 year from now)
+        String futureDate = now.plusYears(1).format(DateTimeFormatter.ISO_INSTANT);
+
+        System.out.println("Fetching events from: " + currentDate + " to: " + futureDate);
+
+        // Fetch only future events (from now onwards, up to 1 year)
+        List<Event> eventsFuture = fetchGoogleEvents("Future Events", true, currentDate, futureDate);
 
         // Fetch recurring events (not expanded) to resolve recurrence rules
-        List<Event> recurringEvents = fetchGoogleEvents("Recurring", false, null, null);
+        List<Event> recurringEvents = fetchGoogleEvents("Recurring Events", false, null, null);
         Map<String, Event> recurringEventsMap = new HashMap<>();
         for (Event event : recurringEvents) {
             recurringEventsMap.put(event.getId(), event);
         }
 
-        // Merge past and future events
-        List<Event> allEvents = new ArrayList<>();
-        allEvents.addAll(eventsPast);
-        allEvents.addAll(eventsFuture);
+        System.out.println("Total future events fetched: " + eventsFuture.size());
 
-        System.out.println("Total events fetched: " + allEvents.size());
-
-        // Map to CalendarEntry objects
-        Set<CalendarEntry> entries = mapEvents(allEvents, recurringEventsMap);
-        System.out.println("Total entries returned: " + entries.size());
+        // Map to CalendarEntry objects and filter for recurring only
+        Set<CalendarEntry> entries = mapEvents(eventsFuture, recurringEventsMap);
+        System.out.println("Total recurring entries returned: " + entries.size());
 
         return entries;
     }
@@ -181,44 +183,52 @@ public class CalendarReader implements InitializingBean {
 
     /**
      * Maps Google Calendar Event objects to CalendarEntry objects.
-     * Filters out cancelled events and events not accepted by the calendar.
+     * Filters out cancelled events, events not accepted by the calendar, and
+     * non-recurring events.
      */
     private Set<CalendarEntry> mapEvents(List<Event> events, Map<String, Event> recurringEventsMap) {
         Set<CalendarEntry> entries = new HashSet<>();
         Set<String> processedKeys = new HashSet<>();
         int notProcessed = 0;
+        int nonRecurring = 0;
 
         for (Event eventData : events) {
             if ("confirmed".equals(eventData.getStatus()) && hasAcceptedEvent(eventData)) {
-                // Create unique key to avoid duplicates
-                String rootId = eventData.getId().split("_")[0];
-                String eventKey = getEventDateTime(eventData.getStart()) + "_" + rootId;
+                // Resolve recurrence rule first
+                String recurrence = getRecurrence(eventData, recurringEventsMap);
 
-                if (!processedKeys.contains(eventKey)) {
-                    processedKeys.add(eventKey);
+                // Only process recurring events
+                if (recurrence != null) {
+                    // Create unique key to avoid duplicates
+                    String rootId = eventData.getId().split("_")[0];
+                    String eventKey = getEventDateTime(eventData.getStart()) + "_" + rootId;
 
-                    CalendarEntry entry = new CalendarEntry();
-                    entry.setUid(eventData.getId());
-                    entry.setTitle(eventData.getSummary());
-                    entry.setDescription(eventData.getDescription());
-                    entry.setStart(parseDateTime(eventData.getStart()));
-                    entry.setEnd(parseDateTime(eventData.getEnd()));
-                    entry.setLocation(eventData.getLocation());
-                    entry.setStatus(eventData.getStatus());
-                    entry.setRecurringEventId(eventData.getRecurringEventId());
+                    if (!processedKeys.contains(eventKey)) {
+                        processedKeys.add(eventKey);
 
-                    // Resolve recurrence rule
-                    String recurrence = getRecurrence(eventData, recurringEventsMap);
-                    entry.setRepeating(recurrence);
+                        CalendarEntry entry = new CalendarEntry();
+                        entry.setUid(eventData.getId());
+                        entry.setTitle(eventData.getSummary());
+                        entry.setDescription(eventData.getDescription());
+                        entry.setStart(parseDateTime(eventData.getStart()));
+                        entry.setEnd(parseDateTime(eventData.getEnd()));
+                        entry.setLocation(eventData.getLocation());
+                        entry.setStatus(eventData.getStatus());
+                        entry.setRecurringEventId(eventData.getRecurringEventId());
+                        entry.setRepeating(recurrence);
 
-                    entries.add(entry);
+                        entries.add(entry);
+                    }
+                } else {
+                    nonRecurring++;
                 }
             } else {
                 notProcessed++;
             }
         }
 
-        System.out.println("Events not processed: " + notProcessed);
+        System.out.println("Events not processed (cancelled/not accepted): " + notProcessed);
+        System.out.println("Events filtered out (non-recurring): " + nonRecurring);
         return entries;
     }
 

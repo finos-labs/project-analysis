@@ -23,4 +23,51 @@ readme:
   head: generated-branch
 
 scan:
-  output: target/toc-scorecard.csv  
+  output: target/toc-scorecard.csv
+
+# Project to Calendar Event Mappings
+# Maps projects from README to their associated calendar events using keyword patterns
+# Events are matched if they contain any of the specified keywords/phrases (case-insensitive)
+# Assume the name of the project is also a pattern.
+# So, if you include the project name in the meeting name (good practice), you won't need to map it here.
+calendar:
+  projects:
+    # Special Interest Groups
+    AI Readiness:
+      - AI Governance
+      - GenAI
+      - LLM
+    
+    DevOps Automation:
+      - DevOps
+      - Dev Ops
+      - Architecture as Code
+      - Evolution at Scale
+      - SDLC
+    
+    Open Source Talent Acceleration:
+      - Talent
+    
+    Open source readiness:
+      - OSR
+    
+    # Incubating Projects
+    Accessibility Theme Builder:
+      - A11y
+    
+    Common Architecture Language Model:
+      - Architecture as Code
+    
+    Common Cloud Controls:
+      - CCC
+      - CFI
+    
+    Common Domain Model:
+      - CDM
+    
+    Compliant Financial Infrastructure:
+      - Compliant Financial Infrastructure
+      - CFI
+    
+    kdb+:
+      - KDB
