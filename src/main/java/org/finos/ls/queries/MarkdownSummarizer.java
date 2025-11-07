@@ -45,15 +45,18 @@ public class MarkdownSummarizer implements QueryType<String> {
 	final Parser p;
 	final SummaryLevel sl;
 	final ProjectInfo pi;
+	final String projectName;
 	final List<CalendarEntry> calendarEntries;
 
 	public MarkdownSummarizer(SummaryLevel sl, ProjectInfo projectInfo) {
-		this(sl, projectInfo, new ArrayList<>());
+		this(sl, projectInfo, null, new ArrayList<>());
 	}
 
-	public MarkdownSummarizer(SummaryLevel sl, ProjectInfo projectInfo, List<CalendarEntry> calendarEntries) {
+	public MarkdownSummarizer(SummaryLevel sl, ProjectInfo projectInfo, String projectName,
+			List<CalendarEntry> calendarEntries) {
 		this.sl = sl;
 		this.pi = projectInfo;
+		this.projectName = projectName;
 		this.calendarEntries = calendarEntries;
 		// configures the parser for github-flavoured markdown
 		this.p = Parser.builder().extensions(Arrays.asList(
@@ -311,7 +314,10 @@ public class MarkdownSummarizer implements QueryType<String> {
 
 	private void addTitle(StringBuilder out, String slugBasedTitle, Repository r) {
 		// Add HTML anchor tag for internal links to work
-		String anchorId = slugBasedTitle.replace(" ", "-");
+		// Use the project name passed from landscape.yml for consistency with TOC
+		// Otherwise fall back to the slug-based title
+		String anchorName = (projectName != null) ? projectName : slugBasedTitle;
+		String anchorId = anchorName.replace(" ", "-");
 		out.append("<a name=\"" + anchorId + "\"></a>\n");
 		out.append(getTitleLevel() + slugBasedTitle);
 		out.append("\n");

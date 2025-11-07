@@ -244,9 +244,10 @@ public class ReadmeGenerator extends AbstractMultiReport {
 		return bucketedProjects.entrySet().stream()
 				.collect(Collectors.toMap(e -> e.getKey(), e -> {
 					// Get calendar entries for this project
-					List<CalendarEntry> projectCalendarEntries = getRelevantEntries(e.getKey());
+					String projectName = e.getKey();
+					List<CalendarEntry> projectCalendarEntries = getRelevantEntries(projectName);
 					MarkdownSummarizer topLevel = new MarkdownSummarizer(SummaryLevel.MAIN, e.getValue(),
-							projectCalendarEntries);
+							projectName, projectCalendarEntries);
 					StringBuilder out = new StringBuilder();
 					appendUsing(topLevel, e.getValue(), out);
 					return out.toString();
