@@ -1,34 +1,49 @@
 package org.finos.ls.readme;
 
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
+import org.yaml.snakeyaml.Yaml;
 
 /**
  * Configuration for mapping project names to calendar event keywords.
- * Loaded from project-mappings.yml via @ConfigurationProperties.
+ * Manually loaded from application.yml to preserve exact key names (including
+ * spaces).
  */
 @Configuration
-@ConfigurationProperties(prefix = "calendar")
 public class ProjectMappingsConfig {
 
-	/**
-	 * Map of project names to lists of keywords that should match calendar events.
-	 * Example:
-	 * projects:
-	 * "AI Readiness": ["AI Governance", "GenAI", "LLM"]
-	 * "DevOps Automation": ["DevOps", "Dev Ops"]
-	 */
-	private Map<String, List<String>> projects = new HashMap<>();
+	@Bean
+	@SuppressWarnings("unchecked")
+	public Map<String, List<String>> projectMappings() {
+		try {
+			Yaml yaml = new Yaml();
+			ClassPathResource resource = new ClassPathResource("application.yml");
 
-	public Map<String, List<String>> getProjects() {
-		return projects;
-	}
+			try (InputStream inputStream = resource.getInputStream()) {
+				Map<String, Object> yamlData = yaml.load(inputStream);
 
-	public void setProjects(Map<String, List<String>> projects) {
-		this.projects = projects;
+				// Navigate to calendar.projects
+				if (yamlData.containsKey("calendar")) {
+					Map<String, Object> calendar = (Map<String, Object>) yamlData.get("calendar");
+					if (calendar.containsKey("projects")) {
+						Map<String, List<String>> projects = (Map<String, List<String>>) calendar.get("projects");
+						System.out.println("Loaded project mappings with keys: " + projects.keySet());
+						return projects;
+					}
+				}
+			}
+		} catch (Exception e) {
+			System.err.println("Error loading project mappings: " + e.getMessage());
+			e.printStackTrace();
+		}
+
+		// Return empty map if loading fails
+		return new HashMap<>();
 	}
 }

@@ -83,7 +83,7 @@ public class ReadmeGenerator extends AbstractMultiReport {
 	CalendarReader calendarReader;
 
 	@Autowired
-	ProjectMappingsConfig projectMappingsConfig;
+	Map<String, List<String>> projectMappings;
 
 	Map<String, Repository> cache = new HashMap<>();
 
@@ -97,7 +97,7 @@ public class ReadmeGenerator extends AbstractMultiReport {
 			System.out.println("Loading calendar entries...");
 			calendarEntries = calendarReader.fetchEvents();
 			System.out.println("Loaded " + calendarEntries.size() + " calendar entries");
-			System.out.println("Loaded mappings for " + projectMappingsConfig.getProjects().size() + " projects");
+			System.out.println("Loaded mappings for " + projectMappings.size() + " projects");
 		} catch (Exception e) {
 			System.err.println("Warning: Failed to initialize calendar data: " + e.getMessage());
 			e.printStackTrace();
@@ -113,12 +113,19 @@ public class ReadmeGenerator extends AbstractMultiReport {
 	 * 2. Any keywords defined in the project-mappings.yml file
 	 */
 	public List<CalendarEntry> getRelevantEntries(String projectName) {
-		List<String> tmpPatterns = projectMappingsConfig.getProjects().get(projectName);
+		List<String> tmpPatterns = projectMappings.get(projectName);
+		System.out.println("Looking up project: '" + projectName + "'");
+		System.out.println("Available keys: " + projectMappings.keySet());
 		List<String> patterns = new ArrayList<>();
 		if (tmpPatterns != null) {
+			System.out.println("Found patterns: " + String.join(", ", tmpPatterns));
 			patterns.addAll(tmpPatterns);
+		} else {
+			System.out.println("No patterns found for project: " + projectName);
 		}
 		patterns.add(projectName);
+
+		System.out.println("Final patterns: " + String.join(", ", patterns));
 
 		// Filter calendar entries that match any of the patterns (case-insensitive)
 		// Sort by title for consistent ordering
@@ -186,7 +193,7 @@ public class ReadmeGenerator extends AbstractMultiReport {
 		out.append(report(bucketedProjects, projectSummaries, ProjectInfo.ProjectType.INCUBATING, null));
 
 		out.append("\n\n_For the full list see the repositories below_\n");
-		allReports.put("README-generated.md", out.toString());
+		allReports.put("README.md", out.toString());
 
 		for (String tag : tags) {
 			StringBuilder tagOut = new StringBuilder();

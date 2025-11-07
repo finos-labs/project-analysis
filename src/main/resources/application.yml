@@ -44,41 +44,41 @@ calendar:
 
   projects:
     # Special Interest Groups
-    AI Readiness:
+    "AI Readiness":
       - AI Governance
       - GenAI
       - LLM
     
-    DevOps Automation:
+    "DevOps Automation":
       - DevOps
       - Dev Ops
       - Architecture as Code
       - Evolution at Scale
       - SDLC
     
-    Open Source Talent Acceleration:
+    "Open Source Talent Acceleration":
       - Talent
     
-    Open source readiness:
+    "Open source readiness":
       - OSR
     
     # Incubating Projects
-    Accessibility Theme Builder:
+    "Accessibility Theme Builder":
       - A11y
     
-    Common Architecture Language Model:
+    "Common Architecture Language Model":
       - Architecture as Code
     
-    Common Cloud Controls:
+    "Common Cloud Controls":
       - CCC
       - CFI
     
-    Common Domain Model:
+    "Common Domain Model":
       - CDM
     
-    Compliant Financial Infrastructure:
+    "Compliant Financial Infrastructure":
       - Compliant Financial Infrastructure
       - CFI
     
-    kdb+:
+    "kdb+":
       - KDB
