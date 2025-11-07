@@ -10,7 +10,6 @@ debug: true
 
 landscapeUrl: https://raw.githubusercontent.com/finos/finos-landscape/improved-readme/landscape.yml
 landscapeLogoPrefix: https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/
-calendarPrefix: https://deploy-preview-254--calendar-gatsby.netlify.app/multi-signup/?search=
   
 githubOrgs: finos, finos-labs
 
