@@ -188,9 +188,10 @@ public class MarkdownSummarizer implements QueryType<String> {
 			});
 		}
 
-		if (pi.calendarUrl != null) {
-			out.append(createBadge("📅%20Calendar", "Add To Calendar", "Add", "orange", null, pi.calendarUrl));
-		}
+		// if (pi.calendarUrl != null) {
+		// out.append(createBadge("📅%20Calendar", "Add To Calendar", "Add", "orange",
+		// null, pi.calendarUrl));
+		// }
 
 	}
 

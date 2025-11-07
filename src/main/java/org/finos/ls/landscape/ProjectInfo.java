@@ -21,7 +21,6 @@ public class ProjectInfo {
 	public List<String> slackChannels;
 	public List<String> zoomEmails;
 	public List<String> tags = new ArrayList<>();
-	public String calendarUrl;
 
 	public static ProjectType projectType(String in) {
 		if (in != null) {

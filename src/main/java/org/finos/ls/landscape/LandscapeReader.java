@@ -84,11 +84,6 @@ public class LandscapeReader {
 						if (pi.tags == null) {
 							pi.tags = new ArrayList<>();
 						}
-						String calendarSearchString = (String) extra.get("meeting_search_term");
-						if (calendarSearchString != null) {
-							pi.calendarUrl = calendarPrefix
-									+ URLEncoder.encode(calendarSearchString, StandardCharsets.UTF_8);
-						}
 					}
 
 					out.add(pi);
