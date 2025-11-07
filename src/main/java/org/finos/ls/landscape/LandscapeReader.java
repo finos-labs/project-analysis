@@ -26,9 +26,6 @@ public class LandscapeReader {
 	@Value("${landscapeLogoPrefix:https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/}")
 	String logoPrefix;
 
-	@Value("${calendarPrefix:https://calendar.finos.org/multi-signup?search=}")
-	String calendarPrefix;
-
 	public List<ProjectInfo> readFromLandscape(String url) {
 		RestTemplate restTemplate = new RestTemplate();
 		restTemplate.getMessageConverters().add(new ByteArrayHttpMessageConverter());

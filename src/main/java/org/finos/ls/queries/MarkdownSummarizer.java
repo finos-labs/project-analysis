@@ -51,6 +51,10 @@ public class MarkdownSummarizer implements QueryType<String> {
 	final ProjectInfo pi;
 	final List<CalendarEntry> calendarEntries;
 
+	public MarkdownSummarizer(SummaryLevel sl, ProjectInfo projectInfo) {
+		this(sl, projectInfo, new ArrayList<>());
+	}
+
 	public MarkdownSummarizer(SummaryLevel sl, ProjectInfo projectInfo, List<CalendarEntry> calendarEntries) {
 		this.sl = sl;
 		this.pi = projectInfo;
