@@ -217,11 +217,6 @@ public class MarkdownSummarizer implements QueryType<String> {
 			return zoomLfxLink;
 		}
 
-		// If location is a direct URL (zoom, teams, etc.), use that
-		if (entry.getLocation() != null && entry.getLocation().startsWith("http")) {
-			return entry.getLocation();
-		}
-
 		// Otherwise, generate a calendar.finos.org signup link
 		if (entry.getUid() != null && entry.getTitle() != null) {
 			try {
