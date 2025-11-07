@@ -2,6 +2,10 @@ package org.finos.ls.outputs;
 
 import java.util.Arrays;
 import java.util.Base64;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.finos.scan.github.client.Commit;
 import org.finos.scan.github.client.CommitMessage;
@@ -26,10 +30,15 @@ public class CommitService {
 
 	@Autowired
 	MutationExecutor me;
-	
-	
-	public void commitFile(String file, byte[] contents, String branch, String repoName, String owner) throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
-		Repository repo = qe.repository("{ref(qualifiedName: \"refs/heads/"+branch+"\") {\n"
+
+	public void commitFile(String file, byte[] contents, String branch, String repoName, String owner)
+			throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		commitFiles(Collections.singletonMap(file, contents), branch, repoName, owner);
+	}
+
+	public void commitFiles(Map<String, byte[]> files, String branch, String repoName, String owner)
+			throws GraphQLRequestExecutionException, GraphQLRequestPreparationException {
+		Repository repo = qe.repository("{ref(qualifiedName: \"refs/heads/" + branch + "\") {\n"
 				+ "      target {\n"
 				+ "        id\n"
 				+ "        ... on Commit {\n"
@@ -41,31 +50,29 @@ public class CommitService {
 				+ "        }\n"
 				+ "      }\n"
 				+ "    }\n"
-				+ "  }", true, repoName, owner);	
-		
+				+ "  }", true, repoName, owner);
+
 		String oid = ((Commit) repo.getRef().getTarget()).getHistory().getNodes().get(0).getOid();
 
-		String base64Contents = Base64.getEncoder().encodeToString(contents);
+		List<FileAddition> fileAdditions = files.entrySet().stream()
+				.map(entry -> FileAddition.builder()
+						.withPath(entry.getKey())
+						.withContents(Base64.getEncoder().encodeToString(entry.getValue()))
+						.build())
+				.collect(Collectors.toList());
 
-		FileAddition fileAddition = FileAddition.builder()
-			.withPath(file)
-			.withContents(base64Contents)
-			.build();
-		
 		FileChanges fileChanges = FileChanges.builder()
-			.withAdditions(Arrays.asList(fileAddition))
-			.build();
-		
-		
+				.withAdditions(fileAdditions)
+				.build();
+
 		CreateCommitOnBranchInput input = CreateCommitOnBranchInput.builder()
-			.withBranch(CommittableBranch.builder()
-					.withRepositoryNameWithOwner(owner+"/"+repoName)
-					.withBranchName("refs/heads/"+branch).build())
-			.withFileChanges(fileChanges)
-			.withMessage(CommitMessage.builder().withHeadline("Landscape Scanning Generated File").build())
-			.withExpectedHeadOid(oid)
-			.build();
-		
+				.withBranch(CommittableBranch.builder()
+						.withRepositoryNameWithOwner(owner + "/" + repoName)
+						.withBranchName("refs/heads/" + branch).build())
+				.withFileChanges(fileChanges)
+				.withMessage(CommitMessage.builder().withHeadline("Landscape Scanning Generated File").build())
+				.withExpectedHeadOid(oid)
+				.build();
 
 		me.createCommitOnBranch("", input);
 	}

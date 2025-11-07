@@ -1,5 +1,7 @@
 package org.finos.ls.landscape;
 
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -23,6 +25,9 @@ public class LandscapeReader {
 
 	@Value("${landscapeLogoPrefix:https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/}")
 	String logoPrefix;
+
+	@Value("${calendarPrefix:https://calendar.finos.org/multi-signup?search=}")
+	String calendarPrefix;
 
 	public List<ProjectInfo> readFromLandscape(String url) {
 		RestTemplate restTemplate = new RestTemplate();
@@ -79,7 +84,6 @@ public class LandscapeReader {
 						if (pi.tags == null) {
 							pi.tags = new ArrayList<>();
 						}
-						pi.calendarSearchString = (String) extra.get("meeting_search_term");
 					}
 
 					out.add(pi);

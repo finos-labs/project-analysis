@@ -1,17 +1,22 @@
 package org.finos.ls.readme;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
+import javax.annotation.PostConstruct;
 import javax.inject.Named;
 
 import org.finos.ls.QueryService;
+import org.finos.ls.calendar.CalendarEntry;
+import org.finos.ls.calendar.CalendarReader;
 import org.finos.ls.landscape.LandscapeReader;
 import org.finos.ls.landscape.ProjectInfo;
 import org.finos.ls.landscape.ProjectInfo.ProjectType;
@@ -62,19 +67,79 @@ public class ReadmeGenerator extends AbstractMultiReport {
 	@Autowired
 	PullRequestService pr;
 
-	@Value("${readme.repo}")
+	@Value("${readme.repo:finos}")
 	String repo;
 
-	@Value("${readme.owner}")
+	@Value("${readme.owner:finos}")
 	String owner;
 
-	@Value("${readme.base}")
+	@Value("${readme.base:main}")
 	String base;
 
-	@Value("${readme.head}")
+	@Value("${readme.head:generated-branch}")
 	String head;
 
+	@Autowired
+	CalendarReader calendarReader;
+
+	@Autowired
+	ProjectMappingsConfig projectMappingsConfig;
+
 	Map<String, Repository> cache = new HashMap<>();
+
+	// Calendar entries loaded on startup
+	private Set<CalendarEntry> calendarEntries;
+
+	@PostConstruct
+	public void init() {
+		try {
+			// Load calendar entries
+			System.out.println("Loading calendar entries...");
+			calendarEntries = calendarReader.fetchEvents();
+			System.out.println("Loaded " + calendarEntries.size() + " calendar entries");
+			System.out.println("Loaded mappings for " + projectMappingsConfig.getProjects().size() + " projects");
+		} catch (Exception e) {
+			System.err.println("Warning: Failed to initialize calendar data: " + e.getMessage());
+			e.printStackTrace();
+			// Initialize with empty collection to prevent NPE
+			calendarEntries = Collections.emptySet();
+		}
+	}
+
+	/**
+	 * Gets the calendar entries that are relevant to a given project.
+	 * Matches based on:
+	 * 1. The project name itself (if it appears in the event title)
+	 * 2. Any keywords defined in the project-mappings.yml file
+	 */
+	public List<CalendarEntry> getRelevantEntries(String projectName) {
+		List<String> tmpPatterns = projectMappingsConfig.getProjects().get(projectName);
+		List<String> patterns = new ArrayList<>();
+		if (tmpPatterns != null) {
+			patterns.addAll(tmpPatterns);
+		}
+		patterns.add(projectName);
+
+		// Filter calendar entries that match any of the patterns (case-insensitive)
+		return calendarEntries.stream()
+				.filter(entry -> matchesAnyPattern(entry.getTitle(), patterns))
+				.sorted((a, b) -> a.getStart().compareTo(b.getStart()))
+				.collect(Collectors.toList());
+	}
+
+	/**
+	 * Checks if a title matches any of the given patterns (case-insensitive).
+	 */
+	private boolean matchesAnyPattern(String title, List<String> patterns) {
+		if (title == null) {
+			return false;
+		}
+
+		String lowerTitle = title.toLowerCase();
+		return patterns.stream()
+				.filter(p -> p != null)
+				.anyMatch(pattern -> lowerTitle.contains(pattern.toLowerCase()));
+	}
 
 	@Override
 	public Map<String, String> generateInner()
@@ -107,7 +172,7 @@ public class ReadmeGenerator extends AbstractMultiReport {
 		System.out.println("Tags: " + String.join(", ", tags));
 
 		for (String tag : tags) {
-			out.append(" - [" + tag + "](#" + tag + ".md)\n");
+			out.append(" - [" + tag + "](" + tag + ".md)\n");
 		}
 
 		out.append("# Special Interest Groups\n");
@@ -170,7 +235,10 @@ public class ReadmeGenerator extends AbstractMultiReport {
 	private Map<String, String> summariseProjects(Map<String, ProjectInfo> bucketedProjects) {
 		return bucketedProjects.entrySet().stream()
 				.collect(Collectors.toMap(e -> e.getKey(), e -> {
-					MarkdownSummarizer topLevel = new MarkdownSummarizer(SummaryLevel.MAIN, e.getValue());
+					// Get calendar entries for this project
+					List<CalendarEntry> projectCalendarEntries = getRelevantEntries(e.getKey());
+					MarkdownSummarizer topLevel = new MarkdownSummarizer(SummaryLevel.MAIN, e.getValue(),
+							projectCalendarEntries);
 					StringBuilder out = new StringBuilder();
 					appendUsing(topLevel, e.getValue(), out);
 					return out.toString();
@@ -185,6 +253,8 @@ public class ReadmeGenerator extends AbstractMultiReport {
 
 			out.append(l.convert(getRepoDetails(l, name, org), qe));
 		} catch (Exception e) {
+			out.append("## " + pi.mainRepo + "\n");
+			out.append("Couldn't process this repo: \n");
 			System.err.println("Couldn't process: " + pi.mainRepo);
 			e.printStackTrace();
 		}
@@ -205,10 +275,12 @@ public class ReadmeGenerator extends AbstractMultiReport {
 	}
 
 	@Override
-	public void outputResults(String filename, String report) throws Exception {
-		super.outputResults(filename, report);
+	public void outputResults(Map<String, String> entries) throws Exception {
+		super.outputResults(entries);
 		if (Arrays.asList(env.getActiveProfiles()).contains("pr")) {
-			commit.commitFile(filename, report.getBytes(), head, repo, owner);
+			Map<String, byte[]> files = entries.entrySet().stream()
+					.collect(Collectors.toMap(e -> e.getKey(), e -> e.getValue().getBytes()));
+			commit.commitFiles(files, head, repo, owner);
 			pr.createOrUpdatePullRequest(repo, owner, base, head, Collections.singletonList("@robmoffat"),
 					"Updated Generated Files");
 		}

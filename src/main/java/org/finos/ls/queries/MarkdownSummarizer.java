@@ -6,7 +6,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -14,7 +13,6 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 
-import org.apache.commons.io.Charsets;
 import org.apache.commons.text.WordUtils;
 import org.commonmark.ext.autolink.AutolinkExtension;
 import org.commonmark.ext.front.matter.YamlFrontMatterExtension;
@@ -25,6 +23,7 @@ import org.commonmark.node.Heading;
 import org.commonmark.node.Node;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.text.TextContentRenderer;
+import org.finos.ls.calendar.CalendarEntry;
 import org.finos.ls.landscape.ProjectInfo;
 import org.finos.ls.markdown.MarkdownExcerptExtension;
 import org.finos.ls.markdown.MarkdownHeadingExtension;
@@ -50,10 +49,12 @@ public class MarkdownSummarizer implements QueryType<String> {
 	final Parser p;
 	final SummaryLevel sl;
 	final ProjectInfo pi;
+	final List<CalendarEntry> calendarEntries;
 
-	public MarkdownSummarizer(SummaryLevel sl, ProjectInfo projectInfo) {
+	public MarkdownSummarizer(SummaryLevel sl, ProjectInfo projectInfo, List<CalendarEntry> calendarEntries) {
 		this.sl = sl;
 		this.pi = projectInfo;
+		this.calendarEntries = calendarEntries;
 		// configures the parser for github-flavoured markdown
 		this.p = Parser.builder().extensions(Arrays.asList(
 				TablesExtension.create(),
@@ -119,6 +120,7 @@ public class MarkdownSummarizer implements QueryType<String> {
 		addDescription(out, description);
 		addTopicTags(out, tags, repo);
 		addQuotedMarkdown(out, d, githubUrl);
+		addCalendarEntries(out);
 		addLinks(homepage, githubUrl, this.pi.additionalRepos, out);
 
 		return out.toString();
@@ -163,6 +165,109 @@ public class MarkdownSummarizer implements QueryType<String> {
 		}
 	}
 
+	private void addCalendarEntries(StringBuilder out) {
+		if (calendarEntries != null && !calendarEntries.isEmpty()) {
+			out.append("#### Upcoming Meetings\n\n");
+
+			for (CalendarEntry entry : calendarEntries) {
+				out.append(" - **");
+				out.append(entry.getTitle());
+				out.append("**");
+
+				if (entry.getStart() != null) {
+					// Format: " - Next: Mon, Nov 7 at 9:00 AM"
+					out.append(" - Next: ");
+					out.append(formatDateTime(entry.getStart()));
+				}
+
+				// Generate the appropriate link for the calendar entry
+				String meetingLink = generateMeetingLink(entry);
+				if (meetingLink != null) {
+					out.append(" ([Join Meeting](");
+					out.append(meetingLink);
+					out.append("))");
+				}
+
+				if (entry.isRecurring()) {
+					out.append(" _(Recurring)_");
+				}
+
+				out.append("\n");
+			}
+
+			out.append("\n[View On Calendar](https://calendar.finos.org)\n\n");
+		}
+	}
+
+	/**
+	 * Generates the appropriate meeting link for a calendar entry.
+	 * Follows the same logic as Calendar.jsx:
+	 * 1. Look for zoom-lfx link with invite=true in the description
+	 * 2. If found, use that link
+	 * 3. Otherwise, use calendar.finos.org signup link
+	 * 
+	 * @param entry The calendar entry
+	 * @return The meeting link URL, or null if no link available
+	 */
+	private String generateMeetingLink(CalendarEntry entry) {
+		// First, try to find a zoom-lfx link in the description
+		String zoomLfxLink = extractZoomLfxLink(entry.getDescription());
+		if (zoomLfxLink != null) {
+			return zoomLfxLink;
+		}
+
+		// If location is a direct URL (zoom, teams, etc.), use that
+		if (entry.getLocation() != null && entry.getLocation().startsWith("http")) {
+			return entry.getLocation();
+		}
+
+		// Otherwise, generate a calendar.finos.org signup link
+		if (entry.getUid() != null && entry.getTitle() != null) {
+			try {
+				String encodedUid = java.net.URLEncoder.encode(entry.getUid(), "UTF-8");
+				String encodedTitle = java.net.URLEncoder.encode(entry.getTitle(), "UTF-8");
+				return "https://calendar.finos.org/signup?eventId=" + encodedUid + "&title=" + encodedTitle;
+			} catch (java.io.UnsupportedEncodingException e) {
+				// UTF-8 is always supported, but handle the exception anyway
+				return null;
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * Extracts zoom-lfx link with invite=true from the description.
+	 * Uses the same regex pattern as Calendar.jsx
+	 * 
+	 * @param description The event description
+	 * @return The zoom-lfx link if found, null otherwise
+	 */
+	private String extractZoomLfxLink(String description) {
+		if (description == null) {
+			return null;
+		}
+
+		// Regex from Calendar.jsx:
+		// /(https:\/\/zoom-lfx\.platform[^\s"'<>]*\binvite=true\b[^\s"'<>]*)/g
+		java.util.regex.Pattern pattern = java.util.regex.Pattern.compile(
+				"(https://zoom-lfx\\.platform[^\\s\"'<>]*\\binvite=true\\b[^\\s\"'<>]*)");
+		java.util.regex.Matcher matcher = pattern.matcher(description);
+
+		if (matcher.find()) {
+			return matcher.group(1);
+		}
+
+		return null;
+	}
+
+	private String formatDateTime(java.time.ZonedDateTime dateTime) {
+		// Format: "Mon, Nov 7 at 9:00 AM GMT"
+		java.time.format.DateTimeFormatter formatter = java.time.format.DateTimeFormatter
+				.ofPattern("EEE, MMM d 'at' h:mm a z");
+		return dateTime.format(formatter);
+	}
+
 	private void addTopicTags(StringBuilder out, List<String> tags, Repository repo) {
 		tags.forEach(t -> out.append(t + " "));
 		out.append("\n\n");
@@ -188,11 +293,10 @@ public class MarkdownSummarizer implements QueryType<String> {
 			});
 		}
 
-		if (pi.calendarSearchString != null) {
-			String param = URLEncoder.encode(pi.calendarSearchString, StandardCharsets.UTF_8);
-			out.append(createBadge("📅%20Calendar", "Add To Calendar", "Add", "orange", null,
-					"https://calendar.finos.org/multi-signup?search=" + param));
-		}
+		// if (pi.calendarUrl != null) {
+		// out.append(createBadge("📅%20Calendar", "Add To Calendar", "Add", "orange",
+		// null, pi.calendarUrl));
+		// }
 
 	}
 
