@@ -9,7 +9,6 @@ import org.springframework.test.context.ActiveProfiles;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
@@ -32,10 +31,9 @@ public class CalendarReaderTest {
         System.out.println("\n=== Calendar Events Summary ===");
         System.out.println("Total events: " + events.size());
 
-        // Sort events by date
+        // Sort events alphabetically by title
         List<CalendarEntry> sortedEvents = events.stream()
-                .filter(e -> e.getStart() != null)
-                .sorted(Comparator.comparing(CalendarEntry::getStart))
+                .sorted(Comparator.comparing(CalendarEntry::getTitle))
                 .collect(Collectors.toList());
 
         // Write to CSV
@@ -47,37 +45,26 @@ public class CalendarReaderTest {
         System.out.println("\n=== All Event Names ===");
         for (int i = 0; i < sortedEvents.size(); i++) {
             CalendarEntry event = sortedEvents.get(i);
-            String dateStr = event.getStart().format(DateTimeFormatter.ISO_LOCAL_DATE);
-            String recurring = event.isRecurring() ? " [RECURRING]" : "";
-            System.out.println((i + 1) + ". " + dateStr + " - " + event.getTitle() + recurring);
+            String recurrenceDesc = event.getRecurrenceDescription();
+            String recurring = event.isRecurring() ? " [" + recurrenceDesc + "]" : "";
+            System.out.println((i + 1) + ". " + event.getTitle() + recurring);
         }
     }
 
     private void writeEventsToCSV(List<CalendarEntry> events, String filename) throws IOException {
         try (FileWriter writer = new FileWriter(filename)) {
             // Write CSV header
-            writer.append("Date,Time,Title,Location,Recurring,Duration(hours),UID\n");
-
-            DateTimeFormatter dateFormatter = DateTimeFormatter.ISO_LOCAL_DATE;
-            DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
+            writer.append("Title,Recurrence,Location,UID\n");
 
             // Write each event
             for (CalendarEntry event : events) {
-                String date = event.getStart().format(dateFormatter);
-                String time = event.getStart().format(timeFormatter);
                 String title = escapeCSV(event.getTitle());
+                String recurrence = escapeCSV(event.getRecurrenceDescription());
                 String location = escapeCSV(event.getLocation());
-                String recurring = event.isRecurring() ? "Yes" : "No";
-
-                // Calculate duration in hours
-                long durationMinutes = java.time.Duration.between(
-                        event.getStart(), event.getEnd()).toMinutes();
-                double durationHours = durationMinutes / 60.0;
-
                 String uid = event.getUid();
 
-                writer.append(String.format("%s,%s,%s,%s,%s,%.2f,%s\n",
-                        date, time, title, location, recurring, durationHours, uid));
+                writer.append(String.format("%s,%s,%s,%s\n",
+                        title, recurrence, location, uid));
             }
         }
     }
