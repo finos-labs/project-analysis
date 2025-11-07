@@ -261,6 +261,10 @@ public class ReadmeGenerator extends AbstractMultiReport {
 
 			out.append(l.convert(getRepoDetails(l, name, org), qe));
 		} catch (Exception e) {
+			// Add anchor tag for error case as well
+			String projectName = pi.name != null ? pi.name : pi.mainRepo;
+			String anchorId = projectName.replace(" ", "-");
+			out.append("<a name=\"" + anchorId + "\"></a>\n");
 			out.append("## " + pi.mainRepo + "\n");
 			out.append("Couldn't process this repo: \n");
 			System.err.println("Couldn't process: " + pi.mainRepo);

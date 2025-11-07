@@ -310,6 +310,9 @@ public class MarkdownSummarizer implements QueryType<String> {
 	}
 
 	private void addTitle(StringBuilder out, String slugBasedTitle, Repository r) {
+		// Add HTML anchor tag for internal links to work
+		String anchorId = slugBasedTitle.replace(" ", "-");
+		out.append("<a name=\"" + anchorId + "\"></a>\n");
 		out.append(getTitleLevel() + slugBasedTitle);
 		out.append("\n");
 	}
