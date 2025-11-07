@@ -1,15 +1,11 @@
 package org.finos.ls.queries;
 
-import java.net.URLEncoder;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 
@@ -178,10 +174,12 @@ public class MarkdownSummarizer implements QueryType<String> {
 				out.append(entry.getTitle());
 				out.append("**");
 
-				if (entry.getStart() != null) {
-					// Format: " - Next: Mon, Nov 7 at 9:00 AM"
-					out.append(" - Next: ");
-					out.append(formatDateTime(entry.getStart()));
+				// Add human-readable recurrence description
+				String recurrenceDesc = entry.getRecurrenceDescription();
+				if (recurrenceDesc != null) {
+					out.append(" - _");
+					out.append(recurrenceDesc);
+					out.append("_");
 				}
 
 				// Generate the appropriate link for the calendar entry
@@ -190,10 +188,6 @@ public class MarkdownSummarizer implements QueryType<String> {
 					out.append(" ([Join Meeting](");
 					out.append(meetingLink);
 					out.append("))");
-				}
-
-				if (entry.isRecurring()) {
-					out.append(" _(Recurring)_");
 				}
 
 				out.append("\n");
@@ -263,13 +257,6 @@ public class MarkdownSummarizer implements QueryType<String> {
 		}
 
 		return null;
-	}
-
-	private String formatDateTime(java.time.ZonedDateTime dateTime) {
-		// Format: "Mon, Nov 7 at 9:00 AM GMT"
-		java.time.format.DateTimeFormatter formatter = java.time.format.DateTimeFormatter
-				.ofPattern("EEE, MMM d 'at' h:mm a z");
-		return dateTime.format(formatter);
 	}
 
 	private void addTopicTags(StringBuilder out, List<String> tags, Repository repo) {

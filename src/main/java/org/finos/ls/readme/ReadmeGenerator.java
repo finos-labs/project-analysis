@@ -121,9 +121,10 @@ public class ReadmeGenerator extends AbstractMultiReport {
 		patterns.add(projectName);
 
 		// Filter calendar entries that match any of the patterns (case-insensitive)
+		// Sort by title for consistent ordering
 		return calendarEntries.stream()
 				.filter(entry -> matchesAnyPattern(entry.getTitle(), patterns))
-				.sorted((a, b) -> a.getStart().compareTo(b.getStart()))
+				.sorted((a, b) -> a.getTitle().compareToIgnoreCase(b.getTitle()))
 				.collect(Collectors.toList());
 	}
 
