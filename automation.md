@@ -59,6 +59,14 @@ _Provide a continuous compliance and assurance approach to DevOps that mutually 
 > The DevOps Automation SIG has formed several Working Groups to focus on key themes for the financial industry. You can see details of the active working groups, how they operate and how you can get involved here.
 >... [_read more_](https://github.com/finos/devops-automation)
 > 
+#### Upcoming Meetings
+
+ - **Architecture as Code Working Group - DevOps Automation** - _Monthly on the fourth tuesday_ ([Join Meeting](https://zoom.us/j/94904595244))
+ - **Evolution at Scale - DevOps Automation Working Group** - _Every 2 weeks on Wednesdays_ ([Join Meeting](https://zoom.us/j/94904595244?pwd=djIxWjlrenBGNWZmSGZ3cWJhamFTZz09))
+ - **FINOS DevOps Automation - Special Interest Group** - _Monthly on the third thursday_ ([Join Meeting](https://zoom.us/j/94904595244))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/devops-automation](https://github.com/finos/devops-automation)
  - [http://devops.finos.org](http://devops.finos.org)
@@ -142,6 +150,12 @@ _Deploy custom push protections and policies on top of Git_
 > The main goal of GitProxy is to marry the defacto standard Open Source developer experience (git-based workflow of branching out, submitting changes and merging back) with security and legal requirements that firms have to comply with, when operating in highly regulated industries like financial services.
 >... [_read more_](https://github.com/finos/git-proxy)
 > 
+#### Upcoming Meetings
+
+ - **Git Proxy Project Meeting** - _Every 2 weeks on Mondays_ ([Join Meeting](https://zoom-lfx.platform.linuxfoundation.org/meeting/95849833904?password=99413314-d03a-4b1c-b682-1ede2c399595&amp;invite=true))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/git-proxy](https://github.com/finos/git-proxy)
  - [https://git-proxy.finos.org](https://git-proxy.finos.org)

@@ -83,6 +83,12 @@ _The AI Readiness SIG provides a space to address AI-related challenges that are
 > There are certainly challenges and issues with the current technology (hallucinations, prompt injections), but things are moving at pace, and the technology challenges we see today may not exist tomorrow.
 >... [_read more_](https://github.com/finos/ai-readiness)
 > 
+#### Upcoming Meetings
+
+ - **AI Readiness SIG** - _Every 2 weeks on Tuesdays_ ([Join Meeting](https://zoom.us/j/92957783050))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/ai-readiness](https://github.com/finos/ai-readiness)
  - [https://www.finos.org/ai-readiness](https://www.finos.org/ai-readiness)
@@ -107,6 +113,14 @@ _Provide a continuous compliance and assurance approach to DevOps that mutually 
 > The DevOps Automation SIG has formed several Working Groups to focus on key themes for the financial industry. You can see details of the active working groups, how they operate and how you can get involved here.
 >... [_read more_](https://github.com/finos/devops-automation)
 > 
+#### Upcoming Meetings
+
+ - **Architecture as Code Working Group - DevOps Automation** - _Monthly on the fourth tuesday_ ([Join Meeting](https://zoom.us/j/94904595244))
+ - **Evolution at Scale - DevOps Automation Working Group** - _Every 2 weeks on Wednesdays_ ([Join Meeting](https://zoom.us/j/94904595244?pwd=djIxWjlrenBGNWZmSGZ3cWJhamFTZz09))
+ - **FINOS DevOps Automation - Special Interest Group** - _Monthly on the third thursday_ ([Join Meeting](https://zoom.us/j/94904595244))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/devops-automation](https://github.com/finos/devops-automation)
  - [http://devops.finos.org](http://devops.finos.org)
@@ -205,6 +219,13 @@ _Accelerate financial services firms’ journeys toward open source readiness, b
 > Read more at [https://osr.finos.org](https://osr.finos.org)
 >... [_read more_](https://github.com/finos/open-source-readiness)
 > 
+#### Upcoming Meetings
+
+ - **Open Source Readiness SIG** - _Monthly on the first wednesday_ ([Join Meeting](https://zoom.us/j/93808780892))
+ - **Open Source Readiness SIG - Checkpoint Session** - _Monthly on the third wednesday_ ([Join Meeting](https://zoom.us/j/93808780892))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/open-source-readiness](https://github.com/finos/open-source-readiness)
  - [https://osr.finos.org](https://osr.finos.org)
@@ -253,6 +274,13 @@ _Create a space where expertise can be identified and implemented to help the fi
 > Welcome to the GitHub repository of the Zenith SIG. The purpose of this special interest group is to explore and promote the adoption of new and innovative technologies in the financial services industry. The  goals of the SIG are to:
 >... [_read more_](https://github.com/finos/zenith)
 > 
+#### Upcoming Meetings
+
+ - **Zenith - FINOS Emerging Technologies SIG** - _Monthly on the fourth thursday_ ([Join Meeting](https://zoom.us/j/98538837792?pwd=ZHg3QVVnaCtOT0tEZSs5c0hrZTg1dz09))
+ - **Zenith Brain Trust - FINOS Emerging Technologies SIG** - _Monthly on the second thursday_ ([Join Meeting](https://zoom.us/j/98538837792?pwd=ZHg3QVVnaCtOT0tEZSs5c0hrZTg1dz09))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/zenith](https://github.com/finos/zenith)
  - [https://zenith.finos.org](https://zenith.finos.org)
@@ -286,6 +314,17 @@ _An open standard for the financial desktop._
 > [FDC3](https://fdc3.finos.org) is an open standard for applications on financial desktop to interoperate and exchange data with each other.
 >... [_read more_](https://github.com/finos/FDC3)
 > 
+#### Upcoming Meetings
+
+ - **FDC3 General Meeting** - _Every 6 months on the third tuesday_ ([Join Meeting](https://calendar.finos.org/signup?eventId=6stt9c3m0r4boisrb6tjt4q0v7_20260317T140000Z&title=FDC3+General+Meeting))
+ - **FDC3 Identity & Security Working Group** - _Monthly on the second thursday_ ([Join Meeting](https://calendar.finos.org/signup?eventId=la9vmdo6epqouj5jpkm59gpf35_20251113T150000Z&title=FDC3+Identity+%26+Security+Working+Group))
+ - **FDC3 Sail Project Meeting** - _Every 2 weeks on Mondays_ ([Join Meeting](https://zoom-lfx.platform.linuxfoundation.org/meeting/95252800112?password=90638454-991c-4ab0-8aed-791fc372623c&amp;invite=true))
+ - **FDC3 Standard Working Group** - _Monthly on the fourth thursday_ ([Join Meeting](https://calendar.finos.org/signup?eventId=4i44ucnpa0h7j8osedpcdhkr9k_20251127T150000Z&title=FDC3+Standard+Working+Group))
+ - **FDC3 Use Cases and Workflows Discussion Group** - _Monthly on the first thursday_ ([Join Meeting](https://calendar.finos.org/signup?eventId=vs0q1o7iesi4nsnfae37kvuo8s_20251204T150000Z&title=FDC3+Use+Cases+and+Workflows+Discussion+Group))
+ - **FDC3 Web Browsers + Bridging Discussion group** - _Monthly on the third thursday_ ([Join Meeting](https://calendar.finos.org/signup?eventId=f7gi6dhef8srpkjl9l83stetv2_20251120T150000Z&title=FDC3+Web+Browsers+%2B+Bridging+Discussion+group))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/FDC3](https://github.com/finos/FDC3)
  - [https://fdc3.finos.org](https://fdc3.finos.org)
@@ -373,6 +412,12 @@ _A universal language for business and technology_
 > For the first time, business logic can be shared, stored, translated and visualised, all with the reliability of standardisation ensured in the Morphir framework.
 >... [_read more_](https://github.com/finos/morphir)
 > 
+#### Upcoming Meetings
+
+ - **FINOS Morphir Project Meeting** - _Every 2 weeks on Thursdays_ ([Join Meeting](https://zoom.us/j/99313804465))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/morphir](https://github.com/finos/morphir)
  - [https://morphir.finos.org](https://morphir.finos.org)
@@ -550,6 +595,12 @@ _Spring Boot + Java Integration for Symphony/Teams Chat Platform Bots and Apps_
 > Spring Bot is a set of [Spring Boot](https://spring.io/projects/spring-boot) starters designed for building chat bots in Java & Kotlin.
 >... [_read more_](https://github.com/finos/spring-bot)
 > 
+#### Upcoming Meetings
+
+ - **Spring Bot Project Meeting** - _Weekly on Wednesdays_ ([Join Meeting](https://zoom-lfx.platform.linuxfoundation.org/meeting/91459369501?password=8e2f4c59-ed09-442a-8707-b2edc8d74a81&amp;invite=true))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/spring-bot](https://github.com/finos/spring-bot)
  - [https://springbot.finos.org](https://springbot.finos.org)
@@ -614,6 +665,12 @@ _Enterprise Information Service_
 >    - now part of the [Linux Foundation](https://www.linuxfoundation.org/blog/2020/04/finos-joins-the-linux-foundation/)
 >... [_read more_](https://github.com/finos/waltz)
 > 
+#### Upcoming Meetings
+
+ - **Waltz Project Meeting** - _Monthly on the second monday_ ([Join Meeting](https://zoom-lfx.platform.linuxfoundation.org/meeting/96950469863?password=a4229b81-221e-4262-8d22-f7ba73ca007f&amp;invite=true))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/waltz](https://github.com/finos/waltz)
  - [https://waltz.finos.org](https://waltz.finos.org)
@@ -727,6 +784,12 @@ _FINOS Common Cloud Controls_
 > FINOS Common Cloud Controls (FINOS CCC) is an open standard project that describes consistent controls for compliant public cloud deployments in the financial services (FS) sector.
 >... [_read more_](https://github.com/finos/common-cloud-controls)
 > 
+#### Upcoming Meetings
+
+ - **FINOS Common Cloud Controls - Steering** - _Every 3 months on the second tuesday_ ([Join Meeting](https://zoom.us/j/93861901920))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/common-cloud-controls](https://github.com/finos/common-cloud-controls)
  - [https://ccc.finos.org](https://ccc.finos.org)
@@ -777,6 +840,13 @@ _Compliant Financial Infrastructure accelerates the development, deployment and 
 > The CFI community collaboratively maintains a series of standalone resources that fall into two categories:
 >... [_read more_](https://github.com/finos/compliant-financial-infrastructure)
 > 
+#### Upcoming Meetings
+
+ - **CCC Working Group: Compliant Financial Infrastructure** - _Monthly on the fourth thursday_ ([Join Meeting](https://zoom.us/j/99708793584?pwd=Zl27vbXvKmYod1KxL4Gbkbm6LfeDlN.1))
+ - **CCC- Working Group: Compliant Financial Infrastructure** - _Monthly on the third thursday_ ([Join Meeting](https://zoom.us/j/99708793584?pwd=Zl27vbXvKmYod1KxL4Gbkbm6LfeDlN.1))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/compliant-financial-infrastructure](https://github.com/finos/compliant-financial-infrastructure)
  - [https://github.com/finos/terraform-aws-cfi-eks](https://github.com/finos/terraform-aws-cfi-eks)
@@ -847,6 +917,12 @@ _Open implementation of the FDC3 standard using Electron and an integrated App D
 >    - workspace tabs
 >... [_read more_](https://github.com/finos/FDC3-Sail)
 > 
+#### Upcoming Meetings
+
+ - **FDC3 Sail Project Meeting** - _Every 2 weeks on Mondays_ ([Join Meeting](https://zoom-lfx.platform.linuxfoundation.org/meeting/95252800112?password=90638454-991c-4ab0-8aed-791fc372623c&amp;invite=true))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/FDC3-Sail](https://github.com/finos/FDC3-Sail)
 ## FINOS Code Scanning
@@ -928,6 +1004,12 @@ _Deploy custom push protections and policies on top of Git_
 > The main goal of GitProxy is to marry the defacto standard Open Source developer experience (git-based workflow of branching out, submitting changes and merging back) with security and legal requirements that firms have to comply with, when operating in highly regulated industries like financial services.
 >... [_read more_](https://github.com/finos/git-proxy)
 > 
+#### Upcoming Meetings
+
+ - **Git Proxy Project Meeting** - _Every 2 weeks on Mondays_ ([Join Meeting](https://zoom-lfx.platform.linuxfoundation.org/meeting/95849833904?password=99413314-d03a-4b1c-b682-1ede2c399595&amp;invite=true))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/git-proxy](https://github.com/finos/git-proxy)
  - [https://git-proxy.finos.org](https://git-proxy.finos.org)
@@ -1243,6 +1325,12 @@ _A next-generation data and analytics platform for use in highly regulated envir
 > can serve as a starting point for educational and experimentation purposes.
 >... [_read more_](https://github.com/finos/traderX)
 > 
+#### Upcoming Meetings
+
+ - **TraderX - Monthly** - _Monthly on the fourth friday_ ([Join Meeting](https://zoom.us/j/96264933811))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/traderX](https://github.com/finos/traderX)
  - [https://demo.traderx.finos.org/](https://demo.traderx.finos.org/)

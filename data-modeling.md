@@ -157,6 +157,12 @@ _A universal language for business and technology_
 > For the first time, business logic can be shared, stored, translated and visualised, all with the reliability of standardisation ensured in the Morphir framework.
 >... [_read more_](https://github.com/finos/morphir)
 > 
+#### Upcoming Meetings
+
+ - **FINOS Morphir Project Meeting** - _Every 2 weeks on Thursdays_ ([Join Meeting](https://zoom.us/j/99313804465))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/morphir](https://github.com/finos/morphir)
  - [https://morphir.finos.org](https://morphir.finos.org)
@@ -262,6 +268,12 @@ _A next-generation data and analytics platform for use in highly regulated envir
 > can serve as a starting point for educational and experimentation purposes.
 >... [_read more_](https://github.com/finos/traderX)
 > 
+#### Upcoming Meetings
+
+ - **TraderX - Monthly** - _Monthly on the fourth friday_ ([Join Meeting](https://zoom.us/j/96264933811))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/traderX](https://github.com/finos/traderX)
  - [https://demo.traderx.finos.org/](https://demo.traderx.finos.org/)

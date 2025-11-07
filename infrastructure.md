@@ -61,6 +61,12 @@ _FINOS Common Cloud Controls_
 > FINOS Common Cloud Controls (FINOS CCC) is an open standard project that describes consistent controls for compliant public cloud deployments in the financial services (FS) sector.
 >... [_read more_](https://github.com/finos/common-cloud-controls)
 > 
+#### Upcoming Meetings
+
+ - **FINOS Common Cloud Controls - Steering** - _Every 3 months on the second tuesday_ ([Join Meeting](https://zoom.us/j/93861901920))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/common-cloud-controls](https://github.com/finos/common-cloud-controls)
  - [https://ccc.finos.org](https://ccc.finos.org)
@@ -87,6 +93,13 @@ _Compliant Financial Infrastructure accelerates the development, deployment and 
 > The CFI community collaboratively maintains a series of standalone resources that fall into two categories:
 >... [_read more_](https://github.com/finos/compliant-financial-infrastructure)
 > 
+#### Upcoming Meetings
+
+ - **CCC Working Group: Compliant Financial Infrastructure** - _Monthly on the fourth thursday_ ([Join Meeting](https://zoom.us/j/99708793584?pwd=Zl27vbXvKmYod1KxL4Gbkbm6LfeDlN.1))
+ - **CCC- Working Group: Compliant Financial Infrastructure** - _Monthly on the third thursday_ ([Join Meeting](https://zoom.us/j/99708793584?pwd=Zl27vbXvKmYod1KxL4Gbkbm6LfeDlN.1))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/compliant-financial-infrastructure](https://github.com/finos/compliant-financial-infrastructure)
  - [https://github.com/finos/terraform-aws-cfi-eks](https://github.com/finos/terraform-aws-cfi-eks)
@@ -121,6 +134,14 @@ _Provide a continuous compliance and assurance approach to DevOps that mutually 
 > The DevOps Automation SIG has formed several Working Groups to focus on key themes for the financial industry. You can see details of the active working groups, how they operate and how you can get involved here.
 >... [_read more_](https://github.com/finos/devops-automation)
 > 
+#### Upcoming Meetings
+
+ - **Architecture as Code Working Group - DevOps Automation** - _Monthly on the fourth tuesday_ ([Join Meeting](https://zoom.us/j/94904595244))
+ - **Evolution at Scale - DevOps Automation Working Group** - _Every 2 weeks on Wednesdays_ ([Join Meeting](https://zoom.us/j/94904595244?pwd=djIxWjlrenBGNWZmSGZ3cWJhamFTZz09))
+ - **FINOS DevOps Automation - Special Interest Group** - _Monthly on the third thursday_ ([Join Meeting](https://zoom.us/j/94904595244))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/devops-automation](https://github.com/finos/devops-automation)
  - [http://devops.finos.org](http://devops.finos.org)
@@ -218,6 +239,12 @@ _Enterprise Information Service_
 >    - now part of the [Linux Foundation](https://www.linuxfoundation.org/blog/2020/04/finos-joins-the-linux-foundation/)
 >... [_read more_](https://github.com/finos/waltz)
 > 
+#### Upcoming Meetings
+
+ - **Waltz Project Meeting** - _Monthly on the second monday_ ([Join Meeting](https://zoom-lfx.platform.linuxfoundation.org/meeting/96950469863?password=a4229b81-221e-4262-8d22-f7ba73ca007f&amp;invite=true))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/waltz](https://github.com/finos/waltz)
  - [https://waltz.finos.org](https://waltz.finos.org)

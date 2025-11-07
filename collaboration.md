@@ -93,6 +93,12 @@ _Spring Boot + Java Integration for Symphony/Teams Chat Platform Bots and Apps_
 > Spring Bot is a set of [Spring Boot](https://spring.io/projects/spring-boot) starters designed for building chat bots in Java & Kotlin.
 >... [_read more_](https://github.com/finos/spring-bot)
 > 
+#### Upcoming Meetings
+
+ - **Spring Bot Project Meeting** - _Weekly on Wednesdays_ ([Join Meeting](https://zoom-lfx.platform.linuxfoundation.org/meeting/91459369501?password=8e2f4c59-ed09-442a-8707-b2edc8d74a81&amp;invite=true))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/spring-bot](https://github.com/finos/spring-bot)
  - [https://springbot.finos.org](https://springbot.finos.org)

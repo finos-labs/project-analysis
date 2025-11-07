@@ -25,6 +25,12 @@ _The AI Readiness SIG provides a space to address AI-related challenges that are
 > There are certainly challenges and issues with the current technology (hallucinations, prompt injections), but things are moving at pace, and the technology challenges we see today may not exist tomorrow.
 >... [_read more_](https://github.com/finos/ai-readiness)
 > 
+#### Upcoming Meetings
+
+ - **AI Readiness SIG** - _Every 2 weeks on Tuesdays_ ([Join Meeting](https://zoom.us/j/92957783050))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/ai-readiness](https://github.com/finos/ai-readiness)
  - [https://www.finos.org/ai-readiness](https://www.finos.org/ai-readiness)
@@ -99,6 +105,13 @@ _Accelerate financial services firms’ journeys toward open source readiness, b
 > Read more at [https://osr.finos.org](https://osr.finos.org)
 >... [_read more_](https://github.com/finos/open-source-readiness)
 > 
+#### Upcoming Meetings
+
+ - **Open Source Readiness SIG** - _Monthly on the first wednesday_ ([Join Meeting](https://zoom.us/j/93808780892))
+ - **Open Source Readiness SIG - Checkpoint Session** - _Monthly on the third wednesday_ ([Join Meeting](https://zoom.us/j/93808780892))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/open-source-readiness](https://github.com/finos/open-source-readiness)
  - [https://osr.finos.org](https://osr.finos.org)

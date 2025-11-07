@@ -24,6 +24,12 @@ _The AI Readiness SIG provides a space to address AI-related challenges that are
 > There are certainly challenges and issues with the current technology (hallucinations, prompt injections), but things are moving at pace, and the technology challenges we see today may not exist tomorrow.
 >... [_read more_](https://github.com/finos/ai-readiness)
 > 
+#### Upcoming Meetings
+
+ - **AI Readiness SIG** - _Every 2 weeks on Tuesdays_ ([Join Meeting](https://zoom.us/j/92957783050))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/ai-readiness](https://github.com/finos/ai-readiness)
  - [https://www.finos.org/ai-readiness](https://www.finos.org/ai-readiness)
@@ -71,6 +77,13 @@ _Create a space where expertise can be identified and implemented to help the fi
 > Welcome to the GitHub repository of the Zenith SIG. The purpose of this special interest group is to explore and promote the adoption of new and innovative technologies in the financial services industry. The  goals of the SIG are to:
 >... [_read more_](https://github.com/finos/zenith)
 > 
+#### Upcoming Meetings
+
+ - **Zenith - FINOS Emerging Technologies SIG** - _Monthly on the fourth thursday_ ([Join Meeting](https://zoom.us/j/98538837792?pwd=ZHg3QVVnaCtOT0tEZSs5c0hrZTg1dz09))
+ - **Zenith Brain Trust - FINOS Emerging Technologies SIG** - _Monthly on the second thursday_ ([Join Meeting](https://zoom.us/j/98538837792?pwd=ZHg3QVVnaCtOT0tEZSs5c0hrZTg1dz09))
+
+[View On Calendar](https://calendar.finos.org)
+
 #### Further Details
  - [https://github.com/finos/zenith](https://github.com/finos/zenith)
  - [https://zenith.finos.org](https://zenith.finos.org)
