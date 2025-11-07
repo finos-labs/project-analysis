@@ -37,7 +37,10 @@ public class CalendarReader implements InitializingBean {
     @Value("${calendar.service.account.file:./calendar-service-account.json}")
     private String serviceAccountFilePath;
 
-    @Value("${calendar.id:finos.org_fac8mo1rfc6ehscg0d80fi8jig@group.calendar.google.com}")
+    @Value("${calendar.service.account.json:#{null}}")
+    private String serviceAccountJson;
+
+    @Value("${calendar.id}")
     private String calendarId;
 
     private Calendar calendarService;
@@ -50,12 +53,12 @@ public class CalendarReader implements InitializingBean {
     public void afterPropertiesSet() throws Exception {
         // Initialize calendar service - log errors but don't fail bean creation
         try {
-            this.calendarService = createCalendarService(serviceAccountFilePath);
+            this.calendarService = createCalendarService();
             System.out.println("CalendarReader initialized successfully with calendar ID: " + calendarId);
         } catch (Exception e) {
             System.err.println("Warning: Failed to initialize CalendarReader: " + e.getMessage());
             System.err.println(
-                    "Calendar functionality will not be available. Service account file: " + serviceAccountFilePath);
+                    "Calendar functionality will not be available. Check service account configuration.");
             // Don't throw - allow bean to be created even if calendar service fails to
             // initialize
         }
@@ -64,16 +67,32 @@ public class CalendarReader implements InitializingBean {
     /**
      * Creates and configures the Google Calendar service with service account
      * authentication.
+     * Supports two methods of providing credentials:
+     * 1. JSON string from environment variable (calendar.service.account.json)
+     * 2. JSON file path (calendar.service.account.file)
      */
-    private Calendar createCalendarService(String serviceAccountFilePath)
+    private Calendar createCalendarService()
             throws IOException, GeneralSecurityException {
         NetHttpTransport httpTransport = GoogleNetHttpTransport.newTrustedTransport();
 
         // Load service account credentials
         GoogleCredentials credentials;
-        try (FileInputStream serviceAccountStream = new FileInputStream(serviceAccountFilePath)) {
-            credentials = GoogleCredentials.fromStream(serviceAccountStream)
-                    .createScoped(Collections.singletonList(CalendarScopes.CALENDAR_READONLY));
+
+        if (serviceAccountJson != null && !serviceAccountJson.isEmpty()) {
+            // Load from JSON string (environment variable)
+            System.out.println("Loading calendar credentials from environment variable");
+            try (java.io.ByteArrayInputStream stream = new java.io.ByteArrayInputStream(
+                    serviceAccountJson.getBytes(java.nio.charset.StandardCharsets.UTF_8))) {
+                credentials = GoogleCredentials.fromStream(stream)
+                        .createScoped(Collections.singletonList(CalendarScopes.CALENDAR_READONLY));
+            }
+        } else {
+            // Load from file
+            System.out.println("Loading calendar credentials from file: " + serviceAccountFilePath);
+            try (FileInputStream serviceAccountStream = new FileInputStream(serviceAccountFilePath)) {
+                credentials = GoogleCredentials.fromStream(serviceAccountStream)
+                        .createScoped(Collections.singletonList(CalendarScopes.CALENDAR_READONLY));
+            }
         }
 
         return new Calendar.Builder(httpTransport, JSON_FACTORY,

@@ -25,12 +25,24 @@ readme:
 scan:
   output: target/toc-scorecard.csv
 
-# Project to Calendar Event Mappings
-# Maps projects from README to their associated calendar events using keyword patterns
+# Calendar Configuration
+# 
+# Authentication: Provide Google Calendar service account credentials via:
+#   - calendar.service.account.file: Path to JSON file (for local development)
+#   - calendar.service.account.json: JSON string from env var (for CI/CD)
+#     Example: calendar.service.account.json: ${GOOGLE_CALENDAR_SERVICE_ACCOUNT_JSON:}
+#
+# Project Mappings: Maps projects from README to their associated calendar events using keyword patterns
 # Events are matched if they contain any of the specified keywords/phrases (case-insensitive)
 # Assume the name of the project is also a pattern.
 # So, if you include the project name in the meeting name (good practice), you won't need to map it here.
 calendar:
+  service: 
+    account:
+      file: ./calendar-service-account.json
+      json: ${GOOGLE_CALENDAR_SERVICE_ACCOUNT_JSON:}
+  id: finos.org_fac8mo1rfc6ehscg0d80fi8jig@group.calendar.google.com
+
   projects:
     # Special Interest Groups
     AI Readiness:

@@ -67,16 +67,16 @@ public class ReadmeGenerator extends AbstractMultiReport {
 	@Autowired
 	PullRequestService pr;
 
-	@Value("${readme.repo}")
+	@Value("${readme.repo:finos}")
 	String repo;
 
-	@Value("${readme.owner}")
+	@Value("${readme.owner:finos}")
 	String owner;
 
-	@Value("${readme.base}")
+	@Value("${readme.base:main}")
 	String base;
 
-	@Value("${readme.head}")
+	@Value("${readme.head:generated-branch}")
 	String head;
 
 	@Autowired
