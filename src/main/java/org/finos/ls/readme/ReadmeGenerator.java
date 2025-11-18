@@ -200,7 +200,7 @@ public class ReadmeGenerator extends AbstractMultiReport {
 			tagOut.append("\n\n# " + tag + "\n");
 			tagOut.append(tableOfContents(bucketedProjects, null, tag));
 			tagOut.append(report(bucketedProjects, projectSummaries, null, tag));
-			allReports.put(tag + ".md", tagOut.toString());
+			allReports.put("profile/" + tag + ".md", tagOut.toString());
 		}
 
 		return allReports;
