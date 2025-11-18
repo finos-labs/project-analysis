@@ -174,13 +174,15 @@ public class ReadmeGenerator extends AbstractMultiReport {
 		out.append("\n**Incubating Projects:**\n");
 		out.append(tableOfContents(bucketedProjects, ProjectInfo.ProjectType.INCUBATING, null));
 
-		out.append("# Projects by Tag\n");
 		List<String> tags = collectTags(info);
+		if (tags.size() > 0) {
+			out.append("# Projects by Tag\n");
 
-		System.out.println("Tags: " + String.join(", ", tags));
+			System.out.println("Tags: " + String.join(", ", tags));
 
-		for (String tag : tags) {
-			out.append(" - [" + tag + "](profile/" + tag + ".md)\n");
+			for (String tag : tags) {
+				out.append(" - [" + tag + "](" + tag + ".md)\n");
+			}
 		}
 
 		out.append("# Special Interest Groups\n");
