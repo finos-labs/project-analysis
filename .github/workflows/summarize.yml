@@ -1,30 +1,45 @@
-name: Landscape Scan Summarize
+name: Landscape Scan
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 22 * * * "
-    
+    - cron: "0 22 * * *"
+
 env:
   LANDSCAPE_SCANNING_TOKEN: ${{ secrets.LANDSCAPE_SCANNING_TOKEN }}
   GOOGLE_CALENDAR_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_CALENDAR_SERVICE_ACCOUNT_JSON }}
-    
+
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
+
     - name: Set up JDK 11
       uses: actions/setup-java@v4
       with:
         java-version: '11'
         distribution: 'temurin'
         cache: 'maven'
+
     - name: Run with Maven
       run: mvn spring-boot:run -Dspring-boot.run.profiles=pr -DskipTests
-    - uses: actions/upload-artifact@v4
+
+    - name: Locate Generated Files (Debug)
+      run: |
+        echo "=== Checking Root Directory ==="
+        ls -la
+        echo "=== Checking Target Directory ==="
+        ls -la target/ || echo "Target directory does not exist or is empty!"
+        echo "=== Searching for toc-scorecard.csv ==="
+        find . -name "toc-scorecard.csv"
+
+    - name: Upload Report Artifact
+      uses: actions/upload-artifact@v4
       with:
-        name: Project-Report.csv
-        path: target/toc-scorecard.csv
+        name: Project-Report
+        path: |
+          target/toc-scorecard.csv
+          **/toc-scorecard.csv
+        if-no-files-found: error
