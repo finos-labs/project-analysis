@@ -23,23 +23,5 @@ jobs:
         distribution: 'temurin'
         cache: 'maven'
 
-    - name: Run with Maven
+    - name: Run with Maven (Generate and Open PR)
       run: mvn spring-boot:run -Dspring-boot.run.profiles=pr -DskipTests
-
-    - name: Locate Generated Files (Debug)
-      run: |
-        echo "=== Checking Root Directory ==="
-        ls -la
-        echo "=== Checking Target Directory ==="
-        ls -la target/ || echo "Target directory does not exist or is empty!"
-        echo "=== Searching for toc-scorecard.csv ==="
-        find . -name "toc-scorecard.csv"
-
-    - name: Upload Report Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: Project-Report
-        path: |
-          target/toc-scorecard.csv
-          **/toc-scorecard.csv
-        if-no-files-found: error
