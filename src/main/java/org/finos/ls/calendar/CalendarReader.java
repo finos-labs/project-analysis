@@ -1,306 +1,370 @@
 package org.finos.ls.calendar;
 
-import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
-import com.google.api.client.http.javanet.NetHttpTransport;
-import com.google.api.client.json.JsonFactory;
-import com.google.api.client.json.gson.GsonFactory;
-import com.google.api.client.util.DateTime;
-import com.google.api.services.calendar.Calendar;
-import com.google.api.services.calendar.CalendarScopes;
-import com.google.api.services.calendar.model.Event;
-import com.google.api.services.calendar.model.EventAttendee;
-import com.google.api.services.calendar.model.Events;
-import com.google.auth.http.HttpCredentialsAdapter;
-import com.google.auth.oauth2.GoogleCredentials;
-
-import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.security.GeneralSecurityException;
-import java.time.ZonedDateTime;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
 
 /**
- * Reads calendar events from Google Calendar API using service account
- * authentication.
- * Mirrors the functionality of googleapi2events.mjs script.
+ * Reads calendar events from an iCalendar (RFC 5545) feed served over HTTP.
+ *
+ * Wraps a small hand-rolled ICS parser: only a handful of properties are read
+ * (UID, SUMMARY, DESCRIPTION, LOCATION, RRULE, DTSTART, STATUS), which are all
+ * the downstream code consumes via {@link CalendarEntry}. The parser handles
+ * line unfolding, parameter stripping, and RFC 5545 text escaping.
+ *
+ * Mirrors the previous Google-Calendar-API-backed behavior:
+ *  - Only recurring meetings are returned.
+ *  - One entry per recurring series = the next future occurrence.
+ *  - Cancelled events are skipped.
  */
 @Component
-public class CalendarReader implements InitializingBean {
+public class CalendarReader {
 
-    private static final JsonFactory JSON_FACTORY = GsonFactory.getDefaultInstance();
+    private static final DateTimeFormatter DT_LOCAL = DateTimeFormatter.ofPattern("yyyyMMdd'T'HHmmss");
+    private static final DateTimeFormatter DT_DATE = DateTimeFormatter.ofPattern("yyyyMMdd");
 
-    @Value("${calendar.service.account.file:./calendar-service-account.json}")
-    private String serviceAccountFilePath;
-
-    @Value("${calendar.service.account.json:#{null}}")
-    private String serviceAccountJson;
-
-    @Value("${calendar.id}")
-    private String calendarId;
-
-    private Calendar calendarService;
+    @Value("${calendar.ical.url:}")
+    private String icalUrl;
 
     /**
-     * Creates and configures the Google Calendar service with service account
-     * authentication. Initializes lazily on first call.
+     * Fetches recurring calendar events from the configured iCal feed and returns
+     * one CalendarEntry per recurring series (the next future occurrence).
      */
-    @Override
-    public void afterPropertiesSet() throws Exception {
-        // Initialize calendar service - log errors but don't fail bean creation
-        try {
-            this.calendarService = createCalendarService();
-            System.out.println("CalendarReader initialized successfully with calendar ID: " + calendarId);
-        } catch (Exception e) {
-            System.err.println("Warning: Failed to initialize CalendarReader: " + e.getMessage());
-            System.err.println(
-                    "Calendar functionality will not be available. Check service account configuration.");
-            // Don't throw - allow bean to be created even if calendar service fails to
-            // initialize
-        }
-    }
-
-    /**
-     * Creates and configures the Google Calendar service with service account
-     * authentication.
-     * Supports two methods of providing credentials:
-     * 1. JSON string from environment variable (calendar.service.account.json)
-     * 2. JSON file path (calendar.service.account.file)
-     */
-    private Calendar createCalendarService()
-            throws IOException, GeneralSecurityException {
-        NetHttpTransport httpTransport = GoogleNetHttpTransport.newTrustedTransport();
-
-        // Load service account credentials
-        GoogleCredentials credentials;
-
-        if (serviceAccountJson != null && !serviceAccountJson.isEmpty()) {
-            // Load from JSON string (environment variable)
-            System.out.println("Loading calendar credentials from environment variable");
-            try (java.io.ByteArrayInputStream stream = new java.io.ByteArrayInputStream(
-                    serviceAccountJson.getBytes(java.nio.charset.StandardCharsets.UTF_8))) {
-                credentials = GoogleCredentials.fromStream(stream)
-                        .createScoped(Collections.singletonList(CalendarScopes.CALENDAR_READONLY));
-            }
-        } else {
-            // Load from file
-            System.out.println("Loading calendar credentials from file: " + serviceAccountFilePath);
-            try (FileInputStream serviceAccountStream = new FileInputStream(serviceAccountFilePath)) {
-                credentials = GoogleCredentials.fromStream(serviceAccountStream)
-                        .createScoped(Collections.singletonList(CalendarScopes.CALENDAR_READONLY));
-            }
+    public Set<CalendarEntry> fetchEvents() throws IOException {
+        if (icalUrl == null || icalUrl.isEmpty()) {
+            System.err.println("Warning: calendar.ical.url is not configured; returning empty set.");
+            return Collections.emptySet();
         }
 
-        return new Calendar.Builder(httpTransport, JSON_FACTORY,
-                new HttpCredentialsAdapter(credentials))
-                .setApplicationName("FINOS Calendar Reader")
-                .build();
-    }
+        System.out.println("Fetching iCal feed...");
+        String ics = fetchIcs(icalUrl);
 
-    /**
-     * Fetches recurring future calendar events and returns them as a Set of
-     * CalendarEntry
-     * objects.
-     * Handles pagination and splits requests to avoid 2500 event limits.
-     * Only returns events that:
-     * 1. Have a recurrence rule (recurring events)
-     * 2. Are in the future or currently ongoing
-     * 
-     * @return Set of CalendarEntry objects
-     * @throws IOException              if the API request fails
-     * @throws GeneralSecurityException if there's a security issue
-     */
-    public Set<CalendarEntry> fetchEvents() throws IOException, GeneralSecurityException {
-        if (calendarService == null) {
-            throw new IllegalStateException("CalendarReader is not properly initialized. Check service account file: "
-                    + serviceAccountFilePath);
-        }
+        List<Map<String, String>> vevents = parseVEvents(ics);
+        System.out.println("Total VEVENTs parsed: " + vevents.size());
 
-        System.out.println("Fetching recurring future calendar events...");
-
-        // Calculate current date as the cutoff (RFC3339 format required by Google API)
-        ZonedDateTime now = ZonedDateTime.now();
-        String currentDate = now.format(DateTimeFormatter.ISO_INSTANT);
-
-        // Calculate future date limit (1 year from now)
-        String futureDate = now.plusYears(1).format(DateTimeFormatter.ISO_INSTANT);
-
-        System.out.println("Fetching events from: " + currentDate + " to: " + futureDate);
-
-        // Fetch only future events (from now onwards, up to 1 year)
-        List<Event> eventsFuture = fetchGoogleEvents("Future Events", true, currentDate, futureDate);
-
-        // Fetch recurring events (not expanded) to resolve recurrence rules
-        List<Event> recurringEvents = fetchGoogleEvents("Recurring Events", false, null, null);
-        Map<String, Event> recurringEventsMap = new HashMap<>();
-        for (Event event : recurringEvents) {
-            recurringEventsMap.put(event.getId(), event);
-        }
-
-        System.out.println("Total future events fetched: " + eventsFuture.size());
-
-        // Map to CalendarEntry objects and filter for recurring only
-        Set<CalendarEntry> entries = mapEvents(eventsFuture, recurringEventsMap);
+        Set<CalendarEntry> entries = buildEntries(vevents);
         System.out.println("Total recurring entries returned: " + entries.size());
-
         return entries;
     }
 
-    /**
-     * Fetches events from Google Calendar API with pagination support.
-     * 
-     * @param queryName    Name for logging purposes
-     * @param singleEvents Whether to expand recurring events into instances
-     * @param timeMin      Minimum time for events (null for no limit)
-     * @param timeMax      Maximum time for events (null for no limit)
-     * @return List of Event objects
-     * @throws IOException              if the API request fails
-     * @throws GeneralSecurityException if there's a security issue
-     */
-    private List<Event> fetchGoogleEvents(String queryName, boolean singleEvents,
-            String timeMin, String timeMax) throws IOException, GeneralSecurityException {
-        List<Event> allEvents = new ArrayList<>();
-        String pageToken = null;
+    private String fetchIcs(String url) throws IOException {
+        RestTemplate restTemplate = new RestTemplate();
+        HttpHeaders headers = new HttpHeaders();
+        headers.setAccept(Arrays.asList(MediaType.parseMediaType("text/calendar"), MediaType.TEXT_PLAIN));
+        HttpEntity<String> entity = new HttpEntity<>(headers);
 
-        do {
-            Calendar.Events.List request = calendarService.events().list(calendarId)
-                    .setMaxResults(2500)
-                    .setSingleEvents(singleEvents);
-
-            if (timeMin != null) {
-                request.setTimeMin(new DateTime(timeMin));
-            }
-            if (timeMax != null) {
-                request.setTimeMax(new DateTime(timeMax));
-            }
-            if (pageToken != null) {
-                request.setPageToken(pageToken);
-            }
-
-            Events events = request.execute();
-            List<Event> items = events.getItems();
-
-            if (items != null && !items.isEmpty()) {
-                allEvents.addAll(items);
-            }
-
-            pageToken = events.getNextPageToken();
-        } while (pageToken != null);
-
-        if (allEvents.isEmpty()) {
-            System.err.println("WARNING: " + queryName + " - No events returned!");
-        } else {
-            System.out.println(queryName + " - Events retrieved: " + allEvents.size());
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
+        if (!response.getStatusCode().equals(HttpStatus.OK)) {
+            throw new IOException("Failed to fetch iCal feed: HTTP " + response.getStatusCode());
         }
-
-        return allEvents;
+        String body = response.getBody();
+        if (body == null || body.isEmpty()) {
+            throw new IOException("iCal feed returned empty body");
+        }
+        return body;
     }
 
     /**
-     * Maps Google Calendar Event objects to CalendarEntry objects.
-     * Filters out cancelled events, events not accepted by the calendar, and
-     * non-recurring events.
-     * Returns only the NEXT instance of each recurring meeting.
+     * Parses the raw ICS text into a list of VEVENT property maps. Each map's key
+     * is the upper-cased property name (with an optional "@TZID" for DTSTART when
+     * a TZID parameter is present). Values are unescaped for text properties.
+     * VALARM blocks nested inside VEVENTs are skipped.
      */
-    private Set<CalendarEntry> mapEvents(List<Event> events, Map<String, Event> recurringEventsMap) {
-        // Group events by their root ID to find the next instance of each recurring
-        // meeting
-        Map<String, Event> nextInstanceByRootId = new HashMap<>();
-        int notProcessed = 0;
-        int nonRecurring = 0;
+    List<Map<String, String>> parseVEvents(String ics) {
+        String unfolded = unfold(ics);
+        List<Map<String, String>> events = new ArrayList<>();
 
-        for (Event eventData : events) {
-            if ("confirmed".equals(eventData.getStatus()) && hasAcceptedEvent(eventData)) {
-                // Resolve recurrence rule first
-                String recurrence = getRecurrence(eventData, recurringEventsMap);
+        Map<String, String> current = null;
+        boolean inAlarm = false;
 
-                // Only process recurring events
-                if (recurrence != null) {
-                    // Get root ID (the recurring event ID without instance suffix)
-                    String rootId = eventData.getId().split("_")[0];
+        for (String rawLine : unfolded.split("\n")) {
+            String line = rawLine.endsWith("\r") ? rawLine.substring(0, rawLine.length() - 1) : rawLine;
+            if (line.isEmpty()) {
+                continue;
+            }
 
-                    // Store only the first instance encountered for each recurring event
-                    // Since we're fetching events sorted by time, this will be the next occurrence
-                    if (!nextInstanceByRootId.containsKey(rootId)) {
-                        nextInstanceByRootId.put(rootId, eventData);
-                    }
-                } else {
-                    nonRecurring++;
+            if ("BEGIN:VEVENT".equalsIgnoreCase(line)) {
+                current = new LinkedHashMap<>();
+                inAlarm = false;
+                continue;
+            }
+            if ("END:VEVENT".equalsIgnoreCase(line)) {
+                if (current != null) {
+                    events.add(current);
                 }
+                current = null;
+                inAlarm = false;
+                continue;
+            }
+            if (current == null) {
+                continue;
+            }
+            if ("BEGIN:VALARM".equalsIgnoreCase(line)) {
+                inAlarm = true;
+                continue;
+            }
+            if ("END:VALARM".equalsIgnoreCase(line)) {
+                inAlarm = false;
+                continue;
+            }
+            if (inAlarm) {
+                continue;
+            }
+
+            int colon = line.indexOf(':');
+            if (colon < 0) {
+                continue;
+            }
+            String namePart = line.substring(0, colon);
+            String value = line.substring(colon + 1);
+
+            String name;
+            String tzid = null;
+            int semi = namePart.indexOf(';');
+            if (semi < 0) {
+                name = namePart;
             } else {
-                notProcessed++;
+                name = namePart.substring(0, semi);
+                for (String param : namePart.substring(semi + 1).split(";")) {
+                    if (param.regionMatches(true, 0, "TZID=", 0, 5)) {
+                        tzid = param.substring(5);
+                    }
+                }
+            }
+            String key = name.toUpperCase(Locale.ROOT);
+
+            switch (key) {
+                case "SUMMARY":
+                case "DESCRIPTION":
+                case "LOCATION":
+                    current.put(key, unescapeText(value));
+                    break;
+                case "DTSTART":
+                    current.put(key, value);
+                    if (tzid != null) {
+                        current.put("DTSTART@TZID", tzid);
+                    }
+                    break;
+                case "UID":
+                case "RRULE":
+                case "STATUS":
+                case "RECURRENCE-ID":
+                    current.put(key, value);
+                    break;
+                default:
+                    // ignore properties the downstream code doesn't consume
+                    break;
             }
         }
 
-        // Convert the next instances to CalendarEntry objects
+        return events;
+    }
+
+    /**
+     * RFC 5545 line unfolding: a CRLF (or LF) followed by a single space or tab
+     * is a continuation of the previous logical line and must be stripped.
+     */
+    private String unfold(String ics) {
+        return ics.replaceAll("\r?\n[ \t]", "");
+    }
+
+    /**
+     * RFC 5545 text unescaping for SUMMARY / DESCRIPTION / LOCATION values.
+     */
+    private String unescapeText(String value) {
+        StringBuilder out = new StringBuilder(value.length());
+        for (int i = 0; i < value.length(); i++) {
+            char c = value.charAt(i);
+            if (c == '\\' && i + 1 < value.length()) {
+                char next = value.charAt(i + 1);
+                switch (next) {
+                    case 'n':
+                    case 'N':
+                        out.append('\n');
+                        i++;
+                        continue;
+                    case ',':
+                    case ';':
+                    case '\\':
+                        out.append(next);
+                        i++;
+                        continue;
+                    default:
+                        break;
+                }
+            }
+            out.append(c);
+        }
+        return out.toString();
+    }
+
+    /**
+     * Groups parsed VEVENTs by their recurring-series root UID and returns one
+     * CalendarEntry per series. Mirrors the previous Google-API-backed behavior:
+     *  - one entry per series
+     *  - only series that have an RRULE
+     *  - cancelled events skipped
+     *  - series whose RRULE UNTIL has passed are dropped
+     *
+     * The LFX feed represents series in two shapes: some as a single root VEVENT
+     * with RRULE (whose DTSTART is the original first occurrence, typically in
+     * the past), others as per-instance VEVENTs with UIDs of the form
+     * "&lt;rootUid&gt;:&lt;isoTimestamp&gt;". For each series we prefer the earliest future
+     * instance if available, otherwise fall back to the root VEVENT.
+     */
+    private Set<CalendarEntry> buildEntries(List<Map<String, String>> vevents) {
+        // Group all non-cancelled VEVENTs by root UID.
+        Map<String, List<Map<String, String>>> byRoot = new HashMap<>();
+        int skippedCancelled = 0;
+        for (Map<String, String> ev : vevents) {
+            String uid = ev.get("UID");
+            if (uid == null) {
+                continue;
+            }
+            String status = ev.get("STATUS");
+            if (status != null && "CANCELLED".equalsIgnoreCase(status)) {
+                skippedCancelled++;
+                continue;
+            }
+            byRoot.computeIfAbsent(rootUid(uid), k -> new ArrayList<>()).add(ev);
+        }
+
+        LocalDateTime now = LocalDateTime.now();
         Set<CalendarEntry> entries = new HashSet<>();
-        for (Event eventData : nextInstanceByRootId.values()) {
-            String recurrence = getRecurrence(eventData, recurringEventsMap);
+        int nonRecurring = 0;
+        int expired = 0;
+
+        for (Map.Entry<String, List<Map<String, String>>> group : byRoot.entrySet()) {
+            String rootUid = group.getKey();
+            List<Map<String, String>> members = group.getValue();
+
+            // Resolve RRULE from any member of the series.
+            String rrule = null;
+            Map<String, String> rootVevent = null;
+            for (Map<String, String> ev : members) {
+                if (rrule == null && ev.get("RRULE") != null) {
+                    rrule = ev.get("RRULE");
+                }
+                if (rootVevent == null && rootUid.equals(ev.get("UID"))) {
+                    rootVevent = ev;
+                }
+            }
+            if (rrule == null) {
+                nonRecurring++;
+                continue;
+            }
+            if (isExpired(rrule, now)) {
+                expired++;
+                continue;
+            }
+
+            // Prefer the earliest future instance; otherwise fall back to the root
+            // VEVENT (whose DTSTART may be in the past but whose RRULE is ongoing).
+            Map<String, String> best = null;
+            LocalDateTime bestStart = null;
+            for (Map<String, String> ev : members) {
+                if (rootUid.equals(ev.get("UID"))) {
+                    continue;
+                }
+                LocalDateTime start = parseDtStart(ev.get("DTSTART"));
+                if (start == null || start.isBefore(now)) {
+                    continue;
+                }
+                if (bestStart == null || start.isBefore(bestStart)) {
+                    best = ev;
+                    bestStart = start;
+                }
+            }
+            if (best == null) {
+                best = rootVevent != null ? rootVevent : members.get(0);
+            }
 
             CalendarEntry entry = new CalendarEntry();
-            entry.setUid(eventData.getId());
-            entry.setTitle(eventData.getSummary());
-            entry.setDescription(eventData.getDescription());
-            entry.setLocation(eventData.getLocation());
-            entry.setStatus(eventData.getStatus());
-            entry.setRecurringEventId(eventData.getRecurringEventId());
-            entry.setRepeating(recurrence);
-
+            entry.setUid(best.get("UID"));
+            entry.setTitle(best.get("SUMMARY"));
+            entry.setDescription(best.get("DESCRIPTION"));
+            entry.setLocation(best.get("LOCATION"));
+            entry.setStatus(best.get("STATUS") != null ? best.get("STATUS").toLowerCase(Locale.ROOT) : "confirmed");
+            entry.setRecurringEventId(rootUid.equals(best.get("UID")) ? null : rootUid);
+            // Prefix preserves the shape expected by CalendarEntry.getRecurrenceDescription()
+            entry.setRepeating("RRULE:" + rrule);
             entries.add(entry);
         }
 
-        System.out.println("Events not processed (cancelled/not accepted): " + notProcessed);
-        System.out.println("Events filtered out (non-recurring): " + nonRecurring);
-        System.out.println("Unique recurring events (next instances only): " + entries.size());
+        System.out.println("Events skipped (cancelled): " + skippedCancelled);
+        System.out.println("Series filtered out (non-recurring): " + nonRecurring);
+        System.out.println("Series filtered out (RRULE UNTIL in past): " + expired);
+        System.out.println("Unique recurring events: " + entries.size());
         return entries;
     }
 
     /**
-     * Checks if the event has been accepted by the calendar.
+     * Returns true if the RRULE has an UNTIL clause whose date has already
+     * passed. Handles the two common UNTIL forms in RFC 5545: "yyyyMMdd'T'HHmmssZ"
+     * (UTC) and "yyyyMMdd" (all-day).
      */
-    private boolean hasAcceptedEvent(Event eventData) {
-        List<EventAttendee> attendees = eventData.getAttendees();
-        if (attendees != null) {
-            for (EventAttendee attendee : attendees) {
-                if (calendarId.equals(attendee.getEmail())) {
-                    return "accepted".equals(attendee.getResponseStatus());
-                }
-            }
+    private boolean isExpired(String rrule, LocalDateTime now) {
+        int idx = rrule.toUpperCase(Locale.ROOT).indexOf("UNTIL=");
+        if (idx < 0) {
+            return false;
         }
-        return true; // No attendees means accepted
+        int end = rrule.indexOf(';', idx);
+        String until = rrule.substring(idx + "UNTIL=".length(), end < 0 ? rrule.length() : end);
+        LocalDateTime untilDt = parseDtStart(until);
+        return untilDt != null && untilDt.isBefore(now);
     }
 
     /**
-     * Gets the recurrence rule (RRULE) for an event.
-     * Checks the event itself first, then falls back to the root recurring event.
+     * ICS instance UIDs from the LFX feed look like "&lt;rootUid&gt;:&lt;isoTimestamp&gt;".
+     * For root VEVENTs the UID is already the root.
      */
-    private String getRecurrence(Event eventData, Map<String, Event> recurringEventsMap) {
-        // Check if this event has recurrence data
-        if (hasRecurrence(eventData)) {
-            return eventData.getRecurrence().get(0);
-        }
-
-        // Check if this is an instance of a recurring event
-        if (eventData.getRecurringEventId() != null) {
-            Event rootEvent = recurringEventsMap.get(eventData.getRecurringEventId());
-            if (rootEvent != null && hasRecurrence(rootEvent)) {
-                return rootEvent.getRecurrence().get(0);
-            }
-        }
-
-        return null;
+    private String rootUid(String uid) {
+        int colon = uid.indexOf(':');
+        return colon < 0 ? uid : uid.substring(0, colon);
     }
 
     /**
-     * Checks if an event has valid recurrence data.
+     * Parses a DTSTART value. Accepts "yyyyMMdd'T'HHmmss[Z]" and "yyyyMMdd".
+     * Time-zone information is ignored: comparisons are wall-clock-relative,
+     * which is fine because all instances of a given series share the same TZ
+     * and we only use the value for "next future occurrence" ordering.
      */
-    private boolean hasRecurrence(Event eventData) {
-        List<String> recurrence = eventData.getRecurrence();
-        return recurrence != null && !recurrence.isEmpty()
-                && !recurrence.get(0).startsWith("EXDATE");
+    private LocalDateTime parseDtStart(String raw) {
+        if (raw == null || raw.isEmpty()) {
+            return null;
+        }
+        String value = raw.endsWith("Z") ? raw.substring(0, raw.length() - 1) : raw;
+        try {
+            if (value.contains("T")) {
+                return LocalDateTime.parse(value, DT_LOCAL);
+            }
+            return LocalDateTime.parse(value + "T000000", DT_LOCAL);
+        } catch (Exception e) {
+            try {
+                return DT_DATE.parse(value, java.time.LocalDate::from).atStartOfDay();
+            } catch (Exception ex) {
+                return null;
+            }
+        }
     }
 }
