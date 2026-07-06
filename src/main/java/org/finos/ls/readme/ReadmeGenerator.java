@@ -169,8 +169,8 @@ public class ReadmeGenerator extends AbstractMultiReport {
 
 		out.append("\n**Special Interest Groups:**\n");
 		out.append(tableOfContents(bucketedProjects, ProjectInfo.ProjectType.SIG, null));
-		out.append("\n**Active Projects:**\n");
-		out.append(tableOfContents(bucketedProjects, ProjectInfo.ProjectType.ACTIVE, null));
+		out.append("\n**Graduated Projects:**\n");
+		out.append(tableOfContents(bucketedProjects, ProjectInfo.ProjectType.GRADUATED, null));
 		out.append("\n**Incubating Projects:**\n");
 		out.append(tableOfContents(bucketedProjects, ProjectInfo.ProjectType.INCUBATING, null));
 
@@ -188,8 +188,8 @@ public class ReadmeGenerator extends AbstractMultiReport {
 		out.append("# Special Interest Groups\n");
 		out.append(report(bucketedProjects, projectSummaries, ProjectInfo.ProjectType.SIG, null));
 
-		out.append("# Active Projects\n");
-		out.append(report(bucketedProjects, projectSummaries, ProjectInfo.ProjectType.ACTIVE, null));
+		out.append("# Graduated Projects\n");
+		out.append(report(bucketedProjects, projectSummaries, ProjectInfo.ProjectType.GRADUATED, null));
 
 		out.append("# Incubating Projects\n");
 		out.append(report(bucketedProjects, projectSummaries, ProjectInfo.ProjectType.INCUBATING, null));

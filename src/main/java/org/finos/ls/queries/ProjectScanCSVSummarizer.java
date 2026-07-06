@@ -109,7 +109,7 @@ public class ProjectScanCSVSummarizer implements CSVSummarizer{
 	
 	private String projectStage(Repository r) {
 		ProjectInfo pi = getMatchingProject(r.getName(), r.getOwner().getLogin());
-		return (pi != null) && pi.type == ProjectType.INCUBATING ? "Incubating" : "Active";
+		return (pi != null) && pi.type == ProjectType.INCUBATING ? "Incubating" : "Graduated";
 	}
 	
 	private boolean matchName(String name, String owner, String url) {

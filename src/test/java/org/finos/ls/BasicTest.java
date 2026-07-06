@@ -176,7 +176,7 @@ public class BasicTest {
 		pi.name = "Spring Bot";
 		pi.logo = "https://raw.githubusercontent.com/finos/finos-landscape/master/hosted_logos/springbot.svg";
 		pi.homepageUrl = "https://springbot.finos.org";
-		pi.type = org.finos.ls.landscape.ProjectInfo.ProjectType.ACTIVE;
+		pi.type = org.finos.ls.landscape.ProjectInfo.ProjectType.GRADUATED;
 		String out = qs.getSingleRepository(new MarkdownSummarizer(SummaryLevel.MAIN, pi), ORG, "spring-bot");
 		System.out.println(out);
 	}
