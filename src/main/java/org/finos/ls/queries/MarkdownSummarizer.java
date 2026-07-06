@@ -202,22 +202,24 @@ public class MarkdownSummarizer implements QueryType<String> {
 
 	/**
 	 * Generates the appropriate meeting link for a calendar entry.
-	 * Follows the same logic as Calendar.jsx:
-	 * 1. Look for zoom-lfx link with invite=true in the description
-	 * 2. If found, use that link
-	 * 3. Otherwise, use calendar.finos.org signup link
-	 * 
+	 * 1. Look for a zoom-lfx meeting link in the description, then the location.
+	 * 2. Ensure the link has invite=true so it lands on the LFX registration page
+	 *    instead of trying to join the meeting directly.
+	 * 3. If no zoom-lfx link is available, fall back to a calendar.finos.org
+	 *    signup link.
+	 *
 	 * @param entry The calendar entry
 	 * @return The meeting link URL, or null if no link available
 	 */
 	private String generateMeetingLink(CalendarEntry entry) {
-		// First, try to find a zoom-lfx link in the description
 		String zoomLfxLink = extractZoomLfxLink(entry.getDescription());
+		if (zoomLfxLink == null) {
+			zoomLfxLink = extractZoomLfxLink(entry.getLocation());
+		}
 		if (zoomLfxLink != null) {
-			return zoomLfxLink;
+			return ensureInviteTrue(zoomLfxLink);
 		}
 
-		// Otherwise, generate a calendar.finos.org signup link
 		if (entry.getUid() != null && entry.getTitle() != null) {
 			try {
 				String encodedUid = java.net.URLEncoder.encode(entry.getUid(), "UTF-8");
@@ -233,28 +235,38 @@ public class MarkdownSummarizer implements QueryType<String> {
 	}
 
 	/**
-	 * Extracts zoom-lfx link with invite=true from the description.
-	 * Uses the same regex pattern as Calendar.jsx
-	 * 
-	 * @param description The event description
-	 * @return The zoom-lfx link if found, null otherwise
+	 * Extracts the first zoom-lfx meeting URL from the given text.
+	 *
+	 * @param text The text to search (event description or location)
+	 * @return The zoom-lfx URL if found, null otherwise
 	 */
-	private String extractZoomLfxLink(String description) {
-		if (description == null) {
+	private String extractZoomLfxLink(String text) {
+		if (text == null) {
 			return null;
 		}
 
-		// Regex from Calendar.jsx:
-		// /(https:\/\/zoom-lfx\.platform[^\s"'<>]*\binvite=true\b[^\s"'<>]*)/g
 		java.util.regex.Pattern pattern = java.util.regex.Pattern.compile(
-				"(https://zoom-lfx\\.platform[^\\s\"'<>]*\\binvite=true\\b[^\\s\"'<>]*)");
-		java.util.regex.Matcher matcher = pattern.matcher(description);
+				"(https://zoom-lfx\\.platform[^\\s\"'<>]+)");
+		java.util.regex.Matcher matcher = pattern.matcher(text);
 
 		if (matcher.find()) {
 			return matcher.group(1);
 		}
 
 		return null;
+	}
+
+	/**
+	 * Ensures the zoom-lfx URL carries the invite=true query parameter so that
+	 * LFX serves the registration page. The LFX iCal feed omits this parameter
+	 * from the URLs it embeds in description/location; without it, the link
+	 * takes users to the meeting rather than the invite/signup page.
+	 */
+	private String ensureInviteTrue(String url) {
+		if (java.util.regex.Pattern.compile("[?&]invite=true\\b").matcher(url).find()) {
+			return url;
+		}
+		return url + (url.contains("?") ? "&" : "?") + "invite=true";
 	}
 
 	private void addTopicTags(StringBuilder out, List<String> tags, Repository repo) {
