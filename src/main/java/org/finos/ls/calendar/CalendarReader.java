@@ -258,28 +258,52 @@ public class CalendarReader {
             String rootUid = group.getKey();
             List<Map<String, String>> members = group.getValue();
 
-            // Resolve RRULE from any member of the series.
-            String rrule = null;
-            Map<String, String> rootVevent = null;
+            // LFX sometimes re-segments a recurring series into multiple VEVENTs
+            // that share a root UID, each with its own RRULE and a different
+            // UNTIL. Pick the RRULE with the latest (or no) UNTIL - that's the
+            // currently-active segment. The series is only expired if every
+            // RRULE has an UNTIL that's already in the past.
+            String activeRrule = null;
+            LocalDateTime activeRruleUntil = null;
+            Map<String, String> activeRruleOwner = null;
+            boolean anyRrule = false;
             for (Map<String, String> ev : members) {
-                if (rrule == null && ev.get("RRULE") != null) {
-                    rrule = ev.get("RRULE");
+                String r = ev.get("RRULE");
+                if (r == null) {
+                    continue;
                 }
-                if (rootVevent == null && rootUid.equals(ev.get("UID"))) {
-                    rootVevent = ev;
+                anyRrule = true;
+                LocalDateTime until = rruleUntil(r);
+                boolean better =
+                        activeRrule == null
+                                || (activeRruleUntil != null
+                                        && (until == null || until.isAfter(activeRruleUntil)));
+                if (better) {
+                    activeRrule = r;
+                    activeRruleUntil = until;
+                    activeRruleOwner = ev;
                 }
             }
-            if (rrule == null) {
+            if (!anyRrule) {
                 nonRecurring++;
                 continue;
             }
-            if (isExpired(rrule, now)) {
+            if (activeRruleUntil != null && activeRruleUntil.isBefore(now)) {
                 expired++;
                 continue;
             }
 
-            // Prefer the earliest future instance; otherwise fall back to the root
-            // VEVENT (whose DTSTART may be in the past but whose RRULE is ongoing).
+            Map<String, String> rootVevent = null;
+            for (Map<String, String> ev : members) {
+                if (rootUid.equals(ev.get("UID"))) {
+                    rootVevent = ev;
+                    break;
+                }
+            }
+
+            // Prefer the earliest future instance; otherwise fall back to the
+            // member that owns the active RRULE (or root VEVENT, or first
+            // member) so we describe the still-live segment of the series.
             Map<String, String> best = null;
             LocalDateTime bestStart = null;
             for (Map<String, String> ev : members) {
@@ -296,7 +320,13 @@ public class CalendarReader {
                 }
             }
             if (best == null) {
-                best = rootVevent != null ? rootVevent : members.get(0);
+                if (activeRruleOwner != null) {
+                    best = activeRruleOwner;
+                } else if (rootVevent != null) {
+                    best = rootVevent;
+                } else {
+                    best = members.get(0);
+                }
             }
 
             CalendarEntry entry = new CalendarEntry();
@@ -307,31 +337,29 @@ public class CalendarReader {
             entry.setStatus(best.get("STATUS") != null ? best.get("STATUS").toLowerCase(Locale.ROOT) : "confirmed");
             entry.setRecurringEventId(rootUid.equals(best.get("UID")) ? null : rootUid);
             // Prefix preserves the shape expected by CalendarEntry.getRecurrenceDescription()
-            entry.setRepeating("RRULE:" + rrule);
+            entry.setRepeating("RRULE:" + activeRrule);
             entries.add(entry);
         }
 
         System.out.println("Events skipped (cancelled): " + skippedCancelled);
         System.out.println("Series filtered out (non-recurring): " + nonRecurring);
-        System.out.println("Series filtered out (RRULE UNTIL in past): " + expired);
+        System.out.println("Series filtered out (all RRULEs expired): " + expired);
         System.out.println("Unique recurring events: " + entries.size());
         return entries;
     }
 
     /**
-     * Returns true if the RRULE has an UNTIL clause whose date has already
-     * passed. Handles the two common UNTIL forms in RFC 5545: "yyyyMMdd'T'HHmmssZ"
-     * (UTC) and "yyyyMMdd" (all-day).
+     * Parses the UNTIL clause of an RRULE, if present. Returns null when the
+     * RRULE has no UNTIL (i.e. the series is open-ended).
      */
-    private boolean isExpired(String rrule, LocalDateTime now) {
+    private LocalDateTime rruleUntil(String rrule) {
         int idx = rrule.toUpperCase(Locale.ROOT).indexOf("UNTIL=");
         if (idx < 0) {
-            return false;
+            return null;
         }
         int end = rrule.indexOf(';', idx);
         String until = rrule.substring(idx + "UNTIL=".length(), end < 0 ? rrule.length() : end);
-        LocalDateTime untilDt = parseDtStart(until);
-        return untilDt != null && untilDt.isBefore(now);
+        return parseDtStart(until);
     }
 
     /**
