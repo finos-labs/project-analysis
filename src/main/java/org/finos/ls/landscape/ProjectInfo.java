@@ -6,7 +6,7 @@ import java.util.List;
 public class ProjectInfo {
 
 	public enum ProjectType {
-		SIG, ACTIVE, INCUBATING
+		SIG, GRADUATED, INCUBATING
 	}
 
 	public String name;
@@ -27,8 +27,8 @@ public class ProjectInfo {
 			switch (in) {
 				case "incubating":
 					return ProjectType.INCUBATING;
-				case "active":
-					return ProjectType.ACTIVE;
+				case "graduated":
+					return ProjectType.GRADUATED;
 				case "sig":
 					return ProjectType.SIG;
 				default:
